@@ -1,0 +1,27 @@
+---
+answer: 动员起来
+due: '2026-06-03'
+ease: 2.5
+example: ''
+interval: 1
+last-review: ''
+mastery: new
+meaning: 动员起来 (vi.) / 动员；调动，鼓动起 (vt.)
+phonetic: /'mobəlaɪz/
+reviews: 0
+tags:
+- 英语
+- CET6
+type: word
+word: mobilize
+---
+
+## mobilize
+
+**音标**：
+
+**释义**：动员起来 (vi.) / 动员；调动，鼓动起 (vt.)
+
+**例句**：
+
+**联想/记忆**：

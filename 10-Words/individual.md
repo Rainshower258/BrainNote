@@ -1,0 +1,27 @@
+---
+answer: 个别的
+due: '2026-06-03'
+ease: 2.5
+example: ''
+interval: 1
+last-review: ''
+mastery: new
+meaning: 个别的；独特的 (adj.) / 个人， 个体 (n.)
+phonetic: /ˌɪndəˈvɪdʒʊəl/
+reviews: 0
+tags:
+- 英语
+- CET6
+type: word
+word: individual
+---
+
+## individual
+
+**音标**：
+
+**释义**：个别的；独特的 (adj.) / 个人， 个体 (n.)
+
+**例句**：
+
+**联想/记忆**：
