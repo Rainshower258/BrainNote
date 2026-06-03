@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>脑记 · BrainNote</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Ma+Shan+Zheng&family=Noto+Serif+SC:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+/* ============ TOKENS ============ */
+:root{
+  --parchment:#F5F0E8;
+  --parchment-deep:#EDE5D6;
+  --ink:#2C1810;
+  --ink-soft:#5A4636;
+  --ink-faint:#8A7763;
+  --rust:#C4603A;
+  --rust-deep:#A24A2A;
+  --sage:#7A9E7E;
+  --gold:#C9A84C;
+  --rule:rgba(122,158,126,0.22);
+  --card:#FBF7EF;
+  --shadow:rgba(44,24,16,0.18);
+  --hand:'Caveat',cursive;
+  --hand-cn:'Ma Shan Zheng',cursive;
+  --serif:'Lora','Noto Serif SC',serif;
+  --serif-cn:'Noto Serif SC',serif;
+}
+
+[data-theme="dark"]{
+  --parchment:#1C1814;
+  --parchment-deep:#252018;
+  --ink:#EDE0CC;
+  --ink-soft:#C4B49A;
+  --ink-faint:#7A6E5E;
+  --rust:#D4724A;
+  --rust-deep:#B85A36;
+  --sage:#6A8E6E;
+  --gold:#C9A84C;
+  --rule:rgba(100,140,100,0.15);
+  --card:#231F1A;
+  --shadow:rgba(0,0,0,0.45);
+}
+
+/* theme toggle button */
+.theme-toggle{
+  width:32px;height:32px;border-radius:50%;border:1.5px solid var(--ink-faint);
+  background:var(--card);color:var(--ink-soft);
+  cursor:pointer;font-size:15px;display:flex;align-items:center;justify-content:center;
+  transition:background .3s,border-color .3s,transform .2s;
+  box-shadow:0 2px 6px var(--shadow);
+  flex-shrink:0;
+}
+.theme-toggle:hover{transform:scale(1.1);border-color:var(--rust);}
+.theme-toggle .icon-sun{display:none;}
+.theme-toggle .icon-moon{display:block;}
+[data-theme="dark"] .theme-toggle .icon-sun{display:block;}
+[data-theme="dark"] .theme-toggle .icon-moon{display:none;}
+
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent;}
+html,body{margin:0;padding:0;height:100%;}
+body{
+  background:var(--parchment);
+  color:var(--ink);
+  font-family:var(--serif);
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+/* paper grain overlay */
+body::before{
+  content:"";position:fixed;inset:0;z-index:0;pointer-events:none;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
+  opacity:0.05;mix-blend-mode:multiply;
+}
+/* faint vignette of aging */
+body::after{
+  content:"";position:fixed;inset:0;z-index:0;pointer-events:none;
+  background:radial-gradient(120% 90% at 50% 0%,transparent 60%,rgba(120,90,50,0.10) 100%);
+}
+
+#app{position:relative;z-index:1;min-height:100%;}
+
+/* ============ VIEW SYSTEM ============ */
+.view{
+  position:absolute;inset:0;min-height:100vh;
+  opacity:0;visibility:hidden;transform:scale(0.985);
+  transition:opacity .55s ease,transform .55s ease,visibility .55s;
+  padding:clamp(20px,5vw,48px) clamp(16px,5vw,40px) 64px;
+}
+.view.active{opacity:1;visibility:visible;transform:scale(1);position:relative;}
+.wrap{max-width:720px;margin:0 auto;}
+
+/* ============ SHARED: stamp / washi / torn ============ */
+.washi{
+  position:absolute;width:108px;height:30px;opacity:.78;
+  background:repeating-linear-gradient(45deg,rgba(122,158,126,.55) 0 9px,rgba(122,158,126,.30) 9px 18px);
+  box-shadow:0 1px 4px rgba(44,24,16,.12);
+  mix-blend-mode:multiply;
+}
+.washi::after{content:"";position:absolute;inset:0;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='12'%3E%3Crect width='40' height='12' fill='none'/%3E%3Cpath d='M0 6h40' stroke='rgba(255,255,255,0.25)' stroke-width='2' stroke-dasharray='1 3'/%3E%3C/svg%3E");}
+
+@keyframes stampIn{
+  0%{transform:scale(2.4) rotate(var(--rot,-6deg));opacity:0;}
+  55%{transform:scale(.88) rotate(var(--rot,-6deg));opacity:1;}
+  72%{transform:scale(1.06) rotate(var(--rot,-6deg));}
+  100%{transform:scale(1) rotate(var(--rot,-6deg));opacity:1;}
+}
+
+/* ============ DASHBOARD ============ */
+.dash-head{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;margin-bottom:30px;}
+.brand-block .kanji{font-family:var(--hand-cn);font-size:clamp(46px,11vw,68px);line-height:.9;color:var(--ink);}
+.brand-block .latin{font-family:var(--hand);font-size:clamp(22px,5vw,30px);color:var(--rust);transform:rotate(-3deg);margin-top:2px;}
+.today-date{font-family:var(--hand);font-size:clamp(20px,4.5vw,26px);color:var(--ink-soft);text-align:right;line-height:1.05;}
+.today-date small{display:block;font-family:var(--serif-cn);font-size:13px;letter-spacing:.18em;color:var(--ink-faint);text-transform:uppercase;}
+
+/* streak rubber stamp */
+.streak-stamp{
+  --rot:-7deg;
+  display:inline-flex;flex-direction:column;align-items:center;justify-content:center;
+  width:104px;height:104px;border-radius:50%;
+  border:3px double var(--rust);color:var(--rust);
+  transform:rotate(var(--rot));
+  font-family:var(--hand);position:relative;flex:0 0 auto;
+  box-shadow:inset 0 0 0 6px rgba(196,96,58,.10);
+  filter:url(#rough);opacity:.9;
+}
+.streak-stamp .fire{font-size:24px;line-height:1;filter:grayscale(.1);}
+.streak-stamp .num{font-size:40px;line-height:.8;font-weight:700;}
+.streak-stamp .lbl{font-size:15px;letter-spacing:.22em;text-transform:uppercase;}
+
+.section-label{
+  font-family:var(--hand-cn);font-size:clamp(24px,5vw,30px);color:var(--ink);
+  margin:6px 0 14px;display:flex;align-items:center;gap:12px;
+}
+.section-label::after{content:"";flex:1;height:2px;
+  background:repeating-linear-gradient(90deg,var(--ink-faint) 0 6px,transparent 6px 12px);opacity:.4;}
+
+/* paper card base */
+.paper{
+  position:relative;background:var(--card);
+  border-radius:3px;padding:22px 22px 24px;
+  box-shadow:0 1px 0 rgba(255,255,255,.6) inset,0 10px 26px -14px var(--shadow);
+  border:1px solid rgba(44,24,16,.07);
+}
+.paper.ruled{
+  background-image:repeating-linear-gradient(transparent 0 31px,var(--rule) 31px 32px);
+  background-position:0 12px;
+}
+
+/* heatmap */
+.heat-card{margin-bottom:30px;}
+.heat-scroll{overflow-x:auto;padding-bottom:6px;-webkit-overflow-scrolling:touch;}
+.heat-grid{display:flex;gap:3px;min-width:max-content;padding-top:18px;position:relative;}
+.heat-col{display:flex;flex-direction:column;gap:3px;}
+.heat-cell{width:13px;height:13px;border-radius:2px;background:var(--parchment-deep);
+  box-shadow:inset 0 0 0 1px rgba(44,24,16,.05);position:relative;}
+.heat-cell.l1{background:#EAD6BC;}
+.heat-cell.l2{background:#E0B488;}
+.heat-cell.l3{background:#D08A52;}
+.heat-cell.l4{background:var(--rust);}
+.heat-cell.today{box-shadow:0 0 0 2px var(--ink);animation:todayPulse 1.4s ease-in-out 3;}
+@keyframes todayPulse{50%{box-shadow:0 0 0 2px var(--gold);}}
+.heat-months{display:flex;gap:3px;position:absolute;top:0;left:0;font-family:var(--serif-cn);
+  font-size:11px;color:var(--ink-faint);letter-spacing:.05em;}
+.heat-legend{display:flex;align-items:center;gap:6px;justify-content:flex-end;margin-top:12px;
+  font-family:var(--serif-cn);font-size:12px;color:var(--ink-faint);}
+.heat-legend .heat-cell{width:11px;height:11px;}
+
+/* mastery badges */
+.badge-row{display:grid;grid-template-columns:repeat(6,1fr);gap:10px;margin-bottom:34px;}
+.badge{
+  --rot:-2deg;text-align:center;padding:12px 4px 10px;border-radius:6px;
+  border:2px solid currentColor;background:rgba(255,255,255,.35);
+  transform:rotate(var(--rot));position:relative;filter:url(#rough);
+}
+.badge .bnum{font-family:var(--hand);font-size:30px;font-weight:700;line-height:.85;}
+.badge .blbl{font-family:var(--serif-cn);font-size:11px;letter-spacing:.04em;margin-top:4px;display:block;opacity:.85;}
+
+.b-new{color:#6B7C93;}
+.b-again{color:var(--rust-deep);}
+.b-hard{color:#B07A2E;}
+.b-good{color:var(--sage);}
+.b-easy{color:#5E8C62;}
+.b-perfect{color:var(--gold);}
+
+/* wax seal start button */
+.start-wrap{display:flex;flex-direction:column;align-items:center;margin-top:8px;}
+.due-note{font-family:var(--hand);font-size:clamp(22px,5vw,28px);color:var(--ink-soft);margin-bottom:16px;transform:rotate(-1.5deg);}
+.due-note b{color:var(--rust);font-weight:700;}
+.wax-seal{
+  --rot:-3deg;cursor:pointer;border:none;position:relative;
+  width:172px;height:172px;border-radius:50%;
+  background:radial-gradient(circle at 38% 32%,#D2724C 0%,var(--rust) 42%,var(--rust-deep) 100%);
+  color:#FBEDE2;font-family:var(--hand-cn);font-size:34px;
+  display:flex;align-items:center;justify-content:center;flex-direction:column;
+  transform:rotate(var(--rot));transition:transform .25s ease,box-shadow .25s ease,filter .25s;
+  box-shadow:0 14px 24px -10px rgba(162,74,42,.7),inset 0 3px 8px rgba(255,255,255,.25),inset 0 -8px 16px rgba(120,40,20,.55);
+  filter:url(#rough);
+}
+.wax-seal::before{content:"";position:absolute;inset:14px;border-radius:50%;border:2px dashed rgba(255,237,226,.5);}
+.wax-seal .wlbl{font-size:14px;font-family:var(--serif-cn);letter-spacing:.3em;margin-top:4px;opacity:.85;text-indent:.3em;}
+.wax-seal:hover{transform:rotate(var(--rot)) scale(1.05);box-shadow:0 20px 30px -10px rgba(162,74,42,.8),inset 0 3px 8px rgba(255,255,255,.3),inset 0 -8px 16px rgba(120,40,20,.55);}
+.wax-seal:active{transform:rotate(var(--rot)) scale(.97);}
+
+/* ============ FLASHCARD VIEW ============ */
+.review-top{display:flex;align-items:center;gap:14px;margin-bottom:clamp(22px,5vw,40px);}
+.icon-btn{
+  background:var(--card);border:1px solid rgba(44,24,16,.12);color:var(--ink-soft);
+  width:42px;height:42px;border-radius:50%;cursor:pointer;font-size:20px;flex:0 0 auto;
+  display:flex;align-items:center;justify-content:center;transition:.2s;font-family:var(--serif);
+  box-shadow:0 4px 10px -6px var(--shadow);
+}
+.icon-btn:hover{background:var(--parchment-deep);transform:translateY(-1px);}
+
+/* torn progress strip */
+.progress-strip{flex:1;height:26px;position:relative;background:var(--card);
+  box-shadow:inset 0 1px 4px rgba(44,24,16,.12);
+  -webkit-mask:var(--torn);mask:var(--torn);}
+.progress-fill{height:100%;width:0;transition:width .5s cubic-bezier(.4,1.3,.5,1);
+  background:linear-gradient(90deg,var(--rust-deep),var(--rust));
+  background-image:linear-gradient(90deg,var(--rust-deep),var(--rust)),url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='6' height='6'%3E%3Cpath d='M0 6L6 0' stroke='rgba(255,255,255,0.18)' stroke-width='1'/%3E%3C/svg%3E");}
+:root{--torn:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='26' preserveAspectRatio='none'%3E%3Cpath d='M0 3 Q15 0 30 4 T60 3 T90 5 T120 2 T150 4 T180 3 T210 5 T240 2 T270 4 T300 3 T330 5 T360 2 T390 4 T420 3 T450 5 T480 2 T510 4 T540 3 T570 5 T600 2 T630 4 T660 3 T690 5 T720 2 T750 4 T780 3 T810 5 T840 2 T870 4 T900 3 T930 5 T960 2 T990 4 T1020 3 T1050 5 T1080 2 T1110 4 T1140 3 T1200 4 L1200 23 Q1185 26 1170 22 T1140 23 T1110 21 T1080 24 T1050 22 T1020 23 T990 21 T960 24 T930 22 T900 23 T870 21 T840 24 T810 22 T780 23 T750 21 T720 24 T690 22 T660 23 T630 21 T600 24 T570 22 T540 23 T510 21 T480 24 T450 22 T420 23 T390 21 T360 24 T330 22 T300 23 T270 21 T240 24 T210 22 T180 23 T150 21 T120 24 T90 22 T60 23 T30 21 T0 23 Z' fill='black'/%3E%3C/svg%3E");}
+.progress-count{font-family:var(--hand);font-size:22px;color:var(--ink-soft);flex:0 0 auto;min-width:54px;text-align:center;}
+
+/* 3D flip card */
+.card-stage{perspective:1600px;margin:0 auto;max-width:560px;}
+.flip{
+  position:relative;width:100%;min-height:clamp(340px,58vh,440px);
+  transform-style:preserve-3d;transition:transform .7s cubic-bezier(.45,.05,.25,1);
+  transform:rotate(-1deg);
+}
+.flip.is-flipped{transform:rotate(1deg) rotateY(180deg);}
+.face{
+  position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;
+  background:var(--card);border-radius:6px;border:1px solid rgba(44,24,16,.08);
+  padding:38px 30px;display:flex;flex-direction:column;
+  box-shadow:0 22px 40px -20px var(--shadow),0 2px 0 rgba(255,255,255,.6) inset;
+  background-image:repeating-linear-gradient(transparent 0 33px,var(--rule) 33px 34px);
+  background-position:0 64px;overflow:hidden;
+}
+.face::before{content:"";position:absolute;left:46px;top:0;bottom:0;width:1.5px;
+  background:rgba(196,96,58,.28);}
+.face.back{transform:rotateY(180deg);}
+
+.card-tag{align-self:flex-start;font-family:var(--serif-cn);font-size:13px;letter-spacing:.05em;
+  color:var(--sage);border:1.5px solid var(--sage);padding:3px 12px;border-radius:20px;
+  transform:rotate(-2deg);background:rgba(122,158,126,.08);}
+.card-front-mid{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;text-align:center;}
+.word-big{font-family:var(--hand);font-weight:700;font-size:clamp(64px,16vw,100px);line-height:.9;color:var(--ink);}
+.phonetic{font-family:var(--serif);font-style:italic;font-size:clamp(20px,5vw,26px);color:var(--rust);}
+.flip-hint{text-align:center;font-family:var(--serif-cn);font-size:13px;color:var(--ink-faint);letter-spacing:.1em;}
+
+/* back face */
+.back .word-small{font-family:var(--hand);font-size:38px;color:var(--ink-soft);text-align:center;border-bottom:2px dotted var(--rule);padding-bottom:8px;margin-bottom:6px;}
+.answer-big{font-family:var(--serif-cn);font-weight:600;font-size:clamp(30px,7vw,42px);color:var(--rust);text-align:center;margin:14px 0 6px;line-height:1.25;}
+.example{font-family:var(--serif);font-style:italic;font-size:clamp(16px,4vw,19px);color:var(--ink-soft);text-align:center;line-height:1.5;margin:4px 0 18px;}
+.tip{margin-top:auto;background:rgba(201,168,76,.12);border:1px dashed var(--gold);border-radius:6px;
+  padding:10px 14px;font-family:var(--serif-cn);font-size:14px;color:var(--ink-soft);line-height:1.5;}
+.tip b{font-family:var(--hand);font-size:19px;color:#A07F1E;font-weight:700;margin-right:6px;}
+
+/* flip button */
+.flip-btn-row{display:flex;justify-content:center;margin-top:22px;}
+.flip-btn{
+  cursor:pointer;border:none;font-family:var(--serif-cn);font-size:17px;letter-spacing:.12em;
+  color:#FBF7EF;background:var(--ink);padding:13px 30px;border-radius:30px;
+  display:inline-flex;align-items:center;gap:10px;transform:rotate(-1deg);
+  box-shadow:0 10px 20px -10px var(--shadow);transition:.2s;
+}
+.flip-btn:hover{transform:rotate(-1deg) translateY(-2px);background:#3a2113;}
+.flip-btn .pen{font-size:18px;}
+
+/* rating buttons */
+.ratings{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-top:24px;}
+.rate-btn{
+  --rot:-2deg;cursor:pointer;position:relative;padding:13px 4px 10px;border-radius:7px;
+  border:2.5px solid currentColor;background:rgba(255,255,255,.4);
+  transform:rotate(var(--rot));transition:transform .18s ease,background .18s;
+  font-family:var(--serif-cn);text-align:center;filter:url(#rough);
+}
+
+.rate-btn .rk{position:absolute;top:-9px;left:-9px;width:22px;height:22px;border-radius:50%;
+  background:currentColor;color:var(--card);font-family:var(--hand);font-weight:700;font-size:15px;
+  display:flex;align-items:center;justify-content:center;box-shadow:0 2px 4px rgba(0,0,0,.2);}
+.rate-btn .rlbl{display:block;font-size:14px;font-weight:600;}
+.rate-btn .rcn{display:block;font-family:var(--hand);font-size:20px;margin-top:1px;line-height:.9;}
+.rate-btn:hover{transform:rotate(var(--rot)) translateY(-3px) scale(1.04);background:rgba(255,255,255,.7);}
+.rate-btn:active{transform:rotate(var(--rot)) scale(.95);}
+.r-again{color:var(--rust-deep);}
+.r-hard{color:#B07A2E;}
+.r-good{color:var(--sage);}
+.r-easy{color:#5E8C62;}
+.r-perfect{color:var(--gold);}
+.ratings.hidden{opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:.3s;}
+.ratings{transition:.3s;}
+
+/* card slide-out */
+.card-stage.slide-out{animation:slideOut .42s ease forwards;}
+@keyframes slideOut{
+  to{transform:translateX(-46%) rotate(-9deg);opacity:0;}
+}
+.card-stage.slide-in{animation:slideIn .45s ease;}
+@keyframes slideIn{
+  from{transform:translateX(40%) rotate(7deg);opacity:0;}
+}
+
+/* ============ COMPLETION ============ */
+#view-done{display:flex;align-items:center;justify-content:center;text-align:center;}
+.done-inner{position:relative;z-index:2;max-width:480px;width:100%;}
+.done-stamp{
+  --rot:-8deg;display:inline-block;font-family:var(--hand-cn);font-size:clamp(72px,20vw,118px);
+  color:var(--rust);border:6px double var(--rust);border-radius:14px;padding:6px 30px 14px;
+  transform:rotate(var(--rot));filter:url(#rough);opacity:.92;
+  box-shadow:inset 0 0 0 4px rgba(196,96,58,.08);
+  animation:stampIn .7s cubic-bezier(.2,1.4,.4,1) both;
+}
+.done-sub{font-family:var(--hand);font-size:clamp(26px,6vw,34px);color:var(--ink-soft);margin:22px 0 4px;}
+.done-streak{font-family:var(--serif-cn);font-size:16px;color:var(--ink-faint);letter-spacing:.06em;}
+.done-streak b{color:var(--rust);font-family:var(--hand);font-size:26px;}
+.done-stats{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:28px 0 30px;}
+.stat-tile{background:var(--card);border:1px solid rgba(44,24,16,.08);border-radius:7px;padding:14px;
+  box-shadow:0 8px 20px -14px var(--shadow);}
+.stat-tile .sv{font-family:var(--hand);font-weight:700;font-size:38px;line-height:.8;color:var(--rust);}
+.stat-tile .sl{font-family:var(--serif-cn);font-size:13px;color:var(--ink-soft);margin-top:6px;}
+.done-break{display:flex;justify-content:center;flex-wrap:wrap;gap:8px;margin-bottom:30px;}
+.bk-chip{font-family:var(--serif-cn);font-size:13px;padding:5px 12px;border-radius:20px;
+  border:1.5px solid currentColor;background:rgba(255,255,255,.35);display:inline-flex;gap:6px;align-items:center;}
+.bk-chip b{font-family:var(--hand);font-size:18px;}
+.return-btn{
+  cursor:pointer;border:none;font-family:var(--serif-cn);font-size:17px;letter-spacing:.18em;
+  color:#FBF7EF;background:var(--ink);padding:14px 38px;border-radius:30px;
+  transform:rotate(-1deg);box-shadow:0 12px 24px -12px var(--shadow);transition:.2s;
+}
+.return-btn:hover{transform:rotate(-1deg) translateY(-2px);}
+
+/* confetti */
+.confetti-layer{position:fixed;inset:0;z-index:1;pointer-events:none;overflow:hidden;}
+.confetti{position:absolute;top:-40px;width:11px;height:15px;opacity:.9;
+  animation:fall linear forwards;border-radius:1px;}
+@keyframes fall{
+  0%{transform:translateY(-40px) rotate(0deg);opacity:0;}
+  10%{opacity:.95;}
+  100%{transform:translateY(108vh) rotate(720deg);opacity:.9;}
+}
+
+/* footer credit */
+.foot{text-align:center;font-family:var(--serif-cn);font-size:12px;color:var(--ink-faint);
+  margin-top:38px;letter-spacing:.08em;opacity:.7;}
+
+@media (max-width:430px){
+  .badge-row{gap:6px;}
+  .badge .bnum{font-size:24px;}
+  .badge .blbl{font-size:9px;}
+  .ratings{gap:6px;}
+  .rate-btn .rlbl{font-size:12px;}
+  .rate-btn .rcn{font-size:17px;}
+  .streak-stamp{width:90px;height:90px;}
+  .face{padding:30px 22px;}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation-duration:.001s !important;}
+  .view{transition:opacity .2s;}
+}
+</style>
+</head>
+<body>
+
+<!-- rough-edge filter for stamps -->
+<svg width="0" height="0" style="position:absolute">
+  <filter id="rough"><feTurbulence type="fractalNoise" baseFrequency="0.012" numOctaves="2" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="3"/></filter>
+</svg>
+
+<div id="app">
+
+    <!-- ===================== VIEW 1 · DASHBOARD ===================== -->
+  <section class="view active" id="view-dash" data-screen-label="Dashboard">
+    <div class="wrap">
+      <div class="dash-head">
+        <div class="brand-block">
+          <div class="kanji">脑记</div>
+          <div class="latin">BrainNote</div>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:flex-end;gap:8px;">
+          <button class="theme-toggle" id="themeToggle" aria-label="切换深色模式"><span class="icon-moon">🌙</span><span class="icon-sun">☀️</span></button>
+          <div class="today-date" id="todayDate">
+            周二<br>6月2日
+            <small>Tuesday</small>
+          </div>
+        </div>
+      </div>
+
+      <div style="display:flex;align-items:center;gap:18px;margin-bottom:30px;flex-wrap:wrap;">
+        <div class="streak-stamp">
+          <span class="fire">🔥</span>
+          <span class="num" id="streakNum">7</span>
+          <span class="lbl">Day</span>
+        </div>
+        <div style="font-family:var(--serif-cn);color:var(--ink-soft);font-size:15px;line-height:1.6;max-width:320px;">
+          连续第 <b class="streak-copy-num" style="font-family:var(--hand);font-size:22px;color:var(--rust);">7</b> 天没有断更，<br>笔记本又厚了一点点。
+        </div>
+      </div>
+
+      <!-- heatmap -->
+      <div class="paper heat-card">
+        <span class="washi" style="top:-12px;right:24px;transform:rotate(8deg);"></span>
+        <div class="section-label">复习热力图</div>
+        <div class="heat-scroll">
+          <div class="heat-grid" id="heatGrid">
+            <div class="heat-months" id="heatMonths"></div>
+          </div>
+        </div>
+        <div class="heat-legend">
+          <span>少</span>
+          <span class="heat-cell"></span>
+          <span class="heat-cell l1"></span>
+          <span class="heat-cell l2"></span>
+          <span class="heat-cell l3"></span>
+          <span class="heat-cell l4"></span>
+          <span>多</span>
+        </div>
+      </div>
+
+      <!-- mastery badges -->
+      <div class="section-label">掌握分布</div>
+      <div class="badge-row" id="badgeRow"></div>
+
+      <!-- start -->
+      <div class="start-wrap">
+        <div class="due-note">今日 <b id="dueCount">5</b> 条待复习</div>
+        <button class="wax-seal" id="startBtn" aria-label="开始复习">
+          开始复习
+          <span class="wlbl">START</span>
+        </button>
+      </div>
+
+      <div class="foot">手账式间隔重复 · 一笔一画，记进脑子里</div>
+    </div>
+  </section>
+
+  <!-- ===================== VIEW 2 · FLASHCARD ===================== -->
+  <section class="view" id="view-review" data-screen-label="Flashcard Review">
+    <div class="wrap">
+      <div class="review-top">
+        <button class="icon-btn" id="backBtn" title="返回 (Esc)">←</button>
+        <div class="progress-strip"><div class="progress-fill" id="progFill"></div></div>
+        <div class="progress-count" id="progCount">1 / 5</div>
+      </div>
+
+      <div class="card-stage" id="cardStage">
+        <div class="flip" id="flipCard">
+          <!-- FRONT -->
+          <div class="face front">
+            <span class="card-tag" id="cardType">v. 动词</span>
+            <div class="card-front-mid">
+              <div class="word-big" id="cardWord">abandon</div>
+              <div class="phonetic" id="cardPhon">/əˈbændən/</div>
+            </div>
+            <div class="flip-hint">空格 / 点击翻转卡片 →</div>
+          </div>
+          <!-- BACK -->
+          <div class="face back">
+            <div class="word-small" id="backWord">abandon</div>
+            <div class="answer-big" id="backAnswer">放弃；抛弃</div>
+            <div class="example" id="backExample">"He abandoned the project halfway."</div>
+            <div class="tip" id="backTip"><b>记</b><span id="tipText">a-ban-don：把禁令(ban)丢下，就是放弃。</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="flip-btn-row" id="flipRow">
+        <button class="flip-btn" id="flipBtn"><span class="pen">✒️</span>翻转</button>
+      </div>
+
+      <div class="ratings hidden" id="ratings">
+        <button class="rate-btn r-again"   data-rate="again"   data-key="1"><span class="rk">1</span><span class="rlbl">again</span><span class="rcn">重来</span></button>
+        <button class="rate-btn r-hard"    data-rate="hard"    data-key="2"><span class="rk">2</span><span class="rlbl">hard</span><span class="rcn">困难</span></button>
+        <button class="rate-btn r-good"    data-rate="good"    data-key="3"><span class="rk">3</span><span class="rlbl">good</span><span class="rcn">良好</span></button>
+        <button class="rate-btn r-easy"    data-rate="easy"    data-key="4"><span class="rk">4</span><span class="rlbl">easy</span><span class="rcn">简单</span></button>
+        <button class="rate-btn r-perfect" data-rate="perfect" data-key="5"><span class="rk">5</span><span class="rlbl">perfect</span><span class="rcn">完美</span></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== VIEW 3 · COMPLETION ===================== -->
+  <section class="view" id="view-done" data-screen-label="Completion">
+    <div class="confetti-layer" id="confetti"></div>
+    <div class="done-inner">
+      <div class="done-stamp">完成！</div>
+      <div class="done-sub">今天的笔记，复习完毕。</div>
+      <div class="done-streak">连胜更新 · <b id="doneStreak">8</b> 天</div>
+
+      <div class="done-stats">
+        <div class="stat-tile"><div class="sv" id="doneCount">5</div><div class="sl">张卡片已复习</div></div>
+        <div class="stat-tile"><div class="sv" id="doneTime">3′12″</div><div class="sl">用时</div></div>
+      </div>
+
+      <div class="done-break" id="doneBreak"></div>
+
+      <button class="return-btn" id="returnBtn">返回笔记本</button>
+    </div>
+  </section>
+
+</div>
+
+<script>
+/* ===================== DATA ===================== */
+const API = 'http://localhost:8765/api';
+let WORDS = [];   // 从 /api/due 动态加载
+const RATES=[
+  {k:"again",cn:"重来",cls:"r-again"},
+  {k:"hard",cn:"困难",cls:"r-hard"},
+  {k:"good",cn:"良好",cls:"r-good"},
+  {k:"easy",cn:"简单",cls:"r-easy"},
+  {k:"perfect",cn:"完美",cls:"r-perfect"}
+];
+
+/* ===================== STATE ===================== */
+let idx=0, flipped=false, locked=false;
+const tally={again:0,hard:0,good:0,easy:0,perfect:0};
+let startTime=0;
+
+const $=s=>document.querySelector(s);
+const views={dash:$("#view-dash"),review:$("#view-review"),done:$("#view-done")};
+
+function show(name){
+  Object.values(views).forEach(v=>v.classList.remove("active"));
+  views[name].classList.add("active");
+  window.scrollTo(0,0);
+}
+
+/* ===================== DASHBOARD BUILD ===================== */
+function buildHeatmap(todayFilled, realData = {}){
+  const grid=$("#heatGrid");
+  const months=$("#heatMonths");
+  // 26 weeks back from today
+  const today=new Date(); // dynamic: real today
+  const weeks=26;
+  // start on the Sunday of (weeks-1) weeks ago
+  const start=new Date(today);
+  start.setDate(start.getDate()-(weeks-1)*7-today.getDay());
+  let html="";
+  let monthMarks=[];
+  let lastMonth=-1;
+  const mNames=["1月","2月","3月","4月","5月","6月","7月","8月","9月","10月","11月","12月"];
+  for(let c=0;c<weeks;c++){
+    let col="";
+    for(let r=0;r<7;r++){
+      const d=new Date(start); d.setDate(start.getDate()+c*7+r);
+      const isFuture=d>today;
+      const isToday=d.toDateString()===today.toDateString();
+      if(c===0&&r===0)lastMonth=d.getMonth();
+      if(r===0&&d.getMonth()!==lastMonth){ lastMonth=d.getMonth(); monthMarks.push({c,name:mNames[d.getMonth()]}); }
+      if(c===0&&r===0) monthMarks.push({c:0,name:mNames[d.getMonth()]});
+      let lvl=0;
+      if(!isFuture){
+        const dateStr = `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
+        const count = realData[dateStr] || 0;
+        if (isToday && todayFilled) lvl = 4;
+        else if (count >= 20) lvl = 4;
+        else if (count >= 10) lvl = 3;
+        else if (count >= 5)  lvl = 2;
+        else if (count >= 1)  lvl = 1;
+        else lvl = 0;
+      }
+      let cls="heat-cell"+(lvl?` l${lvl}`:"")+(isToday?" today":"")+(isFuture?" future":"");
+      col+=`<div class="${cls}" style="${isFuture?'opacity:.25':''}"></div>`;
+    }
+    html+=`<div class="heat-col">${col}</div>`;
+  }
+  grid.innerHTML=`<div class="heat-months" id="heatMonths"></div>`+html;
+  // month labels
+  const mLayer=grid.querySelector(".heat-months");
+  // dedupe by column
+  const seen=new Set();
+  mLayer.innerHTML=monthMarks.filter(m=>{if(seen.has(m.name))return false;seen.add(m.name);return true;})
+    .map(m=>`<span style="position:absolute;left:${m.c*16}px;">${m.name}</span>`).join("");
+}
+
+/* ===================== CARD RENDER ===================== */
+function renderCard(){
+  const c=WORDS[idx];
+  $("#cardType").textContent=c.word_type || '';
+  $("#cardWord").textContent=c.word;
+  $("#cardPhon").textContent=c.phonetic || '';
+  $("#backWord").textContent=c.word;
+  $("#backAnswer").textContent=c.answer || '';
+  $("#backExample").textContent=c.example ? '"'+c.example+'"' : '';
+  $("#tipText").textContent=c.tip || '';
+  $("#progCount").textContent=(idx+1)+" / "+WORDS.length;
+  $("#progFill").style.width=((idx)/WORDS.length*100)+"%";
+}
+
+function setFlip(state){
+  flipped=state;
+  $("#flipCard").classList.toggle("is-flipped",flipped);
+  $("#ratings").classList.toggle("hidden",!flipped);
+  $("#flipRow").style.display=flipped?"none":"flex";
+}
+
+function toggleFlip(){ if(!locked) setFlip(!flipped); }
+
+function rate(k){
+  if(locked||!flipped)return;
+  locked=true;
+  tally[k]++;
+  // 提交评分到后端
+  const card = WORDS[idx];
+  fetch(`${API}/rate`, {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify({id: card.id, type: card.type, rating: k})
+  }).catch(e => console.error('rate failed', e));
+  const stage=$("#cardStage");
+  stage.classList.add("slide-out");
+  setTimeout(()=>{
+    stage.classList.remove("slide-out");
+    idx++;
+    if(idx>=WORDS.length){ locked=false; finish(); return; }
+    setFlip(false);
+    renderCard();
+    stage.classList.add("slide-in");
+    setTimeout(()=>{stage.classList.remove("slide-in");locked=false;},460);
+  },420);
+}
+
+/* ===================== FLOW ===================== */
+async function startReview(){
+  // 加载今日待复习
+  const res = await fetch(`${API}/due`).then(r => r.json());
+  WORDS = res.cards;
+  if (WORDS.length === 0) {
+    alert('今日无待复习！');
+    return;
+  }
+  idx=0; setFlip(false); renderCard();
+  Object.keys(tally).forEach(k=>tally[k]=0);
+  startTime=Date.now();
+  show("review");
+}
+
+function finish(){
+  $("#progFill").style.width="100%";
+  // stats
+  const secs=Math.max(1,Math.round((Date.now()-startTime)/1000));
+  const mm=Math.floor(secs/60), ss=secs%60;
+  $("#doneTime").textContent=mm+"′"+String(ss).padStart(2,"0")+"″";
+  $("#doneCount").textContent=WORDS.length;
+  // streak will be refreshed by loadStats below
+  $("#doneBreak").innerHTML=RATES.map(r=>{
+    const n=tally[r.k]; if(!n)return"";
+    return `<span class="bk-chip ${r.cls}">${r.cn} <b>${n}</b></span>`;
+  }).join("")||`<span class="bk-chip r-good">已完成 <b>${WORDS.length}</b></span>`;
+  spawnConfetti();
+  show("done");
+  // 刷新 dashboard 统计（回到首页时数据是最新的）
+  loadStats();
+}
+
+function backToDash(){ show("dash"); }
+
+/* ===================== CONFETTI ===================== */
+function spawnConfetti(){
+  const layer=$("#confetti");
+  layer.innerHTML="";
+  const cols=["#C4603A","#C9A84C","#7A9E7E","#A24A2A","#D2724C","#5E8C62"];
+  for(let i=0;i<70;i++){
+    const c=document.createElement("div");
+    c.className="confetti";
+    c.style.left=Math.random()*100+"%";
+    c.style.background=cols[i%cols.length];
+    c.style.animationDuration=(2.6+Math.random()*2.4)+"s";
+    c.style.animationDelay=(Math.random()*1.2)+"s";
+    const w=6+Math.random()*8;
+    c.style.width=w+"px";
+    c.style.height=(w*1.3)+"px";
+    if(Math.random()>0.6)c.style.borderRadius="50%";
+    c.style.opacity=0.7+Math.random()*0.3;
+    layer.appendChild(c);
+  }
+  // tidy up after a while
+  setTimeout(()=>{ if(views.done.classList.contains("active")) layer.innerHTML=layer.innerHTML; },6000);
+}
+
+/* ===================== EVENTS ===================== */
+$("#startBtn").addEventListener("click",startReview);
+$("#flipBtn").addEventListener("click",toggleFlip);
+$("#flipCard").addEventListener("click",e=>{ if(!flipped) toggleFlip(); });
+$("#backBtn").addEventListener("click",backToDash);
+$("#returnBtn").addEventListener("click",backToDash);
+document.querySelectorAll(".rate-btn").forEach(b=>{
+  b.addEventListener("click",()=>rate(b.dataset.rate));
+});
+
+document.addEventListener("keydown",e=>{
+  const reviewing=views.review.classList.contains("active");
+  if(e.key==="Escape"){
+    if(views.review.classList.contains("active")||views.done.classList.contains("active")) backToDash();
+    return;
+  }
+  if(views.dash.classList.contains("active")){
+    if(e.key==="Enter"||e.code==="Space"){e.preventDefault();startReview();}
+    return;
+  }
+  if(reviewing){
+    if(e.code==="Space"){ e.preventDefault(); toggleFlip(); return; }
+    if(["1","2","3","4","5"].includes(e.key)){
+      if(flipped){ e.preventDefault(); rate(RATES[+e.key-1].k); }
+    }
+  }
+});
+
+
+/* ===================== THEME TOGGLE ===================== */
+const themeToggle = document.getElementById('themeToggle');
+const savedTheme = localStorage.getItem('brainnote-theme') || 'light';
+if(savedTheme === 'dark') document.documentElement.setAttribute('data-theme','dark');
+themeToggle.addEventListener('click', () => {
+  const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+  if(isDark){
+    document.documentElement.removeAttribute('data-theme');
+    localStorage.setItem('brainnote-theme','light');
+  } else {
+    document.documentElement.setAttribute('data-theme','dark');
+    localStorage.setItem('brainnote-theme','dark');
+  }
+});
+
+/* ===================== INIT ===================== */
+async function init() {
+  // 加载日期
+  try {
+    const d = await fetch(`${API}/today-date`).then(r => r.json());
+    document.getElementById('todayDate').innerHTML =
+      `${d.weekday_cn}<br>${d.date_cn}<small>${d.weekday_en}</small>`;
+  } catch(e) {}
+
+  // 加载统计
+  await loadStats();
+}
+
+async function loadStats() {
+  try {
+    const s = await fetch(`${API}/stats`).then(r => r.json());
+    // streak
+    document.getElementById('streakNum').textContent = s.streak;
+    document.querySelectorAll('.streak-copy-num').forEach(el => el.textContent = s.streak);
+    // also update done streak if visible
+    const ds = document.getElementById('doneStreak');
+    if (ds) ds.textContent = s.streak;
+    // due count
+    document.getElementById('dueCount').textContent = s.due_today;
+    // mastery badges
+    const MASTERY = [
+      {cls:'b-new',   lbl:'新词',  key:'new'},
+      {cls:'b-again', lbl:'重来',  key:'again'},
+      {cls:'b-hard',  lbl:'困难',  key:'hard'},
+      {cls:'b-good',  lbl:'良好',  key:'good'},
+      {cls:'b-easy',  lbl:'简单',  key:'easy'},
+      {cls:'b-perfect',lbl:'完美', key:'perfect'},
+    ];
+    document.getElementById('badgeRow').innerHTML = MASTERY.map(m =>
+      `<div class="badge ${m.cls}"><span class="bnum">${s.distribution[m.key]||0}</span><span class="blbl">${m.lbl}</span></div>`
+    ).join('');
+    // heatmap（传入真实数据）
+    buildHeatmap(false, s.heatmap);
+  } catch(e) {
+    console.error('stats load failed', e);
+  }
+}
+
+init();
+</script>
+</body>
+</html>
