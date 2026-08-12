@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>脑记 · 六级背词 · 2026-08-13</title>
+<style>
+  :root {
+    --paper: #F5F0E8;
+    --paper-dark: #1C1814;
+    --rust: #C4603A;
+    --sage: #7A9E7E;
+    --gold: #C9A84C;
+    --ink: #2b2620;
+    --ink-soft: #6b6258;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: "Noto Serif SC", "PingFang SC", "Songti SC", serif;
+    background: var(--paper);
+    color: var(--ink);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 24px 16px 60px;
+  }
+  .wrap { width: 100%; max-width: 560px; }
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 18px;
+  }
+  header h1 { font-size: 22px; margin: 0; color: var(--rust); letter-spacing: 1px; }
+  header .date { font-size: 13px; color: var(--ink-soft); }
+
+  .progress-bar {
+    height: 8px;
+    background: #e4dccb;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 8px;
+  }
+  .progress-fill {
+    height: 100%;
+    background: var(--rust);
+    transition: width .3s ease;
+  }
+  .progress-label {
+    font-size: 12px;
+    color: var(--ink-soft);
+    text-align: right;
+    margin-bottom: 20px;
+  }
+
+  .card {
+    background: #fffdf8;
+    border-radius: 14px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    padding: 28px 24px;
+    min-height: 320px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    border: 1px solid #e8e0cf;
+  }
+  .tag {
+    align-self: flex-start;
+    font-size: 11px;
+    padding: 3px 10px;
+    border-radius: 20px;
+    margin-bottom: 14px;
+    font-weight: 600;
+  }
+  .tag.mode-flip { background: #eee3cf; color: var(--gold); }
+  .tag.mode-en2cn { background: #e3ecdf; color: var(--sage); }
+  .tag.mode-cn2en { background: #f0ddd3; color: var(--rust); }
+  .tag.mode-spell { background: #e3e6f0; color: #5a6ba8; }
+  .tag.mode-cloze { background: #e6dcef; color: #7a5aa8; }
+  .tag.review-badge { background: var(--rust); color: #fff; margin-left: 6px; }
+
+  .word-main { font-size: 32px; font-weight: 700; margin: 4px 0 6px; }
+  .phonetic { font-size: 15px; color: var(--ink-soft); margin-bottom: 18px; font-style: italic; }
+  .hint { font-size: 13px; color: var(--ink-soft); margin-top: auto; text-align: center; }
+
+  .back-content { animation: fadeIn .25s ease; }
+  @keyframes fadeIn { from { opacity: 0; transform: translateY(6px);} to {opacity:1; transform: translateY(0);} }
+  .meaning-big { font-size: 24px; color: var(--rust); font-weight: 600; margin: 10px 0; }
+  .example { font-style: italic; color: var(--ink-soft); margin-bottom: 14px; font-size: 14px; }
+  .tip-box {
+    border: 1px dashed var(--gold);
+    border-radius: 8px;
+    padding: 10px 14px;
+    font-size: 13px;
+    color: #8a7226;
+    background: #fbf6e8;
+  }
+
+  .options { display: flex; flex-direction: column; gap: 10px; margin-top: 8px; }
+  .opt-btn {
+    background: #fffdf8;
+    border: 1.5px solid #ddd1b8;
+    border-radius: 10px;
+    padding: 14px 16px;
+    font-size: 15px;
+    text-align: left;
+    cursor: pointer;
+    transition: all .15s ease;
+    font-family: inherit;
+    color: var(--ink);
+  }
+  .opt-btn:hover:not(:disabled) { border-color: var(--rust); background: #fbf3ec; }
+  .opt-btn.correct { background: #e3f2e5; border-color: var(--sage); }
+  .opt-btn.wrong { background: #f7e2dc; border-color: var(--rust); }
+  .opt-btn:disabled { cursor: default; opacity: 0.85; }
+
+  .spell-row { display: flex; gap: 10px; margin-top: 10px; }
+  .spell-input {
+    flex: 1;
+    font-size: 20px;
+    padding: 12px 14px;
+    border-radius: 10px;
+    border: 1.5px solid #ddd1b8;
+    font-family: "Courier New", monospace;
+    letter-spacing: 1px;
+  }
+  .spell-input.correct { border-color: var(--sage); background: #e3f2e5; }
+  .spell-input.wrong { border-color: var(--rust); background: #f7e2dc; }
+  .btn {
+    background: var(--rust);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 12px 20px;
+    font-size: 15px;
+    cursor: pointer;
+    font-family: inherit;
+    font-weight: 600;
+  }
+  .btn:hover { opacity: .92; }
+  .btn.secondary { background: #ddd1b8; color: var(--ink); }
+  .btn.full { width: 100%; margin-top: 16px; }
+
+  .rating-row { display: flex; gap: 8px; margin-top: 18px; flex-wrap: wrap; }
+  .rating-btn {
+    flex: 1;
+    min-width: 60px;
+    padding: 12px 6px;
+    border-radius: 10px;
+    border: none;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    color: #fff;
+    font-family: inherit;
+  }
+  .rating-btn.again { background: #a33; }
+  .rating-btn.hard { background: #c47a3a; }
+  .rating-btn.good { background: var(--sage); }
+  .rating-btn.easy { background: #4a90a4; }
+  .rating-btn.perfect { background: var(--gold); }
+
+  .feedback-msg { font-size: 14px; margin-top: 10px; text-align: center; font-weight: 600; }
+  .feedback-msg.ok { color: var(--sage); }
+  .feedback-msg.no { color: var(--rust); }
+
+  /* —— 挖空造句题 —— */
+  .cloze-sentence { font-size: 19px; line-height: 1.7; margin: 10px 0 18px; }
+  .cloze-sentence .blank { border-bottom: 2px solid var(--rust); padding: 0 8px; color: var(--rust); font-weight: 700; }
+  .cloze-zh { font-size: 14px; color: var(--ink-soft); margin-top: 12px; line-height: 1.6; }
+  .cloze-zh-sentence { font-style: italic; font-size: 15px; color: var(--ink); }
+  .cloze-summary { font-size: 13px; color: var(--ink-soft); margin-top: 10px; }
+
+  .summary { text-align: center; }
+  .stamp {
+    display: inline-block;
+    border: 3px solid var(--rust);
+    color: var(--rust);
+    font-size: 30px;
+    font-weight: 800;
+    padding: 10px 28px;
+    border-radius: 8px;
+    transform: rotate(-2deg);
+    margin: 20px 0;
+  }
+  .stat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 20px 0; }
+  .stat-box { background: #f7f1e3; border-radius: 10px; padding: 14px; }
+  .stat-box .num { font-size: 26px; font-weight: 700; color: var(--rust); }
+  .stat-box .label { font-size: 12px; color: var(--ink-soft); margin-top: 2px; }
+  .wrong-list { text-align: left; margin-top: 16px; font-size: 14px; }
+  .wrong-list ul { padding-left: 18px; }
+  .wrong-list li { margin-bottom: 4px; }
+
+  .footer-note {
+    font-size: 12px;
+    color: var(--ink-soft);
+    text-align: center;
+    margin-top: 20px;
+    line-height: 1.6;
+  }
+  kbd {
+    background: #eee3cf;
+    border-radius: 4px;
+    padding: 1px 6px;
+    font-size: 11px;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>脑记 · 六级背词</h1>
+    <div class="date" id="dateLabel"></div>
+  </header>
+
+  <div class="progress-bar"><div class="progress-fill" id="progressFill" style="width:0%"></div></div>
+  <div class="progress-label" id="progressLabel">0 / 0</div>
+
+  <div id="cardArea"></div>
+
+  <div class="footer-note" id="footerNote"></div>
+</div>
+
+<script>
+// ============ 当日词表数据（构建时注入） ============
+const WORDS = [{"id": "attain", "path": "10-Words/attain.md", "word": "attain", "phonetic": "/ə'ten/", "meaning": "达到， 获得； 完成 (vt.)", "shortMeaning": "达到， 获得", "example": "", "tip": "", "mastery": "new", "due": "2026-06-12", "interval": 1.0, "ease": 2.5, "reviews": 0, "isReview": false}, {"id": "assumption", "path": "10-Words/assumption.md", "word": "assumption", "phonetic": "/ə'sʌmpʃən/", "meaning": "假定， 臆断； 担任， 承担 (n.)", "shortMeaning": "假定， 臆断", "example": "", "tip": "", "mastery": "new", "due": "2026-06-11", "interval": 1.0, "ease": 2.5, "reviews": 0, "isReview": false}, {"id": "associate", "path": "10-Words/associate.md", "word": "associate", "phonetic": "/ə'soʃɪet/", "meaning": "把…联系在一起；使联合，结合；交往\t[ə'səuʃiət] (v.) / 副的 (adj.) / 伙伴，同事 (n.)", "shortMeaning": "把…联系在一起", "example": "", "tip": "", "mastery": "new", "due": "2026-06-11", "interval": 1.0, "ease": 2.5, "reviews": 0, "isReview": false}, {"id": "assume", "path": "10-Words/assume.md", "word": "assume", "phonetic": "/ə'sum/", "meaning": "假定， 假设； 臆断； 承担， 担任； 呈现 (vt.)", "shortMeaning": "假定， 假设", "example": "", "tip": "", "mastery": "new", "due": "2026-06-11", "interval": 1.0, "ease": 2.5, "reviews": 0, "isReview": false}, {"id": "assistance", "path": "10-Words/assistance.md", "word": "assistance", "phonetic": "/ə'sɪstəns/", "meaning": "协助， 援助 (n.)", "shortMeaning": "协助， 援助", "example": "", "tip": "", "mastery": "new", "due": "2026-06-11", "interval": 1.0, "ease": 2.5, "reviews": 0, "isReview": false}, {"id": "atmosphere", "path": "10-Words/atmosphere.md", "word": "atmosphere", "phonetic": "/'ætməsfɪr/", "meaning": "大气， 空气； 气氛， 环境 (n.)", "shortMeaning": "大气， 空气", "example": "", "tip": "", "mastery": "new", "due": "2026-06-12", "interval": 1.0, "ease": 2.5, "reviews": 0, "isReview": false}, {"id": "attendant", "path": "10-Words/attendant.md", "word": "attendant", "phonetic": "/ə'tɛndənt/", "meaning": "伴随的， 随之产生的 (adj.) / 服务人员，侍者，随从 (n.)", "shortMeaning": "伴随的， 随之产生的", "example": "", "tip": "", "mastery": "new", "due": "2026-06-12", "interval": 1.0, "ease": 2.5, "reviews": 0, "isReview": false}, {"id": "attract", "path": "10-Words/attract.md", "word": "attract", "phonetic": "/ə'trækt/", "meaning": "吸引， 引起…注意 (vt.)", "shortMeaning": "吸引， 引起…注意", "example": "", "tip": "", "mastery": "new", "due": "2026-06-12", "interval": 1.0, "ease": 2.5, "reviews": 0, "isReview": false}, {"id": "assure", "path": "10-Words/assure.md", "word": "assure", "phonetic": "/ə'ʃʊr/", "meaning": "使确信； 确保， 向…保证 (vt.)", "shortMeaning": "使确信", "example": "", "tip": "", "mastery": "new", "due": "2026-06-12", "interval": 1.0, "ease": 2.5, "reviews": 0, "isReview": false}, {"id": "assimilate", "path": "10-Words/assimilate.md", "word": "assimilate", "phonetic": "/ə'sɪməlet/", "meaning": "被吸收， 被消化； 被同化 (vi.) / 吸收，消化；使同化 (vt.)", "shortMeaning": "被吸收， 被消化", "example": "", "tip": "", "mastery": "new", "due": "2026-06-11", "interval": 1.0, "ease": 2.5, "reviews": 0, "isReview": false}, {"id": "atlas", "path": "10-Words/atlas.md", "word": "atlas", "phonetic": "/'ætləs/", "meaning": "地图集 (n.)", "shortMeaning": "地图集", "example": "", "tip": "", "mastery": "new", "due": "2026-06-12", "interval": 1.0, "ease": 2.5, "reviews": 0, "isReview": false}, {"id": "attitude", "path": "10-Words/attitude.md", "word": "attitude", "phonetic": "/'ætɪtʊd/", "meaning": "态度， 看法； 姿势 (n.)", "shortMeaning": "态度， 看法", "example": "", "tip": "", "mastery": "new", "due": "2026-06-12", "interval": 1.0, "ease": 2.5, "reviews": 0, "isReview": false}, {"id": "assurance", "path": "10-Words/assurance.md", "word": "assurance", "phonetic": "/ə'ʃʊrəns/", "meaning": "把握， 信心； 保证， 表示保证的话； 保险 (n.)", "shortMeaning": "把握， 信心", "example": "", "tip": "", "mastery": "new", "due": "2026-06-11", "interval": 1.0, "ease": 2.5, "reviews": 0, "isReview": false}, {"id": "association", "path": "10-Words/association.md", "word": "association", "phonetic": "/ə,soʃɪ'eʃən/", "meaning": "协会， 团体； 联合， 交往 (n.)", "shortMeaning": "协会， 团体", "example": "", "tip": "", "mastery": "new", "due": "2026-06-11", "interval": 1.0, "ease": 2.5, "reviews": 0, "isReview": false}, {"id": "attribute", "path": "10-Words/attribute.md", "word": "attribute", "phonetic": "/ə'trɪbjut/", "meaning": "把…归因于 (vt.) / 属性 (n.)", "shortMeaning": "把…归因于", "example": "", "tip": "", "mastery": "new", "due": "2026-06-12", "interval": 1.0, "ease": 2.5, "reviews": 0, "isReview": false}, {"id": "attempt", "path": "10-Words/attempt.md", "word": "attempt", "phonetic": "/ə'tɛmpt/", "meaning": "尝试， 试图， 努力 (vt.)", "shortMeaning": "尝试， 试图， 努力", "example": "", "tip": "", "mastery": "new", "due": "2026-06-12", "interval": 1.0, "ease": 2.5, "reviews": 0, "isReview": false}, {"id": "assimilation", "path": "10-Words/assimilation.md", "word": "assimilation", "phonetic": "/əˌsɪməˈleʃən/", "meaning": "同化， 同化作用； 消化 (n.)", "shortMeaning": "同化， 同化作用", "example": "", "tip": "", "mastery": "new", "due": "2026-06-11", "interval": 1.0, "ease": 2.5, "reviews": 0, "isReview": false}, {"id": "attach", "path": "10-Words/attach.md", "word": "attach", "phonetic": "/ə'tætʃ/", "meaning": "缚， 系， 贴， 附加； 使依恋， 使喜爱； 使附属； 认为有 (vt.)", "shortMeaning": "缚， 系， 贴， 附加", "example": "", "tip": "", "mastery": "new", "due": "2026-06-12", "interval": 1.0, "ease": 2.5, "reviews": 0, "isReview": false}, {"id": "attack", "path": "10-Words/attack.md", "word": "attack", "phonetic": "/ə'tæk/", "meaning": "攻击， 进攻； 突然发作 (n&vt.)", "shortMeaning": "攻击， 进攻", "example": "", "tip": "", "mastery": "new", "due": "2026-06-12", "interval": 1.0, "ease": 2.5, "reviews": 0, "isReview": false}, {"id": "audience", "path": "10-Words/audience.md", "word": "audience", "phonetic": "/'ɔdɪəns/", "meaning": "听众， 观众； 读者 (n.)", "shortMeaning": "听众， 观众", "example": "", "tip": "", "mastery": "new", "due": "2026-06-12", "interval": 1.0, "ease": 2.5, "reviews": 0, "isReview": false}, {"id": "assignment", "path": "10-Words/assignment.md", "word": "assignment", "phonetic": "/ə'saɪnmənt/", "meaning": "任务； 指定的作业； 分配， 指派 (n.)", "shortMeaning": "任务", "example": "", "tip": "", "mastery": "new", "due": "2026-06-11", "interval": 1.0, "ease": 2.5, "reviews": 0, "isReview": false}, {"id": "attractive", "path": "10-Words/attractive.md", "word": "attractive", "phonetic": "/ə'træktɪv/", "meaning": "有吸引力的， 引起注意的 (adj.)", "shortMeaning": "有吸引力的， 引起注意的", "example": "", "tip": "", "mastery": "new", "due": "2026-06-12", "interval": 1.0, "ease": 2.5, "reviews": 0, "isReview": false}, {"id": "auction", "path": "10-Words/auction.md", "word": "auction", "phonetic": "/'ɔkʃən/", "meaning": "拍卖 (n&vt.)", "shortMeaning": "拍卖", "example": "", "tip": "", "mastery": "new", "due": "2026-06-12", "interval": 1.0, "ease": 2.5, "reviews": 0, "isReview": false}, {"id": "assign", "path": "10-Words/assign.md", "word": "assign", "phonetic": "/ə'saɪn/", "meaning": "指派， 分配； 布置； 指定 (vt.)", "shortMeaning": "指派， 分配", "example": "", "tip": "", "mastery": "new", "due": "2026-06-11", "interval": 1.0, "ease": 2.5, "reviews": 0, "isReview": false}, {"id": "athlete", "path": "10-Words/athlete.md", "word": "athlete", "phonetic": "/'æθlit/", "meaning": "运动员， 体育家 (n.)", "shortMeaning": "运动员， 体育家", "example": "", "tip": "", "mastery": "new", "due": "2026-06-12", "interval": 1.0, "ease": 2.5, "reviews": 0, "isReview": false}];
+
+// ============ 挖空造句数据（构建时注入；key = word） ============
+// 每个词: {sentence_en, sentence_zh}；缺失的词在浏览器端静默跳过挖空题
+const CLOZE = {"attain": {"sentence_en": "To attain success, you must be willing to work hard and persist.", "sentence_zh": "为了获得成功，你必须愿意努力工作并坚持不懈。"}, "assumption": {"sentence_en": "We should question every assumption before making a final decision.", "sentence_zh": "在做出最终决定之前，我们应该质疑每一个假设。"}, "associate": {"sentence_en": "You should associate the word with its context to remember it better.", "sentence_zh": "你应该把这个词与它的语境联系起来，以便更好地记住它。"}, "assume": {"sentence_en": "Despite the delays, we must assume that the project will be completed on time.", "sentence_zh": "尽管有延误，我们必须假设该项目将按时完成。"}, "assistance": {"sentence_en": "We need your assistance to complete the project on time.", "sentence_zh": "我们需要你的协助以按时完成项目。"}, "atmosphere": {"sentence_en": "The peaceful atmosphere in the library helps students concentrate on their studies.", "sentence_zh": "图书馆里宁静的氛围有助于学生专心学习。"}, "attendant": {"sentence_en": "We cannot ignore the attendant social problems caused by rapid urbanization.", "sentence_zh": "我们不能忽视快速城市化所带来的一系列社会问题。"}, "attract": {"sentence_en": "To attract more customers, the shop must offer better service.", "sentence_zh": "为了吸引更多顾客，这家商店必须提供更好的服务。"}, "assure": {"sentence_en": "I can assure you that the project will be completed on time.", "sentence_zh": "我可以向你保证，这个项目将按时完成。"}, "assimilate": {"sentence_en": "It is important to assimilate nutrients from food for good health.", "sentence_zh": "为了身体健康，从食物中吸收营养是很重要的。"}, "atlas": {"sentence_en": "This atlas provides detailed maps of every region in the world.", "sentence_zh": "这本地图集提供了世界上每个地区的详细地图。"}, "attitude": {"sentence_en": "A positive attitude can help you overcome many difficulties in life.", "sentence_zh": "积极的态度能帮助你克服生活中的许多困难。"}, "assurance": {"sentence_en": "He gave me his assurance that he would help.", "sentence_zh": "他向我保证他会帮忙。"}, "association": {"sentence_en": "The association aims to promote cultural exchange between the two countries.", "sentence_zh": "该协会旨在促进两国之间的文化交流。"}, "attribute": {"sentence_en": "We can attribute his success to hard work and persistence.", "sentence_zh": "我们可以把他的成功归因于勤奋和坚持。"}, "attempt": {"sentence_en": "Before giving up, we should attempt to find a better solution.", "sentence_zh": "在放弃之前，我们应该尝试找到更好的解决方案。"}, "assimilation": {"sentence_en": "The assimilation of new ideas into a culture can be a gradual process.", "sentence_zh": "新思想融入文化的过程可能是渐进的。"}, "attach": {"sentence_en": "You should attach the receipt to the expense report before submitting it.", "sentence_zh": "你应该在提交之前把收据附在费用报告上。"}, "attack": {"sentence_en": "The strategy to attack the enemy's weakest point requires careful planning.", "sentence_zh": "攻击敌人最弱点的策略需要仔细规划。"}, "audience": {"sentence_en": "The speaker must engage the audience with clear arguments and vivid examples.", "sentence_zh": "演讲者必须用清晰的论点和生动的例子来吸引听众。"}, "assignment": {"sentence_en": "The teacher will announce the assignment for next week after the lecture.", "sentence_zh": "老师将在讲座后宣布下周的任务。"}, "attractive": {"sentence_en": "The attractive design of the new smartphone caught my attention immediately.", "sentence_zh": "新款智能手机的吸引人的设计立刻引起了我的注意。"}, "auction": {"sentence_en": "If you want to sell your old furniture quickly, you can auction it online.", "sentence_zh": "如果你想快速卖掉旧家具，你可以在网上拍卖。"}, "assign": {"sentence_en": "You should assign a specific task to each team member.", "sentence_zh": "你应该给每个团队成员分配一项具体任务。"}, "athlete": {"sentence_en": "The athlete must maintain a strict diet to achieve peak performance.", "sentence_zh": "运动员必须保持严格的饮食以达到最佳表现。"}};
+// 从未错过的新词触发挖空题的概率（0~1）
+const CLOZE_PROB_NEW = 0.15;
+
+// ============ 会话状态 ============
+// 每个词的练习队列：flip -> en2cn -> cn2en -> spell
+// 任一环节答错，该词重新排到队列后方（间隔几张卡）重新做，从头开始四关
+const STAGES = ['flip', 'en2cn', 'cn2en', 'spell'];
+
+function shuffle(arr) {
+  const a = arr.slice();
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
+let queue = shuffle(WORDS).map(w => ({ word: w, stageIndex: 0, wrongCount: 0, log: {flip:null, en2cn:null, cn2en:null, spelling:null} }));
+const totalWords = WORDS.length;
+let completed = []; // finished word entries (with final results + cloze record)
+const startTime = Date.now();
+
+const cardArea = document.getElementById('cardArea');
+const progressFill = document.getElementById('progressFill');
+const progressLabel = document.getElementById('progressLabel');
+const dateLabel = document.getElementById('dateLabel');
+dateLabel.textContent = new Date().toLocaleDateString('zh-CN', {year:'numeric', month:'long', day:'numeric', weekday:'long'});
+
+function updateProgress() {
+  const done = Math.min(completed.length, totalWords);
+  progressFill.style.width = (done / totalWords * 100) + '%';
+  progressLabel.textContent = `${done} / ${totalWords}`;
+}
+
+function buildDistractors(correct, pool, count) {
+  const others = pool.filter(w => w.id !== correct.id);
+  return shuffle(others).slice(0, count);
+}
+
+function render() {
+  updateProgress();
+  if (queue.length === 0) { renderSummary(); return; }
+  const item = queue[0];
+  if (item.type === 'cloze') { renderCloze(item); return; }
+  const stage = STAGES[item.stageIndex];
+  if (stage === 'flip') renderFlip(item);
+  else if (stage === 'en2cn') renderEn2Cn(item);
+  else if (stage === 'cn2en') renderCn2En(item);
+  else if (stage === 'spell') renderSpell(item);
+}
+
+function tagHtml(cls, label, item) {
+  const badge = item.word.isReview ? `<span class="tag review-badge">复习</span>` : '';
+  return `<span class="tag ${cls}">${label}</span>${badge}`;
+}
+
+function escapeHtml(s) {
+  return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+}
+
+function escapeRegExp(s) {
+  return String(s).replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
+
+// ---------- Stage 1: 遮词卡片 ----------
+function renderFlip(item) {
+  const w = item.word;
+  cardArea.innerHTML = `
+    <div class="card">
+      ${tagHtml('mode-flip', '① 遮词卡片', item)}
+      <div class="word-main">${w.word}</div>
+      <div class="phonetic">${w.phonetic || ''}</div>
+      <div id="flipBody"></div>
+      <div class="hint" id="flipHint">点击卡片或按 <kbd>空格</kbd> 翻转</div>
+    </div>
+  `;
+  let flipped = false;
+  const card = cardArea.querySelector('.card');
+  function doFlip() {
+    if (flipped) return;
+    flipped = true;
+    document.getElementById('flipBody').innerHTML = `
+      <div class="back-content">
+        <div class="meaning-big">${w.meaning}</div>
+        ${w.example ? `<div class="example">${w.example}</div>` : ''}
+        ${w.tip ? `<div class="tip-box">${w.tip}</div>` : ''}
+      </div>
+      <button class="btn full" id="flipNext">认识了，下一关 →</button>
+    `;
+    document.getElementById('flipHint').style.display = 'none';
+    document.getElementById('flipNext').onclick = () => {
+      item.log.flip = 'seen';
+      item.stageIndex++;
+      render();
+    };
+  }
+  card.onclick = doFlip;
+  const keyHandler = (e) => { if (e.code === 'Space') { e.preventDefault(); doFlip(); } };
+  document.addEventListener('keydown', keyHandler, { once: true });
+}
+
+// ---------- Stage 2: 看英选中 ----------
+function renderEn2Cn(item) {
+  const w = item.word;
+  const distractors = buildDistractors(w, WORDS, 3);
+  const options = shuffle([w, ...distractors]);
+  cardArea.innerHTML = `
+    <div class="card">
+      ${tagHtml('mode-en2cn', '② 看英选中', item)}
+      <div class="word-main">${w.word}</div>
+      <div class="phonetic">${w.phonetic || ''}</div>
+      <div class="options" id="optList"></div>
+      <div class="feedback-msg" id="fbMsg"></div>
+    </div>
+  `;
+  const optList = document.getElementById('optList');
+  options.forEach(opt => {
+    const btn = document.createElement('button');
+    btn.className = 'opt-btn';
+    btn.textContent = opt.shortMeaning;
+    btn.onclick = () => handleAnswer(opt.id === w.id, btn, optList, item, 'en2cn');
+    optList.appendChild(btn);
+  });
+}
+
+// ---------- Stage 3: 看中选英 ----------
+function renderCn2En(item) {
+  const w = item.word;
+  const distractors = buildDistractors(w, WORDS, 3);
+  const options = shuffle([w, ...distractors]);
+  cardArea.innerHTML = `
+    <div class="card">
+      ${tagHtml('mode-cn2en', '③ 看中选英', item)}
+      <div class="meaning-big" style="font-size:22px;">${w.shortMeaning}</div>
+      <div class="options" id="optList"></div>
+      <div class="feedback-msg" id="fbMsg"></div>
+    </div>
+  `;
+  const optList = document.getElementById('optList');
+  options.forEach(opt => {
+    const btn = document.createElement('button');
+    btn.className = 'opt-btn';
+    btn.textContent = opt.word;
+    btn.onclick = () => handleAnswer(opt.id === w.id, btn, optList, item, 'cn2en');
+    optList.appendChild(btn);
+  });
+}
+
+function handleAnswer(isCorrect, btn, container, item, stageKey) {
+  Array.from(container.children).forEach(b => b.disabled = true);
+  const fb = document.getElementById('fbMsg');
+  if (isCorrect) {
+    btn.classList.add('correct');
+    fb.textContent = '✓ 正确';
+    fb.className = 'feedback-msg ok';
+    item.log[stageKey] = true;
+  } else {
+    btn.classList.add('wrong');
+    // reveal correct one
+    const correctText = item.word[stageKey === 'en2cn' ? 'shortMeaning' : 'word'];
+    Array.from(container.children).forEach(b => { if (b.textContent === correctText) b.classList.add('correct'); });
+    fb.textContent = '✗ 错误，已记录，稍后会再次出现';
+    fb.className = 'feedback-msg no';
+    item.log[stageKey] = false;
+    item.wrongCount++;
+  }
+  setTimeout(() => {
+    if (isCorrect) {
+      item.stageIndex++;
+    } else {
+      requeueWithError(item);
+    }
+    render();
+  }, isCorrect ? 500 : 1100);
+}
+
+// ---------- Stage 4: 拼写练习 ----------
+function renderSpell(item) {
+  const w = item.word;
+  cardArea.innerHTML = `
+    <div class="card">
+      ${tagHtml('mode-spell', '④ 拼写练习', item)}
+      <div class="meaning-big" style="font-size:20px;">${w.shortMeaning}</div>
+      <div class="phonetic">${w.phonetic || ''}</div>
+      <div class="spell-row">
+        <input type="text" class="spell-input" id="spellInput" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="拼出这个单词...">
+        <button class="btn" id="spellCheck">检查</button>
+      </div>
+      <div class="feedback-msg" id="fbMsg"></div>
+    </div>
+  `;
+  const input = document.getElementById('spellInput');
+  input.focus();
+  function check() {
+    const val = input.value.trim().toLowerCase();
+    const correct = val === w.word.toLowerCase();
+    const fb = document.getElementById('fbMsg');
+    input.disabled = true;
+    document.getElementById('spellCheck').disabled = true;
+    if (correct) {
+      input.classList.add('correct');
+      fb.textContent = '✓ 拼写正确';
+      fb.className = 'feedback-msg ok';
+      item.log.spelling = true;
+    } else {
+      input.classList.add('wrong');
+      fb.textContent = `✗ 正确拼写：${w.word}`;
+      fb.className = 'feedback-msg no';
+      item.log.spelling = false;
+      item.wrongCount++;
+    }
+    setTimeout(() => {
+      if (correct) {
+        item.stageIndex++;
+        // full pass through all 4 stages -> finalize
+        finalizeWord(item);
+      } else {
+        requeueWithError(item);
+      }
+      render();
+    }, correct ? 500 : 1300);
+  }
+  document.getElementById('spellCheck').onclick = check;
+  input.addEventListener('keydown', e => { if (e.key === 'Enter') check(); });
+}
+
+function requeueWithError(item) {
+  // remove from front, reset to stage 0, reinsert a few positions later
+  queue.shift();
+  item.stageIndex = 0;
+  const insertPos = Math.min(queue.length, 3 + Math.floor(Math.random() * 3));
+  queue.splice(insertPos, 0, item);
+}
+
+// ---------- Stage 5: 挖空造句题（独立卡片，插在词与词之间） ----------
+function renderCloze(item) {
+  const w = item.word;
+  const blanked = escapeHtml(item.data.sentence_en)
+    .replace(new RegExp('\\b' + escapeRegExp(w.word) + '\\b', 'gi'), '<span class="blank">____</span>');
+  cardArea.innerHTML = `
+    <div class="card">
+      ${tagHtml('mode-cloze', '⑤ 挖空造句', item)}
+      <div class="meaning-big" style="font-size:18px;">${w.shortMeaning}</div>
+      <div class="cloze-sentence">${blanked}</div>
+      <div class="spell-row">
+        <input type="text" class="spell-input" id="clozeInput" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="填入单词（原形）...">
+        <button class="btn" id="clozeCheck">检查</button>
+      </div>
+      <div class="feedback-msg" id="fbMsg"></div>
+      <div class="hint">填对填错只计入单独统计，不影响本词评分</div>
+    </div>
+  `;
+  const input = document.getElementById('clozeInput');
+  input.focus();
+  function check() {
+    const val = input.value.trim().toLowerCase();
+    const correct = val === w.word.toLowerCase();
+    input.disabled = true;
+    document.getElementById('clozeCheck').disabled = true;
+    const fb = document.getElementById('fbMsg');
+    if (correct) {
+      fb.textContent = '✓ 填空正确';
+      fb.className = 'feedback-msg ok';
+    } else {
+      fb.textContent = `✗ 正确答案：${w.word}`;
+      fb.className = 'feedback-msg no';
+    }
+    // 显示完整原句 + 中文翻译
+    const reveal = document.createElement('div');
+    reveal.className = 'cloze-zh';
+    reveal.innerHTML = `<div class="cloze-zh-sentence">${escapeHtml(item.data.sentence_en)}</div><div>译文：${escapeHtml(item.data.sentence_zh)}</div>`;
+    fb.after(reveal);
+    const next = document.createElement('button');
+    next.className = 'btn full';
+    next.textContent = '下一张 →';
+    next.onclick = () => {
+      item.entry.cloze.correct = correct;
+      queue.shift();
+      render();
+    };
+    cardArea.querySelector('.card').appendChild(next);
+  }
+  document.getElementById('clozeCheck').onclick = check;
+  input.addEventListener('keydown', e => { if (e.key === 'Enter') check(); });
+}
+
+function finalizeWord(item) {
+  queue.shift();
+  // score mapping based on wrongCount
+  let score, mastery;
+  if (item.wrongCount === 0) { score = 5; mastery = 'perfect'; }
+  else if (item.wrongCount === 1) { score = 4; mastery = 'easy'; }
+  else if (item.wrongCount === 2) { score = 3; mastery = 'good'; }
+  else if (item.wrongCount <= 4) { score = 2; mastery = 'hard'; }
+  else { score = 1; mastery = 'again'; }
+
+  const entry = {
+    word: item.word.word,
+    path: item.word.path,
+    wrongCount: item.wrongCount,
+    score, mastery,
+    log: item.log,
+    // 挖空题独立统计，不影响 SM-2 评分
+    cloze: { triggered: false, correct: null },
+  };
+  completed.push(entry);
+
+  // —— 触发挖空造句题 ——
+  // 复习词 / 本次答错过一次的词：四关通过后 100% 补一道
+  // 从未错过的新词：按 CLOZE_PROB_NEW 概率触发
+  const data = CLOZE[item.word.word];
+  if (data) {
+    const isReview = !!item.word.isReview;
+    const hadError = item.wrongCount > 0;
+    const shouldCloze = (isReview || hadError) ? true : (Math.random() < CLOZE_PROB_NEW);
+    if (shouldCloze) {
+      entry.cloze.triggered = true;
+      // 插到队列最前面 = 下一张卡（不会打断任何词的"四关一组"）
+      queue.unshift({ type: 'cloze', word: item.word, data, entry });
+    }
+  }
+}
+
+function renderSummary() {
+  const elapsedSec = Math.round((Date.now() - startTime) / 1000);
+  const mins = Math.floor(elapsedSec / 60);
+  const secs = elapsedSec % 60;
+  const perfect = completed.filter(c => c.mastery === 'perfect').length;
+  const wrongWords = completed.filter(c => c.wrongCount > 0);
+  const clozeDone = completed.filter(c => c.cloze && c.cloze.triggered);
+  const clozeCorrect = clozeDone.filter(c => c.cloze.correct).length;
+
+  cardArea.innerHTML = `
+    <div class="card summary">
+      <div class="stamp">完成！</div>
+      <div>今日 ${totalWords} 个词全部过关</div>
+      <div class="stat-grid">
+        <div class="stat-box"><div class="num">${perfect}</div><div class="label">零错通过</div></div>
+        <div class="stat-box"><div class="num">${wrongWords.length}</div><div class="label">出现过错误</div></div>
+        <div class="stat-box"><div class="num">${mins}分${secs}秒</div><div class="label">用时</div></div>
+        <div class="stat-box"><div class="num">${totalWords}</div><div class="label">总词数</div></div>
+      </div>
+      ${clozeDone.length ? `<div class="cloze-summary">挖空造句：答对 ${clozeCorrect} / ${clozeDone.length}</div>` : ''}
+      ${wrongWords.length ? `
+        <div class="wrong-list">
+          <strong>需要多注意的词：</strong>
+          <ul>${wrongWords.map(w => `<li>${w.word}（错 ${w.wrongCount} 次 → 评分 ${w.mastery}）</li>`).join('')}</ul>
+        </div>
+      ` : ''}
+      <button class="btn full" id="exportBtn">导出今日进度 JSON</button>
+      <div class="footer-note">导出后请把文件保存到 Obsidian vault 的<br><code>90-ReviewApp/sync/</code> 目录，下次对话时告诉我一声，我会读取并同步回笔记。</div>
+    </div>
+  `;
+  document.getElementById('exportBtn').onclick = exportSession;
+}
+
+function exportSession() {
+  const payload = {
+    date: new Date().toISOString().slice(0,10),
+    totalWords,
+    elapsedSec: Math.round((Date.now() - startTime) / 1000),
+    results: completed,
+  };
+  const blob = new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = `session_${payload.date}.json`;
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+}
+
+document.getElementById('footerNote').textContent = `共 ${totalWords} 个词（含 ${WORDS.filter(w=>w.isReview).length} 个到期复习词）。每词需依次通过遮词卡片、看英选中、看中选英、拼写练习四关，答错会重新排队再来一次；四关过后，复习词和答错过的词会补一道挖空造句题。`;
+
+render();
+</script>
+</body>
+</html>
