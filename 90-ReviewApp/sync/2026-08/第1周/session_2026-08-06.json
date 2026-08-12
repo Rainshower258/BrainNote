@@ -1,0 +1,286 @@
+{
+  "date": "2026-08-06",
+  "totalWords": 31,
+  "elapsedSec": 796,
+  "results": [
+    {
+      "word": "ambiguous",
+      "path": "10-Words/ambiguous.md",
+      "wrongCount": 0,
+      "score": 5,
+      "mastery": "perfect",
+      "log": { "flip": "seen", "en2cn": true, "cn2en": true, "spelling": true },
+      "cloze": { "triggered": true, "correct": true }
+    },
+    {
+      "word": "accident",
+      "path": "10-Words/accident.md",
+      "wrongCount": 0,
+      "score": 5,
+      "mastery": "perfect",
+      "log": { "flip": "seen", "en2cn": true, "cn2en": true, "spelling": true },
+      "cloze": { "triggered": true, "correct": true }
+    },
+    {
+      "word": "accommodate",
+      "path": "10-Words/accommodate.md",
+      "wrongCount": 0,
+      "score": 5,
+      "mastery": "perfect",
+      "log": { "flip": "seen", "en2cn": true, "cn2en": true, "spelling": true },
+      "cloze": { "triggered": true, "correct": true }
+    },
+    {
+      "word": "alien",
+      "path": "10-Words/alien.md",
+      "wrongCount": 0,
+      "score": 5,
+      "mastery": "perfect",
+      "log": { "flip": "seen", "en2cn": true, "cn2en": true, "spelling": true },
+      "cloze": { "triggered": false, "correct": null }
+    },
+    {
+      "word": "annoy",
+      "path": "10-Words/annoy.md",
+      "wrongCount": 0,
+      "score": 5,
+      "mastery": "perfect",
+      "log": { "flip": "seen", "en2cn": true, "cn2en": true, "spelling": true },
+      "cloze": { "triggered": false, "correct": null }
+    },
+    {
+      "word": "alternate",
+      "path": "10-Words/alternate.md",
+      "wrongCount": 1,
+      "score": 4,
+      "mastery": "easy",
+      "log": { "flip": "seen", "en2cn": true, "cn2en": true, "spelling": true },
+      "cloze": { "triggered": true, "correct": false }
+    },
+    {
+      "word": "ambition",
+      "path": "10-Words/ambition.md",
+      "wrongCount": 1,
+      "score": 4,
+      "mastery": "easy",
+      "log": { "flip": "seen", "en2cn": true, "cn2en": true, "spelling": true },
+      "cloze": { "triggered": true, "correct": true }
+    },
+    {
+      "word": "allege",
+      "path": "10-Words/allege.md",
+      "wrongCount": 0,
+      "score": 5,
+      "mastery": "perfect",
+      "log": { "flip": "seen", "en2cn": true, "cn2en": true, "spelling": true },
+      "cloze": { "triggered": false, "correct": null }
+    },
+    {
+      "word": "ancient",
+      "path": "10-Words/ancient.md",
+      "wrongCount": 0,
+      "score": 5,
+      "mastery": "perfect",
+      "log": { "flip": "seen", "en2cn": true, "cn2en": true, "spelling": true },
+      "cloze": { "triggered": false, "correct": null }
+    },
+    {
+      "word": "acceptance",
+      "path": "10-Words/acceptance.md",
+      "wrongCount": 1,
+      "score": 4,
+      "mastery": "easy",
+      "log": { "flip": "seen", "en2cn": true, "cn2en": true, "spelling": true },
+      "cloze": { "triggered": true, "correct": true }
+    },
+    {
+      "word": "alleviate",
+      "path": "10-Words/alleviate.md",
+      "wrongCount": 0,
+      "score": 5,
+      "mastery": "perfect",
+      "log": { "flip": "seen", "en2cn": true, "cn2en": true, "spelling": true },
+      "cloze": { "triggered": false, "correct": null }
+    },
+    {
+      "word": "accessory",
+      "path": "10-Words/accessory.md",
+      "wrongCount": 0,
+      "score": 5,
+      "mastery": "perfect",
+      "log": { "flip": "seen", "en2cn": true, "cn2en": true, "spelling": true },
+      "cloze": { "triggered": true, "correct": true }
+    },
+    {
+      "word": "anniversary",
+      "path": "10-Words/anniversary.md",
+      "wrongCount": 0,
+      "score": 5,
+      "mastery": "perfect",
+      "log": { "flip": "seen", "en2cn": true, "cn2en": true, "spelling": true },
+      "cloze": { "triggered": false, "correct": null }
+    },
+    {
+      "word": "ammunition",
+      "path": "10-Words/ammunition.md",
+      "wrongCount": 0,
+      "score": 5,
+      "mastery": "perfect",
+      "log": { "flip": "seen", "en2cn": true, "cn2en": true, "spelling": true },
+      "cloze": { "triggered": true, "correct": true }
+    },
+    {
+      "word": "allocate",
+      "path": "10-Words/allocate.md",
+      "wrongCount": 0,
+      "score": 5,
+      "mastery": "perfect",
+      "log": { "flip": "seen", "en2cn": true, "cn2en": true, "spelling": true },
+      "cloze": { "triggered": false, "correct": null }
+    },
+    {
+      "word": "analogy",
+      "path": "10-Words/analogy.md",
+      "wrongCount": 0,
+      "score": 5,
+      "mastery": "perfect",
+      "log": { "flip": "seen", "en2cn": true, "cn2en": true, "spelling": true },
+      "cloze": { "triggered": false, "correct": null }
+    },
+    {
+      "word": "alienate",
+      "path": "10-Words/alienate.md",
+      "wrongCount": 0,
+      "score": 5,
+      "mastery": "perfect",
+      "log": { "flip": "seen", "en2cn": true, "cn2en": true, "spelling": true },
+      "cloze": { "triggered": false, "correct": null }
+    },
+    {
+      "word": "analyse",
+      "path": "10-Words/analyse.md",
+      "wrongCount": 0,
+      "score": 5,
+      "mastery": "perfect",
+      "log": { "flip": "seen", "en2cn": true, "cn2en": true, "spelling": true },
+      "cloze": { "triggered": false, "correct": null }
+    },
+    {
+      "word": "analogous",
+      "path": "10-Words/analogous.md",
+      "wrongCount": 1,
+      "score": 4,
+      "mastery": "easy",
+      "log": { "flip": "seen", "en2cn": true, "cn2en": true, "spelling": true },
+      "cloze": { "triggered": true, "correct": true }
+    },
+    {
+      "word": "alter",
+      "path": "10-Words/alter.md",
+      "wrongCount": 0,
+      "score": 5,
+      "mastery": "perfect",
+      "log": { "flip": "seen", "en2cn": true, "cn2en": true, "spelling": true },
+      "cloze": { "triggered": false, "correct": null }
+    },
+    {
+      "word": "alternative",
+      "path": "10-Words/alternative.md",
+      "wrongCount": 0,
+      "score": 5,
+      "mastery": "perfect",
+      "log": { "flip": "seen", "en2cn": true, "cn2en": true, "spelling": true },
+      "cloze": { "triggered": false, "correct": null }
+    },
+    {
+      "word": "amplify",
+      "path": "10-Words/amplify.md",
+      "wrongCount": 0,
+      "score": 5,
+      "mastery": "perfect",
+      "log": { "flip": "seen", "en2cn": true, "cn2en": true, "spelling": true },
+      "cloze": { "triggered": false, "correct": null }
+    },
+    {
+      "word": "alloy",
+      "path": "10-Words/alloy.md",
+      "wrongCount": 0,
+      "score": 5,
+      "mastery": "perfect",
+      "log": { "flip": "seen", "en2cn": true, "cn2en": true, "spelling": true },
+      "cloze": { "triggered": true, "correct": true }
+    },
+    {
+      "word": "ambitious",
+      "path": "10-Words/ambitious.md",
+      "wrongCount": 0,
+      "score": 5,
+      "mastery": "perfect",
+      "log": { "flip": "seen", "en2cn": true, "cn2en": true, "spelling": true },
+      "cloze": { "triggered": false, "correct": null }
+    },
+    {
+      "word": "accord",
+      "path": "10-Words/accord.md",
+      "wrongCount": 0,
+      "score": 5,
+      "mastery": "perfect",
+      "log": { "flip": "seen", "en2cn": true, "cn2en": true, "spelling": true },
+      "cloze": { "triggered": true, "correct": true }
+    },
+    {
+      "word": "analysis",
+      "path": "10-Words/analysis.md",
+      "wrongCount": 1,
+      "score": 4,
+      "mastery": "easy",
+      "log": { "flip": "seen", "en2cn": true, "cn2en": true, "spelling": true },
+      "cloze": { "triggered": true, "correct": true }
+    },
+    {
+      "word": "alliance",
+      "path": "10-Words/alliance.md",
+      "wrongCount": 0,
+      "score": 5,
+      "mastery": "perfect",
+      "log": { "flip": "seen", "en2cn": true, "cn2en": true, "spelling": true },
+      "cloze": { "triggered": false, "correct": null }
+    },
+    {
+      "word": "ancestor",
+      "path": "10-Words/ancestor.md",
+      "wrongCount": 0,
+      "score": 5,
+      "mastery": "perfect",
+      "log": { "flip": "seen", "en2cn": true, "cn2en": true, "spelling": true },
+      "cloze": { "triggered": false, "correct": null }
+    },
+    {
+      "word": "amend",
+      "path": "10-Words/amend.md",
+      "wrongCount": 0,
+      "score": 5,
+      "mastery": "perfect",
+      "log": { "flip": "seen", "en2cn": true, "cn2en": true, "spelling": true },
+      "cloze": { "triggered": false, "correct": null }
+    },
+    {
+      "word": "academic",
+      "path": "10-Words/academic.md",
+      "wrongCount": 1,
+      "score": 4,
+      "mastery": "easy",
+      "log": { "flip": "seen", "en2cn": true, "cn2en": true, "spelling": true },
+      "cloze": { "triggered": true, "correct": true }
+    },
+    {
+      "word": "allowance",
+      "path": "10-Words/allowance.md",
+      "wrongCount": 1,
+      "score": 4,
+      "mastery": "easy",
+      "log": { "flip": "seen", "en2cn": true, "cn2en": true, "spelling": true },
+      "cloze": { "triggered": true, "correct": true }
+    }
+  ]
+}
