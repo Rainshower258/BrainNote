@@ -4,10 +4,10 @@
   "dailyMaxWords": 30,
   "dailyMaxWords_note": "每天卡片总量上限。复习词>=上限时，当天只取最过期的 daily_max 个复习词、不引入新词（纯复习日）；剩余复习词 due 不变，自动排到之后的天数，不会丢词。",
   "clozeProbabilityNewWord": 0.15,
-  "cursor_index": 151,
-  "cursor_note": "已引入的新词累计到第 151 个（下标 0-150 已用），下次从下标 151 开始取下 25 个",
-  "last_session_date": "2026-08-12",
-  "last_synced_date": "2026-08-12",
+  "cursor_index": 201,
+  "cursor_note": "已引入的新词累计到第 201 个（下标 0-200 已用），下次从下标 201 开始取下 25 个",
+  "last_session_date": "2026-08-14",
+  "last_synced_date": "2026-08-14",
   "history": [
     {
       "date": "2026-07-22",
@@ -214,6 +214,32 @@
       "review_words_count": 1,
       "review_word_ids": [
         "arbitrary"
+      ],
+      "synced": true,
+      "cloze": {
+        "attempted": 10,
+        "correct": 10
+      }
+    },
+    {
+      "date": "2026-08-13",
+      "new_words_count": 25,
+      "review_words_count": 0,
+      "review_word_ids": [],
+      "synced": true,
+      "cloze": {
+        "attempted": 5,
+        "correct": 4
+      }
+    },
+    {
+      "date": "2026-08-14",
+      "new_words_count": 25,
+      "review_words_count": 3,
+      "review_word_ids": [
+        "appearance",
+        "appropriation",
+        "aspiration"
       ],
       "synced": true,
       "cloze": {

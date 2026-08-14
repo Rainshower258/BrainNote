@@ -16,3 +16,8 @@ __pycache__/
 
 # Downloaded dictionaries (large, upstream source)
 cet6.json
+
+# 90-ReviewApp: 本地密钥与生成的缓存（不入库）
+90-ReviewApp/config.local.json
+90-ReviewApp/.env
+90-ReviewApp/sync/cloze_cache.json
