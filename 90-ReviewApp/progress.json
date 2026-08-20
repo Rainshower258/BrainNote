@@ -4,10 +4,10 @@
   "dailyMaxWords": 30,
   "dailyMaxWords_note": "每天卡片总量上限。复习词>=上限时，当天只取最过期的 daily_max 个复习词、不引入新词（纯复习日）；剩余复习词 due 不变，自动排到之后的天数，不会丢词。",
   "clozeProbabilityNewWord": 0.15,
-  "cursor_index": 216,
-  "cursor_note": "已引入的新词累计到第 216 个（下标 0-215 已用），下次从下标 216 开始取下 25 个",
-  "last_session_date": "2026-08-18",
-  "last_synced_date": "2026-08-18",
+  "cursor_index": 237,
+  "cursor_note": "已引入的新词累计到第 237 个（下标 0-236 已用），下次从下标 237 开始取下 25 个",
+  "last_session_date": "2026-08-20",
+  "last_synced_date": "2026-08-20",
   "history": [
     {
       "date": "2026-07-22",
@@ -398,6 +398,27 @@
       "cloze": {
         "attempted": 28,
         "correct": 26
+      }
+    },
+    {
+      "date": "2026-08-20",
+      "new_words_count": 21,
+      "review_words_count": 9,
+      "review_word_ids": [
+        "acquaint",
+        "acute",
+        "adapt",
+        "administration",
+        "admit",
+        "advisable",
+        "barely",
+        "bargain",
+        "batch"
+      ],
+      "synced": true,
+      "cloze": {
+        "attempted": 11,
+        "correct": 11
       }
     }
   ]
