@@ -4,10 +4,10 @@
   "dailyMaxWords": 30,
   "dailyMaxWords_note": "每天卡片总量上限。复习词>=上限时，当天只取最过期的 daily_max 个复习词、不引入新词（纯复习日）；剩余复习词 due 不变，自动排到之后的天数，不会丢词。",
   "clozeProbabilityNewWord": 0.15,
-  "cursor_index": 272,
-  "cursor_note": "已引入的新词累计到第 272 个（下标 0-271 已用），下次从下标 272 开始取下 25 个",
-  "last_session_date": "2026-08-22",
-  "last_synced_date": "2026-08-22",
+  "cursor_index": 274,
+  "cursor_note": "已引入的新词累计到第 274 个（下标 0-273 已用），下次从下标 274 开始取下 25 个",
+  "last_session_date": "2026-08-23",
+  "last_synced_date": "2026-08-23",
   "history": [
     {
       "date": "2026-07-22",
@@ -468,6 +468,46 @@
       "cloze": {
         "attempted": 16,
         "correct": 15
+      }
+    },
+    {
+      "date": "2026-08-23",
+      "new_words_count": 2,
+      "review_words_count": 28,
+      "review_word_ids": [
+        "abnormal",
+        "abolish",
+        "abrupt",
+        "absence",
+        "absorb",
+        "abstract",
+        "absurd",
+        "abundance",
+        "abundant",
+        "abuse",
+        "accelerate",
+        "access",
+        "accompany",
+        "accordance",
+        "account",
+        "accumulate",
+        "accurate",
+        "accuse",
+        "achievement",
+        "acid",
+        "acknowledge",
+        "acquaintance",
+        "adequate",
+        "adhere",
+        "adolescent",
+        "aggregate",
+        "atmosphere",
+        "bonus"
+      ],
+      "synced": true,
+      "cloze": {
+        "attempted": 29,
+        "correct": 28
       }
     }
   ]
