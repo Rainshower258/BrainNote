@@ -4,10 +4,10 @@
   "dailyMaxWords": 30,
   "dailyMaxWords_note": "每天卡片总量上限。复习词>=上限时，当天只取最过期的 daily_max 个复习词、不引入新词（纯复习日）；剩余复习词 due 不变，自动排到之后的天数，不会丢词。",
   "clozeProbabilityNewWord": 0.15,
-  "cursor_index": 274,
-  "cursor_note": "已引入的新词累计到第 274 个（下标 0-273 已用），下次从下标 274 开始取下 25 个",
-  "last_session_date": "2026-08-23",
-  "last_synced_date": "2026-08-23",
+  "cursor_index": 281,
+  "cursor_note": "已引入的新词累计到第 281 个（下标 0-280 已用），下次从下标 281 开始取下 25 个",
+  "last_session_date": "2026-08-24",
+  "last_synced_date": "2026-08-24",
   "history": [
     {
       "date": "2026-07-22",
@@ -508,6 +508,41 @@
       "cloze": {
         "attempted": 29,
         "correct": 28
+      }
+    },
+    {
+      "date": "2026-08-24",
+      "new_words_count": 7,
+      "review_words_count": 23,
+      "review_word_ids": [
+        "ambiguous",
+        "ambitious",
+        "betray",
+        "beverage",
+        "bewilder",
+        "beyond",
+        "bibliography",
+        "biography",
+        "bizarre",
+        "blank",
+        "blaze",
+        "bleed",
+        "blink",
+        "blossom",
+        "blunder",
+        "blunt",
+        "blur",
+        "blush",
+        "booklet",
+        "boom",
+        "boost",
+        "booth",
+        "breach"
+      ],
+      "synced": true,
+      "cloze": {
+        "attempted": 24,
+        "correct": 23
       }
     }
   ]
