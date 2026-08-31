@@ -4,10 +4,10 @@
   "dailyMaxWords": 30,
   "dailyMaxWords_note": "每天卡片总量上限。复习词>=上限时，当天只取最过期的 daily_max 个复习词、不引入新词（纯复习日）；剩余复习词 due 不变，自动排到之后的天数，不会丢词。",
   "clozeProbabilityNewWord": 0.15,
-  "cursor_index": 281,
-  "cursor_note": "已引入的新词累计到第 281 个（下标 0-280 已用），下次从下标 281 开始取下 25 个",
-  "last_session_date": "2026-08-24",
-  "last_synced_date": "2026-08-24",
+  "cursor_index": 323,
+  "cursor_note": "已引入的新词累计到第 323 个（下标 0-322 已用），下次从下标 323 开始取下 25 个",
+  "last_session_date": "2026-08-31",
+  "last_synced_date": "2026-08-31",
   "history": [
     {
       "date": "2026-07-22",
@@ -543,6 +543,171 @@
       "cloze": {
         "attempted": 24,
         "correct": 23
+      }
+    },
+    {
+      "date": "2026-08-26",
+      "new_words_count": 0,
+      "review_words_count": 30,
+      "review_word_ids": [
+        "acquire",
+        "activate",
+        "addict",
+        "addition",
+        "additional",
+        "adjacent",
+        "adjoin",
+        "adjust",
+        "adopt",
+        "adore",
+        "advantage",
+        "adverse",
+        "advocate",
+        "aerial",
+        "aesthetic",
+        "affection",
+        "affiliate",
+        "affirm",
+        "afflict",
+        "afford",
+        "agent",
+        "anniversary",
+        "assemble",
+        "border",
+        "boring",
+        "bounce",
+        "bound",
+        "bowel",
+        "boycott",
+        "brace"
+      ],
+      "synced": true,
+      "cloze": {
+        "attempted": 30,
+        "correct": 30
+      }
+    },
+    {
+      "date": "2026-08-27",
+      "new_words_count": 0,
+      "review_words_count": 30,
+      "review_word_ids": [
+        "agony",
+        "agreeable",
+        "aid",
+        "air-conditioning",
+        "alarm",
+        "album",
+        "alert",
+        "alien",
+        "alienate",
+        "allege",
+        "alleviate",
+        "alliance",
+        "allocate",
+        "alloy",
+        "alternative",
+        "amend",
+        "ammunition",
+        "amplify",
+        "analogy",
+        "analyse",
+        "appearance",
+        "appropriation",
+        "bracket",
+        "brand",
+        "breakdown",
+        "breakthrough",
+        "breed",
+        "brew",
+        "bribe",
+        "brief"
+      ],
+      "synced": true,
+      "cloze": {
+        "attempted": 30,
+        "correct": 30
+      }
+    },
+    {
+      "date": "2026-08-28",
+      "new_words_count": 0,
+      "review_words_count": 30,
+      "review_word_ids": [
+        "ancestor",
+        "ancient",
+        "annoy",
+        "armor",
+        "aspect",
+        "assassination",
+        "associate",
+        "attempt",
+        "briefcase",
+        "brilliant",
+        "brink",
+        "brisk",
+        "brochure",
+        "bronze",
+        "brood",
+        "bruise",
+        "brutal",
+        "bubble",
+        "buck",
+        "bud",
+        "budget",
+        "bug",
+        "bulk",
+        "bull",
+        "bulletin",
+        "bully",
+        "bump",
+        "burden",
+        "bureaucracy",
+        "cabinet"
+      ],
+      "synced": true,
+      "cloze": {
+        "attempted": 30,
+        "correct": 30
+      }
+    },
+    {
+      "date": "2026-08-29",
+      "new_words_count": 17,
+      "review_words_count": 13,
+      "review_word_ids": [
+        "appendix",
+        "auction",
+        "audience",
+        "authoritative",
+        "available",
+        "bacteria",
+        "banquet",
+        "burial",
+        "bust",
+        "buzz",
+        "bypass",
+        "cabin",
+        "cable"
+      ],
+      "synced": true,
+      "cloze": {
+        "attempted": 16,
+        "correct": 16
+      }
+    },
+    {
+      "date": "2026-08-31",
+      "new_words_count": 25,
+      "review_words_count": 2,
+      "review_word_ids": [
+        "ascertain",
+        "barren"
+      ],
+      "synced": true,
+      "cloze": {
+        "attempted": 9,
+        "correct": 9
       }
     }
   ]
