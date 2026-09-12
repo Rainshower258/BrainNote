@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>脑记 · 六级背词 · @@TITLE_DATE@@</title>
+<style>
+  :root {
+    --paper: #F5F0E8;
+    --paper-dark: #1C1814;
+    --rust: #C4603A;
+    --sage: #7A9E7E;
+    --gold: #C9A84C;
+    --ink: #2b2620;
+    --ink-soft: #6b6258;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: "Noto Serif SC", "PingFang SC", "Songti SC", serif;
+    background: var(--paper);
+    color: var(--ink);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 24px 16px 60px;
+  }
+  .wrap { width: 100%; max-width: 560px; }
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 18px;
+  }
+  header h1 { font-size: 22px; margin: 0; color: var(--rust); letter-spacing: 1px; }
+  header .date { font-size: 13px; color: var(--ink-soft); }
+
+  .progress-bar {
+    height: 8px;
+    background: #e4dccb;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 8px;
+  }
+  .progress-fill {
+    height: 100%;
+    background: var(--rust);
+    transition: width .3s ease;
+  }
+  .progress-label {
+    font-size: 12px;
+    color: var(--ink-soft);
+    text-align: right;
+    margin-bottom: 20px;
+  }
+
+  .card {
+    background: #fffdf8;
+    border-radius: 14px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    padding: 28px 24px;
+    min-height: 320px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    border: 1px solid #e8e0cf;
+  }
+  .tag {
+    align-self: flex-start;
+    font-size: 11px;
+    padding: 3px 10px;
+    border-radius: 20px;
+    margin-bottom: 14px;
+    font-weight: 600;
+  }
+  .tag.mode-flip { background: #eee3cf; color: var(--gold); }
+  .tag.mode-en2cn { background: #e3ecdf; color: var(--sage); }
+  .tag.mode-cn2en { background: #f0ddd3; color: var(--rust); }
+  .tag.mode-spell { background: #e3e6f0; color: #5a6ba8; }
+  .tag.mode-cloze { background: #e6dcef; color: #7a5aa8; }
+  .tag.review-badge { background: var(--rust); color: #fff; margin-left: 6px; }
+
+  .word-main { font-size: 32px; font-weight: 700; margin: 4px 0 6px; }
+  .phonetic { font-size: 15px; color: var(--ink-soft); margin-bottom: 18px; font-style: italic; }
+  .hint { font-size: 13px; color: var(--ink-soft); margin-top: auto; text-align: center; }
+
+  .back-content { animation: fadeIn .25s ease; }
+  @keyframes fadeIn { from { opacity: 0; transform: translateY(6px);} to {opacity:1; transform: translateY(0);} }
+  .meaning-big { font-size: 24px; color: var(--rust); font-weight: 600; margin: 10px 0; }
+  .example { font-style: italic; color: var(--ink-soft); margin-bottom: 14px; font-size: 14px; }
+  .tip-box {
+    border: 1px dashed var(--gold);
+    border-radius: 8px;
+    padding: 10px 14px;
+    font-size: 13px;
+    color: #8a7226;
+    background: #fbf6e8;
+  }
+
+  .options { display: flex; flex-direction: column; gap: 10px; margin-top: 8px; }
+  .opt-btn {
+    background: #fffdf8;
+    border: 1.5px solid #ddd1b8;
+    border-radius: 10px;
+    padding: 14px 16px;
+    font-size: 15px;
+    text-align: left;
+    cursor: pointer;
+    transition: all .15s ease;
+    font-family: inherit;
+    color: var(--ink);
+  }
+  .opt-btn:hover:not(:disabled) { border-color: var(--rust); background: #fbf3ec; }
+  .opt-btn.correct { background: #e3f2e5; border-color: var(--sage); }
+  .opt-btn.wrong { background: #f7e2dc; border-color: var(--rust); }
+  .opt-btn:disabled { cursor: default; opacity: 0.85; }
+
+  .spell-row { display: flex; gap: 10px; margin-top: 10px; }
+  .spell-input {
+    flex: 1;
+    font-size: 20px;
+    padding: 12px 14px;
+    border-radius: 10px;
+    border: 1.5px solid #ddd1b8;
+    font-family: "Courier New", monospace;
+    letter-spacing: 1px;
+  }
+  .spell-input.correct { border-color: var(--sage); background: #e3f2e5; }
+  .spell-input.wrong { border-color: var(--rust); background: #f7e2dc; }
+  .btn {
+    background: var(--rust);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 12px 20px;
+    font-size: 15px;
+    cursor: pointer;
+    font-family: inherit;
+    font-weight: 600;
+  }
+  .btn:hover { opacity: .92; }
+  .btn.secondary { background: #ddd1b8; color: var(--ink); }
+  .btn.full { width: 100%; margin-top: 16px; }
+
+  .rating-row { display: flex; gap: 8px; margin-top: 18px; flex-wrap: wrap; }
+  .rating-btn {
+    flex: 1;
+    min-width: 60px;
+    padding: 12px 6px;
+    border-radius: 10px;
+    border: none;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    color: #fff;
+    font-family: inherit;
+  }
+  .rating-btn.again { background: #a33; }
+  .rating-btn.hard { background: #c47a3a; }
+  .rating-btn.good { background: var(--sage); }
+  .rating-btn.easy { background: #4a90a4; }
+  .rating-btn.perfect { background: var(--gold); }
+
+  .feedback-msg { font-size: 14px; margin-top: 10px; text-align: center; font-weight: 600; }
+  .feedback-msg.ok { color: var(--sage); }
+  .feedback-msg.no { color: var(--rust); }
+
+  /* —— 挖空造句题 —— */
+  .cloze-sentence { font-size: 19px; line-height: 1.7; margin: 10px 0 18px; }
+  .cloze-sentence .blank { border-bottom: 2px solid var(--rust); padding: 0 8px; color: var(--rust); font-weight: 700; }
+  .cloze-zh { font-size: 14px; color: var(--ink-soft); margin-top: 12px; line-height: 1.6; }
+  .cloze-zh-sentence { font-style: italic; font-size: 15px; color: var(--ink); }
+  .cloze-summary { font-size: 13px; color: var(--ink-soft); margin-top: 10px; }
+
+  .summary { text-align: center; }
+  .stamp {
+    display: inline-block;
+    border: 3px solid var(--rust);
+    color: var(--rust);
+    font-size: 30px;
+    font-weight: 800;
+    padding: 10px 28px;
+    border-radius: 8px;
+    transform: rotate(-2deg);
+    margin: 20px 0;
+  }
+  .stat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 20px 0; }
+  .stat-box { background: #f7f1e3; border-radius: 10px; padding: 14px; }
+  .stat-box .num { font-size: 26px; font-weight: 700; color: var(--rust); }
+  .stat-box .label { font-size: 12px; color: var(--ink-soft); margin-top: 2px; }
+  .wrong-list { text-align: left; margin-top: 16px; font-size: 14px; }
+  .wrong-list ul { padding-left: 18px; }
+  .wrong-list li { margin-bottom: 4px; }
+
+  .footer-note {
+    font-size: 12px;
+    color: var(--ink-soft);
+    text-align: center;
+    margin-top: 20px;
+    line-height: 1.6;
+  }
+  kbd {
+    background: #eee3cf;
+    border-radius: 4px;
+    padding: 1px 6px;
+    font-size: 11px;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>脑记 · 六级背词</h1>
+    <div class="date" id="dateLabel"></div>
+  </header>
+
+  <div class="progress-bar"><div class="progress-fill" id="progressFill" style="width:0%"></div></div>
+  <div class="progress-label" id="progressLabel">0 / 0</div>
+
+  <div id="cardArea"></div>
+
+  <div class="footer-note" id="footerNote"></div>
+</div>
+
+<script>
+// ============ 当日词表数据（构建时注入） ============
+const WORDS = @@WORDS@@;
+
+// ============ 挖空造句数据（构建时注入；key = word） ============
+// 每个词: {sentence_en, sentence_zh}；缺失的词在浏览器端静默跳过挖空题
+const CLOZE = @@CLOZE@@;
+// 从未错过的新词触发挖空题的概率（0~1）
+const CLOZE_PROB_NEW = @@CLOZE_PROB@@;
+
+// ============ 会话状态 ============
+// 每个词的练习队列：flip -> en2cn -> cn2en -> spell
+// 任一环节答错，该词重新排到队列后方（间隔几张卡）重新做，从头开始四关
+const STAGES = ['flip', 'en2cn', 'cn2en', 'spell'];
+
+function shuffle(arr) {
+  const a = arr.slice();
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
+let queue = shuffle(WORDS).map(w => ({ word: w, stageIndex: 0, wrongCount: 0, log: {flip:null, en2cn:null, cn2en:null, spelling:null} }));
+const totalWords = WORDS.length;
+let completed = []; // finished word entries (with final results + cloze record)
+const startTime = Date.now();
+
+const cardArea = document.getElementById('cardArea');
+const progressFill = document.getElementById('progressFill');
+const progressLabel = document.getElementById('progressLabel');
+const dateLabel = document.getElementById('dateLabel');
+dateLabel.textContent = new Date().toLocaleDateString('zh-CN', {year:'numeric', month:'long', day:'numeric', weekday:'long'});
+
+function updateProgress() {
+  const done = Math.min(completed.length, totalWords);
+  progressFill.style.width = (done / totalWords * 100) + '%';
+  progressLabel.textContent = `${done} / ${totalWords}`;
+}
+
+function buildDistractors(correct, pool, count) {
+  const others = pool.filter(w => w.id !== correct.id);
+  return shuffle(others).slice(0, count);
+}
+
+function render() {
+  updateProgress();
+  if (queue.length === 0) { renderSummary(); return; }
+  const item = queue[0];
+  if (item.type === 'cloze') { renderCloze(item); return; }
+  const stage = STAGES[item.stageIndex];
+  if (stage === 'flip') renderFlip(item);
+  else if (stage === 'en2cn') renderEn2Cn(item);
+  else if (stage === 'cn2en') renderCn2En(item);
+  else if (stage === 'spell') renderSpell(item);
+}
+
+function tagHtml(cls, label, item) {
+  const badge = item.word.isReview ? `<span class="tag review-badge">复习</span>` : '';
+  return `<span class="tag ${cls}">${label}</span>${badge}`;
+}
+
+function escapeHtml(s) {
+  return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+}
+
+function escapeRegExp(s) {
+  return String(s).replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
+
+// ---------- Stage 1: 遮词卡片 ----------
+function renderFlip(item) {
+  const w = item.word;
+  cardArea.innerHTML = `
+    <div class="card">
+      ${tagHtml('mode-flip', '① 遮词卡片', item)}
+      <div class="word-main">${w.word}</div>
+      <div class="phonetic">${w.phonetic || ''}</div>
+      <div id="flipBody"></div>
+      <div class="hint" id="flipHint">点击卡片或按 <kbd>空格</kbd> 翻转</div>
+    </div>
+  `;
+  let flipped = false;
+  const card = cardArea.querySelector('.card');
+  function doFlip() {
+    if (flipped) return;
+    flipped = true;
+    document.getElementById('flipBody').innerHTML = `
+      <div class="back-content">
+        <div class="meaning-big">${w.meaning}</div>
+        ${w.example ? `<div class="example">${w.example}</div>` : ''}
+        ${w.tip ? `<div class="tip-box">${w.tip}</div>` : ''}
+      </div>
+      <button class="btn full" id="flipNext">认识了，下一关 →</button>
+    `;
+    document.getElementById('flipHint').style.display = 'none';
+    document.getElementById('flipNext').onclick = () => {
+      item.log.flip = 'seen';
+      item.stageIndex++;
+      render();
+    };
+  }
+  card.onclick = doFlip;
+  const keyHandler = (e) => { if (e.code === 'Space') { e.preventDefault(); doFlip(); } };
+  document.addEventListener('keydown', keyHandler, { once: true });
+}
+
+// ---------- Stage 2: 看英选中 ----------
+function renderEn2Cn(item) {
+  const w = item.word;
+  const distractors = buildDistractors(w, WORDS, 3);
+  const options = shuffle([w, ...distractors]);
+  cardArea.innerHTML = `
+    <div class="card">
+      ${tagHtml('mode-en2cn', '② 看英选中', item)}
+      <div class="word-main">${w.word}</div>
+      <div class="phonetic">${w.phonetic || ''}</div>
+      <div class="options" id="optList"></div>
+      <div class="feedback-msg" id="fbMsg"></div>
+    </div>
+  `;
+  const optList = document.getElementById('optList');
+  options.forEach(opt => {
+    const btn = document.createElement('button');
+    btn.className = 'opt-btn';
+    btn.textContent = opt.shortMeaning;
+    btn.onclick = () => handleAnswer(opt.id === w.id, btn, optList, item, 'en2cn');
+    optList.appendChild(btn);
+  });
+}
+
+// ---------- Stage 3: 看中选英 ----------
+function renderCn2En(item) {
+  const w = item.word;
+  const distractors = buildDistractors(w, WORDS, 3);
+  const options = shuffle([w, ...distractors]);
+  cardArea.innerHTML = `
+    <div class="card">
+      ${tagHtml('mode-cn2en', '③ 看中选英', item)}
+      <div class="meaning-big" style="font-size:22px;">${w.shortMeaning}</div>
+      <div class="options" id="optList"></div>
+      <div class="feedback-msg" id="fbMsg"></div>
+    </div>
+  `;
+  const optList = document.getElementById('optList');
+  options.forEach(opt => {
+    const btn = document.createElement('button');
+    btn.className = 'opt-btn';
+    btn.textContent = opt.word;
+    btn.onclick = () => handleAnswer(opt.id === w.id, btn, optList, item, 'cn2en');
+    optList.appendChild(btn);
+  });
+}
+
+function handleAnswer(isCorrect, btn, container, item, stageKey) {
+  Array.from(container.children).forEach(b => b.disabled = true);
+  const fb = document.getElementById('fbMsg');
+  if (isCorrect) {
+    btn.classList.add('correct');
+    fb.textContent = '✓ 正确';
+    fb.className = 'feedback-msg ok';
+    item.log[stageKey] = true;
+  } else {
+    btn.classList.add('wrong');
+    // reveal correct one
+    const correctText = item.word[stageKey === 'en2cn' ? 'shortMeaning' : 'word'];
+    Array.from(container.children).forEach(b => { if (b.textContent === correctText) b.classList.add('correct'); });
+    fb.textContent = '✗ 错误，已记录，稍后会再次出现';
+    fb.className = 'feedback-msg no';
+    item.log[stageKey] = false;
+    item.wrongCount++;
+  }
+  setTimeout(() => {
+    if (isCorrect) {
+      item.stageIndex++;
+    } else {
+      requeueWithError(item);
+    }
+    render();
+  }, isCorrect ? 500 : 1100);
+}
+
+// ---------- Stage 4: 拼写练习 ----------
+function renderSpell(item) {
+  const w = item.word;
+  cardArea.innerHTML = `
+    <div class="card">
+      ${tagHtml('mode-spell', '④ 拼写练习', item)}
+      <div class="meaning-big" style="font-size:20px;">${w.shortMeaning}</div>
+      <div class="phonetic">${w.phonetic || ''}</div>
+      <div class="spell-row">
+        <input type="text" class="spell-input" id="spellInput" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="拼出这个单词...">
+        <button class="btn" id="spellCheck">检查</button>
+      </div>
+      <div class="feedback-msg" id="fbMsg"></div>
+    </div>
+  `;
+  const input = document.getElementById('spellInput');
+  input.focus();
+  function check() {
+    const val = input.value.trim().toLowerCase();
+    const correct = val === w.word.toLowerCase();
+    const fb = document.getElementById('fbMsg');
+    input.disabled = true;
+    document.getElementById('spellCheck').disabled = true;
+    if (correct) {
+      input.classList.add('correct');
+      fb.textContent = '✓ 拼写正确';
+      fb.className = 'feedback-msg ok';
+      item.log.spelling = true;
+    } else {
+      input.classList.add('wrong');
+      fb.textContent = `✗ 正确拼写：${w.word}`;
+      fb.className = 'feedback-msg no';
+      item.log.spelling = false;
+      item.wrongCount++;
+    }
+    setTimeout(() => {
+      if (correct) {
+        item.stageIndex++;
+        // full pass through all 4 stages -> finalize
+        finalizeWord(item);
+      } else {
+        requeueWithError(item);
+      }
+      render();
+    }, correct ? 500 : 1300);
+  }
+  document.getElementById('spellCheck').onclick = check;
+  input.addEventListener('keydown', e => { if (e.key === 'Enter') check(); });
+}
+
+function requeueWithError(item) {
+  // remove from front, reset to stage 0, reinsert a few positions later
+  queue.shift();
+  item.stageIndex = 0;
+  const insertPos = Math.min(queue.length, 3 + Math.floor(Math.random() * 3));
+  queue.splice(insertPos, 0, item);
+}
+
+// ---------- Stage 5: 挖空造句题（独立卡片，插在词与词之间） ----------
+function renderCloze(item) {
+  const w = item.word;
+  const blanked = escapeHtml(item.data.sentence_en)
+    .replace(new RegExp('\\b' + escapeRegExp(w.word) + '\\b', 'gi'), '<span class="blank">____</span>');
+  cardArea.innerHTML = `
+    <div class="card">
+      ${tagHtml('mode-cloze', '⑤ 挖空造句', item)}
+      <div class="meaning-big" style="font-size:18px;">${w.shortMeaning}</div>
+      <div class="cloze-sentence">${blanked}</div>
+      <div class="spell-row">
+        <input type="text" class="spell-input" id="clozeInput" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="填入单词（原形）...">
+        <button class="btn" id="clozeCheck">检查</button>
+      </div>
+      <div class="feedback-msg" id="fbMsg"></div>
+      <div class="hint">填对填错只计入单独统计，不影响本词评分</div>
+    </div>
+  `;
+  const input = document.getElementById('clozeInput');
+  input.focus();
+  function check() {
+    const val = input.value.trim().toLowerCase();
+    const correct = val === w.word.toLowerCase();
+    input.disabled = true;
+    document.getElementById('clozeCheck').disabled = true;
+    const fb = document.getElementById('fbMsg');
+    if (correct) {
+      fb.textContent = '✓ 填空正确';
+      fb.className = 'feedback-msg ok';
+    } else {
+      fb.textContent = `✗ 正确答案：${w.word}`;
+      fb.className = 'feedback-msg no';
+    }
+    // 显示完整原句 + 中文翻译
+    const reveal = document.createElement('div');
+    reveal.className = 'cloze-zh';
+    reveal.innerHTML = `<div class="cloze-zh-sentence">${escapeHtml(item.data.sentence_en)}</div><div>译文：${escapeHtml(item.data.sentence_zh)}</div>`;
+    fb.after(reveal);
+    const next = document.createElement('button');
+    next.className = 'btn full';
+    next.textContent = '下一张 →';
+    next.onclick = () => {
+      item.entry.cloze.correct = correct;
+      queue.shift();
+      render();
+    };
+    cardArea.querySelector('.card').appendChild(next);
+  }
+  document.getElementById('clozeCheck').onclick = check;
+  input.addEventListener('keydown', e => { if (e.key === 'Enter') check(); });
+}
+
+function finalizeWord(item) {
+  queue.shift();
+  // score mapping based on wrongCount
+  let score, mastery;
+  if (item.wrongCount === 0) { score = 5; mastery = 'perfect'; }
+  else if (item.wrongCount === 1) { score = 4; mastery = 'easy'; }
+  else if (item.wrongCount === 2) { score = 3; mastery = 'good'; }
+  else if (item.wrongCount <= 4) { score = 2; mastery = 'hard'; }
+  else { score = 1; mastery = 'again'; }
+
+  const entry = {
+    word: item.word.word,
+    path: item.word.path,
+    wrongCount: item.wrongCount,
+    score, mastery,
+    log: item.log,
+    // 挖空题独立统计，不影响 SM-2 评分
+    cloze: { triggered: false, correct: null },
+  };
+  completed.push(entry);
+
+  // —— 触发挖空造句题 ——
+  // 复习词 / 本次答错过一次的词：四关通过后 100% 补一道
+  // 从未错过的新词：按 CLOZE_PROB_NEW 概率触发
+  const data = CLOZE[item.word.word];
+  if (data) {
+    const isReview = !!item.word.isReview;
+    const hadError = item.wrongCount > 0;
+    const shouldCloze = (isReview || hadError) ? true : (Math.random() < CLOZE_PROB_NEW);
+    if (shouldCloze) {
+      entry.cloze.triggered = true;
+      // 插到队列最前面 = 下一张卡（不会打断任何词的"四关一组"）
+      queue.unshift({ type: 'cloze', word: item.word, data, entry });
+    }
+  }
+}
+
+function renderSummary() {
+  const elapsedSec = Math.round((Date.now() - startTime) / 1000);
+  const mins = Math.floor(elapsedSec / 60);
+  const secs = elapsedSec % 60;
+  const perfect = completed.filter(c => c.mastery === 'perfect').length;
+  const wrongWords = completed.filter(c => c.wrongCount > 0);
+  const clozeDone = completed.filter(c => c.cloze && c.cloze.triggered);
+  const clozeCorrect = clozeDone.filter(c => c.cloze.correct).length;
+
+  cardArea.innerHTML = `
+    <div class="card summary">
+      <div class="stamp">完成！</div>
+      <div>今日 ${totalWords} 个词全部过关</div>
+      <div class="stat-grid">
+        <div class="stat-box"><div class="num">${perfect}</div><div class="label">零错通过</div></div>
+        <div class="stat-box"><div class="num">${wrongWords.length}</div><div class="label">出现过错误</div></div>
+        <div class="stat-box"><div class="num">${mins}分${secs}秒</div><div class="label">用时</div></div>
+        <div class="stat-box"><div class="num">${totalWords}</div><div class="label">总词数</div></div>
+      </div>
+      ${clozeDone.length ? `<div class="cloze-summary">挖空造句：答对 ${clozeCorrect} / ${clozeDone.length}</div>` : ''}
+      ${wrongWords.length ? `
+        <div class="wrong-list">
+          <strong>需要多注意的词：</strong>
+          <ul>${wrongWords.map(w => `<li>${w.word}（错 ${w.wrongCount} 次 → 评分 ${w.mastery}）</li>`).join('')}</ul>
+        </div>
+      ` : ''}
+      <button class="btn full" id="exportBtn">导出今日进度 JSON</button>
+      <div class="footer-note">导出后请把文件保存到 Obsidian vault 的<br><code>90-ReviewApp/sync/</code> 目录，下次对话时告诉我一声，我会读取并同步回笔记。</div>
+    </div>
+  `;
+  document.getElementById('exportBtn').onclick = exportSession;
+}
+
+function exportSession() {
+  const payload = {
+    date: new Date().toISOString().slice(0,10),
+    totalWords,
+    elapsedSec: Math.round((Date.now() - startTime) / 1000),
+    results: completed,
+  };
+  const blob = new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = `session_${payload.date}.json`;
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+}
+
+document.getElementById('footerNote').textContent = `共 ${totalWords} 个词（含 ${WORDS.filter(w=>w.isReview).length} 个到期复习词）。每词需依次通过遮词卡片、看英选中、看中选英、拼写练习四关，答错会重新排队再来一次；四关过后，复习词和答错过的词会补一道挖空造句题。`;
+
+render();
+</script>
+</body>
+</html>
