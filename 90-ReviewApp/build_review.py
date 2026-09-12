@@ -15,9 +15,15 @@
   2. 到期复习词 = reviews>0 且 due<=今天；新词 = 按字母序从 cursor 起的 25 个从未学过的词
      （cursor 只在同步确认后由同步脚本推进，本脚本不推进，避免漏词/重复）
   3. 生成 sync/day_YYYY-MM-DD.json 当日词表
-  4. Cloze 例句：读 config.local.json 的 deepseek_api_key → 调 DeepSeek deepseek-v4-flash
-     （缓存 sync/cloze_cache.json，key=word；无 key/调用失败/句子不含原形词 → 静默跳过该词，
-       对应挖空卡片在浏览器端自动跳过，不阻塞背词）
+  4. Cloze 例句：默认走本地 llama-server（Qwen3.5-2B，config.local.json 的
+     cloze_backend 控制，默认 "local"）；本地生成失败（连不上/重试耗尽）→
+     自动 fallback 到 DeepSeek API（需 deepseek_api_key）；两者都失败 →
+     静默跳过该词，对应挖空卡片在浏览器端自动跳过，不阻塞背词。
+     缓存 sync/cloze_cache.json，key=word，新写入的条目带 source 字段
+     （"local-qwen35-2b" / "deepseek"），标记来源方便以后对比质量。
+     本地模型只是可替换的内容生成组件：它挂了要能退回 API/缓存，不能让
+     背词流程瘫掉；同时它不参与 SM-2 调度决策，只负责把选中的词包装成
+     挖空题。
   5. 渲染 template.html → review.html
 
 只依赖 frontmatter；API 调用用标准库 urllib。
@@ -246,6 +252,140 @@ def call_deepseek(word, meaning, config):
     return {"sentence_en": sent_en, "sentence_zh": sent_zh}
 
 
+def _word_variants(word):
+    """派生极简变形表：复数/三单 -s、过去式/进行时 -ed/-ing、比较级 -er/-est。
+    不接受跨词性派生（如 arbitrary -> arbitrarily）——挖空题答案键存的是
+    原形，接受派生形式会导致学习者填的答案和答案键对不上。"""
+    w = word.lower()
+    variants = {w}
+    vowels = "aeiou"
+
+    def is_cvc(base):
+        return (len(base) >= 3 and base[-1] not in "aeiouwxy"
+                and base[-2] in vowels and base[-3] not in vowels)
+
+    if w.endswith(("s", "x", "z", "ch", "sh")):
+        variants.add(w + "es")
+    elif w.endswith("y") and len(w) > 1 and w[-2] not in vowels:
+        variants.add(w[:-1] + "ies")
+    else:
+        variants.add(w + "s")
+
+    if w.endswith("e") and not w.endswith("ee"):
+        variants.add(w + "d")
+        variants.add(w[:-1] + "ing")
+    elif w.endswith("y") and len(w) > 1 and w[-2] not in vowels:
+        variants.add(w[:-1] + "ied")
+        variants.add(w + "ing")
+    elif is_cvc(w):
+        variants.add(w + w[-1] + "ed")
+        variants.add(w + w[-1] + "ing")
+    else:
+        variants.add(w + "ed")
+        variants.add(w + "ing")
+
+    if w.endswith("y") and len(w) > 1 and w[-2] not in vowels:
+        variants.add(w[:-1] + "ier")
+        variants.add(w[:-1] + "iest")
+    elif is_cvc(w):
+        variants.add(w + w[-1] + "er")
+        variants.add(w + w[-1] + "est")
+    else:
+        variants.add(w + "er")
+        variants.add(w + "est")
+
+    return variants
+
+
+def _sentence_form_ok(sentence, word):
+    """目标词（或其屈折变形，不含跨词性派生）在句中恰好出现一次。"""
+    variants = sorted(_word_variants(word), key=len, reverse=True)
+    pattern = r"\b(" + "|".join(re.escape(v) for v in variants) + r")\b"
+    return len(re.findall(pattern, sentence, flags=re.IGNORECASE)) == 1
+
+
+LOCAL_SYS = "你是英语教学助手，为用户给出的 CET6 词汇生成学习用双语例句。只输出 JSON，不输出其他内容。"
+
+LOCAL_INSTR = (
+    "请生成一句包含该单词的英文例句：\n"
+    "- 难度适中，符合 CET6 水平，不要用比单词本身更难的生僻搭配\n"
+    "- 句中必须使用该单词的【精确原形】：一字不差，不能是改变词性得到的派生词"
+    "（例如形容词变副词），也不能变时态/单复数\n"
+    "- 长度 10-20 个词左右\n"
+    "- 另附对应中文翻译\n\n"
+    "Example:\n"
+    "Target word: arbitrary\n"
+    'WRONG: "The decision was made arbitrarily." (用了派生副词 "arbitrarily"，不允许)\n'
+    'RIGHT: "The decision was arbitrary." (精确原形 "arbitrary")\n\n'
+    '只返回一个 JSON 对象，不要任何其他文字：{"sentence_en": "英文例句", "sentence_zh": "中文翻译"}'
+)
+
+LOCAL_MAX_RETRIES = 3
+
+
+def call_local(word, meaning, config):
+    """调本地 llama-server 生成双语例句。成功返回 {sentence_en, sentence_zh}，
+    失败（连不上 / 重试耗尽）返回 None，调用方负责 fallback 到 DeepSeek。"""
+    base_url = (config.get("local_base_url") or "http://127.0.0.1:8901").rstrip("/")
+    timeout = float(config.get("local_timeout_sec", 20) or 20)
+
+    pos = re.match(r"^([a-zA-Z]+\.)", meaning)
+    pos_text = pos.group(1) if pos else ""
+
+    tail = f"单词：{word}\n词性：{pos_text}\n中文释义：{meaning}\n\n{LOCAL_INSTR}"
+    prev_sentence = None
+
+    for attempt in range(1, LOCAL_MAX_RETRIES + 1):
+        user_content = tail
+        if attempt > 1 and prev_sentence:
+            user_content += (
+                f'\n\n上一次生成的句子是："{prev_sentence}"，其中没有以精确原形 '
+                f'"{word}" 出现。必须使用 "{word}" 这个精确形式。'
+            )
+        payload = {
+            "messages": [
+                {"role": "system", "content": LOCAL_SYS},
+                {"role": "user", "content": user_content},
+            ],
+            "temperature": 0.6 + (attempt - 1) * 0.15,
+            "max_tokens": 200,
+        }
+        req = urllib.request.Request(
+            base_url + "/v1/chat/completions",
+            data=json.dumps(payload).encode("utf-8"),
+            headers={"Content-Type": "application/json"},
+            method="POST",
+        )
+        try:
+            with urllib.request.urlopen(req, timeout=timeout) as resp:
+                body = json.loads(resp.read().decode("utf-8"))
+            content = body["choices"][0]["message"]["content"]
+            # 模型偶尔会在 JSON 前后夹带说明文字，取第一个花括号块
+            m = re.search(r"\{.*\}", content, flags=re.DOTALL)
+            obj = json.loads(m.group(0) if m else content)
+            sent_en = (obj.get("sentence_en") or "").strip()
+            sent_zh = (obj.get("sentence_zh") or "").strip()
+        except (urllib.error.URLError, OSError, TimeoutError, KeyError, IndexError,
+                json.JSONDecodeError, TypeError, ValueError, AttributeError) as exc:
+            if isinstance(exc, (urllib.error.URLError, OSError, TimeoutError)):
+                # 连不上本地服务：不用再重试，直接交给调用方 fallback
+                print(f"  [cloze-local] {word}：本地服务不可用（{type(exc).__name__}: {exc}）")
+                return None
+            print(f"  [cloze-local] {word} 第{attempt}次：解析失败（{type(exc).__name__}: {exc}）")
+            continue
+        if not sent_en or not sent_zh:
+            print(f"  [cloze-local] {word} 第{attempt}次：返回内容不完整")
+            continue
+        if not _sentence_form_ok(sent_en, word):
+            print(f"  [cloze-local] {word} 第{attempt}次：例句未含精确原形（{sent_en!r}）")
+            prev_sentence = sent_en
+            continue
+        return {"sentence_en": sent_en, "sentence_zh": sent_zh}
+
+    print(f"  [cloze-local] {word}：重试{LOCAL_MAX_RETRIES}次仍未通过校验，fallback")
+    return None
+
+
 def mock_sentence(word, meaning):
     """离线测试用假例句：保证含原形词。"""
     return {
@@ -265,20 +405,39 @@ def build_cloze_map(words, config, use_mock):
     cache = load_cache()
     dirty = False
     api_key = (config.get("deepseek_api_key") or "").strip()
+    backend = (config.get("cloze_backend") or "local").strip().lower()
+    local_tag = config.get("local_model_tag") or "local-qwen35-2b"
+
     for w in words:
         key = w["word"]
         if key in cache:
             result[key] = cache[key]
             continue
-        if not api_key:
-            continue  # 无 key：整批跳过（浏览器端自动跳过挖空题）
-        sent = call_deepseek(key, w["meaning"], config)
-        if sent:
-            cache[key] = sent
-            dirty = True
-            result[key] = sent
-            print(f"  [cloze] {key} ✓")
-        # 失败：result 不含该词 → 静默跳过
+
+        sent = None
+        source = None
+
+        if backend == "local":
+            sent = call_local(key, w["meaning"], config)
+            source = local_tag
+            if not sent and api_key:
+                sent = call_deepseek(key, w["meaning"], config)
+                source = "deepseek"
+        elif backend == "deepseek":
+            if api_key:
+                sent = call_deepseek(key, w["meaning"], config)
+                source = "deepseek"
+        else:
+            print(f"  [cloze] 未知 cloze_backend={backend!r}，跳过 {key}")
+
+        if not sent:
+            continue  # 本地+API 都失败/都没配置：result 不含该词 → 静默跳过
+        entry = dict(sent, source=source)
+        cache[key] = entry
+        dirty = True
+        result[key] = entry
+        print(f"  [cloze] {key} ✓（{source}）")
+
     if dirty:
         save_cache(cache)
     return result
