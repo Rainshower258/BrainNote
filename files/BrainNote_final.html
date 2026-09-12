@@ -397,7 +397,7 @@ body::after{
           <span class="lbl">Day</span>
         </div>
         <div style="font-family:var(--serif-cn);color:var(--ink-soft);font-size:15px;line-height:1.6;max-width:320px;">
-          连续第 <b class="streak-copy-num" style="font-family:var(--hand);font-size:22px;color:var(--rust);">7</b> 天没有断更，<br>笔记本又厚了一点点。
+          连续第 <b style="font-family:var(--hand);font-size:22px;color:var(--rust);">7</b> 天没有断更，<br>笔记本又厚了一点点。
         </div>
       </div>
 
@@ -505,14 +505,27 @@ body::after{
 
 <script>
 /* ===================== DATA ===================== */
-const API = 'http://localhost:8765/api';
-let WORDS = [];   // 从 /api/due 动态加载
+const WORDS=[
+  {w:"abandon",p:"/əˈbændən/",type:"v. 动词",ans:"放弃；抛弃",ex:"He abandoned the project halfway.",tip:"a-ban-don：把禁令(ban)丢下，就是放弃。"},
+  {w:"ephemeral",p:"/ɪˈfem.ər.əl/",type:"adj. 形容词",ans:"短暂的",ex:"Fame is ephemeral.",tip:"e-phemeral 像 fever 一阵热度，转瞬即逝。"},
+  {w:"resilience",p:"/rɪˈzɪl.i.əns/",type:"n. 名词",ans:"韧性；恢复力",ex:"She showed great resilience.",tip:"re(再)+ sili(弹)→ 被压后再弹回来的力量。"},
+  {w:"meticulous",p:"/məˈtɪk.jə.ləs/",type:"adj. 形容词",ans:"一丝不苟的",ex:"He was meticulous in his work.",tip:"me-ti-cu-lous，每一个 tick 都要核对。"},
+  {w:"serendipity",p:"/ˌser.ənˈdɪp.ɪ.ti/",type:"n. 名词",ans:"意外之喜；偶然发现",ex:"It was pure serendipity.",tip:"seren(平静)+ dip 偶然蘸到的小确幸。"}
+];
 const RATES=[
   {k:"again",cn:"重来",cls:"r-again"},
   {k:"hard",cn:"困难",cls:"r-hard"},
   {k:"good",cn:"良好",cls:"r-good"},
   {k:"easy",cn:"简单",cls:"r-easy"},
   {k:"perfect",cn:"完美",cls:"r-perfect"}
+];
+const MASTERY=[
+  {cls:"b-new",lbl:"新词",n:14},
+  {cls:"b-again",lbl:"重来",n:3},
+  {cls:"b-hard",lbl:"困难",n:9},
+  {cls:"b-good",lbl:"良好",n:42},
+  {cls:"b-easy",lbl:"简单",n:67},
+  {cls:"b-perfect",lbl:"完美",n:88}
 ];
 
 /* ===================== STATE ===================== */
@@ -530,11 +543,17 @@ function show(name){
 }
 
 /* ===================== DASHBOARD BUILD ===================== */
-function buildHeatmap(todayFilled, realData = {}){
+function buildBadges(){
+  $("#badgeRow").innerHTML=MASTERY.map(m=>
+    `<div class="badge ${m.cls}"><span class="bnum">${m.n}</span><span class="blbl">${m.lbl}</span></div>`
+  ).join("");
+}
+
+function buildHeatmap(todayFilled){
   const grid=$("#heatGrid");
   const months=$("#heatMonths");
   // 26 weeks back from today
-  const today=new Date(); // dynamic: real today
+  const today=new Date(2026,5,2); // Jun 2 2026
   const weeks=26;
   // start on the Sunday of (weeks-1) weeks ago
   const start=new Date(today);
@@ -548,22 +567,21 @@ function buildHeatmap(todayFilled, realData = {}){
     for(let r=0;r<7;r++){
       const d=new Date(start); d.setDate(start.getDate()+c*7+r);
       const isFuture=d>today;
-      const isToday=d.toDateString()===today.toDateString();
+      const isToday=d.getTime()===today.getTime();
       if(c===0&&r===0)lastMonth=d.getMonth();
       if(r===0&&d.getMonth()!==lastMonth){ lastMonth=d.getMonth(); monthMarks.push({c,name:mNames[d.getMonth()]}); }
       if(c===0&&r===0) monthMarks.push({c:0,name:mNames[d.getMonth()]});
       let lvl=0;
       if(!isFuture){
-        const dateStr = `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
-        const count = realData[dateStr] || 0;
-        if (isToday && todayFilled) lvl = 4;
-        else if (count >= 20) lvl = 4;
-        else if (count >= 10) lvl = 3;
-        else if (count >= 5)  lvl = 2;
-        else if (count >= 1)  lvl = 1;
-        else lvl = 0;
+        // deterministic pseudo-random density, denser recently
+        const seed=Math.sin(d.getTime()/8.64e7)*10000;
+        const rnd=seed-Math.floor(seed);
+        const recency=c/weeks; // 0..1
+        const v=rnd*0.6+recency*0.55;
+        if(v>0.95)lvl=4;else if(v>0.72)lvl=3;else if(v>0.5)lvl=2;else if(v>0.3)lvl=1;else lvl=0;
+        if(isToday) lvl=todayFilled?4:0;
       }
-      let cls="heat-cell"+(lvl?` l${lvl}`:"")+(isToday?" today":"")+(isFuture?" future":"");
+      let cls="heat-cell"+(lvl?` l${lvl}`:"")+(isToday&&todayFilled?" today":"")+(isFuture?" future":"");
       col+=`<div class="${cls}" style="${isFuture?'opacity:.25':''}"></div>`;
     }
     html+=`<div class="heat-col">${col}</div>`;
@@ -580,13 +598,13 @@ function buildHeatmap(todayFilled, realData = {}){
 /* ===================== CARD RENDER ===================== */
 function renderCard(){
   const c=WORDS[idx];
-  $("#cardType").textContent=c.word_type || '';
-  $("#cardWord").textContent=c.word;
-  $("#cardPhon").textContent=c.phonetic || '';
-  $("#backWord").textContent=c.word;
-  $("#backAnswer").textContent=c.answer || '';
-  $("#backExample").textContent=c.example ? '"'+c.example+'"' : '';
-  $("#tipText").textContent=c.tip || '';
+  $("#cardType").textContent=c.type;
+  $("#cardWord").textContent=c.w;
+  $("#cardPhon").textContent=c.p;
+  $("#backWord").textContent=c.w;
+  $("#backAnswer").textContent=c.ans;
+  $("#backExample").textContent='"'+c.ex+'"';
+  $("#tipText").textContent=c.tip;
   $("#progCount").textContent=(idx+1)+" / "+WORDS.length;
   $("#progFill").style.width=((idx)/WORDS.length*100)+"%";
 }
@@ -604,13 +622,6 @@ function rate(k){
   if(locked||!flipped)return;
   locked=true;
   tally[k]++;
-  // 提交评分到后端
-  const card = WORDS[idx];
-  fetch(`${API}/rate`, {
-    method: 'POST',
-    headers: {'Content-Type': 'application/json'},
-    body: JSON.stringify({id: card.id, type: card.type, rating: k})
-  }).catch(e => console.error('rate failed', e));
   const stage=$("#cardStage");
   stage.classList.add("slide-out");
   setTimeout(()=>{
@@ -625,14 +636,7 @@ function rate(k){
 }
 
 /* ===================== FLOW ===================== */
-async function startReview(){
-  // 加载今日待复习
-  const res = await fetch(`${API}/due`).then(r => r.json());
-  WORDS = res.cards;
-  if (WORDS.length === 0) {
-    alert('今日无待复习！');
-    return;
-  }
+function startReview(){
   idx=0; setFlip(false); renderCard();
   Object.keys(tally).forEach(k=>tally[k]=0);
   startTime=Date.now();
@@ -646,15 +650,15 @@ function finish(){
   const mm=Math.floor(secs/60), ss=secs%60;
   $("#doneTime").textContent=mm+"′"+String(ss).padStart(2,"0")+"″";
   $("#doneCount").textContent=WORDS.length;
-  // streak will be refreshed by loadStats below
+  $("#doneStreak").textContent="8";
+  $("#streakNum").textContent="8"; // streak ticks up
   $("#doneBreak").innerHTML=RATES.map(r=>{
     const n=tally[r.k]; if(!n)return"";
     return `<span class="bk-chip ${r.cls}">${r.cn} <b>${n}</b></span>`;
   }).join("")||`<span class="bk-chip r-good">已完成 <b>${WORDS.length}</b></span>`;
+  buildHeatmap(true); // today now filled
   spawnConfetti();
   show("done");
-  // 刷新 dashboard 统计（回到首页时数据是最新的）
-  loadStats();
 }
 
 function backToDash(){ show("dash"); }
@@ -727,49 +731,9 @@ themeToggle.addEventListener('click', () => {
 });
 
 /* ===================== INIT ===================== */
-async function init() {
-  // 加载日期
-  try {
-    const d = await fetch(`${API}/today-date`).then(r => r.json());
-    document.getElementById('todayDate').innerHTML =
-      `${d.weekday_cn}<br>${d.date_cn}<small>${d.weekday_en}</small>`;
-  } catch(e) {}
-
-  // 加载统计
-  await loadStats();
-}
-
-async function loadStats() {
-  try {
-    const s = await fetch(`${API}/stats`).then(r => r.json());
-    // streak
-    document.getElementById('streakNum').textContent = s.streak;
-    document.querySelectorAll('.streak-copy-num').forEach(el => el.textContent = s.streak);
-    // also update done streak if visible
-    const ds = document.getElementById('doneStreak');
-    if (ds) ds.textContent = s.streak;
-    // due count
-    document.getElementById('dueCount').textContent = s.due_today;
-    // mastery badges
-    const MASTERY = [
-      {cls:'b-new',   lbl:'新词',  key:'new'},
-      {cls:'b-again', lbl:'重来',  key:'again'},
-      {cls:'b-hard',  lbl:'困难',  key:'hard'},
-      {cls:'b-good',  lbl:'良好',  key:'good'},
-      {cls:'b-easy',  lbl:'简单',  key:'easy'},
-      {cls:'b-perfect',lbl:'完美', key:'perfect'},
-    ];
-    document.getElementById('badgeRow').innerHTML = MASTERY.map(m =>
-      `<div class="badge ${m.cls}"><span class="bnum">${s.distribution[m.key]||0}</span><span class="blbl">${m.lbl}</span></div>`
-    ).join('');
-    // heatmap（传入真实数据）
-    buildHeatmap(false, s.heatmap);
-  } catch(e) {
-    console.error('stats load failed', e);
-  }
-}
-
-init();
+buildBadges();
+buildHeatmap(false);
+renderCard();
 </script>
 </body>
 </html>
