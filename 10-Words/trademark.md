@@ -1,6 +1,6 @@
 ---
 answer: 商标， 牌号
-due: '2026-06-03'
+due: '2026-09-21'
 ease: 2.5
 example: ''
 interval: 1

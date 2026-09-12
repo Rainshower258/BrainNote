@@ -1,6 +1,6 @@
 ---
 answer: 移栽，移种
-due: '2026-06-03'
+due: '2026-09-22'
 ease: 2.5
 example: ''
 interval: 1

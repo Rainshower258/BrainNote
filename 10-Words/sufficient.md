@@ -1,6 +1,6 @@
 ---
 answer: 足够的， 充分的
-due: '2026-06-03'
+due: '2026-09-16'
 ease: 2.5
 example: ''
 interval: 1

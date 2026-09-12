@@ -1,14 +1,14 @@
 ---
 answer: 向…靠近
-due: '2026-06-03'
-ease: 2.5
+due: '2026-11-07'
+ease: 2.95
 example: ''
-interval: 1
-last-review: ''
-mastery: new
+interval: 67
+last-review: '2026-09-01'
+mastery: perfect
 meaning: 向…靠近 (vt.) / 靠近； 途径， 方式 (n.)
 phonetic: /ə'protʃ/
-reviews: 0
+reviews: 3
 tags:
 - 英语
 - CET6

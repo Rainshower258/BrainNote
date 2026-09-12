@@ -1,6 +1,6 @@
 ---
 answer: 竖直的， 挺直的
-due: '2026-06-03'
+due: '2026-07-15'
 ease: 2.5
 example: ''
 interval: 1

@@ -1,6 +1,6 @@
 ---
 answer: 可溶的
-due: '2026-06-03'
+due: '2026-09-12'
 ease: 2.5
 example: ''
 interval: 1

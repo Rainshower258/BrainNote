@@ -1,6 +1,6 @@
 ---
 answer: 编结， 编织
-due: '2026-06-03'
+due: '2026-08-05'
 ease: 2.5
 example: ''
 interval: 1

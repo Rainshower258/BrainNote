@@ -1,6 +1,6 @@
 ---
 answer: 吸引， 引起…的兴趣
-due: '2026-06-03'
+due: '2026-09-19'
 ease: 2.5
 example: ''
 interval: 1

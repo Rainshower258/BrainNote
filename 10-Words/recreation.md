@@ -1,6 +1,6 @@
 ---
 answer: 娱乐活动， 消遣
-due: '2026-06-03'
+due: '2026-08-31'
 ease: 2.5
 example: ''
 interval: 1

@@ -1,6 +1,6 @@
 ---
 answer: 实体， 独立存在体， 实际存在物
-due: '2026-06-03'
+due: '2026-07-14'
 ease: 2.5
 example: ''
 interval: 1

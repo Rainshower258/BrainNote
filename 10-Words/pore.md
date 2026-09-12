@@ -1,6 +1,6 @@
 ---
 answer: 仔细阅读， 审视
-due: '2026-06-03'
+due: '2026-08-23'
 ease: 2.5
 example: ''
 interval: 1

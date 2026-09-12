@@ -1,6 +1,6 @@
 ---
 answer: 扭伤， 拉伤
-due: '2026-06-03'
+due: '2026-09-14'
 ease: 2.5
 example: ''
 interval: 1

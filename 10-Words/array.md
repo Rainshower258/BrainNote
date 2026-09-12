@@ -1,14 +1,14 @@
 ---
 answer: 展示
-due: '2026-06-03'
-ease: 2.5
+due: '2026-11-08'
+ease: 2.95
 example: ''
-interval: 1
-last-review: ''
-mastery: new
+interval: 67
+last-review: '2026-09-02'
+mastery: perfect
 meaning: 展示；陈列，一系列；排列，队形；衣服，盛装； (n.)
 phonetic: /ə're/
-reviews: 0
+reviews: 3
 tags:
 - 英语
 - CET6

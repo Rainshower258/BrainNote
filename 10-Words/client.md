@@ -1,14 +1,14 @@
 ---
 answer: 委托人， 当事人
-due: '2026-06-03'
-ease: 2.5
+due: '2026-09-28'
+ease: 2.8
 example: ''
-interval: 1
-last-review: ''
-mastery: new
+interval: 16
+last-review: '2026-09-12'
+mastery: perfect
 meaning: 委托人， 当事人； 顾客 (n.)
 phonetic: /'klaɪənt/
-reviews: 0
+reviews: 2
 tags:
 - 英语
 - CET6

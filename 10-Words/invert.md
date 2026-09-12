@@ -1,6 +1,6 @@
 ---
 answer: 使倒转， 使倒置， 使颠倒
-due: '2026-06-03'
+due: '2026-08-04'
 ease: 2.5
 example: ''
 interval: 1

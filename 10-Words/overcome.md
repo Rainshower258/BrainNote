@@ -1,6 +1,6 @@
 ---
 answer: 战胜， 克服
-due: '2026-06-03'
+due: '2026-08-18'
 ease: 2.5
 example: ''
 interval: 1

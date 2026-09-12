@@ -1,14 +1,14 @@
 ---
 answer: 黏附， 附着
-due: '2026-06-03'
-ease: 2.5
+due: '2026-10-20'
+ease: 2.9
 example: ''
-interval: 1
-last-review: ''
-mastery: new
+interval: 58
+last-review: '2026-08-23'
+mastery: perfect
 meaning: 黏附， 附着； 遵守； 坚持； 追随， 支持 (vi.)
 phonetic: /əd'hɪr/
-reviews: 0
+reviews: 3
 tags:
 - 英语
 - CET6

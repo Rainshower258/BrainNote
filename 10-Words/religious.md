@@ -1,6 +1,6 @@
 ---
 answer: 宗教的
-due: '2026-06-03'
+due: '2026-09-02'
 ease: 2.5
 example: ''
 interval: 1

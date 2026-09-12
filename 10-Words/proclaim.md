@@ -1,6 +1,6 @@
 ---
 answer: 宣告， 宣布， 声明
-due: '2026-06-03'
+due: '2026-08-26'
 ease: 2.5
 example: ''
 interval: 1

@@ -1,6 +1,6 @@
 ---
 answer: 包围， 围困
-due: '2026-06-03'
+due: '2026-09-09'
 ease: 2.5
 example: ''
 interval: 1

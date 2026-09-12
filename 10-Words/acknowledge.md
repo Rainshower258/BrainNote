@@ -1,14 +1,14 @@
 ---
 answer: 承认， 承认…的权威
-due: '2026-06-03'
-ease: 2.5
+due: '2026-10-29'
+ease: 2.95
 example: ''
-interval: 1
-last-review: ''
-mastery: new
+interval: 67
+last-review: '2026-08-23'
+mastery: perfect
 meaning: 承认， 承认…的权威； 告知收到， 确认； 对…表示谢意， 报偿 (vt.)
 phonetic: /ək'nɑlɪdʒ/
-reviews: 0
+reviews: 3
 tags:
 - 英语
 - CET6

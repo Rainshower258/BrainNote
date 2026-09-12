@@ -1,14 +1,14 @@
 ---
 answer: 流产， 堕胎
-due: '2026-06-03'
-ease: 2.5
+due: '2026-10-18'
+ease: 2.9
 example: ''
-interval: 1
-last-review: ''
-mastery: new
+interval: 58
+last-review: '2026-08-21'
+mastery: perfect
 meaning: 流产， 堕胎 (n.)
 phonetic: /ə'bɔrʃən/
-reviews: 0
+reviews: 3
 tags:
 - 英语
 - CET6

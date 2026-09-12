@@ -1,6 +1,6 @@
 ---
 answer: 辅助的，次要的，附设的
-due: '2026-06-03'
+due: '2026-09-16'
 ease: 2.5
 example: ''
 interval: 1

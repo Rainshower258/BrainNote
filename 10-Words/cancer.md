@@ -1,14 +1,14 @@
 ---
 answer: 癌， 癌症， 肿瘤
-due: '2026-06-03'
-ease: 2.5
+due: '2026-09-14'
+ease: 2.75
 example: ''
-interval: 1
-last-review: ''
-mastery: new
+interval: 12
+last-review: '2026-09-02'
+mastery: perfect
 meaning: 癌， 癌症， 肿瘤 (n.)
 phonetic: /'kænsɚ/
-reviews: 0
+reviews: 2
 tags:
 - 英语
 - CET6

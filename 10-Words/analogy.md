@@ -1,14 +1,14 @@
 ---
 answer: 比拟
-due: '2026-06-03'
-ease: 2.5
+due: '2026-11-02'
+ease: 2.95
 example: ''
-interval: 1
-last-review: ''
-mastery: new
+interval: 67
+last-review: '2026-08-27'
+mastery: perfect
 meaning: 比拟； 类比， 类推 (n.)
 phonetic: /ə'nælədʒi/
-reviews: 0
+reviews: 3
 tags:
 - 英语
 - CET6

@@ -1,14 +1,14 @@
 ---
 answer: 繁殖
-due: '2026-06-03'
-ease: 2.5
+due: '2026-09-12'
+ease: 2.8
 example: ''
-interval: 1
-last-review: ''
-mastery: new
+interval: 16
+last-review: '2026-08-27'
+mastery: perfect
 meaning: 繁殖； 养育， 培育； 酿成， 产生 (v.) / 品种 (n.)
 phonetic: /brid/
-reviews: 0
+reviews: 2
 tags:
 - 英语
 - CET6

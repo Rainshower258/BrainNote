@@ -1,14 +1,14 @@
 ---
 answer: 假定， 臆断
-due: '2026-06-03'
-ease: 2.5
+due: '2026-10-21'
+ease: 2.85
 example: ''
-interval: 1
-last-review: ''
-mastery: new
+interval: 50
+last-review: '2026-09-01'
+mastery: easy
 meaning: 假定， 臆断； 担任， 承担 (n.)
 phonetic: /ə'sʌmpʃən/
-reviews: 0
+reviews: 3
 tags:
 - 英语
 - CET6

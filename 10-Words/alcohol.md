@@ -1,14 +1,14 @@
 ---
 answer: 酒精， 乙醇
-due: '2026-06-03'
-ease: 2.5
+due: '2026-10-29'
+ease: 2.75
 example: ''
-interval: 1
-last-review: ''
-mastery: new
+interval: 55
+last-review: '2026-09-04'
+mastery: perfect
 meaning: 酒精， 乙醇 (n.)
 phonetic: /'ælkəhɔl/
-reviews: 0
+reviews: 4
 tags:
 - 英语
 - CET6

@@ -1,6 +1,6 @@
 ---
 answer: 掩蔽， 躲避， 庇护
-due: '2026-06-03'
+due: '2026-09-09'
 ease: 2.5
 example: ''
 interval: 1

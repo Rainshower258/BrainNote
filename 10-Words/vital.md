@@ -1,6 +1,6 @@
 ---
 answer: 生死攸关的， 极其重要的
-due: '2026-06-03'
+due: '2026-09-26'
 ease: 2.5
 example: ''
 interval: 1

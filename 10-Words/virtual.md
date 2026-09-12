@@ -1,6 +1,6 @@
 ---
 answer: 实质上的， 事实上的， 实际上的
-due: '2026-06-03'
+due: '2026-09-26'
 ease: 2.5
 example: ''
 interval: 1

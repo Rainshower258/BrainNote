@@ -1,6 +1,6 @@
 ---
 answer: 认为， 估计
-due: '2026-06-03'
+due: '2026-08-31'
 ease: 2.5
 example: ''
 interval: 1

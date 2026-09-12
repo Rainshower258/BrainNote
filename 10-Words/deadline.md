@@ -1,6 +1,6 @@
 ---
 answer: 最后期限
-due: '2026-06-03'
+due: '2026-07-02'
 ease: 2.5
 example: ''
 interval: 1

@@ -1,6 +1,6 @@
 ---
 answer: 免疫的， 有免疫力的， 不受影响的
-due: '2026-06-03'
+due: '2026-07-29'
 ease: 2.5
 example: ''
 interval: 1

@@ -1,6 +1,6 @@
 ---
 answer: 人与人之间的， 关于人与人之间关系的
-due: '2026-06-03'
+due: '2026-08-03'
 ease: 2.5
 example: ''
 interval: 1

@@ -1,14 +1,14 @@
 ---
 answer: 可卡因， 古柯碱
-due: '2026-06-03'
-ease: 2.5
+due: '2026-09-12'
+ease: 2.65
 example: ''
-interval: 1
-last-review: ''
-mastery: new
+interval: 4
+last-review: '2026-09-08'
+mastery: perfect
 meaning: 可卡因， 古柯碱 (n.)
 phonetic: /ko'ken/
-reviews: 0
+reviews: 1
 tags:
 - 英语
 - CET6

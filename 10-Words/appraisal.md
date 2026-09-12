@@ -1,14 +1,14 @@
 ---
 answer: 估计， 估量
-due: '2026-06-03'
-ease: 2.5
+due: '2026-11-07'
+ease: 2.95
 example: ''
-interval: 1
-last-review: ''
-mastery: new
+interval: 67
+last-review: '2026-09-01'
+mastery: perfect
 meaning: 估计， 估量； 评价 (n.)
 phonetic: /ə'prezl/
-reviews: 0
+reviews: 3
 tags:
 - 英语
 - CET6

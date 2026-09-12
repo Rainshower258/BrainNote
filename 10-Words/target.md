@@ -1,6 +1,6 @@
 ---
 answer: 靶， 标的， 目标
-due: '2026-06-03'
+due: '2026-09-18'
 ease: 2.5
 example: ''
 interval: 1

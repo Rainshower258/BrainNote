@@ -1,6 +1,6 @@
 ---
 answer: 对称
-due: '2026-06-03'
+due: '2026-09-18'
 ease: 2.5
 example: ''
 interval: 1

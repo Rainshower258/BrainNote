@@ -1,6 +1,6 @@
 ---
 answer: 多数， 大多数
-due: '2026-06-03'
+due: '2026-08-08'
 ease: 2.5
 example: ''
 interval: 1

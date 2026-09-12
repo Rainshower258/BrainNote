@@ -1,6 +1,6 @@
 ---
 answer: 方向， 目标， 方位
-due: '2026-06-03'
+due: '2026-08-17'
 ease: 2.5
 example: ''
 interval: 1

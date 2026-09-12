@@ -1,6 +1,6 @@
 ---
 answer: 旋律， 曲调
-due: '2026-06-03'
+due: '2026-08-10'
 ease: 2.5
 example: ''
 interval: 1

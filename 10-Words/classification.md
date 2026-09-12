@@ -1,14 +1,14 @@
 ---
 answer: 分类， 分级， 分类法
-due: '2026-06-03'
-ease: 2.5
+due: '2026-09-28'
+ease: 2.8
 example: ''
-interval: 1
-last-review: ''
-mastery: new
+interval: 16
+last-review: '2026-09-12'
+mastery: perfect
 meaning: 分类， 分级， 分类法； 类别， 级别 (n.)
 phonetic: /,klæsɪfɪ'keʃən/
-reviews: 0
+reviews: 2
 tags:
 - 英语
 - CET6

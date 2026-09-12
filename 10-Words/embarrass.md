@@ -1,6 +1,6 @@
 ---
 answer: 使窘迫， 使为难
-due: '2026-06-03'
+due: '2026-07-13'
 ease: 2.5
 example: ''
 interval: 1

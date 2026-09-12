@@ -1,6 +1,6 @@
 ---
 answer: 赤字， 亏空， 亏损
-due: '2026-06-03'
+due: '2026-07-04'
 ease: 2.5
 example: ''
 interval: 1

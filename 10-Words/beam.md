@@ -1,14 +1,14 @@
 ---
 answer: 面露喜色
-due: '2026-06-03'
-ease: 2.5
+due: '2026-11-13'
+ease: 2.95
 example: ''
-interval: 1
-last-review: ''
-mastery: new
+interval: 67
+last-review: '2026-09-07'
+mastery: perfect
 meaning: 面露喜色； 定向发出， 播送 (v.) / 梁，横梁；束，柱；笑容，喜色 (n.)
 phonetic: /bim/
-reviews: 0
+reviews: 3
 tags:
 - 英语
 - CET6

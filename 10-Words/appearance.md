@@ -1,14 +1,14 @@
 ---
 answer: 出现， 来到
-due: '2026-06-03'
-ease: 2.5
+due: '2026-10-09'
+ease: 2.85
 example: ''
-interval: 1
-last-review: ''
-mastery: new
+interval: 43
+last-review: '2026-08-27'
+mastery: easy
 meaning: 出现， 来到； 外观 (n.)
 phonetic: /ə'pɪrəns/
-reviews: 0
+reviews: 3
 tags:
 - 英语
 - CET6

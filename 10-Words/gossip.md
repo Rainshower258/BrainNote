@@ -1,6 +1,6 @@
 ---
 answer: 传播流言蜚语
-due: '2026-06-03'
+due: '2026-07-24'
 ease: 2.5
 example: ''
 interval: 1

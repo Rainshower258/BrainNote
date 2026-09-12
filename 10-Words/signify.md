@@ -1,6 +1,6 @@
 ---
 answer: 有重要性
-due: '2026-06-03'
+due: '2026-09-10'
 ease: 2.5
 example: ''
 interval: 1

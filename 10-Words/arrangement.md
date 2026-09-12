@@ -1,14 +1,14 @@
 ---
 answer: 整理， 排列
-due: '2026-06-03'
-ease: 2.5
+due: '2026-11-08'
+ease: 2.95
 example: ''
-interval: 1
-last-review: ''
-mastery: new
+interval: 67
+last-review: '2026-09-02'
+mastery: perfect
 meaning: 整理， 排列； 安排； 准备工作 (n.)
 phonetic: /ə'rendʒmənt/
-reviews: 0
+reviews: 3
 tags:
 - 英语
 - CET6

@@ -1,14 +1,14 @@
 ---
 answer: 议程
-due: '2026-06-03'
-ease: 2.5
+due: '2026-10-10'
+ease: 2.9
 example: ''
-interval: 1
-last-review: ''
-mastery: new
+interval: 50
+last-review: '2026-08-21'
+mastery: perfect
 meaning: 议程 (n.)
 phonetic: /ə'dʒɛndə/
-reviews: 0
+reviews: 3
 tags:
 - 英语
 - CET6

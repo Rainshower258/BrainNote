@@ -1,6 +1,6 @@
 ---
 answer: 强迫， 迫使屈服
-due: '2026-06-03'
+due: '2026-06-24'
 ease: 2.5
 example: ''
 interval: 1

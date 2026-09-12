@@ -1,6 +1,6 @@
 ---
 answer: 似有道理的， 似乎正确的， 貌似可信的
-due: '2026-06-03'
+due: '2026-08-22'
 ease: 2.5
 example: ''
 interval: 1

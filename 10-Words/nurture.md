@@ -1,6 +1,6 @@
 ---
 answer: 养育， 培育， 滋养 (n&vt.)
-due: '2026-06-03'
+due: '2026-08-15'
 ease: 2.5
 example: ''
 interval: 1

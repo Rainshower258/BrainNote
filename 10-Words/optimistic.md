@@ -1,6 +1,6 @@
 ---
 answer: 乐观的， 乐观主义的
-due: '2026-06-03'
+due: '2026-08-16'
 ease: 2.5
 example: ''
 interval: 1

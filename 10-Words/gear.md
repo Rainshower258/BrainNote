@@ -1,6 +1,6 @@
 ---
 answer: 齿轮，传动装置，挡
-due: '2026-06-03'
+due: '2026-07-23'
 ease: 2.5
 example: ''
 interval: 1

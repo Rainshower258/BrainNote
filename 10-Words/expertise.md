@@ -1,6 +1,6 @@
 ---
 answer: 专门知识， 专长
-due: '2026-06-03'
+due: '2026-07-18'
 ease: 2.5
 example: ''
 interval: 1

@@ -1,6 +1,6 @@
 ---
 answer: 冒犯的，无礼的，使人不快的
-due: '2026-06-03'
+due: '2026-08-16'
 ease: 2.5
 example: ''
 interval: 1

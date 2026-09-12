@@ -1,6 +1,6 @@
 ---
 answer: 对…表示愤恨， 怨恨
-due: '2026-06-03'
+due: '2026-09-03'
 ease: 2.5
 example: ''
 interval: 1

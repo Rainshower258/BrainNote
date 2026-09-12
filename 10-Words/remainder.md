@@ -1,6 +1,6 @@
 ---
 answer: 余下的部分， 剩下的人数
-due: '2026-06-03'
+due: '2026-09-02'
 ease: 2.5
 example: ''
 interval: 1

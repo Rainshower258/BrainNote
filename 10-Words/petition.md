@@ -1,6 +1,6 @@
 ---
 answer: 请愿， 正式请求
-due: '2026-06-03'
+due: '2026-08-21'
 ease: 2.5
 example: ''
 interval: 1

@@ -1,6 +1,6 @@
 ---
 answer: 争论， 辩论 (n&v.)
-due: '2026-06-03'
+due: '2026-07-02'
 ease: 2.5
 example: ''
 interval: 1

@@ -1,6 +1,6 @@
 ---
 answer: 履行， 实现， 完成
-due: '2026-06-03'
+due: '2026-07-22'
 ease: 2.5
 example: ''
 interval: 1

@@ -1,6 +1,6 @@
 ---
 answer: 理事会， 委员会
-due: '2026-06-03'
+due: '2026-06-30'
 ease: 2.5
 example: ''
 interval: 1

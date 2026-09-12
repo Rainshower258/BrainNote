@@ -1,14 +1,14 @@
 ---
 answer: 接近
-due: '2026-06-03'
-ease: 2.5
+due: '2026-10-29'
+ease: 2.95
 example: ''
-interval: 1
-last-review: ''
-mastery: new
+interval: 67
+last-review: '2026-08-23'
+mastery: perfect
 meaning: 接近；通道，入口；接近的机会 (n.) / 存取 (vt.)
 phonetic: /'æksɛs/
-reviews: 0
+reviews: 3
 tags:
 - 英语
 - CET6

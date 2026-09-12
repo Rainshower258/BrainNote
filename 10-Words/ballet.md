@@ -1,14 +1,14 @@
 ---
 answer: 芭蕾舞， 芭蕾舞剧
-due: '2026-06-03'
-ease: 2.5
+due: '2026-11-10'
+ease: 2.95
 example: ''
-interval: 1
-last-review: ''
-mastery: new
+interval: 67
+last-review: '2026-09-04'
+mastery: perfect
 meaning: 芭蕾舞， 芭蕾舞剧； 芭蕾舞团 (n.)
 phonetic: /bæ'le/
-reviews: 0
+reviews: 3
 tags:
 - 英语
 - CET6

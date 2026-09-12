@@ -1,14 +1,14 @@
 ---
 answer: 小屋
-due: '2026-06-03'
-ease: 2.5
+due: '2026-09-14'
+ease: 2.8
 example: ''
-interval: 1
-last-review: ''
-mastery: new
+interval: 16
+last-review: '2026-08-29'
+mastery: perfect
 meaning: 小屋； 船舱， 机舱 (n.)
 phonetic: /'kæbɪn/
-reviews: 0
+reviews: 2
 tags:
 - 英语
 - CET6

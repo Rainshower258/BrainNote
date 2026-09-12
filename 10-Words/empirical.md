@@ -1,6 +1,6 @@
 ---
 answer: 以经验为依据的， 经验主义的， 经验的
-due: '2026-06-03'
+due: '2026-07-13'
 ease: 2.5
 example: ''
 interval: 1

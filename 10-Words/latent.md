@@ -1,6 +1,6 @@
 ---
 answer: 潜在的， 隐伏的， 不易察觉的
-due: '2026-06-03'
+due: '2026-08-06'
 ease: 2.5
 example: ''
 interval: 1

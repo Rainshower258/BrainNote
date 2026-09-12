@@ -1,6 +1,6 @@
 ---
 answer: 居住的， 住宅的
-due: '2026-06-03'
+due: '2026-09-03'
 ease: 2.5
 example: ''
 interval: 1

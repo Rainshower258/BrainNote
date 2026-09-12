@@ -1,14 +1,14 @@
 ---
 answer: 把握， 信心
-due: '2026-06-03'
-ease: 2.5
+due: '2026-10-17'
+ease: 2.8
 example: ''
-interval: 1
-last-review: ''
-mastery: new
+interval: 45
+last-review: '2026-09-02'
+mastery: good
 meaning: 把握， 信心； 保证， 表示保证的话； 保险 (n.)
 phonetic: /ə'ʃʊrəns/
-reviews: 0
+reviews: 3
 tags:
 - 英语
 - CET6

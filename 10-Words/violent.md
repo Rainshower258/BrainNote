@@ -1,6 +1,6 @@
 ---
 answer: 暴力引起的， 强暴的
-due: '2026-06-03'
+due: '2026-09-26'
 ease: 2.5
 example: ''
 interval: 1

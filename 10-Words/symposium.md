@@ -1,6 +1,6 @@
 ---
 answer: 讨论会， 专题报告会
-due: '2026-06-03'
+due: '2026-09-18'
 ease: 2.5
 example: ''
 interval: 1

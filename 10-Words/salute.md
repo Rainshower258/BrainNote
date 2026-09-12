@@ -1,6 +1,6 @@
 ---
 answer: 敬礼，致意
-due: '2026-06-03'
+due: '2026-09-06'
 ease: 2.5
 example: ''
 interval: 1

@@ -1,6 +1,6 @@
 ---
 answer: 译文， 说法， 改写本
-due: '2026-06-03'
+due: '2026-09-25'
 ease: 2.5
 example: ''
 interval: 1

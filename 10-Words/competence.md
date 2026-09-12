@@ -1,6 +1,6 @@
 ---
 answer: 能力， 胜任， 称职
-due: '2026-06-03'
+due: '2026-06-24'
 ease: 2.5
 example: ''
 interval: 1

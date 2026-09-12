@@ -1,6 +1,6 @@
 ---
 answer: 不透明的， 不透光的
-due: '2026-06-03'
+due: '2026-08-16'
 ease: 2.5
 example: ''
 interval: 1

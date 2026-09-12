@@ -1,6 +1,6 @@
 ---
 answer: 现代的， 当代的
-due: '2026-06-03'
+due: '2026-06-28'
 ease: 2.5
 example: ''
 interval: 1

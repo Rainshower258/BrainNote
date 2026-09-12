@@ -1,14 +1,14 @@
 ---
 answer: 合金
-due: '2026-06-03'
-ease: 2.5
+due: '2026-11-02'
+ease: 2.95
 example: ''
-interval: 1
-last-review: ''
-mastery: new
+interval: 67
+last-review: '2026-08-27'
+mastery: perfect
 meaning: 合金 (n.) / 将…铸成合金 (vt.)
 phonetic: /'ælɔɪ/
-reviews: 0
+reviews: 3
 tags:
 - 英语
 - CET6

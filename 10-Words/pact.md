@@ -1,6 +1,6 @@
 ---
 answer: 契约， 协定， 条约
-due: '2026-06-03'
+due: '2026-08-18'
 ease: 2.5
 example: ''
 interval: 1

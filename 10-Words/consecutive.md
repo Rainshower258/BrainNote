@@ -1,6 +1,6 @@
 ---
 answer: 连续的， 连贯的
-due: '2026-06-03'
+due: '2026-06-26'
 ease: 2.5
 example: ''
 interval: 1

@@ -1,6 +1,6 @@
 ---
 answer: 堕落的，腐败的，贪赃舞弊的
-due: '2026-06-03'
+due: '2026-06-30'
 ease: 2.5
 example: ''
 interval: 1

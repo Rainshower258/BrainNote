@@ -1,6 +1,6 @@
 ---
 answer: 原始的，早期的
-due: '2026-06-03'
+due: '2026-08-25'
 ease: 2.5
 example: ''
 interval: 1

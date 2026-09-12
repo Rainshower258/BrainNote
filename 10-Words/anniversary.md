@@ -1,14 +1,14 @@
 ---
 answer: 周年
-due: '2026-06-03'
-ease: 2.5
+due: '2026-10-23'
+ease: 2.9
 example: ''
-interval: 1
-last-review: ''
-mastery: new
+interval: 58
+last-review: '2026-08-26'
+mastery: perfect
 meaning: 周年 (n.)
 phonetic: /,ænɪ'vɝsəri/
-reviews: 0
+reviews: 3
 tags:
 - 英语
 - CET6

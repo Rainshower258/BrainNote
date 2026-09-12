@@ -1,6 +1,6 @@
 ---
 answer: 继续逗留， 留恋徘徊， 继续存留
-due: '2026-06-03'
+due: '2026-08-07'
 ease: 2.5
 example: ''
 interval: 1

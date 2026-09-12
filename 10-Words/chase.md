@@ -1,14 +1,14 @@
 ---
 answer: 追逐， 追赶， 追求 (n&vt.)
-due: '2026-06-03'
-ease: 2.5
+due: '2026-09-27'
+ease: 2.8
 example: ''
-interval: 1
-last-review: ''
-mastery: new
+interval: 16
+last-review: '2026-09-11'
+mastery: perfect
 meaning: 追逐， 追赶， 追求 (n&vt.)
 phonetic: /tʃeis/
-reviews: 0
+reviews: 2
 tags:
 - 英语
 - CET6

@@ -1,14 +1,14 @@
 ---
 answer: 严重的
-due: '2026-06-03'
-ease: 2.5
+due: '2026-10-09'
+ease: 2.9
 example: ''
-interval: 1
-last-review: ''
-mastery: new
+interval: 50
+last-review: '2026-08-20'
+mastery: perfect
 meaning: 严重的； 急性的； 灵敏的， 敏锐的； 精明的 (adj.)
 phonetic: /ə'kjut/
-reviews: 0
+reviews: 3
 tags:
 - 英语
 - CET6

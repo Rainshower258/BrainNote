@@ -1,6 +1,6 @@
 ---
 answer: 先例， 范例
-due: '2026-06-03'
+due: '2026-08-23'
 ease: 2.5
 example: ''
 interval: 1

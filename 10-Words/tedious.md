@@ -1,6 +1,6 @@
 ---
 answer: 冗长乏味的， 沉闷的
-due: '2026-06-03'
+due: '2026-09-19'
 ease: 2.5
 example: ''
 interval: 1

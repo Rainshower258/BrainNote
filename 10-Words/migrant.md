@@ -1,6 +1,6 @@
 ---
 answer: 移居者， 移民
-due: '2026-06-03'
+due: '2026-08-11'
 ease: 2.5
 example: ''
 interval: 1

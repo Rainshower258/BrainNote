@@ -1,6 +1,6 @@
 ---
 answer: 不活动， 惰性
-due: '2026-06-03'
+due: '2026-07-31'
 ease: 2.5
 example: ''
 interval: 1

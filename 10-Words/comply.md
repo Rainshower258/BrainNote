@@ -1,6 +1,6 @@
 ---
 answer: 遵从， 依从， 服从
-due: '2026-06-03'
+due: '2026-06-24'
 ease: 2.5
 example: ''
 interval: 1

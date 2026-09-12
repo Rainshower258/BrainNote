@@ -1,6 +1,6 @@
 ---
 answer: 比预期时间早的
-due: '2026-06-03'
+due: '2026-08-24'
 ease: 2.5
 example: ''
 interval: 1

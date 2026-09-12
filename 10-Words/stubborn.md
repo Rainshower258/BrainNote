@@ -1,6 +1,6 @@
 ---
 answer: 顽固的， 执拗的， 倔强的
-due: '2026-06-03'
+due: '2026-09-15'
 ease: 2.5
 example: ''
 interval: 1

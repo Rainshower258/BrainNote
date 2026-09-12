@@ -1,6 +1,6 @@
 ---
 answer: 界限， 范围
-due: '2026-06-03'
+due: '2026-08-19'
 ease: 2.5
 example: ''
 interval: 1

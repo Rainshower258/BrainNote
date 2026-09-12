@@ -1,6 +1,6 @@
 ---
 answer: 使确信， 使信服， 说服
-due: '2026-06-03'
+due: '2026-06-29'
 ease: 2.5
 example: ''
 interval: 1

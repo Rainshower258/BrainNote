@@ -1,6 +1,6 @@
 ---
 answer: 生动的， 形象的
-due: '2026-06-03'
+due: '2026-07-25'
 ease: 2.5
 example: ''
 interval: 1

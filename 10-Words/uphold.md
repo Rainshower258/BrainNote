@@ -1,6 +1,6 @@
 ---
 answer: 支持， 维护
-due: '2026-06-03'
+due: '2026-09-24'
 ease: 2.5
 example: ''
 interval: 1

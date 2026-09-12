@@ -1,6 +1,6 @@
 ---
 answer: 努力， 尽力， 尝试 (n&v.)
-due: '2026-06-03'
+due: '2026-07-13'
 ease: 2.5
 example: ''
 interval: 1

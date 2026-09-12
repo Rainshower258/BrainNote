@@ -1,6 +1,6 @@
 ---
 answer: 重新得到， 取回， 收回
-due: '2026-06-03'
+due: '2026-09-04'
 ease: 2.5
 example: ''
 interval: 1

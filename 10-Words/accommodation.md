@@ -1,14 +1,14 @@
 ---
 answer: 住处， 膳宿
-due: '2026-06-03'
-ease: 2.5
+due: '2026-11-23'
+ease: 2.85
 example: ''
-interval: 1
-last-review: ''
-mastery: new
+interval: 82
+last-review: '2026-09-02'
+mastery: easy
 meaning: 住处， 膳宿 (n.)
 phonetic: /ə,kɑmə'deʃən/
-reviews: 0
+reviews: 4
 tags:
 - 英语
 - CET6

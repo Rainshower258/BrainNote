@@ -1,6 +1,6 @@
 ---
 answer: 征收
-due: '2026-06-03'
+due: '2026-08-06'
 ease: 2.5
 example: ''
 interval: 1

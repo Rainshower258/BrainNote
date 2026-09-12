@@ -1,6 +1,6 @@
 ---
 answer: 四周有篱笆的场地， 围场
-due: '2026-06-03'
+due: '2026-07-13'
 ease: 2.5
 example: ''
 interval: 1

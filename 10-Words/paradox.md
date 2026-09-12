@@ -1,6 +1,6 @@
 ---
 answer: 似乎矛盾而正确的说法
-due: '2026-06-03'
+due: '2026-08-19'
 ease: 2.5
 example: ''
 interval: 1

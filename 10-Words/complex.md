@@ -1,6 +1,6 @@
 ---
 answer: 由许多部分组成的，复合的
-due: '2026-06-03'
+due: '2026-06-24'
 ease: 2.5
 example: ''
 interval: 1

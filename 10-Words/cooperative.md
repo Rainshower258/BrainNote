@@ -1,6 +1,6 @@
 ---
 answer: 有合作意向的，乐意合作的
-due: '2026-06-03'
+due: '2026-06-29'
 ease: 2.5
 example: ''
 interval: 1

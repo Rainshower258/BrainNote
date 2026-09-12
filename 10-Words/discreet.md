@@ -1,6 +1,6 @@
 ---
 answer: 谨慎的， 慎重的， 审慎的
-due: '2026-06-03'
+due: '2026-07-07'
 ease: 2.5
 example: ''
 interval: 1

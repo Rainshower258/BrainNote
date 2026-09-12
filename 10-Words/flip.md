@@ -1,6 +1,6 @@
 ---
 answer: 〈口〉无理的， 轻率的， 轻浮的
-due: '2026-06-03'
+due: '2026-07-21'
 ease: 2.5
 example: ''
 interval: 1

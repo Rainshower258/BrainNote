@@ -1,6 +1,6 @@
 ---
 answer: 地极的， 近地极的
-due: '2026-06-03'
+due: '2026-08-23'
 ease: 2.5
 example: ''
 interval: 1

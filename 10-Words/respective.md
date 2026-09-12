@@ -1,6 +1,6 @@
 ---
 answer: 各自的， 各个的， 分别的
-due: '2026-06-03'
+due: '2026-09-04'
 ease: 2.5
 example: ''
 interval: 1

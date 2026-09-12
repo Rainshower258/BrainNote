@@ -1,6 +1,6 @@
 ---
 answer: 纯净， 纯洁， 纯正
-due: '2026-06-03'
+due: '2026-08-28'
 ease: 2.5
 example: ''
 interval: 1

@@ -1,6 +1,6 @@
 ---
 answer: 参加者， 参与者
-due: '2026-06-03'
+due: '2026-08-19'
 ease: 2.5
 example: ''
 interval: 1

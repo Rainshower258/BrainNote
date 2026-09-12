@@ -1,6 +1,6 @@
 ---
 answer: 时刻表，日程安排表
-due: '2026-06-03'
+due: '2026-09-07'
 ease: 2.5
 example: ''
 interval: 1

@@ -1,6 +1,6 @@
 ---
 answer: 爱国的， 有爱国心的， 显示爱国精神的
-due: '2026-06-03'
+due: '2026-08-20'
 ease: 2.5
 example: ''
 interval: 1

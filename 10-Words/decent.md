@@ -1,6 +1,6 @@
 ---
 answer: 像样的， 过得去的， 体面的
-due: '2026-06-03'
+due: '2026-07-03'
 ease: 2.5
 example: ''
 interval: 1

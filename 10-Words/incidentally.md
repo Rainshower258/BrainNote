@@ -1,6 +1,6 @@
 ---
 answer: 顺便提及地， 顺便提一句
-due: '2026-06-03'
+due: '2026-07-30'
 ease: 2.5
 example: ''
 interval: 1

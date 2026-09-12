@@ -1,6 +1,6 @@
 ---
 answer: 热情， 热心， 热忱
-due: '2026-06-03'
+due: '2026-07-14'
 ease: 2.5
 example: ''
 interval: 1

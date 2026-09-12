@@ -1,6 +1,6 @@
 ---
 answer: 成为必要， 需要
-due: '2026-06-03'
+due: '2026-08-14'
 ease: 2.5
 example: ''
 interval: 1

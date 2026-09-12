@@ -1,6 +1,6 @@
 ---
 answer: 降低…的身份， 有辱…的人格
-due: '2026-06-03'
+due: '2026-07-04'
 ease: 2.5
 example: ''
 interval: 1

@@ -1,6 +1,6 @@
 ---
 answer: 无效的，作废的
-due: '2026-06-03'
+due: '2026-08-04'
 ease: 2.5
 example: ''
 interval: 1

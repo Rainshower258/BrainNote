@@ -1,14 +1,14 @@
 ---
 answer: 伤亡人员， 死伤者
-due: '2026-06-03'
-ease: 2.5
+due: '2026-09-16'
+ease: 2.75
 example: ''
-interval: 1
-last-review: ''
-mastery: new
+interval: 12
+last-review: '2026-09-04'
+mastery: perfect
 meaning: 伤亡人员， 死伤者； 受害人， 损失的东西 (n.)
 phonetic: /'kæʒuəlti/
-reviews: 0
+reviews: 2
 tags:
 - 英语
 - CET6

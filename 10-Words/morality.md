@@ -1,6 +1,6 @@
 ---
 answer: 道德， 道德性
-due: '2026-06-03'
+due: '2026-08-12'
 ease: 2.5
 example: ''
 interval: 1

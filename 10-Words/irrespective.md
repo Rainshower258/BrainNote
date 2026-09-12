@@ -1,6 +1,6 @@
 ---
 answer: 不考虑的， 不顾及的
-due: '2026-06-03'
+due: '2026-08-04'
 ease: 2.5
 example: ''
 interval: 1

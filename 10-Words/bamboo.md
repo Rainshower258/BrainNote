@@ -1,14 +1,14 @@
 ---
 answer: 竹， 竹子
-due: '2026-06-03'
-ease: 2.5
+due: '2026-11-10'
+ease: 2.95
 example: ''
-interval: 1
-last-review: ''
-mastery: new
+interval: 67
+last-review: '2026-09-04'
+mastery: perfect
 meaning: 竹， 竹子 (n.)
 phonetic: /,bæm'bu/
-reviews: 0
+reviews: 3
 tags:
 - 英语
 - CET6

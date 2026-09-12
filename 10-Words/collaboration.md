@@ -1,14 +1,14 @@
 ---
 answer: 合作， 协作
-due: '2026-06-03'
-ease: 2.5
+due: '2026-09-24'
+ease: 2.75
 example: ''
-interval: 1
-last-review: ''
-mastery: new
+interval: 12
+last-review: '2026-09-12'
+mastery: perfect
 meaning: 合作， 协作； 勾结 (n.)
 phonetic: /kə,læbə'reʃən/
-reviews: 0
+reviews: 2
 tags:
 - 英语
 - CET6

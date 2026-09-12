@@ -1,6 +1,6 @@
 ---
 answer: 被提示的真相， 新发现
-due: '2026-06-03'
+due: '2026-09-05'
 ease: 2.5
 example: ''
 interval: 1

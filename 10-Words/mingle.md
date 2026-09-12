@@ -1,6 +1,6 @@
 ---
 answer: 混合起来， 相混合
-due: '2026-06-03'
+due: '2026-08-11'
 ease: 2.5
 example: ''
 interval: 1

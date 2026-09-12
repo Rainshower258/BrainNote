@@ -1,6 +1,6 @@
 ---
 answer: 下降， 下倾
-due: '2026-06-03'
+due: '2026-07-05'
 ease: 2.5
 example: ''
 interval: 1

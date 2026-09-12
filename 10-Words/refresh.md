@@ -1,6 +1,6 @@
 ---
 answer: 振作精神， 恢复活力
-due: '2026-06-03'
+due: '2026-09-01'
 ease: 2.5
 example: ''
 interval: 1

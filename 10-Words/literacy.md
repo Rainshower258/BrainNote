@@ -1,6 +1,6 @@
 ---
 answer: 识字， 有文化， 读写能力
-due: '2026-06-03'
+due: '2026-08-07'
 ease: 2.5
 example: ''
 interval: 1

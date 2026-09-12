@@ -1,6 +1,6 @@
 ---
 answer: 使受不了， 使不知所措
-due: '2026-06-03'
+due: '2026-08-18'
 ease: 2.5
 example: ''
 interval: 1

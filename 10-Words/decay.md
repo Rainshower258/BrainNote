@@ -1,6 +1,6 @@
 ---
 answer: 腐烂，衰败
-due: '2026-06-03'
+due: '2026-07-03'
 ease: 2.5
 example: ''
 interval: 1

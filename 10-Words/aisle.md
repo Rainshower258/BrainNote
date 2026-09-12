@@ -1,14 +1,14 @@
 ---
 answer: 过道， 通道
-due: '2026-06-03'
-ease: 2.5
+due: '2026-10-04'
+ease: 2.8
 example: ''
-interval: 1
-last-review: ''
-mastery: new
+interval: 44
+last-review: '2026-08-21'
+mastery: perfect
 meaning: 过道， 通道 (n.)
 phonetic: /aɪl/
-reviews: 0
+reviews: 3
 tags:
 - 英语
 - CET6

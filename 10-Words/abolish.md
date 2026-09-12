@@ -1,14 +1,14 @@
 ---
 answer: 彻底废除， 废止
-due: '2026-06-03'
-ease: 2.5
+due: '2026-10-29'
+ease: 2.95
 example: ''
-interval: 1
-last-review: ''
-mastery: new
+interval: 67
+last-review: '2026-08-23'
+mastery: perfect
 meaning: 彻底废除， 废止 (vt.)
 phonetic: /ə'bɑlɪʃ/
-reviews: 0
+reviews: 3
 tags:
 - 英语
 - CET6

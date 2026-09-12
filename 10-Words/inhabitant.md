@@ -1,6 +1,6 @@
 ---
 answer: 居民， 住户
-due: '2026-06-03'
+due: '2026-07-31'
 ease: 2.5
 example: ''
 interval: 1

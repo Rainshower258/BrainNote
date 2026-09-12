@@ -1,6 +1,6 @@
 ---
 answer: 伸出，突出
-due: '2026-06-03'
+due: '2026-08-22'
 ease: 2.5
 example: ''
 interval: 1

@@ -1,6 +1,6 @@
 ---
 answer: 尽情地吃， 宴饮
-due: '2026-06-03'
+due: '2026-07-19'
 ease: 2.5
 example: ''
 interval: 1

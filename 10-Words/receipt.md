@@ -1,6 +1,6 @@
 ---
 answer: 发票， 收据
-due: '2026-06-03'
+due: '2026-08-30'
 ease: 2.5
 example: ''
 interval: 1

@@ -1,6 +1,6 @@
 ---
 answer: 压抑， 压制， 镇压
-due: '2026-06-03'
+due: '2026-09-03'
 ease: 2.5
 example: ''
 interval: 1

@@ -1,6 +1,6 @@
 ---
 answer: 不变地， 始终如一地， 总是
-due: '2026-06-03'
+due: '2026-08-04'
 ease: 2.5
 example: ''
 interval: 1

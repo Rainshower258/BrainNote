@@ -1,6 +1,6 @@
 ---
 answer: 重新开始， 继续， 恢复
-due: '2026-06-03'
+due: '2026-09-04'
 ease: 2.5
 example: ''
 interval: 1

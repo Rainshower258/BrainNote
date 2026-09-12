@@ -1,6 +1,6 @@
 ---
 answer: 抑制， 限制， 克制
-due: '2026-06-03'
+due: '2026-09-04'
 ease: 2.5
 example: ''
 interval: 1

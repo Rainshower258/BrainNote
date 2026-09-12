@@ -1,6 +1,6 @@
 ---
 answer: 破坏的， 毁灭的
-due: '2026-06-03'
+due: '2026-07-06'
 ease: 2.5
 example: ''
 interval: 1

@@ -1,6 +1,6 @@
 ---
 answer: 压碎， 碾碎， 镇压
-due: '2026-06-03'
+due: '2026-07-01'
 ease: 2.5
 example: ''
 interval: 1

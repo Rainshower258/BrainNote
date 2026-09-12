@@ -1,6 +1,6 @@
 ---
 answer: 思想， 观念， 概念
-due: '2026-06-03'
+due: '2026-06-25'
 ease: 2.5
 example: ''
 interval: 1

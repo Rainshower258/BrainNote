@@ -1,6 +1,6 @@
 ---
 answer: 雄辩的， 口才流利的， 有说服力的
-due: '2026-06-03'
+due: '2026-07-13'
 ease: 2.5
 example: ''
 interval: 1

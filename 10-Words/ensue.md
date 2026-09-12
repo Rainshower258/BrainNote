@@ -1,6 +1,6 @@
 ---
 answer: 接着发生， 接踵而来， 因而产生
-due: '2026-06-03'
+due: '2026-07-14'
 ease: 2.5
 example: ''
 interval: 1

@@ -1,6 +1,6 @@
 ---
 answer: 作为…的代表， 表示， 象征
-due: '2026-06-03'
+due: '2026-09-03'
 ease: 2.5
 example: ''
 interval: 1

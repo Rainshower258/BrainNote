@@ -1,6 +1,6 @@
 ---
 answer: 软木，软木塞
-due: '2026-06-03'
+due: '2026-06-29'
 ease: 2.5
 example: ''
 interval: 1

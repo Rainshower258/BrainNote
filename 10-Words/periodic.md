@@ -1,6 +1,6 @@
 ---
 answer: 周期的， 定期的， 时而发生的
-due: '2026-06-03'
+due: '2026-08-21'
 ease: 2.5
 example: ''
 interval: 1

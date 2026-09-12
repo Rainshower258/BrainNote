@@ -1,14 +1,14 @@
 ---
 answer: 公文包， 公事包
-due: '2026-06-03'
-ease: 2.5
+due: '2026-09-13'
+ease: 2.8
 example: ''
-interval: 1
-last-review: ''
-mastery: new
+interval: 16
+last-review: '2026-08-28'
+mastery: perfect
 meaning: 公文包， 公事包 (n.)
 phonetic: /'brifkes/
-reviews: 0
+reviews: 2
 tags:
 - 英语
 - CET6

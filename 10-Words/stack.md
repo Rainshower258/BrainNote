@@ -1,6 +1,6 @@
 ---
 answer: 堆，垛
-due: '2026-06-03'
+due: '2026-09-13'
 ease: 2.5
 example: ''
 interval: 1

@@ -1,6 +1,6 @@
 ---
 answer: 初级律师， 事务律师
-due: '2026-06-03'
+due: '2026-09-11'
 ease: 2.5
 example: ''
 interval: 1

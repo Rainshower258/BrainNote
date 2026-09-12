@@ -1,6 +1,6 @@
 ---
 answer: 致命的， 灾难性的， 毁灭性的
-due: '2026-06-03'
+due: '2026-07-19'
 ease: 2.5
 example: ''
 interval: 1

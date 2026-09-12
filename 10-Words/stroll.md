@@ -1,6 +1,6 @@
 ---
 answer: 散步， 闲逛 (n&vi.)
-due: '2026-06-03'
+due: '2026-09-15'
 ease: 2.5
 example: ''
 interval: 1

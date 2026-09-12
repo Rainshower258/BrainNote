@@ -1,6 +1,6 @@
 ---
 answer: 特征， 特点， 特性
-due: '2026-06-03'
+due: '2026-09-21'
 ease: 2.5
 example: ''
 interval: 1

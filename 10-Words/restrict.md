@@ -1,6 +1,6 @@
 ---
 answer: 限制， 约束， 限定
-due: '2026-06-03'
+due: '2026-09-04'
 ease: 2.5
 example: ''
 interval: 1

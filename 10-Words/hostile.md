@@ -1,6 +1,6 @@
 ---
 answer: 敌方的， 不友善的
-due: '2026-06-03'
+due: '2026-07-27'
 ease: 2.5
 example: ''
 interval: 1

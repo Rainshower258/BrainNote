@@ -1,14 +1,14 @@
 ---
 answer: 逮捕，拘留
-due: '2026-06-03'
-ease: 2.5
+due: '2026-11-08'
+ease: 2.95
 example: ''
-interval: 1
-last-review: ''
-mastery: new
+interval: 67
+last-review: '2026-09-02'
+mastery: perfect
 meaning: 逮捕，拘留；停止，阻止；吸引 (vt.) / 逮捕， 拘留， 扣留 (n.)
 phonetic: /ə'rɛst/
-reviews: 0
+reviews: 3
 tags:
 - 英语
 - CET6

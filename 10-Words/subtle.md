@@ -1,6 +1,6 @@
 ---
 answer: 微妙的， 难以捉摸的
-due: '2026-06-03'
+due: '2026-09-16'
 ease: 2.5
 example: ''
 interval: 1

@@ -1,6 +1,6 @@
 ---
 answer: 消灭， 毁灭
-due: '2026-06-03'
+due: '2026-06-28'
 ease: 2.5
 example: ''
 interval: 1

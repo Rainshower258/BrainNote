@@ -1,14 +1,14 @@
 ---
 answer: 喜剧的，滑稽的
-due: '2026-06-03'
-ease: 2.5
+due: '2026-09-12'
+ease: 2.65
 example: ''
-interval: 1
-last-review: ''
-mastery: new
+interval: 4
+last-review: '2026-09-08'
+mastery: perfect
 meaning: 喜剧的，滑稽的 (adj.) / 连环漫画； 喜剧演员 (n.)
 phonetic: /'kɑmɪk/
-reviews: 0
+reviews: 1
 tags:
 - 英语
 - CET6

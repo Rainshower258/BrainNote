@@ -1,14 +1,14 @@
 ---
 answer: 委任状
-due: '2026-06-03'
-ease: 2.5
+due: '2026-09-13'
+ease: 2.65
 example: ''
-interval: 1
-last-review: ''
-mastery: new
+interval: 4
+last-review: '2026-09-09'
+mastery: perfect
 meaning: 委任状；委员会；佣金，回扣；授权，委托 (n.) / 委任， 委托 (vt.)
 phonetic: /kə'mɪʃən/
-reviews: 0
+reviews: 1
 tags:
 - 英语
 - CET6

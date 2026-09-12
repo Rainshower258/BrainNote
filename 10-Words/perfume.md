@@ -1,6 +1,6 @@
 ---
 answer: 香水，香料，香气
-due: '2026-06-03'
+due: '2026-08-21'
 ease: 2.5
 example: ''
 interval: 1

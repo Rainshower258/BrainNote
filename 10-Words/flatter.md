@@ -1,6 +1,6 @@
 ---
 answer: 向…谄媚， 奉承
-due: '2026-06-03'
+due: '2026-07-20'
 ease: 2.5
 example: ''
 interval: 1

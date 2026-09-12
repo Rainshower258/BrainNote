@@ -1,6 +1,6 @@
 ---
 answer: 闪亮， 闪烁
-due: '2026-06-03'
+due: '2026-07-24'
 ease: 2.5
 example: ''
 interval: 1

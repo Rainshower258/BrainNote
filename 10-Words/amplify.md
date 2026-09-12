@@ -1,14 +1,14 @@
 ---
 answer: 放大， 增强
-due: '2026-06-03'
-ease: 2.5
+due: '2026-11-02'
+ease: 2.95
 example: ''
-interval: 1
-last-review: ''
-mastery: new
+interval: 67
+last-review: '2026-08-27'
+mastery: perfect
 meaning: 放大， 增强； 扩大； 详述， 进一步阐述 (vt.)
 phonetic: /'æmplɪfaɪ/
-reviews: 0
+reviews: 3
 tags:
 - 英语
 - CET6

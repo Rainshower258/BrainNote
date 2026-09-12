@@ -1,6 +1,6 @@
 ---
 answer: 投掷， 使猛然倒下
-due: '2026-06-03'
+due: '2026-08-22'
 ease: 2.5
 example: ''
 interval: 1

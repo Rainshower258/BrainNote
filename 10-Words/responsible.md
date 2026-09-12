@@ -1,6 +1,6 @@
 ---
 answer: 需负责任的， 承担责任的
-due: '2026-06-03'
+due: '2026-09-04'
 ease: 2.5
 example: ''
 interval: 1

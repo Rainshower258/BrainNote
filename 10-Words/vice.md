@@ -1,6 +1,6 @@
 ---
 answer: 罪恶， 恶习， 缺点
-due: '2026-06-03'
+due: '2026-09-26'
 ease: 2.5
 example: ''
 interval: 1

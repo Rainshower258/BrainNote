@@ -1,6 +1,6 @@
 ---
 answer: 可忽略不计的， 微不足道的
-due: '2026-06-03'
+due: '2026-08-14'
 ease: 2.5
 example: ''
 interval: 1

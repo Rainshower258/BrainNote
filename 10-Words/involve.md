@@ -1,6 +1,6 @@
 ---
 answer: 使卷入， 牵涉
-due: '2026-06-03'
+due: '2026-08-04'
 ease: 2.5
 example: ''
 interval: 1

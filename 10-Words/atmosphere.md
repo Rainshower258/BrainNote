@@ -1,14 +1,14 @@
 ---
 answer: 大气， 空气
-due: '2026-06-03'
-ease: 2.5
+due: '2026-09-20'
+ease: 2.75
 example: ''
-interval: 1
-last-review: ''
-mastery: new
+interval: 28
+last-review: '2026-08-23'
+mastery: easy
 meaning: 大气， 空气； 气氛， 环境 (n.)
 phonetic: /'ætməsfɪr/
-reviews: 0
+reviews: 3
 tags:
 - 英语
 - CET6

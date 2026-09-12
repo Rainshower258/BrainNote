@@ -1,6 +1,6 @@
 ---
 answer: 唯物主义
-due: '2026-06-03'
+due: '2026-08-10'
 ease: 2.5
 example: ''
 interval: 1

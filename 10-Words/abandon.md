@@ -1,15 +1,15 @@
 ---
 answer: 放弃；抛弃
-due: '2026-06-13'
-ease: 2.65
+due: '2026-09-15'
+ease: 2.8
 example: ''
-interval: 11
-last-review: '2026-06-02'
+interval: 44
+last-review: '2026-08-02'
 last_review: ''
-mastery: good
+mastery: perfect
 meaning: v. 放弃，抛弃；丢弃（人或物）
 phonetic: /əˈbændən/
-reviews: 2
+reviews: 3
 tags:
 - 英语
 type: word

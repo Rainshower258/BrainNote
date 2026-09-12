@@ -1,6 +1,6 @@
 ---
 answer: 试探的， 试验的
-due: '2026-06-03'
+due: '2026-09-19'
 ease: 2.5
 example: ''
 interval: 1

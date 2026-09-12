@@ -1,14 +1,14 @@
 ---
 answer: 断定的
-due: '2026-06-03'
-ease: 2.5
+due: '2026-11-08'
+ease: 2.95
 example: ''
-interval: 1
-last-review: ''
-mastery: new
+interval: 67
+last-review: '2026-09-02'
+mastery: perfect
 meaning: 断定的； 过分自信的 (adj.)
 phonetic: /ə'sɝtɪv/
-reviews: 0
+reviews: 3
 tags:
 - 英语
 - CET6

@@ -1,6 +1,6 @@
 ---
 answer: 易受影响的
-due: '2026-06-03'
+due: '2026-09-17'
 ease: 2.5
 example: ''
 interval: 1

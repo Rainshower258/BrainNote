@@ -1,6 +1,6 @@
 ---
 answer: 探索，查究，调查
-due: '2026-06-03'
+due: '2026-08-26'
 ease: 2.5
 example: ''
 interval: 1

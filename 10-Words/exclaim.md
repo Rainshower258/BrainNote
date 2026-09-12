@@ -1,6 +1,6 @@
 ---
 answer: 呼喊， 惊叫
-due: '2026-06-03'
+due: '2026-07-16'
 ease: 2.5
 example: ''
 interval: 1

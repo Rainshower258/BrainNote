@@ -1,6 +1,6 @@
 ---
 answer: 通风口，排放口
-due: '2026-06-03'
+due: '2026-09-25'
 ease: 2.5
 example: ''
 interval: 1

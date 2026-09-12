@@ -1,6 +1,6 @@
 ---
 answer: 百万富翁， 大富翁
-due: '2026-06-03'
+due: '2026-08-11'
 ease: 2.5
 example: ''
 interval: 1

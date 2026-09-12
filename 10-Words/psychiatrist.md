@@ -1,6 +1,6 @@
 ---
 answer: 精神科医生， 精神病专家
-due: '2026-06-03'
+due: '2026-08-28'
 ease: 2.5
 example: ''
 interval: 1

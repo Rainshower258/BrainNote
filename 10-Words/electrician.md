@@ -1,6 +1,6 @@
 ---
 answer: 电工， 电气技师
-due: '2026-06-03'
+due: '2026-07-12'
 ease: 2.5
 example: ''
 interval: 1

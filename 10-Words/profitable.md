@@ -1,6 +1,6 @@
 ---
 answer: 有利可图的， 有益的
-due: '2026-06-03'
+due: '2026-08-26'
 ease: 2.5
 example: ''
 interval: 1

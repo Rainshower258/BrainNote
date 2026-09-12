@@ -1,6 +1,6 @@
 ---
 answer: 摇摇晃晃地移动，蹒跚
-due: '2026-06-03'
+due: '2026-08-31'
 ease: 2.5
 example: ''
 interval: 1

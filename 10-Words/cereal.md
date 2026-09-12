@@ -1,14 +1,14 @@
 ---
 answer: 加工而成的谷类食物
-due: '2026-06-03'
-ease: 2.5
+due: '2026-09-22'
+ease: 2.8
 example: ''
-interval: 1
-last-review: ''
-mastery: new
+interval: 16
+last-review: '2026-09-06'
+mastery: perfect
 meaning: 加工而成的谷类食物； 谷类植物， 谷物 (n.)
 phonetic: /'sɪrɪəl/
-reviews: 0
+reviews: 2
 tags:
 - 英语
 - CET6

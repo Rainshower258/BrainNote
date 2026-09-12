@@ -1,6 +1,6 @@
 ---
 answer: 趋向， 趋势， 倾向
-due: '2026-06-03'
+due: '2026-09-19'
 ease: 2.5
 example: ''
 interval: 1

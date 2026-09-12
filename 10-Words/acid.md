@@ -1,14 +1,14 @@
 ---
 answer: 酸的， 酸性的
-due: '2026-06-03'
-ease: 2.5
+due: '2026-10-29'
+ease: 2.95
 example: ''
-interval: 1
-last-review: ''
-mastery: new
+interval: 67
+last-review: '2026-08-23'
+mastery: perfect
 meaning: 酸的， 酸性的； 尖刻的， 刻薄的 (adj.) / 酸 (n.)
 phonetic: /'æsɪd/
-reviews: 0
+reviews: 3
 tags:
 - 英语
 - CET6

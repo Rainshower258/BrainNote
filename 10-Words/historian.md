@@ -1,6 +1,6 @@
 ---
 answer: 历史学家， 史学工作者
-due: '2026-06-03'
+due: '2026-07-27'
 ease: 2.5
 example: ''
 interval: 1

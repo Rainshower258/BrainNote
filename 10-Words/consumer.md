@@ -1,6 +1,6 @@
 ---
 answer: 消费者， 用户， 消耗者
-due: '2026-06-03'
+due: '2026-06-28'
 ease: 2.5
 example: ''
 interval: 1

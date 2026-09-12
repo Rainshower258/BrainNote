@@ -1,6 +1,6 @@
 ---
 answer: 习惯上的， 惯常的， 合乎习俗的
-due: '2026-06-03'
+due: '2026-07-02'
 ease: 2.5
 example: ''
 interval: 1

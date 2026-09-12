@@ -1,14 +1,14 @@
 ---
 answer: 爆裂，坏掉
-due: '2026-06-03'
-ease: 2.5
+due: '2026-09-14'
+ease: 2.8
 example: ''
-interval: 1
-last-review: ''
-mastery: new
+interval: 16
+last-review: '2026-08-29'
+mastery: perfect
 meaning: 爆裂，坏掉 (vi.) / 打破，打碎 (vt.) / 胸像， 半身像； 胸部， 胸围 (n.)
 phonetic: /bʌst/
-reviews: 0
+reviews: 2
 tags:
 - 英语
 - CET6

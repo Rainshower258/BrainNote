@@ -1,14 +1,14 @@
 ---
 answer: 出血，流血
-due: '2026-06-03'
-ease: 2.5
+due: '2026-11-15'
+ease: 2.95
 example: ''
-interval: 1
-last-review: ''
-mastery: new
+interval: 67
+last-review: '2026-09-09'
+mastery: perfect
 meaning: 出血，流血；泌脂 (vi.) / 勒索…的钱 (vt.)
 phonetic: /blid/
-reviews: 0
+reviews: 3
 tags:
 - 英语
 - CET6

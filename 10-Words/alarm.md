@@ -1,14 +1,14 @@
 ---
 answer: 惊恐，忧虑，警报
-due: '2026-06-03'
-ease: 2.5
+due: '2026-11-02'
+ease: 2.95
 example: ''
-interval: 1
-last-review: ''
-mastery: new
+interval: 67
+last-review: '2026-08-27'
+mastery: perfect
 meaning: 惊恐，忧虑，警报 (n.) / 使惊恐， 使担心 (vt.)
 phonetic: /ə'lɑrm/
-reviews: 0
+reviews: 3
 tags:
 - 英语
 - CET6

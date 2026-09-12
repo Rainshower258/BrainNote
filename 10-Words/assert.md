@@ -1,14 +1,14 @@
 ---
 answer: 肯定地说， 断言
-due: '2026-06-03'
-ease: 2.5
+due: '2026-11-08'
+ease: 2.95
 example: ''
-interval: 1
-last-review: ''
-mastery: new
+interval: 67
+last-review: '2026-09-02'
+mastery: perfect
 meaning: 肯定地说， 断言； 维护， 坚持； 坚持己见 (vt.)
 phonetic: /ə'sɝt/
-reviews: 0
+reviews: 3
 tags:
 - 英语
 - CET6

@@ -1,14 +1,14 @@
 ---
 answer: 讨价还价
-due: '2026-06-03'
-ease: 2.5
+due: '2026-11-01'
+ease: 2.9
 example: ''
-interval: 1
-last-review: ''
-mastery: new
+interval: 58
+last-review: '2026-09-04'
+mastery: perfect
 meaning: 讨价还价 (vi.) / 特价商品；协议，交易 (n.)
 phonetic: /ˈbɑrɡɪn/
-reviews: 0
+reviews: 3
 tags:
 - 英语
 - CET6

@@ -1,6 +1,6 @@
 ---
 answer: 包括一切的， 包括一切费用在内的
-due: '2026-06-03'
+due: '2026-07-30'
 ease: 2.5
 example: ''
 interval: 1

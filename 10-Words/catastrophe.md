@@ -1,14 +1,14 @@
 ---
 answer: 大灾难， 灾祸
-due: '2026-06-03'
-ease: 2.5
+due: '2026-09-14'
+ease: 2.7
 example: ''
-interval: 1
-last-review: ''
-mastery: new
+interval: 10
+last-review: '2026-09-04'
+mastery: easy
 meaning: 大灾难， 灾祸 (n.)
 phonetic: /kə'tæstrəfi/
-reviews: 0
+reviews: 2
 tags:
 - 英语
 - CET6

@@ -1,14 +1,14 @@
 ---
 answer: 惯常的， 习惯的
-due: '2026-06-03'
-ease: 2.5
+due: '2026-10-01'
+ease: 2.8
 example: ''
-interval: 1
-last-review: ''
-mastery: new
+interval: 44
+last-review: '2026-08-18'
+mastery: perfect
 meaning: 惯常的， 习惯的 (adj.)
 phonetic: /ə'kʌstəmd/
-reviews: 0
+reviews: 3
 tags:
 - 英语
 - CET6

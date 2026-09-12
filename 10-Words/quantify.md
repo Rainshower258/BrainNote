@@ -1,6 +1,6 @@
 ---
 answer: 确定…的数量， 量化
-due: '2026-06-03'
+due: '2026-08-28'
 ease: 2.5
 example: ''
 interval: 1

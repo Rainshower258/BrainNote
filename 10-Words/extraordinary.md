@@ -1,6 +1,6 @@
 ---
 answer: 非同寻常的， 特别的
-due: '2026-06-03'
+due: '2026-07-18'
 ease: 2.5
 example: ''
 interval: 1

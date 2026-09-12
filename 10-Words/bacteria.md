@@ -1,14 +1,14 @@
 ---
 answer: 细菌
-due: '2026-06-03'
-ease: 2.5
+due: '2026-10-11'
+ease: 2.85
 example: ''
-interval: 1
-last-review: ''
-mastery: new
+interval: 43
+last-review: '2026-08-29'
+mastery: easy
 meaning: 细菌 (n.)
 phonetic: /bæk'tɪrɪə/
-reviews: 0
+reviews: 3
 tags:
 - 英语
 - CET6

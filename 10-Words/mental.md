@@ -1,6 +1,6 @@
 ---
 answer: 心理的， 精神的， 思想上的
-due: '2026-06-03'
+due: '2026-08-10'
 ease: 2.5
 example: ''
 interval: 1

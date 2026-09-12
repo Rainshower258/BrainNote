@@ -1,6 +1,6 @@
 ---
 answer: 恋爱， 恋爱关系
-due: '2026-06-03'
+due: '2026-09-05'
 ease: 2.5
 example: ''
 interval: 1

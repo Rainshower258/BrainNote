@@ -1,6 +1,6 @@
 ---
 answer: 反话， 冷嘲， 嘲弄
-due: '2026-06-03'
+due: '2026-08-04'
 ease: 2.5
 example: ''
 interval: 1

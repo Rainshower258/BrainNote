@@ -1,6 +1,6 @@
 ---
 answer: 详细目录， 存货清单
-due: '2026-06-03'
+due: '2026-08-04'
 ease: 2.5
 example: ''
 interval: 1

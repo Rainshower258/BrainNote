@@ -1,6 +1,6 @@
 ---
 answer: 可理解的， 明白易懂的， 清楚的
-due: '2026-06-03'
+due: '2026-08-02'
 ease: 2.5
 example: ''
 interval: 1

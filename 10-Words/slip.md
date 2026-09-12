@@ -1,6 +1,6 @@
 ---
 answer: 滑跤，滑落，溜
-due: '2026-06-03'
+due: '2026-09-11'
 ease: 2.5
 example: ''
 interval: 1

@@ -1,14 +1,14 @@
 ---
 answer: 完成
-due: '2026-06-03'
-ease: 2.5
+due: '2026-10-29'
+ease: 2.95
 example: ''
-interval: 1
-last-review: ''
-mastery: new
+interval: 67
+last-review: '2026-08-23'
+mastery: perfect
 meaning: 完成； 成就， 成绩 (n.)
 phonetic: /ə'tʃivmənt/
-reviews: 0
+reviews: 3
 tags:
 - 英语
 - CET6

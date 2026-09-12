@@ -1,6 +1,6 @@
 ---
 answer: 使中断
-due: '2026-06-03'
+due: '2026-07-09'
 ease: 2.5
 example: ''
 interval: 1

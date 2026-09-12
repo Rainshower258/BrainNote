@@ -1,14 +1,14 @@
 ---
 answer: 雄心， 抱负， 野心
-due: '2026-06-03'
-ease: 2.5
+due: '2026-10-04'
+ease: 2.85
 example: ''
-interval: 1
-last-review: ''
-mastery: new
+interval: 43
+last-review: '2026-08-22'
+mastery: easy
 meaning: 雄心， 抱负， 野心； 期望得到的东西 (n.)
 phonetic: /æm'bɪʃən/
-reviews: 0
+reviews: 3
 tags:
 - 英语
 - CET6

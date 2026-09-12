@@ -1,6 +1,6 @@
 ---
 answer: 享受，从…中获得乐趣
-due: '2026-06-03'
+due: '2026-09-02'
 ease: 2.5
 example: ''
 interval: 1

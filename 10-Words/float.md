@@ -1,6 +1,6 @@
 ---
 answer: 浮动， 漂浮， 飘动
-due: '2026-06-03'
+due: '2026-07-21'
 ease: 2.5
 example: ''
 interval: 1

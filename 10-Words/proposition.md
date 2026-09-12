@@ -1,6 +1,6 @@
 ---
 answer: 论点， 主张
-due: '2026-06-03'
+due: '2026-08-27'
 ease: 2.5
 example: ''
 interval: 1

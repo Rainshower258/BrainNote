@@ -1,6 +1,6 @@
 ---
 answer: 优美的， 文雅的， 讲究的
-due: '2026-06-03'
+due: '2026-07-12'
 ease: 2.5
 example: ''
 interval: 1

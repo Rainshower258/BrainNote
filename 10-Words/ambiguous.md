@@ -1,14 +1,14 @@
 ---
 answer: 引起歧义的， 模棱两可的， 含糊不清的
-due: '2026-06-03'
-ease: 2.5
+due: '2026-10-21'
+ease: 2.9
 example: ''
-interval: 1
-last-review: ''
-mastery: new
+interval: 58
+last-review: '2026-08-24'
+mastery: perfect
 meaning: 引起歧义的， 模棱两可的， 含糊不清的 (adj.)
 phonetic: /æm'bɪɡjuəs/
-reviews: 0
+reviews: 3
 tags:
 - 英语
 - CET6

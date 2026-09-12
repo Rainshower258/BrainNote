@@ -1,6 +1,6 @@
 ---
 answer: 典型的， 有代表性的
-due: '2026-06-03'
+due: '2026-09-23'
 ease: 2.5
 example: ''
 interval: 1

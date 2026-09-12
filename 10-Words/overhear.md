@@ -1,6 +1,6 @@
 ---
 answer: 无意中听到， 偷听到
-due: '2026-06-03'
+due: '2026-08-18'
 ease: 2.5
 example: ''
 interval: 1

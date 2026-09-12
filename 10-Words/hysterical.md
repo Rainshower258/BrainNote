@@ -1,6 +1,6 @@
 ---
 answer: 情绪异常激动的， 歇斯底里般的
-due: '2026-06-03'
+due: '2026-07-28'
 ease: 2.5
 example: ''
 interval: 1

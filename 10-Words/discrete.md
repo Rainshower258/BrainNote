@@ -1,6 +1,6 @@
 ---
 answer: 分离的， 不相关联的
-due: '2026-06-03'
+due: '2026-07-08'
 ease: 2.5
 example: ''
 interval: 1

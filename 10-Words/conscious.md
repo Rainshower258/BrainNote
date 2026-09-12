@@ -1,6 +1,6 @@
 ---
 answer: 意识到的， 自觉的
-due: '2026-06-03'
+due: '2026-06-26'
 ease: 2.5
 example: ''
 interval: 1

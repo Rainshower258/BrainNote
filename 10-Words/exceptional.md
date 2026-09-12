@@ -1,6 +1,6 @@
 ---
 answer: 优越的， 杰出的
-due: '2026-06-03'
+due: '2026-07-16'
 ease: 2.5
 example: ''
 interval: 1

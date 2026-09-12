@@ -1,6 +1,6 @@
 ---
 answer: 宽容的， 容忍的
-due: '2026-06-03'
+due: '2026-09-21'
 ease: 2.5
 example: ''
 interval: 1

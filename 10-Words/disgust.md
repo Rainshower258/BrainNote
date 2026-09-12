@@ -1,6 +1,6 @@
 ---
 answer: 厌恶， 憎恶 (n&vt.)
-due: '2026-06-03'
+due: '2026-07-08'
 ease: 2.5
 example: ''
 interval: 1

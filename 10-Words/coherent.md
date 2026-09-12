@@ -1,14 +1,14 @@
 ---
 answer: 条理清楚的， 连贯的
-due: '2026-06-03'
-ease: 2.5
+due: '2026-09-12'
+ease: 2.65
 example: ''
-interval: 1
-last-review: ''
-mastery: new
+interval: 4
+last-review: '2026-09-08'
+mastery: perfect
 meaning: 条理清楚的， 连贯的； 一致的， 协调的 (adj.)
 phonetic: /ko'hɪrənt/
-reviews: 0
+reviews: 1
 tags:
 - 英语
 - CET6

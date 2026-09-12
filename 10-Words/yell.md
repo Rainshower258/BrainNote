@@ -1,6 +1,6 @@
 ---
 answer: 号叫， 叫喊 (n&vi.)
-due: '2026-06-03'
+due: '2026-09-29'
 ease: 2.5
 example: ''
 interval: 1

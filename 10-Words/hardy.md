@@ -1,6 +1,6 @@
 ---
 answer: 能吃苦耐劳的， 坚强的
-due: '2026-06-03'
+due: '2026-07-26'
 ease: 2.5
 example: ''
 interval: 1

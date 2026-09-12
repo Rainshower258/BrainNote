@@ -1,6 +1,6 @@
 ---
 answer: 推进， 推动
-due: '2026-06-03'
+due: '2026-08-27'
 ease: 2.5
 example: ''
 interval: 1

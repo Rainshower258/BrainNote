@@ -1,6 +1,6 @@
 ---
 answer: 任意的， 随机的
-due: '2026-06-03'
+due: '2026-08-29'
 ease: 2.5
 example: ''
 interval: 1

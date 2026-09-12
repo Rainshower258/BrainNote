@@ -1,6 +1,6 @@
 ---
 answer: 形成对比， 对比之下显出区别
-due: '2026-06-03'
+due: '2026-06-28'
 ease: 2.5
 example: ''
 interval: 1

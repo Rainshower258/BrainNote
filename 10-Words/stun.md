@@ -1,6 +1,6 @@
 ---
 answer: 使震惊， 使目瞪口呆
-due: '2026-06-03'
+due: '2026-09-15'
 ease: 2.5
 example: ''
 interval: 1

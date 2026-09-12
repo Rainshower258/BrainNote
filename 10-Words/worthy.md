@@ -1,6 +1,6 @@
 ---
 answer: 有价值的， 值得的
-due: '2026-06-03'
+due: '2026-09-28'
 ease: 2.5
 example: ''
 interval: 1

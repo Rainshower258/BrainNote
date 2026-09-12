@@ -1,14 +1,14 @@
 ---
 answer: 挑战，邀请比赛
-due: '2026-06-03'
-ease: 2.5
+due: '2026-09-16'
+ease: 2.75
 example: ''
-interval: 1
-last-review: ''
-mastery: new
+interval: 12
+last-review: '2026-09-04'
+mastery: perfect
 meaning: 挑战，邀请比赛；艰巨的任务；怀疑，质问 (n.) / 反对， 公然反抗； 向…挑战； 对…质疑 (vt.)
 phonetic: /'tʃælɪndʒ/
-reviews: 0
+reviews: 2
 tags:
 - 英语
 - CET6

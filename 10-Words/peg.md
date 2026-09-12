@@ -1,6 +1,6 @@
 ---
 answer: 小钉，栓，挂物钉
-due: '2026-06-03'
+due: '2026-08-20'
 ease: 2.5
 example: ''
 interval: 1

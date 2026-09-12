@@ -1,6 +1,6 @@
 ---
 answer: 大幅度下降，暴跌
-due: '2026-06-03'
+due: '2026-09-11'
 ease: 2.5
 example: ''
 interval: 1

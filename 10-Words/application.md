@@ -1,14 +1,14 @@
 ---
 answer: 申请， 申请书
-due: '2026-06-03'
-ease: 2.5
+due: '2026-11-07'
+ease: 2.95
 example: ''
-interval: 1
-last-review: ''
-mastery: new
+interval: 67
+last-review: '2026-09-01'
+mastery: perfect
 meaning: 申请， 申请书； 施用， 涂抹； 应用， 实施； 实用性 (n.)
 phonetic: /ˌæpləˈkeʃən/
-reviews: 0
+reviews: 3
 tags:
 - 英语
 - CET6

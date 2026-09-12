@@ -1,6 +1,6 @@
 ---
 answer: 可能， 可能性
-due: '2026-06-03'
+due: '2026-08-07'
 ease: 2.5
 example: ''
 interval: 1

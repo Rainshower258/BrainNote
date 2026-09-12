@@ -1,6 +1,6 @@
 ---
 answer: 鲁莽的， 不考虑后果的
-due: '2026-06-03'
+due: '2026-08-31'
 ease: 2.5
 example: ''
 interval: 1

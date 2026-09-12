@@ -1,6 +1,6 @@
 ---
 answer: 强壮的， 结实的， 坚固的
-due: '2026-06-03'
+due: '2026-09-15'
 ease: 2.5
 example: ''
 interval: 1

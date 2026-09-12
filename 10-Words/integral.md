@@ -1,6 +1,6 @@
 ---
 answer: 构成整体所必需的， 基本的
-due: '2026-06-03'
+due: '2026-08-02'
 ease: 2.5
 example: ''
 interval: 1

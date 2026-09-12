@@ -1,6 +1,6 @@
 ---
 answer: 使联合， 统一
-due: '2026-06-03'
+due: '2026-09-23'
 ease: 2.5
 example: ''
 interval: 1

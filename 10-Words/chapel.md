@@ -1,14 +1,14 @@
 ---
 answer: 小教堂， 祈祷室
-due: '2026-06-03'
-ease: 2.5
+due: '2026-09-20'
+ease: 2.75
 example: ''
-interval: 1
-last-review: ''
-mastery: new
+interval: 14
+last-review: '2026-09-06'
+mastery: easy
 meaning: 小教堂， 祈祷室 (n.)
 phonetic: /'tʃæpl/
-reviews: 0
+reviews: 2
 tags:
 - 英语
 - CET6

@@ -1,6 +1,6 @@
 ---
 answer: 诗， 诗歌， 诗集
-due: '2026-06-03'
+due: '2026-08-22'
 ease: 2.5
 example: ''
 interval: 1

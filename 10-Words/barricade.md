@@ -1,14 +1,14 @@
 ---
 answer: 路障，栅栏，障碍
-due: '2026-06-03'
-ease: 2.5
+due: '2026-11-13'
+ease: 2.95
 example: ''
-interval: 1
-last-review: ''
-mastery: new
+interval: 67
+last-review: '2026-09-07'
+mastery: perfect
 meaning: 路障，栅栏，障碍 (n.) / 设路障于， 挡住 (vt.)
 phonetic: /'bærɪ'ked/
-reviews: 0
+reviews: 3
 tags:
 - 英语
 - CET6

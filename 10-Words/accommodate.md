@@ -1,14 +1,14 @@
 ---
 answer: 容纳
-due: '2026-06-03'
-ease: 2.5
+due: '2026-10-07'
+ease: 2.9
 example: ''
-interval: 1
-last-review: ''
-mastery: new
+interval: 50
+last-review: '2026-08-18'
+mastery: perfect
 meaning: 容纳； 向…提供住处； 使适应， 顺应 (vt.)
 phonetic: /ə'kɑmədet/
-reviews: 0
+reviews: 3
 tags:
 - 英语
 - CET6

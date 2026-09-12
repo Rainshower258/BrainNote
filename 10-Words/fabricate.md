@@ -1,6 +1,6 @@
 ---
 answer: 捏造， 伪造， 编造
-due: '2026-06-03'
+due: '2026-07-18'
 ease: 2.5
 example: ''
 interval: 1

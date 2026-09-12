@@ -1,6 +1,6 @@
 ---
 answer: 理想的，观念的，空想的
-due: '2026-06-03'
+due: '2026-07-28'
 ease: 2.5
 example: ''
 interval: 1

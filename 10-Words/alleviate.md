@@ -1,14 +1,14 @@
 ---
 answer: 减轻
-due: '2026-06-03'
-ease: 2.5
+due: '2026-10-24'
+ease: 2.9
 example: ''
-interval: 1
-last-review: ''
-mastery: new
+interval: 58
+last-review: '2026-08-27'
+mastery: easy
 meaning: 减轻； 缓解， 缓和 (vt.)
 phonetic: /ə'livɪ'et/
-reviews: 0
+reviews: 3
 tags:
 - 英语
 - CET6

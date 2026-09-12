@@ -1,6 +1,6 @@
 ---
 answer: 假设， 假说， 前提
-due: '2026-06-03'
+due: '2026-07-28'
 ease: 2.5
 example: ''
 interval: 1

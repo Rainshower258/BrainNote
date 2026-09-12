@@ -1,6 +1,6 @@
 ---
 answer: 给…起绰号， 把…称为
-due: '2026-06-03'
+due: '2026-07-11'
 ease: 2.5
 example: ''
 interval: 1

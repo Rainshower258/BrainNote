@@ -1,6 +1,6 @@
 ---
 answer: 远足， 短途旅行
-due: '2026-06-03'
+due: '2026-07-16'
 ease: 2.5
 example: ''
 interval: 1

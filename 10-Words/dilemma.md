@@ -1,6 +1,6 @@
 ---
 answer: 窘境， 困境
-due: '2026-06-03'
+due: '2026-07-06'
 ease: 2.5
 example: ''
 interval: 1

@@ -1,14 +1,14 @@
 ---
 answer: 称赞， 表扬
-due: '2026-06-03'
-ease: 2.5
+due: '2026-09-13'
+ease: 2.65
 example: ''
-interval: 1
-last-review: ''
-mastery: new
+interval: 4
+last-review: '2026-09-09'
+mastery: perfect
 meaning: 称赞， 表扬； 推荐 (vt.)
 phonetic: /kə'mɛnd/
-reviews: 0
+reviews: 1
 tags:
 - 英语
 - CET6

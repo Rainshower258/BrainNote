@@ -1,6 +1,6 @@
 ---
 answer: 线的， 直线的， 线状的
-due: '2026-06-03'
+due: '2026-08-07'
 ease: 2.5
 example: ''
 interval: 1

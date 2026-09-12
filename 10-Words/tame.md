@@ -1,6 +1,6 @@
 ---
 answer: 驯服的，顺从的
-due: '2026-06-03'
+due: '2026-09-18'
 ease: 2.5
 example: ''
 interval: 1

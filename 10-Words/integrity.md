@@ -1,6 +1,6 @@
 ---
 answer: 正直， 诚实， 诚恳
-due: '2026-06-03'
+due: '2026-08-02'
 ease: 2.5
 example: ''
 interval: 1

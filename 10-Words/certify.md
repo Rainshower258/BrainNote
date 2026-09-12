@@ -1,14 +1,14 @@
 ---
 answer: 证明， 证实
-due: '2026-06-03'
-ease: 2.5
+due: '2026-09-22'
+ease: 2.8
 example: ''
-interval: 1
-last-review: ''
-mastery: new
+interval: 16
+last-review: '2026-09-06'
+mastery: perfect
 meaning: 证明， 证实； 发证书给 (vt.)
 phonetic: /'sɝtə'fai/
-reviews: 0
+reviews: 2
 tags:
 - 英语
 - CET6

@@ -1,6 +1,6 @@
 ---
 answer: 永久的， 永恒的， 长期的
-due: '2026-06-03'
+due: '2026-08-21'
 ease: 2.5
 example: ''
 interval: 1

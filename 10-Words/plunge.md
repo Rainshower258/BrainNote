@@ -1,6 +1,6 @@
 ---
 answer: 纵身投入， 猛冲， 猛跌 (n&v.)
-due: '2026-06-03'
+due: '2026-08-22'
 ease: 2.5
 example: ''
 interval: 1

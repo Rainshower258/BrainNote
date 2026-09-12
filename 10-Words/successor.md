@@ -1,6 +1,6 @@
 ---
 answer: 接替的人或事物， 继任者
-due: '2026-06-03'
+due: '2026-09-16'
 ease: 2.5
 example: ''
 interval: 1

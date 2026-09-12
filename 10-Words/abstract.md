@@ -1,14 +1,14 @@
 ---
 answer: 抽象的，抽象派的
-due: '2026-06-03'
-ease: 2.5
+due: '2026-10-20'
+ease: 2.9
 example: ''
-interval: 1
-last-review: ''
-mastery: new
+interval: 58
+last-review: '2026-08-23'
+mastery: easy
 meaning: 抽象的，抽象派的 (adj.) / 摘要，梗概；抽象派艺术作品 (n.)
 phonetic: /'æbstrækt/
-reviews: 0
+reviews: 3
 tags:
 - 英语
 - CET6

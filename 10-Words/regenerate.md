@@ -1,6 +1,6 @@
 ---
 answer: 新生， 再生， 起革新作用
-due: '2026-06-03'
+due: '2026-09-01'
 ease: 2.5
 example: ''
 interval: 1

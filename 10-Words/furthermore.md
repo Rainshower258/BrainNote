@@ -1,6 +1,6 @@
 ---
 answer: 而且， 此外
-due: '2026-06-03'
+due: '2026-07-23'
 ease: 2.5
 example: ''
 interval: 1

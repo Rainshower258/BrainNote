@@ -1,6 +1,6 @@
 ---
 answer: 同种类的， 同性质的， 有相同特征的
-due: '2026-06-03'
+due: '2026-07-27'
 ease: 2.5
 example: ''
 interval: 1
