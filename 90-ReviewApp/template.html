@@ -579,20 +579,26 @@ function renderSummary() {
           <ul>${wrongWords.map(w => `<li>${w.word}（错 ${w.wrongCount} 次 → 评分 ${w.mastery}）</li>`).join('')}</ul>
         </div>
       ` : ''}
-      <button class="btn full" id="exportBtn">导出今日进度 JSON</button>
-      <div class="footer-note">导出后请把文件保存到 Obsidian vault 的<br><code>90-ReviewApp/sync/</code> 目录，下次对话时告诉我一声，我会读取并同步回笔记。</div>
+      <button class="btn full" id="exportBtn">导出今日进度 JSON（下载文件）</button>
+      <button class="btn full" id="copyBtn" style="margin-top:8px;">复制 JSON 到剪贴板（下载失败就用这个）</button>
+      <div class="footer-note" id="exportNote">导出后请把文件保存到 Obsidian vault 的<br><code>90-ReviewApp/sync/</code> 目录，下次对话时告诉我一声，我会读取并同步回笔记。<br>平板上如果"下载文件"没反应，点"复制到剪贴板"——收工脚本会自动从剪贴板兜底读取。</div>
     </div>
   `;
   document.getElementById('exportBtn').onclick = exportSession;
+  document.getElementById('copyBtn').onclick = copySessionToClipboard;
 }
 
-function exportSession() {
-  const payload = {
+function buildSessionPayload() {
+  return {
     date: new Date().toISOString().slice(0,10),
     totalWords,
     elapsedSec: Math.round((Date.now() - startTime) / 1000),
     results: completed,
   };
+}
+
+function exportSession() {
+  const payload = buildSessionPayload();
   const blob = new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' });
   const url = URL.createObjectURL(blob);
   const a = document.createElement('a');
@@ -601,7 +607,41 @@ function exportSession() {
   document.body.appendChild(a);
   a.click();
   document.body.removeChild(a);
-  URL.revokeObjectURL(url);
+  // 有些精简版 WebView 浏览器（比如平板上的 Jelly）不会异步完成 blob 下载，
+  // 立刻 revoke 会把还没读完的下载数据一起干掉，所以延迟撤销，给它留出时间。
+  setTimeout(() => URL.revokeObjectURL(url), 60000);
+}
+
+async function copySessionToClipboard() {
+  const json = JSON.stringify(buildSessionPayload(), null, 2);
+  const note = document.getElementById('exportNote');
+  try {
+    await navigator.clipboard.writeText(json);
+    note.textContent = '✅ 已复制到剪贴板，现在可以直接点"收工"脚本了（它会自动从剪贴板读取）。';
+    return;
+  } catch (e) {
+    // 剪贴板 API 不可用，退化成手动选中复制
+    const ta = document.createElement('textarea');
+    ta.value = json;
+    ta.style.position = 'fixed';
+    ta.style.top = '0';
+    document.body.appendChild(ta);
+    ta.focus();
+    ta.select();
+    try {
+      document.execCommand('copy');
+      note.textContent = '✅ 已复制到剪贴板，现在可以直接点"收工"脚本了。';
+    } catch (e2) {
+      note.textContent = '⚠️ 自动复制失败，请长按下面文本框手动全选复制：';
+      note.appendChild(document.createElement('br'));
+      ta.style.position = 'static';
+      ta.style.width = '100%';
+      ta.style.height = '120px';
+      note.appendChild(ta);
+      return;
+    }
+    document.body.removeChild(ta);
+  }
 }
 
 document.getElementById('footerNote').textContent = `共 ${totalWords} 个词（含 ${WORDS.filter(w=>w.isReview).length} 个到期复习词）。每词需依次通过遮词卡片、看英选中、看中选英、拼写练习四关，答错会重新排队再来一次；四关过后，复习词和答错过的词会补一道挖空造句题。`;
