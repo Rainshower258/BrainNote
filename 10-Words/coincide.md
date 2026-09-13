@@ -1,14 +1,14 @@
 ---
 answer: 同时发生
-due: '2026-09-12'
-ease: 2.65
+due: '2026-09-29'
+ease: 2.8
 example: ''
-interval: 4
-last-review: '2026-09-08'
+interval: 16
+last-review: '2026-09-13'
 mastery: perfect
 meaning: 同时发生； 相符， 相一致； 位置重合， 重叠 (vi.)
 phonetic: /,koɪn'saɪd/
-reviews: 1
+reviews: 2
 tags:
 - 英语
 - CET6

@@ -1,14 +1,14 @@
 ---
 answer: 葬， 掩埋
-due: '2026-09-12'
-ease: 2.75
+due: '2026-11-02'
+ease: 2.85
 example: ''
-interval: 14
-last-review: '2026-08-29'
+interval: 50
+last-review: '2026-09-13'
 mastery: easy
 meaning: 葬， 掩埋； 葬礼 (n.)
 phonetic: /'bɛrɪəl/
-reviews: 2
+reviews: 3
 tags:
 - 英语
 - CET6

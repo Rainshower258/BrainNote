@@ -1,14 +1,14 @@
 ---
 answer: 私下的
-due: '2026-09-12'
-ease: 2.65
+due: '2026-09-29'
+ease: 2.8
 example: ''
-interval: 4
-last-review: '2026-09-08'
+interval: 16
+last-review: '2026-09-13'
 mastery: perfect
 meaning: 私下的；隐蔽的 (adj.) / 橱，壁橱 (n.) / 把…引进密室会谈 (vt.)
 phonetic: /'klɑzət/
-reviews: 1
+reviews: 2
 tags:
 - 英语
 - CET6

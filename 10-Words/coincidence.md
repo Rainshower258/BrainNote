@@ -1,14 +1,14 @@
 ---
 answer: 巧合， 巧事
-due: '2026-09-12'
-ease: 2.65
+due: '2026-09-29'
+ease: 2.8
 example: ''
-interval: 4
-last-review: '2026-09-08'
+interval: 16
+last-review: '2026-09-13'
 mastery: perfect
 meaning: 巧合， 巧事； 一致， 符合 (n.)
 phonetic: /ko'ɪnsɪdəns/
-reviews: 1
+reviews: 2
 tags:
 - 英语
 - CET6

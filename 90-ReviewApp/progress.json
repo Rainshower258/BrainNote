@@ -6,8 +6,8 @@
   "clozeProbabilityNewWord": 0.15,
   "cursor_index": 404,
   "cursor_note": "已引入的新词累计到第 404 个（下标 0-403 已用），下次从下标 404 开始取下 25 个",
-  "last_session_date": "2026-09-12",
-  "last_synced_date": "2026-09-12",
+  "last_session_date": "2026-09-13",
+  "last_synced_date": "2026-09-13",
   "history": [
     {
       "date": "2026-07-22",
@@ -1039,6 +1039,48 @@
         "coalition",
         "collaboration",
         "combine"
+      ],
+      "synced": true,
+      "cloze": {
+        "attempted": 30,
+        "correct": 29
+      }
+    },
+    {
+      "date": "2026-09-13",
+      "new_words_count": 0,
+      "review_words_count": 30,
+      "review_word_ids": [
+        "bracket",
+        "breakdown",
+        "breakthrough",
+        "breed",
+        "bribe",
+        "burial",
+        "buzz",
+        "closet",
+        "clue",
+        "cluster",
+        "clutch",
+        "coarse",
+        "cocaine",
+        "cocktail",
+        "cognitive",
+        "coherent",
+        "coincide",
+        "coincidence",
+        "collapse",
+        "colleague",
+        "collide",
+        "collision",
+        "colonial",
+        "combat",
+        "combination",
+        "comet",
+        "comic",
+        "command",
+        "commemorate",
+        "commit"
       ],
       "synced": true,
       "cloze": {
