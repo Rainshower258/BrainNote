@@ -1,14 +1,14 @@
 ---
 answer: 取消， 撤销， 删去
-due: '2026-09-14'
-ease: 2.75
+due: '2026-11-03'
+ease: 2.9
 example: ''
-interval: 12
-last-review: '2026-09-02'
+interval: 50
+last-review: '2026-09-14'
 mastery: perfect
 meaning: 取消， 撤销， 删去 (vt.)
 phonetic: /'kænsl/
-reviews: 2
+reviews: 3
 tags:
 - 英语
 - CET6

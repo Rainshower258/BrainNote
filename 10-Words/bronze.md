@@ -1,14 +1,14 @@
 ---
 answer: 青铜， 青铜色， 古铜色
-due: '2026-09-13'
+due: '2026-10-29'
 ease: 2.8
 example: ''
-interval: 16
-last-review: '2026-08-28'
-mastery: perfect
+interval: 45
+last-review: '2026-09-14'
+mastery: good
 meaning: 青铜， 青铜色， 古铜色； 青铜制品， 铜牌 (n.)
 phonetic: /brɑnz/
-reviews: 2
+reviews: 3
 tags:
 - 英语
 - CET6

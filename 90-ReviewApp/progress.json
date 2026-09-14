@@ -6,8 +6,8 @@
   "clozeProbabilityNewWord": 0.15,
   "cursor_index": 404,
   "cursor_note": "已引入的新词累计到第 404 个（下标 0-403 已用），下次从下标 404 开始取下 25 个",
-  "last_session_date": "2026-09-13",
-  "last_synced_date": "2026-09-13",
+  "last_session_date": "2026-09-14",
+  "last_synced_date": "2026-09-14",
   "history": [
     {
       "date": "2026-07-22",
@@ -1087,6 +1087,49 @@
         "attempted": 30,
         "correct": 29
       }
+    },
+    {
+      "date": "2026-09-14",
+      "new_words_count": 0,
+      "review_words_count": 30,
+      "review_word_ids": [
+        "briefcase",
+        "brilliant",
+        "brink",
+        "brisk",
+        "brochure",
+        "bronze",
+        "brood",
+        "brutal",
+        "bubble",
+        "buck",
+        "bud",
+        "budget",
+        "bug",
+        "bulk",
+        "bull",
+        "bulletin",
+        "bully",
+        "burden",
+        "bust",
+        "bypass",
+        "cabin",
+        "cable",
+        "cancel",
+        "commence",
+        "commend",
+        "commentary",
+        "commercial",
+        "commission",
+        "commitment",
+        "comparison"
+      ],
+      "synced": true,
+      "cloze": {
+        "attempted": 0,
+        "correct": 0
+      },
+      "synced_on": "2026-09-14"
     }
   ]
 }

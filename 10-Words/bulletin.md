@@ -1,14 +1,14 @@
 ---
 answer: 简明新闻， 最新消息
-due: '2026-09-13'
-ease: 2.8
+due: '2026-11-20'
+ease: 2.95
 example: ''
-interval: 16
-last-review: '2026-08-28'
+interval: 67
+last-review: '2026-09-14'
 mastery: perfect
 meaning: 简明新闻， 最新消息； 公告， 布告， 公报； 学报， 期刊 (n.)
 phonetic: /'bʊlətɪn/
-reviews: 2
+reviews: 3
 tags:
 - 英语
 - CET6

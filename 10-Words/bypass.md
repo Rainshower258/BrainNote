@@ -1,14 +1,14 @@
 ---
 answer: 旁道，迂回道
-due: '2026-09-14'
-ease: 2.8
+due: '2026-11-20'
+ease: 2.95
 example: ''
-interval: 16
-last-review: '2026-08-29'
+interval: 67
+last-review: '2026-09-14'
 mastery: perfect
 meaning: 旁道，迂回道 (n.) / 绕过， 绕…走； 越过， 置…于不顾 (vt.)
 phonetic: /'baɪpæs/
-reviews: 2
+reviews: 3
 tags:
 - 英语
 - CET6

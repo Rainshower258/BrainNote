@@ -1,14 +1,14 @@
 ---
 answer: 发芽， 萌芽
-due: '2026-09-13'
-ease: 2.8
+due: '2026-11-20'
+ease: 2.95
 example: ''
-interval: 16
-last-review: '2026-08-28'
+interval: 67
+last-review: '2026-09-14'
 mastery: perfect
 meaning: 发芽， 萌芽 (vi.) / 花蕾，叶芽 (n.)
 phonetic: /bʌd/
-reviews: 2
+reviews: 3
 tags:
 - 英语
 - CET6

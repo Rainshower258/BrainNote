@@ -1,14 +1,14 @@
 ---
 answer: 缆，索，电缆，电报
-due: '2026-09-14'
-ease: 2.8
+due: '2026-11-20'
+ease: 2.95
 example: ''
-interval: 16
-last-review: '2026-08-29'
+interval: 67
+last-review: '2026-09-14'
 mastery: perfect
 meaning: 缆，索，电缆，电报 (n.) / 给… 发电报， 用电报传送 (vt.)
 phonetic: /'kebl/
-reviews: 2
+reviews: 3
 tags:
 - 英语
 - CET6
