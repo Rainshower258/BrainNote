@@ -1611,74 +1611,74 @@
     "sentence_en": "A commonwealth often requires its members to honor common policies.",
     "sentence_zh": "一个联邦通常要求其成员遵守共同政策。"
   },
-  "complex": {
-    "sentence_en": "The human brain is a complex organ that scientists still do not fully understand.",
-    "sentence_zh": "人脑是一个复杂的器官，科学家至今仍未完全理解它。",
-    "source": "deepseek"
-  },
-  "complement": {
-    "sentence_en": "The soft music can complement the quiet atmosphere of the small café.",
-    "sentence_zh": "轻柔的音乐能为这家小咖啡馆的宁静氛围增色。",
-    "source": "deepseek"
-  },
   "compel": {
-    "sentence_en": "Poor health may compel him to give up his demanding job.",
-    "sentence_zh": "健康状况不佳可能会迫使他放弃那份要求很高的工作。",
-    "source": "deepseek"
-  },
-  "complexion": {
-    "sentence_en": "Her pale complexion showed that she had not slept well for several nights.",
-    "sentence_zh": "她苍白的脸色表明她已经好几个晚上没睡好了。",
-    "source": "deepseek"
-  },
-  "abandon": {
-    "sentence_en": "You should abandon the idea if it is not practical.",
-    "sentence_zh": "如果这个想法不切实际，你应该放弃它。",
-    "source": "deepseek"
-  },
-  "competence": {
-    "sentence_en": "She demonstrated her competence in managing the team during the crisis.",
-    "sentence_zh": "她展现了在危机期间管理团队的能力。",
-    "source": "local-qwen35-2b"
-  },
-  "compensate": {
-    "sentence_en": "The company compensated the injured employees with medical benefits and a large cash payment.",
-    "sentence_zh": "公司用医疗福利和一笔大笔现金赔偿了受伤的员工。",
-    "source": "local-qwen35-2b"
-  },
-  "competition": {
-    "sentence_en": "The competition among students for the scholarship was extremely fierce this year.",
-    "sentence_zh": "今年学生们为奖学金展开的竞争异常激烈。",
-    "source": "deepseek"
-  },
-  "compile": {
-    "sentence_en": "The editor asked us to compile a list of useful words for the exam.",
-    "sentence_zh": "编辑让我们为考试汇编一份有用的单词表。",
-    "source": "deepseek"
-  },
-  "compete": {
-    "sentence_en": "The athletes competed in the marathon to win the gold medal.",
-    "sentence_zh": "运动员们在马拉松比赛中参赛以赢得金牌。",
-    "source": "local-qwen35-2b"
-  },
-  "complain": {
-    "sentence_en": "He complained about the long line at the supermarket.",
-    "sentence_zh": "他对超市长长的队伍感到十分不满。",
-    "source": "local-qwen35-2b"
-  },
-  "complaint": {
-    "sentence_en": "The manager's complaints about the new policy were ignored by the team.",
-    "sentence_zh": "经理对新政策的抱怨被团队忽视了。",
+    "sentence_en": "The law compels citizens to pay taxes.",
+    "sentence_zh": "法律迫使公民纳税。",
     "source": "local-qwen35-2b"
   },
   "competitive": {
-    "sentence_en": "The new competition is highly competitive, with participants striving to win.",
-    "sentence_zh": "新的竞争非常激烈，参与者们都在努力获胜。",
-    "source": "local-qwen35-2b"
+    "sentence_en": "The job market is becoming more competitive, so students must improve their skills.",
+    "sentence_zh": "就业市场竞争越来越激烈，因此学生们必须提高自己的技能。",
+    "source": "deepseek"
+  },
+  "complex": {
+    "sentence_en": "Learning a foreign language can be a complex process that requires patience and practice.",
+    "sentence_zh": "学习一门外语可能是一个复杂的过程，需要耐心和练习。",
+    "source": "deepseek"
   },
   "compatible": {
-    "sentence_en": "The software is compatible with all modern operating systems.",
-    "sentence_zh": "该软件与所有现代操作系统兼容。",
+    "sentence_en": "The two companies have been compatible for over ten years and plan to merge.",
+    "sentence_zh": "这两家公司已合作十余年，计划合并。",
+    "source": "local-qwen35-2b"
+  },
+  "competition": {
+    "sentence_en": "The student was disqualified from the final competition for poor time management.",
+    "sentence_zh": "该学生因时间管理不当而被取消参加决赛的资格。",
+    "source": "local-qwen35-2b"
+  },
+  "competence": {
+    "sentence_en": "She showed her competence by solving the complex problem in half an hour.",
+    "sentence_zh": "她通过在一小时内解决这个复杂的难题，展现了她的胜任能力。",
+    "source": "local-qwen35-2b"
+  },
+  "abandon": {
+    "sentence_en": "He decided to abandon his career to pursue his passion for art.",
+    "sentence_zh": "他决定放弃自己的职业生涯，去追求对艺术的热爱。",
+    "source": "local-qwen35-2b"
+  },
+  "complain": {
+    "sentence_en": "She complained about the long wait time at the airport.",
+    "sentence_zh": "她对机场的长时间等待时间表示抱怨。",
+    "source": "local-qwen35-2b"
+  },
+  "compile": {
+    "sentence_en": "The professor spent three hours to compile the final report.",
+    "sentence_zh": "那位教授花了三个小时来汇编最终报告。",
+    "source": "local-qwen35-2b"
+  },
+  "compete": {
+    "sentence_en": "She competed against her rivals to win the championship.",
+    "sentence_zh": "她为了赢得冠军而与竞争对手进行了竞争。",
+    "source": "local-qwen35-2b"
+  },
+  "compensate": {
+    "sentence_en": "The company decided to compensate for the delay caused by the storm.",
+    "sentence_zh": "公司决定对风暴造成的延误进行补偿。",
+    "source": "local-qwen35-2b"
+  },
+  "complement": {
+    "sentence_en": "The new equipment complements the old machinery perfectly.",
+    "sentence_zh": "新设备与旧机器完美搭配，互为补充。",
+    "source": "local-qwen35-2b"
+  },
+  "complaint": {
+    "sentence_en": "She received a formal complaint about the missing documents.",
+    "sentence_zh": "她收到了一份关于丢失文件的正式投诉。",
+    "source": "local-qwen35-2b"
+  },
+  "complexion": {
+    "sentence_en": "The doctor examined her complexion to check for any signs of illness.",
+    "sentence_zh": "医生检查了她的面色以查看是否有任何病状。",
     "source": "local-qwen35-2b"
   }
 }
