@@ -1,14 +1,14 @@
 ---
 answer: 乘公交车上下班，经常乘车往返于两地
-due: '2026-09-15'
-ease: 2.65
+due: '2026-10-03'
+ease: 2.8
 example: ''
-interval: 4
-last-review: '2026-09-11'
+interval: 16
+last-review: '2026-09-17'
 mastery: perfect
 meaning: 乘公交车上下班，经常乘车往返于两地 (vi.) / 减； 折合， 折偿； 上下班交通 (vt.)
 phonetic: /kə'mjʊt/
-reviews: 1
+reviews: 2
 tags:
 - 英语
 - CET6

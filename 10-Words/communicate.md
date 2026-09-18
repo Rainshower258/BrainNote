@@ -1,14 +1,14 @@
 ---
 answer: 通讯， 交际， 交流
-due: '2026-09-14'
-ease: 2.6
+due: '2026-09-29'
+ease: 2.75
 example: ''
-interval: 3
-last-review: '2026-09-11'
-mastery: easy
+interval: 12
+last-review: '2026-09-17'
+mastery: perfect
 meaning: 通讯， 交际， 交流； 连接， 相通； 传达， 传播； 传染 (v.)
 phonetic: /kə'mjunɪket/
-reviews: 1
+reviews: 2
 tags:
 - 英语
 - CET6

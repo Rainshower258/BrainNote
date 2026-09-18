@@ -1,14 +1,14 @@
 ---
 answer: 可比较的
-due: '2026-09-15'
-ease: 2.65
+due: '2026-10-03'
+ease: 2.8
 example: ''
-interval: 4
-last-review: '2026-09-11'
+interval: 16
+last-review: '2026-09-17'
 mastery: perfect
 meaning: 可比较的； 类似的； 比得上的 (adj.)
 phonetic: /'kɑmpərəbl/
-reviews: 1
+reviews: 2
 tags:
 - 英语
 - CET6

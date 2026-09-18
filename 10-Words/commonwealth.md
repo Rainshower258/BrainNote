@@ -1,14 +1,14 @@
 ---
 answer: '[C-]英联邦'
-due: '2026-09-15'
-ease: 2.65
+due: '2026-10-03'
+ease: 2.8
 example: ''
-interval: 4
-last-review: '2026-09-11'
+interval: 16
+last-review: '2026-09-17'
 mastery: perfect
 meaning: '[C-]英联邦； 联邦， 联合体 (n.)'
 phonetic: /'kɑmən'wɛlθ/
-reviews: 1
+reviews: 2
 tags:
 - 英语
 - CET6
