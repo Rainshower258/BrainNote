@@ -1,14 +1,14 @@
 ---
 answer: 赞美，恭维
-due: '2026-06-24'
-ease: 2.5
+due: '2026-10-10'
+ease: 2.8
 example: ''
-interval: 1
-last-review: ''
-mastery: new
+interval: 16
+last-review: '2026-09-24'
+mastery: perfect
 meaning: 赞美，恭维；致意，问候 (n.) / 赞美， 恭维 (vt.)
 phonetic: /ˈkɑːmplɪmənt/
-reviews: 0
+reviews: 2
 tags:
 - 英语
 - CET6

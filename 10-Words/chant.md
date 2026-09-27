@@ -1,14 +1,14 @@
 ---
 answer: 反复有节奏地喊叫
-due: '2026-09-22'
-ease: 2.8
+due: '2026-11-30'
+ease: 2.95
 example: ''
-interval: 16
-last-review: '2026-09-06'
+interval: 67
+last-review: '2026-09-24'
 mastery: perfect
 meaning: 反复有节奏地喊叫；吟诵，咏唱 (vt.) / 反复有节奏的喊叫； 赞美诗， 圣歌 (n.)
 phonetic: /tʃænt/
-reviews: 2
+reviews: 3
 tags:
 - 英语
 - CET6

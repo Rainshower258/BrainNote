@@ -1,14 +1,14 @@
 ---
 answer: 简明的， 简要的
-due: '2026-06-25'
-ease: 2.5
+due: '2026-10-10'
+ease: 2.8
 example: ''
-interval: 1
-last-review: ''
-mastery: new
+interval: 16
+last-review: '2026-09-24'
+mastery: perfect
 meaning: 简明的， 简要的 (adj.)
 phonetic: /kən'saɪs/
-reviews: 0
+reviews: 2
 tags:
 - 英语
 - CET6

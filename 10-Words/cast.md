@@ -1,14 +1,14 @@
 ---
 answer: 投，扔，抛
-due: '2026-09-20'
-ease: 2.8
+due: '2026-11-29'
+ease: 2.95
 example: ''
-interval: 16
-last-review: '2026-09-04'
+interval: 67
+last-review: '2026-09-23'
 mastery: perfect
 meaning: 投，扔，抛；浇铸 (vt.) / 演员表， 全体演员； 石膏绷带； 铸型， 铸件； 投， 抛 (n.)
 phonetic: /kæst/
-reviews: 2
+reviews: 3
 tags:
 - 英语
 - CET6

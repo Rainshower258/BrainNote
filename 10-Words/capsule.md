@@ -1,14 +1,14 @@
 ---
 answer: 胶囊
-due: '2026-09-17'
-ease: 2.75
+due: '2026-11-07'
+ease: 2.85
 example: ''
-interval: 14
-last-review: '2026-09-03'
+interval: 50
+last-review: '2026-09-18'
 mastery: easy
 meaning: 胶囊； 航天舱， 密封舱 (n.)
 phonetic: /ˈkæpsl;/
-reviews: 2
+reviews: 3
 tags:
 - 英语
 - CET6

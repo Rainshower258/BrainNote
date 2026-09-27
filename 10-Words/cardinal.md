@@ -1,14 +1,14 @@
 ---
 answer: 最重要的
-due: '2026-09-19'
-ease: 2.8
+due: '2026-11-27'
+ease: 2.95
 example: ''
-interval: 16
-last-review: '2026-09-03'
+interval: 67
+last-review: '2026-09-21'
 mastery: perfect
 meaning: 最重要的； 基本的 (adj.) / 红衣主教；【数】基数 (n.)
 phonetic: /'kɑrdɪnl/
-reviews: 2
+reviews: 3
 tags:
 - 英语
 - CET6

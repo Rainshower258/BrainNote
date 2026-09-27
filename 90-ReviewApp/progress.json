@@ -4,10 +4,10 @@
   "dailyMaxWords": 30,
   "dailyMaxWords_note": "每天卡片总量上限。复习词>=上限时，当天只取最过期的 daily_max 个复习词、不引入新词（纯复习日）；剩余复习词 due 不变，自动排到之后的天数，不会丢词。",
   "clozeProbabilityNewWord": 0.15,
-  "cursor_index": 417,
-  "cursor_note": "已引入的新词累计到第 417 个（下标 0-416 已用），下次从下标 417 开始取下 25 个",
-  "last_session_date": "2026-09-17",
-  "last_synced_date": "2026-09-17",
+  "cursor_index": 462,
+  "cursor_note": "已引入的新词累计到第 462 个（下标 0-461 已用），下次从下标 462 开始取下 25 个",
+  "last_session_date": "2026-09-27",
+  "last_synced_date": "2026-09-27",
   "history": [
     {
       "date": "2026-07-22",
@@ -1158,6 +1158,169 @@
       "cloze": {
         "attempted": 18,
         "correct": 15
+      }
+    },
+    {
+      "date": "2026-09-18",
+      "new_words_count": 25,
+      "review_words_count": 3,
+      "review_word_ids": [
+        "capsule",
+        "casualty",
+        "challenge"
+      ],
+      "synced": true,
+      "cloze": {
+        "attempted": 12,
+        "correct": 12
+      }
+    },
+    {
+      "date": "2026-09-21",
+      "new_words_count": 16,
+      "review_words_count": 14,
+      "review_word_ids": [
+        "cafeteria",
+        "calcium",
+        "calculate",
+        "calorie",
+        "candidate",
+        "cane",
+        "cannon",
+        "canvas",
+        "capable",
+        "capacity",
+        "cape",
+        "caption",
+        "captive",
+        "cardinal"
+      ],
+      "synced": true,
+      "cloze": {
+        "attempted": 17,
+        "correct": 17
+      }
+    },
+    {
+      "date": "2026-09-23",
+      "new_words_count": 0,
+      "review_words_count": 30,
+      "review_word_ids": [
+        "acceptance",
+        "atmosphere",
+        "carve",
+        "cast",
+        "casual",
+        "cater",
+        "catholic",
+        "caution",
+        "cautious",
+        "cavity",
+        "champion",
+        "chapel",
+        "character",
+        "characteristic",
+        "cholesterol",
+        "compatible",
+        "compel",
+        "compensate",
+        "compete",
+        "competence",
+        "competition",
+        "competitive",
+        "compile",
+        "complain",
+        "complaint",
+        "complement",
+        "complex",
+        "complexion",
+        "concede",
+        "conception"
+      ],
+      "synced": true,
+      "cloze": {
+        "attempted": 30,
+        "correct": 27
+      }
+    },
+    {
+      "date": "2026-09-24",
+      "new_words_count": 0,
+      "review_words_count": 30,
+      "review_word_ids": [
+        "cellar",
+        "census",
+        "ceramic",
+        "cereal",
+        "certainty",
+        "certify",
+        "champagne",
+        "chant",
+        "comparison",
+        "complicated",
+        "complication",
+        "compliment",
+        "comply",
+        "component",
+        "compose",
+        "composite",
+        "compound",
+        "comprehension",
+        "comprehensive",
+        "compromise",
+        "compulsory",
+        "compute",
+        "conceive",
+        "concentrate",
+        "concentration",
+        "concept",
+        "concern",
+        "concise",
+        "conclude",
+        "condense"
+      ],
+      "synced": true,
+      "cloze": {
+        "attempted": 30,
+        "correct": 30
+      }
+    },
+    {
+      "date": "2026-09-27",
+      "new_words_count": 4,
+      "review_words_count": 26,
+      "review_word_ids": [
+        "aspiration",
+        "cherish",
+        "chronic",
+        "classical",
+        "coalition",
+        "collaboration",
+        "combine",
+        "commit",
+        "conclusive",
+        "condemn",
+        "conduct",
+        "confer",
+        "conference",
+        "confidence",
+        "confident",
+        "confidential",
+        "configuration",
+        "confine",
+        "confirm",
+        "conflict",
+        "conform",
+        "confront",
+        "confusion",
+        "congress",
+        "connection",
+        "conscientious"
+      ],
+      "synced": true,
+      "cloze": {
+        "attempted": 27,
+        "correct": 27
       }
     }
   ]

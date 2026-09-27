@@ -1,14 +1,14 @@
 ---
 answer: 珍爱， 珍视
-due: '2026-09-25'
-ease: 2.75
+due: '2026-11-24'
+ease: 2.9
 example: ''
-interval: 14
-last-review: '2026-09-11'
-mastery: easy
+interval: 58
+last-review: '2026-09-27'
+mastery: perfect
 meaning: 珍爱， 珍视； 爱护， 抚育； 抱有， 怀有 (vt.)
 phonetic: /'tʃɛrɪʃ/
-reviews: 2
+reviews: 3
 tags:
 - 英语
 - CET6

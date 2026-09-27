@@ -1805,5 +1805,103 @@
     "sentence_en": "It is always important not to compromise safety for convenience.",
     "sentence_zh": "始终重要的是，不要为了便利而危及安全。",
     "source": "deepseek"
+  },
+  "connection": {
+    "sentence_en": "There is a strong connection between regular exercise and good health.",
+    "sentence_zh": "经常锻炼和身体健康之间有很强的联系。",
+    "source": "deepseek"
+  },
+  "confer": {
+    "sentence_en": "The managers must confer with the lawyers before making a decision.",
+    "sentence_zh": "经理们必须在做出决定前与律师们商议。",
+    "source": "deepseek"
+  },
+  "confusion": {
+    "sentence_en": "The sudden noise caused great confusion among the students in the classroom.",
+    "sentence_zh": "突然的噪音在教室里引起了学生们的极大困惑。",
+    "source": "deepseek"
+  },
+  "confident": {
+    "sentence_en": "She feels confident that she can overcome all the difficulties.",
+    "sentence_zh": "她自信能够克服所有困难。",
+    "source": "deepseek"
+  },
+  "conform": {
+    "sentence_en": "Students must conform to the school rules if they want to study there peacefully.",
+    "sentence_zh": "学生如果想在那里安心学习，就必须遵守校规。",
+    "source": "deepseek"
+  },
+  "confirm": {
+    "sentence_en": "The manager asked me to confirm the meeting time before Friday.",
+    "sentence_zh": "经理让我在周五之前确认会议时间。",
+    "source": "deepseek"
+  },
+  "conscientious": {
+    "sentence_en": "As a conscientious student, she always reviews her notes before the exam.",
+    "sentence_zh": "作为一名认真的学生，她总是在考试前复习笔记。",
+    "source": "deepseek"
+  },
+  "conference": {
+    "sentence_en": "She flew to Paris to attend an important international conference on climate change.",
+    "sentence_zh": "她飞往巴黎参加一个关于气候变化的重要国际会议。",
+    "source": "deepseek"
+  },
+  "congress": {
+    "sentence_en": "The congress passed a new law to protect the environment last month.",
+    "sentence_zh": "国会上个月通过了一项保护环境的新法律。",
+    "source": "deepseek"
+  },
+  "confidence": {
+    "sentence_en": "Studying hard every day gave her the confidence to pass the final exam.",
+    "sentence_zh": "每天努力学习给了她通过期末考试的信心。",
+    "source": "deepseek"
+  },
+  "conduct": {
+    "sentence_en": "The manager will conduct a meeting to discuss the new plan.",
+    "sentence_zh": "经理将召开会议讨论新计划。",
+    "source": "deepseek"
+  },
+  "conflict": {
+    "sentence_en": "The conflict between the two teams made it hard for them to cooperate.",
+    "sentence_zh": "两队之间的冲突使他们很难合作。",
+    "source": "deepseek"
+  },
+  "confront": {
+    "sentence_en": "We must confront our fears instead of running away from them.",
+    "sentence_zh": "我们必须勇敢地面对自己的恐惧，而不是逃避它们。",
+    "source": "deepseek"
+  },
+  "confidential": {
+    "sentence_en": "Please keep this report confidential, because it contains important information about our new plan.",
+    "sentence_zh": "请对这个报告保密，因为它包含关于我们新计划的重要信息。",
+    "source": "deepseek"
+  },
+  "confine": {
+    "sentence_en": "The doctor advised him to confine his activities to light walking for a month.",
+    "sentence_zh": "医生建议他一个月内只做些轻度散步这类活动。"
+  },
+  "configuration": {
+    "sentence_en": "The engineer spent two days checking the configuration of the new server.",
+    "sentence_zh": "工程师花了两天检查新服务器的配置。"
+  },
+  "consent": {
+    "sentence_en": "You must consent to the terms before joining the club.",
+    "sentence_zh": "你必须同意这些条款才能加入俱乐部。",
+    "source": "deepseek"
+  },
+  "consecutive": {
+    "sentence_en": "She won three consecutive matches and surprised all her classmates.",
+    "sentence_zh": "她连续赢了三场比赛，让所有同学都很惊讶。",
+    "source": "deepseek"
+  },
+  "consensus": {
+    "sentence_en": "After a long discussion, the group finally reached a consensus on the new plan.",
+    "sentence_zh": "经过长时间讨论，小组终于就新计划达成了一致。",
+    "source": "deepseek"
+  },
+  "conscious": {
+    "sentence_en": "Many people are not conscious of the importance of protecting the environment.",
+    "sentence_zh": "许多人没有意识到保护环境的重要性。",
+    "source": "deepseek"
   }
 }

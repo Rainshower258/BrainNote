@@ -1,14 +1,14 @@
 ---
 answer: 商谈，商议
-due: '2026-06-26'
-ease: 2.5
+due: '2026-10-13'
+ease: 2.8
 example: ''
-interval: 1
-last-review: ''
-mastery: new
+interval: 16
+last-review: '2026-09-27'
+mastery: perfect
 meaning: 商谈，商议 (vi.) / 授予， 赋予 (vt.)
 phonetic: /kən'fɝ/
-reviews: 0
+reviews: 2
 tags:
 - 英语
 - CET6

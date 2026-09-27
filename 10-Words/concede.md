@@ -1,14 +1,14 @@
 ---
 answer: 让步， 认输
-due: '2026-06-25'
-ease: 2.5
+due: '2026-10-01'
+ease: 2.65
 example: ''
-interval: 1
-last-review: ''
-mastery: new
+interval: 8
+last-review: '2026-09-23'
+mastery: perfect
 meaning: 让步， 认输 (vi.) / 承认，承认…为真；承认失败；允许，让予 (vt.)
 phonetic: /kən'sid/
-reviews: 0
+reviews: 2
 tags:
 - 英语
 - CET6

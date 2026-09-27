@@ -1,14 +1,14 @@
 ---
 answer: 必须做的， 强制性的
-due: '2026-06-25'
-ease: 2.5
+due: '2026-10-10'
+ease: 2.8
 example: ''
-interval: 1
-last-review: ''
-mastery: new
+interval: 16
+last-review: '2026-09-24'
+mastery: perfect
 meaning: 必须做的， 强制性的； 必修的 (adj.)
 phonetic: /kəmˈpʌlsərɪ/
-reviews: 0
+reviews: 2
 tags:
 - 英语
 - CET6

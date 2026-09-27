@@ -1,14 +1,14 @@
 ---
 answer: 冲突， 抵触
-due: '2026-06-26'
-ease: 2.5
+due: '2026-10-13'
+ease: 2.8
 example: ''
-interval: 1
-last-review: ''
-mastery: new
+interval: 16
+last-review: '2026-09-27'
+mastery: perfect
 meaning: 冲突， 抵触 (vi.) / 冲突， 抵触； 争论； 战斗， 战争 (n.)
 phonetic: /'kɑnflɪkt/
-reviews: 0
+reviews: 2
 tags:
 - 英语
 - CET6

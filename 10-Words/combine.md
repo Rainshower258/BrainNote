@@ -1,14 +1,14 @@
 ---
 answer: 结合，联合
-due: '2026-09-24'
-ease: 2.75
+due: '2026-11-16'
+ease: 2.9
 example: ''
-interval: 12
-last-review: '2026-09-12'
+interval: 50
+last-review: '2026-09-27'
 mastery: perfect
 meaning: 结合，联合；化合 (v.) / 联合企业； 联合收割机 (n.)
 phonetic: /kəm'baɪn/
-reviews: 2
+reviews: 3
 tags:
 - 英语
 - CET6

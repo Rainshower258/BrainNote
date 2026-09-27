@@ -1,14 +1,14 @@
 ---
 answer: 大卡
-due: '2026-09-19'
-ease: 2.8
+due: '2026-11-27'
+ease: 2.95
 example: ''
-interval: 16
-last-review: '2026-09-03'
+interval: 67
+last-review: '2026-09-21'
 mastery: perfect
 meaning: 大卡； 卡 (n.)
 phonetic: /'kæləri/
-reviews: 2
+reviews: 3
 tags:
 - 英语
 - CET6

@@ -1,14 +1,14 @@
 ---
 answer: 妥协
-due: '2026-06-25'
-ease: 2.5
+due: '2026-10-10'
+ease: 2.8
 example: ''
-interval: 1
-last-review: ''
-mastery: new
+interval: 16
+last-review: '2026-09-24'
+mastery: perfect
 meaning: 妥协； 危及； 放弃 (v.) / 妥协，和解；折中办法 (n.)
 phonetic: /'kɑmprəmaɪz/
-reviews: 0
+reviews: 2
 tags:
 - 英语
 - CET6

@@ -1,14 +1,14 @@
 ---
 answer: 组成， 构成
-due: '2026-06-25'
-ease: 2.5
+due: '2026-10-10'
+ease: 2.8
 example: ''
-interval: 1
-last-review: ''
-mastery: new
+interval: 16
+last-review: '2026-09-24'
+mastery: perfect
 meaning: 组成， 构成； 创作， 为…谱曲； 使平静， 使镇静 (vt.)
 phonetic: /kəm'poz/
-reviews: 0
+reviews: 2
 tags:
 - 英语
 - CET6

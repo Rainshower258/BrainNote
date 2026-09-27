@@ -1,14 +1,14 @@
 ---
 answer: 意识到的， 自觉的
-due: '2026-06-26'
-ease: 2.5
+due: '2026-10-01'
+ease: 2.65
 example: ''
-interval: 1
-last-review: ''
-mastery: new
+interval: 4
+last-review: '2026-09-27'
+mastery: perfect
 meaning: 意识到的， 自觉的； 神志清醒的； 有意的， 存心的 (adj.)
 phonetic: /'kɑnʃəs/
-reviews: 0
+reviews: 1
 tags:
 - 英语
 - CET6

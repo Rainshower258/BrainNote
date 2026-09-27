@@ -1,14 +1,14 @@
 ---
 answer: 代表大会
-due: '2026-06-26'
-ease: 2.5
+due: '2026-10-13'
+ease: 2.8
 example: ''
-interval: 1
-last-review: ''
-mastery: new
+interval: 16
+last-review: '2026-09-27'
+mastery: perfect
 meaning: 代表大会； 国会， 议会 (n.)
 phonetic: /'kɑŋɡrəs/
-reviews: 0
+reviews: 2
 tags:
 - 英语
 - CET6

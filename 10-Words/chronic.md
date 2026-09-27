@@ -1,14 +1,14 @@
 ---
 answer: 慢性的， 久病的
-due: '2026-09-25'
-ease: 2.75
+due: '2026-11-24'
+ease: 2.9
 example: ''
-interval: 14
-last-review: '2026-09-11'
-mastery: easy
+interval: 58
+last-review: '2026-09-27'
+mastery: perfect
 meaning: 慢性的， 久病的； 长久的， 不断的； 积习难改的 (adj.)
 phonetic: /'krɑnɪk/
-reviews: 2
+reviews: 3
 tags:
 - 英语
 - CET6

@@ -1,14 +1,14 @@
 ---
 answer: 满足需要， 迎合
-due: '2026-09-20'
-ease: 2.8
+due: '2026-11-29'
+ease: 2.95
 example: ''
-interval: 16
-last-review: '2026-09-04'
+interval: 67
+last-review: '2026-09-23'
 mastery: perfect
 meaning: 满足需要， 迎合； 提供饮食及服务， 承办酒席 (vi.)
 phonetic: /'ketɚ/
-reviews: 2
+reviews: 3
 tags:
 - 英语
 - CET6

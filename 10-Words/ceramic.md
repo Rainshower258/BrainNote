@@ -1,14 +1,14 @@
 ---
 answer: 陶器的
-due: '2026-09-22'
-ease: 2.8
+due: '2026-11-30'
+ease: 2.95
 example: ''
-interval: 16
-last-review: '2026-09-06'
+interval: 67
+last-review: '2026-09-24'
 mastery: perfect
 meaning: 陶器的 (adj.) / 陶瓷器 (n.)
 phonetic: /sə'ræmɪk/
-reviews: 2
+reviews: 3
 tags:
 - 英语
 - CET6

@@ -1,14 +1,14 @@
 ---
 answer: 胆固醇
-due: '2026-09-21'
+due: '2026-10-26'
 ease: 2.75
 example: ''
-interval: 12
-last-review: '2026-09-09'
-mastery: perfect
+interval: 33
+last-review: '2026-09-23'
+mastery: good
 meaning: 胆固醇 (n.)
 phonetic: /kə'lɛstərɔl/
-reviews: 2
+reviews: 3
 tags:
 - 英语
 - CET6

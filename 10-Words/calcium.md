@@ -1,14 +1,14 @@
 ---
 answer: 钙
-due: '2026-09-19'
+due: '2026-11-05'
 ease: 2.8
 example: ''
-interval: 16
-last-review: '2026-09-03'
-mastery: perfect
+interval: 45
+last-review: '2026-09-21'
+mastery: good
 meaning: 钙 (n.)
 phonetic: /'kælsɪəm/
-reviews: 2
+reviews: 3
 tags:
 - 英语
 - CET6
