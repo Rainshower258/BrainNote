@@ -1,14 +1,14 @@
 ---
 answer: 发生冲突
-due: '2026-09-28'
-ease: 2.8
+due: '2026-12-05'
+ease: 2.95
 example: ''
-interval: 16
-last-review: '2026-09-12'
+interval: 67
+last-review: '2026-09-29'
 mastery: perfect
 meaning: 发生冲突；不协调；砰地相撞，发出刺耳的撞击声 (vi.) / 冲突； 不协调； 刺耳的撞击声 (n.)
 phonetic: /klæʃ/
-reviews: 2
+reviews: 3
 tags:
 - 英语
 - CET6

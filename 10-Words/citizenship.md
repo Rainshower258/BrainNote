@@ -1,14 +1,14 @@
 ---
 answer: 公民的身份, 公民的职责和权力
-due: '2026-09-26'
-ease: 2.75
+due: '2026-11-26'
+ease: 2.9
 example: ''
-interval: 14
-last-review: '2026-09-12'
-mastery: easy
+interval: 58
+last-review: '2026-09-29'
+mastery: perfect
 meaning: 公民的身份, 公民的职责和权力 (n.)
 phonetic: /'sɪtɪzənʃɪp/
-reviews: 2
+reviews: 3
 tags:
 - 英语
 - CET6

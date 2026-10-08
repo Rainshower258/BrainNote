@@ -1,14 +1,14 @@
 ---
 answer: 成为…的特征， 以…为特征
-due: '2026-09-27'
-ease: 2.8
+due: '2026-12-05'
+ease: 2.95
 example: ''
-interval: 16
-last-review: '2026-09-11'
+interval: 67
+last-review: '2026-09-29'
 mastery: perfect
 meaning: 成为…的特征， 以…为特征； 描绘的特性， 描述 (vt.)
 phonetic: /'kærəktə'raɪz/
-reviews: 2
+reviews: 3
 tags:
 - 英语
 - CET6

@@ -1,14 +1,14 @@
 ---
 answer: 纪念， 庆祝
-due: '2026-09-29'
-ease: 2.8
+due: '2026-12-05'
+ease: 2.9
 example: ''
-interval: 16
-last-review: '2026-09-13'
-mastery: perfect
+interval: 58
+last-review: '2026-10-08'
+mastery: easy
 meaning: 纪念， 庆祝 (vt.)
 phonetic: /kə'mɛməret/
-reviews: 2
+reviews: 3
 tags:
 - 英语
 - CET6

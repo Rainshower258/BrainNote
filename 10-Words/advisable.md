@@ -1,14 +1,14 @@
 ---
 answer: 可取的
-due: '2026-09-29'
-ease: 2.85
+due: '2027-03-05'
+ease: 2.95
 example: ''
-interval: 40
-last-review: '2026-08-20'
-mastery: perfect
+interval: 148
+last-review: '2026-10-08'
+mastery: easy
 meaning: 可取的； 适当的 (adj.)
 phonetic: /əd'vaɪzəbl/
-reviews: 3
+reviews: 4
 tags:
 - 英语
 - CET6

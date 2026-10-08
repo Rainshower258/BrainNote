@@ -1,14 +1,14 @@
 ---
 answer: 清楚， 明晰
-due: '2026-09-28'
-ease: 2.8
+due: '2026-12-05'
+ease: 2.95
 example: ''
-interval: 16
-last-review: '2026-09-12'
+interval: 67
+last-review: '2026-09-29'
 mastery: perfect
 meaning: 清楚， 明晰 (n.)
 phonetic: /'klærəti/
-reviews: 2
+reviews: 3
 tags:
 - 英语
 - CET6

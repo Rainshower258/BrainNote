@@ -1,14 +1,14 @@
 ---
 answer: 同伴， 共事者
-due: '2026-09-27'
-ease: 2.7
+due: '2026-11-08'
+ease: 2.85
 example: ''
-interval: 10
-last-review: '2026-09-17'
-mastery: easy
+interval: 40
+last-review: '2026-09-29'
+mastery: perfect
 meaning: 同伴， 共事者； 伴侣 (n.)
 phonetic: /kəm'pænɪən/
-reviews: 2
+reviews: 3
 tags:
 - 英语
 - CET6

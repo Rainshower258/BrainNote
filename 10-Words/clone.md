@@ -1,14 +1,14 @@
 ---
 answer: 无性繁殖， 克隆
-due: '2026-09-28'
-ease: 2.8
+due: '2026-12-14'
+ease: 2.95
 example: ''
-interval: 16
-last-review: '2026-09-12'
+interval: 67
+last-review: '2026-10-08'
 mastery: perfect
 meaning: 无性繁殖， 克隆 (v.) / 无性繁殖系，克隆；复制品，翻版 (n.)
 phonetic: /klon/
-reviews: 2
+reviews: 3
 tags:
 - 英语
 - CET6

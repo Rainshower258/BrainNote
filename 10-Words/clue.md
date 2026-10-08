@@ -1,14 +1,14 @@
 ---
 answer: 线索， 暗示， 提示
-due: '2026-09-29'
-ease: 2.8
+due: '2026-12-14'
+ease: 2.95
 example: ''
-interval: 16
-last-review: '2026-09-13'
+interval: 67
+last-review: '2026-10-08'
 mastery: perfect
 meaning: 线索， 暗示， 提示 (n.)
 phonetic: /klʊ/
-reviews: 2
+reviews: 3
 tags:
 - 英语
 - CET6

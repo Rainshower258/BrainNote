@@ -1,14 +1,14 @@
 ---
 answer: 厚片， 大块
-due: '2026-09-27'
-ease: 2.8
+due: '2026-12-05'
+ease: 2.95
 example: ''
-interval: 16
-last-review: '2026-09-11'
+interval: 67
+last-review: '2026-09-29'
 mastery: perfect
 meaning: 厚片， 大块； 相当大的部分 (n.)
 phonetic: /tʃʌŋk/
-reviews: 2
+reviews: 3
 tags:
 - 英语
 - CET6

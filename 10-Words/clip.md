@@ -1,14 +1,14 @@
 ---
 answer: 夹子，回形针，别针
-due: '2026-09-28'
-ease: 2.8
+due: '2026-12-14'
+ease: 2.95
 example: ''
-interval: 16
-last-review: '2026-09-12'
+interval: 67
+last-review: '2026-10-08'
 mastery: perfect
 meaning: 夹子，回形针，别针；弹夹，弹仓；剪，修剪；剪报，电影片断 (n.) / 夹住， 扣住； 剪， 修剪 (vt.)
 phonetic: /klɪp/
-reviews: 2
+reviews: 3
 tags:
 - 英语
 - CET6

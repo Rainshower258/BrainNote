@@ -1,14 +1,14 @@
 ---
 answer: 引用， 引证
-due: '2026-09-27'
-ease: 2.8
+due: '2026-12-05'
+ease: 2.95
 example: ''
-interval: 16
-last-review: '2026-09-11'
+interval: 67
+last-review: '2026-09-29'
 mastery: perfect
 meaning: 引用， 引证； 传唤， 传讯； 表彰， 嘉奖 (vt.)
 phonetic: /saɪt/
-reviews: 2
+reviews: 3
 tags:
 - 英语
 - CET6

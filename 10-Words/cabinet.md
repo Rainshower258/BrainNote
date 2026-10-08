@@ -1,14 +1,14 @@
 ---
 answer: 橱， 柜
-due: '2026-09-27'
-ease: 2.75
+due: '2026-12-20'
+ease: 2.85
 example: ''
-interval: 23
-last-review: '2026-09-04'
-mastery: perfect
+interval: 82
+last-review: '2026-09-29'
+mastery: easy
 meaning: 橱， 柜； 内阁 (n.)
 phonetic: /'kæbɪnət/
-reviews: 3
+reviews: 4
 tags:
 - 英语
 - CET6

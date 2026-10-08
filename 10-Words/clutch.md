@@ -1,14 +1,14 @@
 ---
 answer: 企图抓住
-due: '2026-09-27'
-ease: 2.75
+due: '2026-11-26'
+ease: 2.9
 example: ''
-interval: 14
-last-review: '2026-09-13'
-mastery: easy
+interval: 58
+last-review: '2026-09-29'
+mastery: perfect
 meaning: 企图抓住 (vi.) / 抓紧，紧握 (vt.) / 离合器； 掌握， 控制； 把握， 抓紧 (n.)
 phonetic: /klʌtʃ/
-reviews: 2
+reviews: 3
 tags:
 - 英语
 - CET6

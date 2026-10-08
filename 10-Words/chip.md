@@ -1,14 +1,14 @@
 ---
 answer: 屑片， 碎片
-due: '2026-09-27'
-ease: 2.8
+due: '2026-11-26'
+ease: 2.9
 example: ''
-interval: 16
-last-review: '2026-09-11'
-mastery: perfect
+interval: 58
+last-review: '2026-09-29'
+mastery: easy
 meaning: 屑片， 碎片； 炸土豆条； 集成电路片， 集成块； 缺口， 瑕疵 (n.)
 phonetic: /tʃɪp/
-reviews: 2
+reviews: 3
 tags:
 - 英语
 - CET6
