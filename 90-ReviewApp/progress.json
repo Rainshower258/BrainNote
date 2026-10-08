@@ -6,8 +6,8 @@
   "clozeProbabilityNewWord": 0.15,
   "cursor_index": 462,
   "cursor_note": "已引入的新词累计到第 462 个（下标 0-461 已用），下次从下标 462 开始取下 25 个",
-  "last_session_date": "2026-09-27",
-  "last_synced_date": "2026-09-27",
+  "last_session_date": "2026-10-08",
+  "last_synced_date": "2026-10-08",
   "history": [
     {
       "date": "2026-07-22",
@@ -1321,6 +1321,90 @@
       "cloze": {
         "attempted": 27,
         "correct": 27
+      }
+    },
+    {
+      "date": "2026-09-29",
+      "new_words_count": 0,
+      "review_words_count": 30,
+      "review_word_ids": [
+        "cabinet",
+        "characterize",
+        "charge",
+        "chase",
+        "chief",
+        "chip",
+        "chord",
+        "chorus",
+        "chunk",
+        "circulation",
+        "circumstance",
+        "circus",
+        "cite",
+        "citizenship",
+        "claim",
+        "clamp",
+        "clan",
+        "clarity",
+        "clash",
+        "clasp",
+        "classic",
+        "cling",
+        "clutch",
+        "cocktail",
+        "coherent",
+        "collide",
+        "collision",
+        "combat",
+        "combination",
+        "companion"
+      ],
+      "synced": true,
+      "cloze": {
+        "attempted": 30,
+        "correct": 30
+      }
+    },
+    {
+      "date": "2026-10-08",
+      "new_words_count": 0,
+      "review_words_count": 30,
+      "review_word_ids": [
+        "advisable",
+        "classification",
+        "clearance",
+        "clerk",
+        "client",
+        "cliff",
+        "climate",
+        "climax",
+        "clip",
+        "clockwise",
+        "clone",
+        "closet",
+        "clue",
+        "cluster",
+        "coarse",
+        "cocaine",
+        "cognitive",
+        "coincide",
+        "coincidence",
+        "collapse",
+        "colleague",
+        "colonial",
+        "comet",
+        "comic",
+        "command",
+        "commemorate",
+        "commence",
+        "commend",
+        "communicate",
+        "compact"
+      ],
+      "synced": true,
+      "cloze": {
+        "attempted": 30,
+        "correct": 30
       }
     }
   ]
