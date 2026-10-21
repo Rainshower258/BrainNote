@@ -97,6 +97,25 @@
     color: #8a7226;
     background: #fbf6e8;
   }
+  .restore-note {
+    border: 1px dashed var(--sage);
+    border-radius: 8px;
+    padding: 8px 14px;
+    margin-bottom: 12px;
+    font-size: 13px;
+    color: var(--ink-soft);
+    background: #f1f5ef;
+    text-align: center;
+  }
+  .restore-note button {
+    margin-left: 8px;
+    border: none;
+    background: none;
+    color: var(--rust);
+    font-size: 13px;
+    text-decoration: underline;
+    cursor: pointer;
+  }
 
   .options { display: flex; flex-direction: column; gap: 10px; margin-top: 8px; }
   .opt-btn {
@@ -218,6 +237,8 @@
   <div class="progress-bar"><div class="progress-fill" id="progressFill" style="width:0%"></div></div>
   <div class="progress-label" id="progressLabel">0 / 0</div>
 
+  <div class="restore-note" id="restoreNote" hidden></div>
+
   <div id="cardArea"></div>
 
   <div class="footer-note" id="footerNote"></div>
@@ -250,7 +271,81 @@ function shuffle(arr) {
 let queue = shuffle(WORDS).map(w => ({ word: w, stageIndex: 0, wrongCount: 0, log: {flip:null, en2cn:null, cn2en:null, spelling:null} }));
 const totalWords = WORDS.length;
 let completed = []; // finished word entries (with final results + cloze record)
-const startTime = Date.now();
+let startTime = Date.now();
+
+// ============ 进度暂存（localStorage） ============
+// 每次切卡自动存一份，关掉页面重新打开能接着做；key 按当日词表区分，换了新词表不会串
+const STORE_PREFIX = 'cet6-review:';
+const STORE_KEY = STORE_PREFIX + WORDS.map(w => w.id).sort().join(',');
+let exported = false;
+
+function saveState() {
+  const state = {
+    // word 对象不存，只存 id，恢复时从 WORDS 里找回；挖空卡通过下标指回 completed 里的 entry
+    queue: queue.map(it => it.type === 'cloze'
+      ? { type: 'cloze', id: it.word.id, entryIndex: completed.indexOf(it.entry) }
+      : { id: it.word.id, stageIndex: it.stageIndex, wrongCount: it.wrongCount, log: it.log }),
+    completed,
+    elapsedMs: Date.now() - startTime,
+    exported,
+  };
+  try { localStorage.setItem(STORE_KEY, JSON.stringify(state)); } catch (e) { /* 隐私模式等存不了，静默跳过 */ }
+}
+
+function loadState() {
+  let state;
+  try {
+    // 顺手清掉旧词表留下的存档
+    for (let i = localStorage.length - 1; i >= 0; i--) {
+      const k = localStorage.key(i);
+      if (k && k.startsWith(STORE_PREFIX) && k !== STORE_KEY) localStorage.removeItem(k);
+    }
+    state = JSON.parse(localStorage.getItem(STORE_KEY));
+  } catch (e) { return false; }
+  if (!state || !Array.isArray(state.queue) || !Array.isArray(state.completed)) return false;
+  const byId = Object.fromEntries(WORDS.map(w => [w.id, w]));
+  const restored = [];
+  for (const s of state.queue) {
+    const word = byId[s.id];
+    if (!word) return false;
+    if (s.type === 'cloze') {
+      const entry = state.completed[s.entryIndex];
+      const data = CLOZE[word.word];
+      if (entry && data) restored.push({ type: 'cloze', word, data, entry });
+    } else {
+      restored.push({ word, stageIndex: s.stageIndex, wrongCount: s.wrongCount, log: s.log });
+    }
+  }
+  queue = restored;
+  completed = state.completed;
+  startTime = Date.now() - (state.elapsedMs || 0);
+  exported = !!state.exported;
+  return true;
+}
+
+function markExported() {
+  exported = true;
+  saveState();
+}
+
+function showRestoreNote() {
+  const note = document.getElementById('restoreNote');
+  note.innerHTML = `已恢复上次的进度：完成 ${completed.length} / ${totalWords}${exported ? '（已导出过）' : ''}<button id="restartBtn">从头开始</button>`;
+  note.hidden = false;
+  document.getElementById('restartBtn').onclick = () => {
+    if (!confirm('清掉暂存的进度，从头开始做今天的词？')) return;
+    try { localStorage.removeItem(STORE_KEY); } catch (e) {}
+    completed = []; // 让下面的关闭提醒放行
+    location.reload();
+  };
+}
+
+// 做过题但还没导出就关页面/刷新 → 浏览器弹"确定离开"提醒
+window.addEventListener('beforeunload', e => {
+  if (completed.length === 0 || exported) return;
+  e.preventDefault();
+  e.returnValue = '';
+});
 
 const cardArea = document.getElementById('cardArea');
 const progressFill = document.getElementById('progressFill');
@@ -270,6 +365,7 @@ function buildDistractors(correct, pool, count) {
 }
 
 function render() {
+  saveState();
   updateProgress();
   if (queue.length === 0) { renderSummary(); return; }
   const item = queue[0];
@@ -607,6 +703,7 @@ function exportSession() {
   document.body.appendChild(a);
   a.click();
   document.body.removeChild(a);
+  markExported();
   // 有些精简版 WebView 浏览器（比如平板上的 Jelly）不会异步完成 blob 下载，
   // 立刻 revoke 会把还没读完的下载数据一起干掉，所以延迟撤销，给它留出时间。
   setTimeout(() => URL.revokeObjectURL(url), 60000);
@@ -617,6 +714,7 @@ async function copySessionToClipboard() {
   const note = document.getElementById('exportNote');
   try {
     await navigator.clipboard.writeText(json);
+    markExported();
     note.textContent = '✅ 已复制到剪贴板，现在可以直接点"收工"脚本了（它会自动从剪贴板读取）。';
     return;
   } catch (e) {
@@ -630,6 +728,7 @@ async function copySessionToClipboard() {
     ta.select();
     try {
       document.execCommand('copy');
+      markExported();
       note.textContent = '✅ 已复制到剪贴板，现在可以直接点"收工"脚本了。';
     } catch (e2) {
       note.textContent = '⚠️ 自动复制失败，请长按下面文本框手动全选复制：';
@@ -644,8 +743,9 @@ async function copySessionToClipboard() {
   }
 }
 
-document.getElementById('footerNote').textContent = `共 ${totalWords} 个词（含 ${WORDS.filter(w=>w.isReview).length} 个到期复习词）。每词需依次通过遮词卡片、看英选中、看中选英、拼写练习四关，答错会重新排队再来一次；四关过后，复习词和答错过的词会补一道挖空造句题。`;
+document.getElementById('footerNote').textContent = `共 ${totalWords} 个词（含 ${WORDS.filter(w=>w.isReview).length} 个到期复习词）。每词需依次通过遮词卡片、看英选中、看中选英、拼写练习四关，答错会重新排队再来一次；四关过后，复习词和答错过的词会补一道挖空造句题。进度自动暂存在本浏览器里，关掉重开可接着做；做完记得导出。`;
 
+if (loadState()) showRestoreNote();
 render();
 </script>
 </body>

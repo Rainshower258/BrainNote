@@ -97,6 +97,25 @@
     color: #8a7226;
     background: #fbf6e8;
   }
+  .restore-note {
+    border: 1px dashed var(--sage);
+    border-radius: 8px;
+    padding: 8px 14px;
+    margin-bottom: 12px;
+    font-size: 13px;
+    color: var(--ink-soft);
+    background: #f1f5ef;
+    text-align: center;
+  }
+  .restore-note button {
+    margin-left: 8px;
+    border: none;
+    background: none;
+    color: var(--rust);
+    font-size: 13px;
+    text-decoration: underline;
+    cursor: pointer;
+  }
 
   .options { display: flex; flex-direction: column; gap: 10px; margin-top: 8px; }
   .opt-btn {
@@ -218,6 +237,8 @@
   <div class="progress-bar"><div class="progress-fill" id="progressFill" style="width:0%"></div></div>
   <div class="progress-label" id="progressLabel">0 / 0</div>
 
+  <div class="restore-note" id="restoreNote" hidden></div>
+
   <div id="cardArea"></div>
 
   <div class="footer-note" id="footerNote"></div>
@@ -225,11 +246,11 @@
 
 <script>
 // ============ 当日词表数据（构建时注入） ============
-const WORDS = [{"id": "confront", "path": "10-Words/confront.md", "word": "confront", "phonetic": "/kən'frʌnt/", "meaning": "迎面遇到， 遭遇； 勇敢地面对， 正视； 使对质， 使当面对证 (vt.)", "shortMeaning": "迎面遇到， 遭遇", "example": "", "tip": "", "mastery": "perfect", "due": "2026-10-13", "interval": 16.0, "ease": 2.8, "reviews": 2, "isReview": true}, {"id": "confine", "path": "10-Words/confine.md", "word": "confine", "phonetic": "/kən'faɪn/", "meaning": "限制，使局限；使不外出，禁闭 (vt.)", "shortMeaning": "限制，使局限", "example": "", "tip": "", "mastery": "perfect", "due": "2026-10-13", "interval": 16.0, "ease": 2.8, "reviews": 2, "isReview": true}, {"id": "conflict", "path": "10-Words/conflict.md", "word": "conflict", "phonetic": "/'kɑnflɪkt/", "meaning": "冲突， 抵触 (vi.) / 冲突， 抵触； 争论； 战斗， 战争 (n.)", "shortMeaning": "冲突， 抵触", "example": "", "tip": "", "mastery": "perfect", "due": "2026-10-13", "interval": 16.0, "ease": 2.8, "reviews": 2, "isReview": true}, {"id": "attempt", "path": "10-Words/attempt.md", "word": "attempt", "phonetic": "/ə'tɛmpt/", "meaning": "尝试， 试图， 努力 (vt.)", "shortMeaning": "尝试， 试图， 努力", "example": "", "tip": "", "mastery": "perfect", "due": "2026-10-17", "interval": 50.0, "ease": 2.9, "reviews": 3, "isReview": true}, {"id": "congress", "path": "10-Words/congress.md", "word": "congress", "phonetic": "/'kɑŋɡrəs/", "meaning": "代表大会； 国会， 议会 (n.)", "shortMeaning": "代表大会", "example": "", "tip": "", "mastery": "perfect", "due": "2026-10-13", "interval": 16.0, "ease": 2.8, "reviews": 2, "isReview": true}, {"id": "accomplish", "path": "10-Words/accomplish.md", "word": "accomplish", "phonetic": "/ə'kɑmplɪʃ/", "meaning": "达到， 完成 (vt.)", "shortMeaning": "达到， 完成", "example": "", "tip": "", "mastery": "perfect", "due": "2026-10-18", "interval": 58.0, "ease": 2.9, "reviews": 3, "isReview": true}, {"id": "confidence", "path": "10-Words/confidence.md", "word": "confidence", "phonetic": "/'kɑnfɪdəns/", "meaning": "信任， 信赖； 信心， 自信 (n.)", "shortMeaning": "信任， 信赖", "example": "", "tip": "", "mastery": "perfect", "due": "2026-10-13", "interval": 16.0, "ease": 2.8, "reviews": 2, "isReview": true}, {"id": "comparison", "path": "10-Words/comparison.md", "word": "comparison", "phonetic": "/kəm'pærɪsn/", "meaning": "比较， 对照； 比拟， 比喻 (n.)", "shortMeaning": "比较， 对照", "example": "", "tip": "", "mastery": "good", "due": "2026-10-15", "interval": 21.0, "ease": 2.65, "reviews": 3, "isReview": true}, {"id": "appropriation", "path": "10-Words/appropriation.md", "word": "appropriation", "phonetic": "/ə,proprɪ'eʃən/", "meaning": "据为己有， 占有； 挪用； 拨款 (n.)", "shortMeaning": "据为己有， 占有", "example": "", "tip": "", "mastery": "perfect", "due": "2026-10-16", "interval": 50.0, "ease": 2.9, "reviews": 3, "isReview": true}, {"id": "assassination", "path": "10-Words/assassination.md", "word": "assassination", "phonetic": "/əˌsæsəˈneɪʃn/", "meaning": "刺杀， 暗杀 (n.)", "shortMeaning": "刺杀， 暗杀", "example": "", "tip": "", "mastery": "perfect", "due": "2026-10-17", "interval": 50.0, "ease": 2.9, "reviews": 3, "isReview": true}, {"id": "conference", "path": "10-Words/conference.md", "word": "conference", "phonetic": "/'kɑnfərəns/", "meaning": "会议， 讨论会； 讨论， 商谈 (n.)", "shortMeaning": "会议， 讨论会", "example": "", "tip": "", "mastery": "perfect", "due": "2026-10-13", "interval": 16.0, "ease": 2.8, "reviews": 2, "isReview": true}, {"id": "absence", "path": "10-Words/absence.md", "word": "absence", "phonetic": "/'æbsns/", "meaning": "缺席， 不在； 缺席的时间， 外出期； 缺乏， 不存在 (n.)", "shortMeaning": "缺席， 不在", "example": "", "tip": "", "mastery": "easy", "due": "2026-10-20", "interval": 58.0, "ease": 2.9, "reviews": 3, "isReview": true}, {"id": "available", "path": "10-Words/available.md", "word": "available", "phonetic": "/ə'veləbl/", "meaning": "现成可使用的， 通用的； 可取的； 联系的； 可得到的 (adj.)", "shortMeaning": "现成可使用的， 通用的", "example": "", "tip": "", "mastery": "perfect", "due": "2026-10-18", "interval": 50.0, "ease": 2.9, "reviews": 3, "isReview": true}, {"id": "confirm", "path": "10-Words/confirm.md", "word": "confirm", "phonetic": "/kən'fɝm/", "meaning": "证实， 肯定； 确认； 批准 (vt.)", "shortMeaning": "证实， 肯定", "example": "", "tip": "", "mastery": "perfect", "due": "2026-10-13", "interval": 16.0, "ease": 2.8, "reviews": 2, "isReview": true}, {"id": "adolescent", "path": "10-Words/adolescent.md", "word": "adolescent", "phonetic": "/,ædə'lɛsnt/", "meaning": "青春期的； 青少年的 (adj.) / 青少年 (n.)", "shortMeaning": "青春期的", "example": "", "tip": "", "mastery": "perfect", "due": "2026-10-20", "interval": 58.0, "ease": 2.9, "reviews": 3, "isReview": true}, {"id": "assurance", "path": "10-Words/assurance.md", "word": "assurance", "phonetic": "/ə'ʃʊrəns/", "meaning": "把握， 信心； 保证， 表示保证的话； 保险 (n.)", "shortMeaning": "把握， 信心", "example": "", "tip": "", "mastery": "good", "due": "2026-10-17", "interval": 45.0, "ease": 2.8, "reviews": 3, "isReview": true}, {"id": "account", "path": "10-Words/account.md", "word": "account", "phonetic": "/ə'kaʊnt/", "meaning": "说明…的原因； 占… (vi.) / 记述；解释；账目 (n.)", "shortMeaning": "说明…的原因", "example": "", "tip": "", "mastery": "easy", "due": "2026-10-20", "interval": 58.0, "ease": 2.9, "reviews": 3, "isReview": true}, {"id": "confer", "path": "10-Words/confer.md", "word": "confer", "phonetic": "/kən'fɝ/", "meaning": "商谈，商议 (vi.) / 授予， 赋予 (vt.)", "shortMeaning": "商谈，商议", "example": "", "tip": "", "mastery": "perfect", "due": "2026-10-13", "interval": 16.0, "ease": 2.8, "reviews": 2, "isReview": true}, {"id": "abundant", "path": "10-Words/abundant.md", "word": "abundant", "phonetic": "/ə'bʌndənt/", "meaning": "丰富的， 富裕的； 大量的， 充足的 (adj.)", "shortMeaning": "丰富的， 富裕的", "example": "", "tip": "", "mastery": "easy", "due": "2026-10-20", "interval": 58.0, "ease": 2.9, "reviews": 3, "isReview": true}, {"id": "adhere", "path": "10-Words/adhere.md", "word": "adhere", "phonetic": "/əd'hɪr/", "meaning": "黏附， 附着； 遵守； 坚持； 追随， 支持 (vi.)", "shortMeaning": "黏附， 附着", "example": "", "tip": "", "mastery": "perfect", "due": "2026-10-20", "interval": 58.0, "ease": 2.9, "reviews": 3, "isReview": true}, {"id": "armor", "path": "10-Words/armor.md", "word": "armor", "phonetic": "/'ɑrmɚ/", "meaning": "盔甲， 装甲； 保护物 (n.)", "shortMeaning": "盔甲， 装甲", "example": "", "tip": "", "mastery": "perfect", "due": "2026-10-17", "interval": 50.0, "ease": 2.9, "reviews": 3, "isReview": true}, {"id": "associate", "path": "10-Words/associate.md", "word": "associate", "phonetic": "/ə'soʃɪet/", "meaning": "把…联系在一起；使联合，结合；交往\t[ə'səuʃiət] (v.) / 副的 (adj.) / 伙伴，同事 (n.)", "shortMeaning": "把…联系在一起", "example": "", "tip": "", "mastery": "perfect", "due": "2026-10-17", "interval": 50.0, "ease": 2.9, "reviews": 3, "isReview": true}, {"id": "adequate", "path": "10-Words/adequate.md", "word": "adequate", "phonetic": "/ˈædɪkwət/", "meaning": "足够的； 可以胜任的 (adj.)", "shortMeaning": "足够的", "example": "", "tip": "", "mastery": "perfect", "due": "2026-10-20", "interval": 58.0, "ease": 2.9, "reviews": 3, "isReview": true}, {"id": "abuse", "path": "10-Words/abuse.md", "word": "abuse", "phonetic": "/ə'bjus/", "meaning": "滥用； 虐待； 辱骂， 毁谤 (vt.) / 滥用； 虐待； 辱骂 (n.)", "shortMeaning": "滥用", "example": "", "tip": "", "mastery": "easy", "due": "2026-10-20", "interval": 58.0, "ease": 2.9, "reviews": 3, "isReview": true}, {"id": "audience", "path": "10-Words/audience.md", "word": "audience", "phonetic": "/'ɔdɪəns/", "meaning": "听众， 观众； 读者 (n.)", "shortMeaning": "听众， 观众", "example": "", "tip": "", "mastery": "perfect", "due": "2026-10-18", "interval": 50.0, "ease": 2.9, "reviews": 3, "isReview": true}, {"id": "abortion", "path": "10-Words/abortion.md", "word": "abortion", "phonetic": "/ə'bɔrʃən/", "meaning": "流产， 堕胎 (n.)", "shortMeaning": "流产， 堕胎", "example": "", "tip": "", "mastery": "perfect", "due": "2026-10-18", "interval": 58.0, "ease": 2.9, "reviews": 3, "isReview": true}, {"id": "confidential", "path": "10-Words/confidential.md", "word": "confidential", "phonetic": "/,kɑnfɪ'dɛnʃl/", "meaning": "秘密的， 机密的； 表示信任的； 担任机密工作的 (adj.)", "shortMeaning": "秘密的， 机密的", "example": "", "tip": "", "mastery": "perfect", "due": "2026-10-13", "interval": 16.0, "ease": 2.8, "reviews": 2, "isReview": true}, {"id": "connection", "path": "10-Words/connection.md", "word": "connection", "phonetic": "/kə'nɛkʃən/", "meaning": "连接； 联系； 连接物， 连接点； 亲戚 (n.)", "shortMeaning": "连接", "example": "", "tip": "", "mastery": "perfect", "due": "2026-10-13", "interval": 16.0, "ease": 2.8, "reviews": 2, "isReview": true}, {"id": "abstract", "path": "10-Words/abstract.md", "word": "abstract", "phonetic": "/'æbstrækt/", "meaning": "抽象的，抽象派的 (adj.) / 摘要，梗概；抽象派艺术作品 (n.)", "shortMeaning": "抽象的，抽象派的", "example": "", "tip": "", "mastery": "easy", "due": "2026-10-20", "interval": 58.0, "ease": 2.9, "reviews": 3, "isReview": true}, {"id": "authoritative", "path": "10-Words/authoritative.md", "word": "authoritative", "phonetic": "/ə'θɔrətetɪv/", "meaning": "有权威性的， 可信的； 专断的， 命令式的 (adj.)", "shortMeaning": "有权威性的， 可信的", "example": "", "tip": "", "mastery": "perfect", "due": "2026-10-18", "interval": 50.0, "ease": 2.9, "reviews": 3, "isReview": true}];
+const WORDS = [{"id": "conference", "path": "10-Words/conference.md", "word": "conference", "phonetic": "/'kɑnfərəns/", "meaning": "会议， 讨论会； 讨论， 商谈 (n.)", "shortMeaning": "会议， 讨论会", "example": "", "tip": "", "mastery": "perfect", "due": "2026-10-13", "interval": 16.0, "ease": 2.8, "reviews": 2, "isReview": true}, {"id": "armor", "path": "10-Words/armor.md", "word": "armor", "phonetic": "/'ɑrmɚ/", "meaning": "盔甲， 装甲； 保护物 (n.)", "shortMeaning": "盔甲， 装甲", "example": "", "tip": "", "mastery": "perfect", "due": "2026-10-17", "interval": 50.0, "ease": 2.9, "reviews": 3, "isReview": true}, {"id": "adequate", "path": "10-Words/adequate.md", "word": "adequate", "phonetic": "/ˈædɪkwət/", "meaning": "足够的； 可以胜任的 (adj.)", "shortMeaning": "足够的", "example": "", "tip": "", "mastery": "perfect", "due": "2026-10-20", "interval": 58.0, "ease": 2.9, "reviews": 3, "isReview": true}, {"id": "account", "path": "10-Words/account.md", "word": "account", "phonetic": "/ə'kaʊnt/", "meaning": "说明…的原因； 占… (vi.) / 记述；解释；账目 (n.)", "shortMeaning": "说明…的原因", "example": "", "tip": "", "mastery": "easy", "due": "2026-10-20", "interval": 58.0, "ease": 2.9, "reviews": 3, "isReview": true}, {"id": "abundant", "path": "10-Words/abundant.md", "word": "abundant", "phonetic": "/ə'bʌndənt/", "meaning": "丰富的， 富裕的； 大量的， 充足的 (adj.)", "shortMeaning": "丰富的， 富裕的", "example": "", "tip": "", "mastery": "easy", "due": "2026-10-20", "interval": 58.0, "ease": 2.9, "reviews": 3, "isReview": true}, {"id": "associate", "path": "10-Words/associate.md", "word": "associate", "phonetic": "/ə'soʃɪet/", "meaning": "把…联系在一起；使联合，结合；交往\t[ə'səuʃiət] (v.) / 副的 (adj.) / 伙伴，同事 (n.)", "shortMeaning": "把…联系在一起", "example": "", "tip": "", "mastery": "perfect", "due": "2026-10-17", "interval": 50.0, "ease": 2.9, "reviews": 3, "isReview": true}, {"id": "abstract", "path": "10-Words/abstract.md", "word": "abstract", "phonetic": "/'æbstrækt/", "meaning": "抽象的，抽象派的 (adj.) / 摘要，梗概；抽象派艺术作品 (n.)", "shortMeaning": "抽象的，抽象派的", "example": "", "tip": "", "mastery": "easy", "due": "2026-10-20", "interval": 58.0, "ease": 2.9, "reviews": 3, "isReview": true}, {"id": "confront", "path": "10-Words/confront.md", "word": "confront", "phonetic": "/kən'frʌnt/", "meaning": "迎面遇到， 遭遇； 勇敢地面对， 正视； 使对质， 使当面对证 (vt.)", "shortMeaning": "迎面遇到， 遭遇", "example": "", "tip": "", "mastery": "perfect", "due": "2026-10-13", "interval": 16.0, "ease": 2.8, "reviews": 2, "isReview": true}, {"id": "conflict", "path": "10-Words/conflict.md", "word": "conflict", "phonetic": "/'kɑnflɪkt/", "meaning": "冲突， 抵触 (vi.) / 冲突， 抵触； 争论； 战斗， 战争 (n.)", "shortMeaning": "冲突， 抵触", "example": "", "tip": "", "mastery": "perfect", "due": "2026-10-13", "interval": 16.0, "ease": 2.8, "reviews": 2, "isReview": true}, {"id": "assassination", "path": "10-Words/assassination.md", "word": "assassination", "phonetic": "/əˌsæsəˈneɪʃn/", "meaning": "刺杀， 暗杀 (n.)", "shortMeaning": "刺杀， 暗杀", "example": "", "tip": "", "mastery": "perfect", "due": "2026-10-17", "interval": 50.0, "ease": 2.9, "reviews": 3, "isReview": true}, {"id": "comparison", "path": "10-Words/comparison.md", "word": "comparison", "phonetic": "/kəm'pærɪsn/", "meaning": "比较， 对照； 比拟， 比喻 (n.)", "shortMeaning": "比较， 对照", "example": "", "tip": "", "mastery": "good", "due": "2026-10-15", "interval": 21.0, "ease": 2.65, "reviews": 3, "isReview": true}, {"id": "attempt", "path": "10-Words/attempt.md", "word": "attempt", "phonetic": "/ə'tɛmpt/", "meaning": "尝试， 试图， 努力 (vt.)", "shortMeaning": "尝试， 试图， 努力", "example": "", "tip": "", "mastery": "perfect", "due": "2026-10-17", "interval": 50.0, "ease": 2.9, "reviews": 3, "isReview": true}, {"id": "appropriation", "path": "10-Words/appropriation.md", "word": "appropriation", "phonetic": "/ə,proprɪ'eʃən/", "meaning": "据为己有， 占有； 挪用； 拨款 (n.)", "shortMeaning": "据为己有， 占有", "example": "", "tip": "", "mastery": "perfect", "due": "2026-10-16", "interval": 50.0, "ease": 2.9, "reviews": 3, "isReview": true}, {"id": "confer", "path": "10-Words/confer.md", "word": "confer", "phonetic": "/kən'fɝ/", "meaning": "商谈，商议 (vi.) / 授予， 赋予 (vt.)", "shortMeaning": "商谈，商议", "example": "", "tip": "", "mastery": "perfect", "due": "2026-10-13", "interval": 16.0, "ease": 2.8, "reviews": 2, "isReview": true}, {"id": "accomplish", "path": "10-Words/accomplish.md", "word": "accomplish", "phonetic": "/ə'kɑmplɪʃ/", "meaning": "达到， 完成 (vt.)", "shortMeaning": "达到， 完成", "example": "", "tip": "", "mastery": "perfect", "due": "2026-10-18", "interval": 58.0, "ease": 2.9, "reviews": 3, "isReview": true}, {"id": "abuse", "path": "10-Words/abuse.md", "word": "abuse", "phonetic": "/ə'bjus/", "meaning": "滥用； 虐待； 辱骂， 毁谤 (vt.) / 滥用； 虐待； 辱骂 (n.)", "shortMeaning": "滥用", "example": "", "tip": "", "mastery": "easy", "due": "2026-10-20", "interval": 58.0, "ease": 2.9, "reviews": 3, "isReview": true}, {"id": "absence", "path": "10-Words/absence.md", "word": "absence", "phonetic": "/'æbsns/", "meaning": "缺席， 不在； 缺席的时间， 外出期； 缺乏， 不存在 (n.)", "shortMeaning": "缺席， 不在", "example": "", "tip": "", "mastery": "easy", "due": "2026-10-20", "interval": 58.0, "ease": 2.9, "reviews": 3, "isReview": true}, {"id": "confidence", "path": "10-Words/confidence.md", "word": "confidence", "phonetic": "/'kɑnfɪdəns/", "meaning": "信任， 信赖； 信心， 自信 (n.)", "shortMeaning": "信任， 信赖", "example": "", "tip": "", "mastery": "perfect", "due": "2026-10-13", "interval": 16.0, "ease": 2.8, "reviews": 2, "isReview": true}, {"id": "adolescent", "path": "10-Words/adolescent.md", "word": "adolescent", "phonetic": "/,ædə'lɛsnt/", "meaning": "青春期的； 青少年的 (adj.) / 青少年 (n.)", "shortMeaning": "青春期的", "example": "", "tip": "", "mastery": "perfect", "due": "2026-10-20", "interval": 58.0, "ease": 2.9, "reviews": 3, "isReview": true}, {"id": "connection", "path": "10-Words/connection.md", "word": "connection", "phonetic": "/kə'nɛkʃən/", "meaning": "连接； 联系； 连接物， 连接点； 亲戚 (n.)", "shortMeaning": "连接", "example": "", "tip": "", "mastery": "perfect", "due": "2026-10-13", "interval": 16.0, "ease": 2.8, "reviews": 2, "isReview": true}, {"id": "abortion", "path": "10-Words/abortion.md", "word": "abortion", "phonetic": "/ə'bɔrʃən/", "meaning": "流产， 堕胎 (n.)", "shortMeaning": "流产， 堕胎", "example": "", "tip": "", "mastery": "perfect", "due": "2026-10-18", "interval": 58.0, "ease": 2.9, "reviews": 3, "isReview": true}, {"id": "audience", "path": "10-Words/audience.md", "word": "audience", "phonetic": "/'ɔdɪəns/", "meaning": "听众， 观众； 读者 (n.)", "shortMeaning": "听众， 观众", "example": "", "tip": "", "mastery": "perfect", "due": "2026-10-18", "interval": 50.0, "ease": 2.9, "reviews": 3, "isReview": true}, {"id": "authoritative", "path": "10-Words/authoritative.md", "word": "authoritative", "phonetic": "/ə'θɔrətetɪv/", "meaning": "有权威性的， 可信的； 专断的， 命令式的 (adj.)", "shortMeaning": "有权威性的， 可信的", "example": "", "tip": "", "mastery": "perfect", "due": "2026-10-18", "interval": 50.0, "ease": 2.9, "reviews": 3, "isReview": true}, {"id": "assurance", "path": "10-Words/assurance.md", "word": "assurance", "phonetic": "/ə'ʃʊrəns/", "meaning": "把握， 信心； 保证， 表示保证的话； 保险 (n.)", "shortMeaning": "把握， 信心", "example": "", "tip": "", "mastery": "good", "due": "2026-10-17", "interval": 45.0, "ease": 2.8, "reviews": 3, "isReview": true}, {"id": "available", "path": "10-Words/available.md", "word": "available", "phonetic": "/ə'veləbl/", "meaning": "现成可使用的， 通用的； 可取的； 联系的； 可得到的 (adj.)", "shortMeaning": "现成可使用的， 通用的", "example": "", "tip": "", "mastery": "perfect", "due": "2026-10-18", "interval": 50.0, "ease": 2.9, "reviews": 3, "isReview": true}, {"id": "confirm", "path": "10-Words/confirm.md", "word": "confirm", "phonetic": "/kən'fɝm/", "meaning": "证实， 肯定； 确认； 批准 (vt.)", "shortMeaning": "证实， 肯定", "example": "", "tip": "", "mastery": "perfect", "due": "2026-10-13", "interval": 16.0, "ease": 2.8, "reviews": 2, "isReview": true}, {"id": "adhere", "path": "10-Words/adhere.md", "word": "adhere", "phonetic": "/əd'hɪr/", "meaning": "黏附， 附着； 遵守； 坚持； 追随， 支持 (vi.)", "shortMeaning": "黏附， 附着", "example": "", "tip": "", "mastery": "perfect", "due": "2026-10-20", "interval": 58.0, "ease": 2.9, "reviews": 3, "isReview": true}, {"id": "confidential", "path": "10-Words/confidential.md", "word": "confidential", "phonetic": "/,kɑnfɪ'dɛnʃl/", "meaning": "秘密的， 机密的； 表示信任的； 担任机密工作的 (adj.)", "shortMeaning": "秘密的， 机密的", "example": "", "tip": "", "mastery": "perfect", "due": "2026-10-13", "interval": 16.0, "ease": 2.8, "reviews": 2, "isReview": true}, {"id": "confine", "path": "10-Words/confine.md", "word": "confine", "phonetic": "/kən'faɪn/", "meaning": "限制，使局限；使不外出，禁闭 (vt.)", "shortMeaning": "限制，使局限", "example": "", "tip": "", "mastery": "perfect", "due": "2026-10-13", "interval": 16.0, "ease": 2.8, "reviews": 2, "isReview": true}, {"id": "congress", "path": "10-Words/congress.md", "word": "congress", "phonetic": "/'kɑŋɡrəs/", "meaning": "代表大会； 国会， 议会 (n.)", "shortMeaning": "代表大会", "example": "", "tip": "", "mastery": "perfect", "due": "2026-10-13", "interval": 16.0, "ease": 2.8, "reviews": 2, "isReview": true}];
 
 // ============ 挖空造句数据（构建时注入；key = word） ============
 // 每个词: {sentence_en, sentence_zh}；缺失的词在浏览器端静默跳过挖空题
-const CLOZE = {"confront": {"sentence_en": "We must confront our fears instead of running away from them.", "sentence_zh": "我们必须勇敢地面对自己的恐惧，而不是逃避它们。", "source": "deepseek"}, "confine": {"sentence_en": "The doctor advised him to confine his activities to light walking for a month.", "sentence_zh": "医生建议他一个月内只做些轻度散步这类活动。"}, "conflict": {"sentence_en": "The conflict between the two teams made it hard for them to cooperate.", "sentence_zh": "两队之间的冲突使他们很难合作。", "source": "deepseek"}, "attempt": {"sentence_en": "Before giving up, we should attempt to find a better solution.", "sentence_zh": "在放弃之前，我们应该尝试找到更好的解决方案。"}, "congress": {"sentence_en": "The congress passed a new law to protect the environment last month.", "sentence_zh": "国会上个月通过了一项保护环境的新法律。", "source": "deepseek"}, "accomplish": {"sentence_en": "To accomplish this task, we must plan carefully.", "sentence_zh": "为了完成这项任务，我们必须仔细计划。"}, "confidence": {"sentence_en": "Studying hard every day gave her the confidence to pass the final exam.", "sentence_zh": "每天努力学习给了她通过期末考试的信心。", "source": "deepseek"}, "comparison": {"sentence_en": "Her essay makes a comparison between traditional and modern lifestyles.", "sentence_zh": "她的文章对传统和现代生活方式进行了比较。"}, "appropriation": {"sentence_en": "The committee approved the appropriation of funds for the new library.", "sentence_zh": "委员会批准了新建图书馆的资金拨款。"}, "assassination": {"sentence_en": "The assassination of the political leader shocked the entire nation.", "sentence_zh": "政治领导人的遇刺震惊了整个国家。"}, "conference": {"sentence_en": "She flew to Paris to attend an important international conference on climate change.", "sentence_zh": "她飞往巴黎参加一个关于气候变化的重要国际会议。", "source": "deepseek"}, "absence": {"sentence_en": "The absence of any clear strategy led to the project's failure.", "sentence_zh": "缺乏明确的战略导致了项目的失败。"}, "available": {"sentence_en": "The library has a wide range of books available for students to borrow.", "sentence_zh": "图书馆有大量书籍可供学生借阅。"}, "confirm": {"sentence_en": "The manager asked me to confirm the meeting time before Friday.", "sentence_zh": "经理让我在周五之前确认会议时间。", "source": "deepseek"}, "adolescent": {"sentence_en": "The adolescent period is often marked by emotional and physical changes.", "sentence_zh": "青春期往往以情感和身体的变化为特征。"}, "assurance": {"sentence_en": "He gave me his assurance that he would help.", "sentence_zh": "他向我保证他会帮忙。"}, "account": {"sentence_en": "These economic factors can account for the recent rise in unemployment.", "sentence_zh": "这些经济因素可以解释近期失业率的上升。"}, "confer": {"sentence_en": "The managers must confer with the lawyers before making a decision.", "sentence_zh": "经理们必须在做出决定前与律师们商议。", "source": "deepseek"}, "abundant": {"sentence_en": "The region has abundant natural resources, which attracts many investors.", "sentence_zh": "该地区拥有丰富的自然资源，吸引了众多投资者。"}, "adhere": {"sentence_en": "To succeed, you must adhere to the principles you believe in.", "sentence_zh": "要想成功，你必须坚持你所相信的原则。"}, "armor": {"sentence_en": "The knight wore heavy armor to protect himself in battle.", "sentence_zh": "骑士穿着厚重的盔甲在战斗中保护自己。"}, "associate": {"sentence_en": "You should associate the word with its context to remember it better.", "sentence_zh": "你应该把这个词与它的语境联系起来，以便更好地记住它。"}, "adequate": {"sentence_en": "The supply of food is adequate for the whole journey.", "sentence_zh": "食物的供应足以满足整个旅程的需求。"}, "abuse": {"sentence_en": "We must not abuse the power entrusted to us by the people.", "sentence_zh": "我们绝不能滥用人民赋予我们的权力。"}, "audience": {"sentence_en": "The speaker must engage the audience with clear arguments and vivid examples.", "sentence_zh": "演讲者必须用清晰的论点和生动的例子来吸引听众。"}, "abortion": {"sentence_en": "The debate about abortion often sparks strong emotions in society.", "sentence_zh": "关于堕胎的辩论常常在社会中激起强烈的情绪。"}, "confidential": {"sentence_en": "Please keep this report confidential, because it contains important information about our new plan.", "sentence_zh": "请对这个报告保密，因为它包含关于我们新计划的重要信息。", "source": "deepseek"}, "connection": {"sentence_en": "There is a strong connection between regular exercise and good health.", "sentence_zh": "经常锻炼和身体健康之间有很强的联系。", "source": "deepseek"}, "abstract": {"sentence_en": "You must abstract the key information from the lengthy passage.", "sentence_zh": "你必须从冗长的文章中提取关键信息。"}, "authoritative": {"sentence_en": "The committee relied on authoritative sources to make its final decision.", "sentence_zh": "委员会依靠权威来源做出了最终决定。"}};
+const CLOZE = {"conference": {"sentence_en": "She flew to Paris to attend an important international conference on climate change.", "sentence_zh": "她飞往巴黎参加一个关于气候变化的重要国际会议。", "source": "deepseek"}, "armor": {"sentence_en": "The knight wore heavy armor to protect himself in battle.", "sentence_zh": "骑士穿着厚重的盔甲在战斗中保护自己。"}, "adequate": {"sentence_en": "The supply of food is adequate for the whole journey.", "sentence_zh": "食物的供应足以满足整个旅程的需求。"}, "account": {"sentence_en": "These economic factors can account for the recent rise in unemployment.", "sentence_zh": "这些经济因素可以解释近期失业率的上升。"}, "abundant": {"sentence_en": "The region has abundant natural resources, which attracts many investors.", "sentence_zh": "该地区拥有丰富的自然资源，吸引了众多投资者。"}, "associate": {"sentence_en": "You should associate the word with its context to remember it better.", "sentence_zh": "你应该把这个词与它的语境联系起来，以便更好地记住它。"}, "abstract": {"sentence_en": "You must abstract the key information from the lengthy passage.", "sentence_zh": "你必须从冗长的文章中提取关键信息。"}, "confront": {"sentence_en": "We must confront our fears instead of running away from them.", "sentence_zh": "我们必须勇敢地面对自己的恐惧，而不是逃避它们。", "source": "deepseek"}, "conflict": {"sentence_en": "The conflict between the two teams made it hard for them to cooperate.", "sentence_zh": "两队之间的冲突使他们很难合作。", "source": "deepseek"}, "assassination": {"sentence_en": "The assassination of the political leader shocked the entire nation.", "sentence_zh": "政治领导人的遇刺震惊了整个国家。"}, "comparison": {"sentence_en": "Her essay makes a comparison between traditional and modern lifestyles.", "sentence_zh": "她的文章对传统和现代生活方式进行了比较。"}, "attempt": {"sentence_en": "Before giving up, we should attempt to find a better solution.", "sentence_zh": "在放弃之前，我们应该尝试找到更好的解决方案。"}, "appropriation": {"sentence_en": "The committee approved the appropriation of funds for the new library.", "sentence_zh": "委员会批准了新建图书馆的资金拨款。"}, "confer": {"sentence_en": "The managers must confer with the lawyers before making a decision.", "sentence_zh": "经理们必须在做出决定前与律师们商议。", "source": "deepseek"}, "accomplish": {"sentence_en": "To accomplish this task, we must plan carefully.", "sentence_zh": "为了完成这项任务，我们必须仔细计划。"}, "abuse": {"sentence_en": "We must not abuse the power entrusted to us by the people.", "sentence_zh": "我们绝不能滥用人民赋予我们的权力。"}, "absence": {"sentence_en": "The absence of any clear strategy led to the project's failure.", "sentence_zh": "缺乏明确的战略导致了项目的失败。"}, "confidence": {"sentence_en": "Studying hard every day gave her the confidence to pass the final exam.", "sentence_zh": "每天努力学习给了她通过期末考试的信心。", "source": "deepseek"}, "adolescent": {"sentence_en": "The adolescent period is often marked by emotional and physical changes.", "sentence_zh": "青春期往往以情感和身体的变化为特征。"}, "connection": {"sentence_en": "There is a strong connection between regular exercise and good health.", "sentence_zh": "经常锻炼和身体健康之间有很强的联系。", "source": "deepseek"}, "abortion": {"sentence_en": "The debate about abortion often sparks strong emotions in society.", "sentence_zh": "关于堕胎的辩论常常在社会中激起强烈的情绪。"}, "audience": {"sentence_en": "The speaker must engage the audience with clear arguments and vivid examples.", "sentence_zh": "演讲者必须用清晰的论点和生动的例子来吸引听众。"}, "authoritative": {"sentence_en": "The committee relied on authoritative sources to make its final decision.", "sentence_zh": "委员会依靠权威来源做出了最终决定。"}, "assurance": {"sentence_en": "He gave me his assurance that he would help.", "sentence_zh": "他向我保证他会帮忙。"}, "available": {"sentence_en": "The library has a wide range of books available for students to borrow.", "sentence_zh": "图书馆有大量书籍可供学生借阅。"}, "confirm": {"sentence_en": "The manager asked me to confirm the meeting time before Friday.", "sentence_zh": "经理让我在周五之前确认会议时间。", "source": "deepseek"}, "adhere": {"sentence_en": "To succeed, you must adhere to the principles you believe in.", "sentence_zh": "要想成功，你必须坚持你所相信的原则。"}, "confidential": {"sentence_en": "Please keep this report confidential, because it contains important information about our new plan.", "sentence_zh": "请对这个报告保密，因为它包含关于我们新计划的重要信息。", "source": "deepseek"}, "confine": {"sentence_en": "The doctor advised him to confine his activities to light walking for a month.", "sentence_zh": "医生建议他一个月内只做些轻度散步这类活动。"}, "congress": {"sentence_en": "The congress passed a new law to protect the environment last month.", "sentence_zh": "国会上个月通过了一项保护环境的新法律。", "source": "deepseek"}};
 // 从未错过的新词触发挖空题的概率（0~1）
 const CLOZE_PROB_NEW = 0.15;
 
@@ -250,7 +271,81 @@ function shuffle(arr) {
 let queue = shuffle(WORDS).map(w => ({ word: w, stageIndex: 0, wrongCount: 0, log: {flip:null, en2cn:null, cn2en:null, spelling:null} }));
 const totalWords = WORDS.length;
 let completed = []; // finished word entries (with final results + cloze record)
-const startTime = Date.now();
+let startTime = Date.now();
+
+// ============ 进度暂存（localStorage） ============
+// 每次切卡自动存一份，关掉页面重新打开能接着做；key 按当日词表区分，换了新词表不会串
+const STORE_PREFIX = 'cet6-review:';
+const STORE_KEY = STORE_PREFIX + WORDS.map(w => w.id).sort().join(',');
+let exported = false;
+
+function saveState() {
+  const state = {
+    // word 对象不存，只存 id，恢复时从 WORDS 里找回；挖空卡通过下标指回 completed 里的 entry
+    queue: queue.map(it => it.type === 'cloze'
+      ? { type: 'cloze', id: it.word.id, entryIndex: completed.indexOf(it.entry) }
+      : { id: it.word.id, stageIndex: it.stageIndex, wrongCount: it.wrongCount, log: it.log }),
+    completed,
+    elapsedMs: Date.now() - startTime,
+    exported,
+  };
+  try { localStorage.setItem(STORE_KEY, JSON.stringify(state)); } catch (e) { /* 隐私模式等存不了，静默跳过 */ }
+}
+
+function loadState() {
+  let state;
+  try {
+    // 顺手清掉旧词表留下的存档
+    for (let i = localStorage.length - 1; i >= 0; i--) {
+      const k = localStorage.key(i);
+      if (k && k.startsWith(STORE_PREFIX) && k !== STORE_KEY) localStorage.removeItem(k);
+    }
+    state = JSON.parse(localStorage.getItem(STORE_KEY));
+  } catch (e) { return false; }
+  if (!state || !Array.isArray(state.queue) || !Array.isArray(state.completed)) return false;
+  const byId = Object.fromEntries(WORDS.map(w => [w.id, w]));
+  const restored = [];
+  for (const s of state.queue) {
+    const word = byId[s.id];
+    if (!word) return false;
+    if (s.type === 'cloze') {
+      const entry = state.completed[s.entryIndex];
+      const data = CLOZE[word.word];
+      if (entry && data) restored.push({ type: 'cloze', word, data, entry });
+    } else {
+      restored.push({ word, stageIndex: s.stageIndex, wrongCount: s.wrongCount, log: s.log });
+    }
+  }
+  queue = restored;
+  completed = state.completed;
+  startTime = Date.now() - (state.elapsedMs || 0);
+  exported = !!state.exported;
+  return true;
+}
+
+function markExported() {
+  exported = true;
+  saveState();
+}
+
+function showRestoreNote() {
+  const note = document.getElementById('restoreNote');
+  note.innerHTML = `已恢复上次的进度：完成 ${completed.length} / ${totalWords}${exported ? '（已导出过）' : ''}<button id="restartBtn">从头开始</button>`;
+  note.hidden = false;
+  document.getElementById('restartBtn').onclick = () => {
+    if (!confirm('清掉暂存的进度，从头开始做今天的词？')) return;
+    try { localStorage.removeItem(STORE_KEY); } catch (e) {}
+    completed = []; // 让下面的关闭提醒放行
+    location.reload();
+  };
+}
+
+// 做过题但还没导出就关页面/刷新 → 浏览器弹"确定离开"提醒
+window.addEventListener('beforeunload', e => {
+  if (completed.length === 0 || exported) return;
+  e.preventDefault();
+  e.returnValue = '';
+});
 
 const cardArea = document.getElementById('cardArea');
 const progressFill = document.getElementById('progressFill');
@@ -270,6 +365,7 @@ function buildDistractors(correct, pool, count) {
 }
 
 function render() {
+  saveState();
   updateProgress();
   if (queue.length === 0) { renderSummary(); return; }
   const item = queue[0];
@@ -607,6 +703,7 @@ function exportSession() {
   document.body.appendChild(a);
   a.click();
   document.body.removeChild(a);
+  markExported();
   // 有些精简版 WebView 浏览器（比如平板上的 Jelly）不会异步完成 blob 下载，
   // 立刻 revoke 会把还没读完的下载数据一起干掉，所以延迟撤销，给它留出时间。
   setTimeout(() => URL.revokeObjectURL(url), 60000);
@@ -617,6 +714,7 @@ async function copySessionToClipboard() {
   const note = document.getElementById('exportNote');
   try {
     await navigator.clipboard.writeText(json);
+    markExported();
     note.textContent = '✅ 已复制到剪贴板，现在可以直接点"收工"脚本了（它会自动从剪贴板读取）。';
     return;
   } catch (e) {
@@ -630,6 +728,7 @@ async function copySessionToClipboard() {
     ta.select();
     try {
       document.execCommand('copy');
+      markExported();
       note.textContent = '✅ 已复制到剪贴板，现在可以直接点"收工"脚本了。';
     } catch (e2) {
       note.textContent = '⚠️ 自动复制失败，请长按下面文本框手动全选复制：';
@@ -644,8 +743,9 @@ async function copySessionToClipboard() {
   }
 }
 
-document.getElementById('footerNote').textContent = `共 ${totalWords} 个词（含 ${WORDS.filter(w=>w.isReview).length} 个到期复习词）。每词需依次通过遮词卡片、看英选中、看中选英、拼写练习四关，答错会重新排队再来一次；四关过后，复习词和答错过的词会补一道挖空造句题。`;
+document.getElementById('footerNote').textContent = `共 ${totalWords} 个词（含 ${WORDS.filter(w=>w.isReview).length} 个到期复习词）。每词需依次通过遮词卡片、看英选中、看中选英、拼写练习四关，答错会重新排队再来一次；四关过后，复习词和答错过的词会补一道挖空造句题。进度自动暂存在本浏览器里，关掉重开可接着做；做完记得导出。`;
 
+if (loadState()) showRestoreNote();
 render();
 </script>
 </body>
