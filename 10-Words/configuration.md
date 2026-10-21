@@ -1,14 +1,14 @@
 ---
 answer: 配置， 布局， 构造
-due: '2026-10-05'
-ease: 2.65
+due: '2026-11-11'
+ease: 2.8
 example: ''
-interval: 8
-last-review: '2026-09-27'
+interval: 32
+last-review: '2026-10-10'
 mastery: perfect
 meaning: 配置， 布局， 构造 (n.)
 phonetic: /kən,fɪɡjə'reʃən/
-reviews: 2
+reviews: 3
 tags:
 - 英语
 - CET6

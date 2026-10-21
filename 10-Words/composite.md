@@ -1,14 +1,14 @@
 ---
 answer: 混合成的，综合成的
-due: '2026-10-10'
-ease: 2.8
+due: '2026-12-11'
+ease: 2.9
 example: ''
-interval: 16
-last-review: '2026-09-24'
-mastery: perfect
+interval: 58
+last-review: '2026-10-14'
+mastery: easy
 meaning: 混合成的，综合成的 (adj.) / 合成物； 复合材料 (n.)
 phonetic: /kɑm'pɑzɪt/
-reviews: 2
+reviews: 3
 tags:
 - 英语
 - CET6

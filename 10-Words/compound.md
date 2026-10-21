@@ -1,14 +1,14 @@
 ---
 answer: 复合的，化合的
-due: '2026-10-10'
-ease: 2.8
+due: '2026-12-20'
+ease: 2.95
 example: ''
-interval: 16
-last-review: '2026-09-24'
+interval: 67
+last-review: '2026-10-14'
 mastery: perfect
 meaning: 复合的，化合的 (adj.) / 化合物，复合物；复合词 (n.) / 使恶化， 加重； 使化合， 使合成 (vt.)
 phonetic: /'kɑmpaʊnd/
-reviews: 2
+reviews: 3
 tags:
 - 英语
 - CET6

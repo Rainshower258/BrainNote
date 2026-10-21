@@ -1,14 +1,14 @@
 ---
 answer: 集中
-due: '2026-10-06'
-ease: 2.75
+due: '2027-04-14'
+ease: 3.0
 example: ''
-interval: 12
-last-review: '2026-09-24'
+interval: 184
+last-review: '2026-10-12'
 mastery: perfect
 meaning: 集中； 专注， 专心； 浓缩； 浓度 (n.)
 phonetic: /'kɑnsn'treʃən/
-reviews: 2
+reviews: 4
 tags:
 - 英语
 - CET6

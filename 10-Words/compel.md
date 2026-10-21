@@ -1,14 +1,14 @@
 ---
 answer: 强迫， 迫使屈服
-due: '2026-10-09'
-ease: 2.8
+due: '2027-08-04'
+ease: 3.1
 example: ''
-interval: 16
-last-review: '2026-09-23'
+interval: 296
+last-review: '2026-10-12'
 mastery: perfect
 meaning: 强迫， 迫使屈服 (vt.)
 phonetic: /kəm'pɛl/
-reviews: 2
+reviews: 4
 tags:
 - 英语
 - CET6

@@ -1,14 +1,14 @@
 ---
 answer: 方面
-due: '2026-10-10'
-ease: 2.85
+due: '2027-04-16'
+ease: 3.0
 example: ''
-interval: 43
-last-review: '2026-08-28'
-mastery: easy
+interval: 184
+last-review: '2026-10-14'
+mastery: perfect
 meaning: 方面； 朝向、 方向； 样子， 外表 (n.)
 phonetic: /'æspɛkt/
-reviews: 3
+reviews: 4
 tags:
 - 英语
 - CET6

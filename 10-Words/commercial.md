@@ -1,14 +1,14 @@
 ---
 answer: 商业的， 商务的
-due: '2026-09-30'
-ease: 2.8
+due: '2026-12-16'
+ease: 2.95
 example: ''
-interval: 16
-last-review: '2026-09-14'
+interval: 67
+last-review: '2026-10-10'
 mastery: perfect
 meaning: 商业的， 商务的； 商品化的， 商业性的 (adj.)
 phonetic: /kə'mɝʃəl/
-reviews: 2
+reviews: 3
 tags:
 - 英语
 - CET6

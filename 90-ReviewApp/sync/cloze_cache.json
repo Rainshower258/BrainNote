@@ -1903,5 +1903,100 @@
     "sentence_en": "Many people are not conscious of the importance of protecting the environment.",
     "sentence_zh": "许多人没有意识到保护环境的重要性。",
     "source": "deepseek"
+  },
+  "constitute": {
+    "sentence_en": "Daily practice can constitute the foundation of successful language learning.",
+    "sentence_zh": "每日练习可以构成成功语言学习的基础。",
+    "source": "deepseek"
+  },
+  "considerable": {
+    "sentence_en": "The project requires considerable time and effort from every member of the team.",
+    "sentence_zh": "这个项目需要团队每位成员投入相当多的时间和精力。",
+    "source": "deepseek"
+  },
+  "constant": {
+    "sentence_en": "The constant noise from the busy street made it hard for me to sleep.",
+    "sentence_zh": "繁忙街道上持续不断的噪音让我难以入睡。",
+    "source": "deepseek"
+  },
+  "constrain": {
+    "sentence_en": "The new rules may constrain students from using their phones during class.",
+    "sentence_zh": "新规定可能会限制学生在课堂上使用手机。",
+    "source": "deepseek"
+  },
+  "consist": {
+    "sentence_en": "A balanced diet must consist mainly of vegetables, fruits, and whole grains.",
+    "sentence_zh": "均衡的饮食必须主要由蔬菜、水果和全谷物组成。",
+    "source": "deepseek"
+  },
+  "construct": {
+    "sentence_en": "Engineers must construct the building according to the new safety rules.",
+    "sentence_zh": "工程师必须按照新的安全规则建造这座建筑。",
+    "source": "deepseek"
+  },
+  "conservative": {
+    "sentence_en": "My conservative uncle always wears old-fashioned clothes and avoids new technology.",
+    "sentence_zh": "我保守的叔叔总是穿着过时的衣服，并且回避新技术。",
+    "source": "deepseek"
+  },
+  "consolidate": {
+    "sentence_en": "Regular review can consolidate what you have learned in class.",
+    "sentence_zh": "定期复习可以巩固你在课堂上学到的知识。",
+    "source": "deepseek"
+  },
+  "conservation": {
+    "sentence_en": "Water conservation is important for the sustainable development of every city.",
+    "sentence_zh": "节约用水对每座城市的可持续发展都很重要。",
+    "source": "deepseek"
+  },
+  "conserve": {
+    "sentence_en": "We must conserve water and electricity in our daily life to protect the environment.",
+    "sentence_zh": "我们必须在日常生活中节约水和电，以保护环境。",
+    "source": "deepseek"
+  },
+  "consistent": {
+    "sentence_en": "His consistent hard work eventually led to great success in his career.",
+    "sentence_zh": "他始终如一的努力工作最终为他的事业带来了巨大成功。",
+    "source": "deepseek"
+  },
+  "consequently": {
+    "sentence_en": "He missed the early bus and consequently arrived late for the important meeting.",
+    "sentence_zh": "他错过了早班公交车，因此重要的会议迟到了。",
+    "source": "deepseek"
+  },
+  "considerate": {
+    "sentence_en": "It is considerate of you to help the old lady with her heavy bags.",
+    "sentence_zh": "你帮那位老太太提沉重的袋子，真是体贴。",
+    "source": "deepseek"
+  },
+  "consequence": {
+    "sentence_en": "She missed the deadline, and as a consequence, she lost the important opportunity.",
+    "sentence_zh": "她错过了截止日期，结果她失去了那个重要的机会。",
+    "source": "deepseek"
+  },
+  "consequent": {
+    "sentence_en": "The heavy rain and consequent flooding caused serious damage to the village.",
+    "sentence_zh": "大雨和随之而来的洪水给村庄造成了严重破坏。",
+    "source": "deepseek"
+  },
+  "conspicuous": {
+    "sentence_en": "The tall building is conspicuous against the clear blue sky.",
+    "sentence_zh": "那座高建筑物在晴朗的蓝天下很显眼。",
+    "source": "deepseek"
+  },
+  "constituent": {
+    "sentence_en": "Hydrogen is a key constituent of water and many other common substances.",
+    "sentence_zh": "氢是水以及许多其他常见物质的关键成分。",
+    "source": "deepseek"
+  },
+  "constitution": {
+    "sentence_en": "The constitution protects the basic rights of every citizen in the country.",
+    "sentence_zh": "宪法保护该国每一位公民的基本权利。",
+    "source": "deepseek"
+  },
+  "console": {
+    "sentence_en": "Her friends tried to console her after she failed the important exam.",
+    "sentence_zh": "她重要考试失利后，朋友们都设法安慰她。",
+    "source": "deepseek"
   }
 }

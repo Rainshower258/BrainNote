@@ -1,14 +1,14 @@
 ---
 answer: 复杂的， 难懂的
-due: '2026-10-06'
-ease: 2.75
+due: '2027-03-20'
+ease: 2.95
 example: ''
-interval: 12
-last-review: '2026-09-24'
-mastery: perfect
+interval: 159
+last-review: '2026-10-12'
+mastery: easy
 meaning: 复杂的， 难懂的 (adj.)
 phonetic: /'kɑmplɪketɪd/
-reviews: 2
+reviews: 4
 tags:
 - 英语
 - CET6

@@ -1,14 +1,14 @@
 ---
 answer: 概念， 观念
-due: '2026-10-10'
-ease: 2.8
+due: '2026-12-20'
+ease: 2.95
 example: ''
-interval: 16
-last-review: '2026-09-24'
+interval: 67
+last-review: '2026-10-14'
 mastery: perfect
 meaning: 概念， 观念； 设想 (n.)
 phonetic: /'kɑnsɛpt/
-reviews: 2
+reviews: 3
 tags:
 - 英语
 - CET6

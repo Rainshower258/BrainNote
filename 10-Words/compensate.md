@@ -1,14 +1,14 @@
 ---
 answer: 补偿， 弥补
-due: '2026-10-09'
-ease: 2.8
+due: '2027-08-04'
+ease: 3.1
 example: ''
-interval: 16
-last-review: '2026-09-23'
+interval: 296
+last-review: '2026-10-12'
 mastery: perfect
 meaning: 补偿， 弥补； 抵消 (v.)
 phonetic: /'kɑmpɛnset/
-reviews: 2
+reviews: 4
 tags:
 - 英语
 - CET6

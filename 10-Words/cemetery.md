@@ -1,14 +1,14 @@
 ---
 answer: 墓地， 公墓
-due: '2026-10-02'
-ease: 2.75
+due: '2027-01-13'
+ease: 2.9
 example: ''
-interval: 23
-last-review: '2026-09-09'
+interval: 95
+last-review: '2026-10-10'
 mastery: perfect
 meaning: 墓地， 公墓 (n.)
 phonetic: /'sɛmə'tɛri/
-reviews: 3
+reviews: 4
 tags:
 - 英语
 - CET6

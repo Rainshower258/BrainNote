@@ -1,14 +1,14 @@
 ---
 answer: 能力， 胜任， 称职
-due: '2026-10-09'
-ease: 2.8
+due: '2027-06-26'
+ease: 3.05
 example: ''
-interval: 16
-last-review: '2026-09-23'
-mastery: perfect
+interval: 257
+last-review: '2026-10-12'
+mastery: easy
 meaning: 能力， 胜任， 称职 (n.)
 phonetic: /'kɑmpɪtəns/
-reviews: 2
+reviews: 4
 tags:
 - 英语
 - CET6

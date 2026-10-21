@@ -1,14 +1,14 @@
 ---
 answer: 附件， 零件， 配件
-due: '2026-10-07'
-ease: 2.9
+due: '2029-07-05'
+ease: 3.2
 example: ''
-interval: 50
-last-review: '2026-08-18'
+interval: 997
+last-review: '2026-10-12'
 mastery: perfect
 meaning: 附件， 零件， 配件； 装饰品； 同谋， 帮凶， 包庇犯 (n.)
 phonetic: /ək'sɛsəri/
-reviews: 3
+reviews: 5
 tags:
 - 英语
 - CET6

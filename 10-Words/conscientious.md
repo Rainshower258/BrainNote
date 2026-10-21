@@ -1,14 +1,14 @@
 ---
 answer: 认真的， 勤勤恳恳的
-due: '2026-10-08'
-ease: 2.65
+due: '2027-03-18'
+ease: 2.9
 example: ''
-interval: 11
-last-review: '2026-09-27'
-mastery: good
+interval: 157
+last-review: '2026-10-12'
+mastery: perfect
 meaning: 认真的， 勤勤恳恳的 (adj.)
 phonetic: /'kɑnʃɪ'ɛnʃəs/
-reviews: 2
+reviews: 4
 tags:
 - 英语
 - CET6

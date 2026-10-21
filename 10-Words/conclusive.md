@@ -1,14 +1,14 @@
 ---
 answer: 确实的
-due: '2026-10-13'
-ease: 2.8
+due: '2026-12-11'
+ease: 2.9
 example: ''
-interval: 16
-last-review: '2026-09-27'
-mastery: perfect
+interval: 58
+last-review: '2026-10-14'
+mastery: easy
 meaning: 确实的； 最后的； 决定性的 (adj.)
 phonetic: /kən'klusɪv/
-reviews: 2
+reviews: 3
 tags:
 - 英语
 - CET6

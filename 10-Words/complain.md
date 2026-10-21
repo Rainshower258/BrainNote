@@ -1,14 +1,14 @@
 ---
 answer: 抱怨， 诉苦
-due: '2026-10-04'
-ease: 2.65
+due: '2026-11-23'
+ease: 2.8
 example: ''
-interval: 11
-last-review: '2026-09-23'
-mastery: good
+interval: 44
+last-review: '2026-10-10'
+mastery: perfect
 meaning: 抱怨， 诉苦； 控告， 投诉 (vi.)
 phonetic: /kəm'plen/
-reviews: 2
+reviews: 3
 tags:
 - 英语
 - CET6

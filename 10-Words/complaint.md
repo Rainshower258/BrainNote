@@ -1,14 +1,14 @@
 ---
 answer: 抱怨， 怨言
-due: '2026-10-09'
-ease: 2.8
+due: '2027-06-21'
+ease: 3.05
 example: ''
-interval: 16
-last-review: '2026-09-23'
+interval: 252
+last-review: '2026-10-12'
 mastery: perfect
 meaning: 抱怨， 怨言； 控告 (n.)
 phonetic: /kəm'plent/
-reviews: 2
+reviews: 4
 tags:
 - 英语
 - CET6

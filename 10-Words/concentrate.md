@@ -1,14 +1,14 @@
 ---
 answer: 全神贯注，全力以赴
-due: '2026-10-06'
-ease: 2.75
+due: '2027-04-18'
+ease: 3.0
 example: ''
-interval: 12
-last-review: '2026-09-24'
-mastery: perfect
+interval: 188
+last-review: '2026-10-12'
+mastery: easy
 meaning: 全神贯注，全力以赴；集中，聚集；浓缩 (v.) / 浓缩物， 浓缩液 (n.)
 phonetic: /'kɑnsn'tret/
-reviews: 2
+reviews: 4
 tags:
 - 英语
 - CET6

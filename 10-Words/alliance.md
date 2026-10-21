@@ -1,14 +1,14 @@
 ---
 answer: 结盟
-due: '2026-10-11'
-ease: 2.8
+due: '2027-04-21'
+ease: 2.95
 example: ''
-interval: 45
-last-review: '2026-08-27'
-mastery: good
+interval: 189
+last-review: '2026-10-14'
+mastery: perfect
 meaning: 结盟； 联盟 (n.)
 phonetic: /ə'laɪəns/
-reviews: 3
+reviews: 4
 tags:
 - 英语
 - CET6

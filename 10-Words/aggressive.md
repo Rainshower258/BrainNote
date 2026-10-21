@@ -1,14 +1,14 @@
 ---
 answer: 侵略的， 好斗的
-due: '2026-10-10'
-ease: 2.9
+due: '2027-05-20'
+ease: 3.05
 example: ''
-interval: 50
-last-review: '2026-08-21'
+interval: 218
+last-review: '2026-10-14'
 mastery: perfect
 meaning: 侵略的， 好斗的； 敢作敢为的； 有进取心的 (adj.)
 phonetic: /ə'ɡrɛsɪv/
-reviews: 3
+reviews: 4
 tags:
 - 英语
 - CET6

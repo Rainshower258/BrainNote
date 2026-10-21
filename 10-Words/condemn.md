@@ -1,14 +1,14 @@
 ---
 answer: 谴责， 指责
-due: '2026-10-11'
-ease: 2.75
+due: '2026-12-11'
+ease: 2.9
 example: ''
-interval: 14
-last-review: '2026-09-27'
-mastery: easy
+interval: 58
+last-review: '2026-10-14'
+mastery: perfect
 meaning: 谴责， 指责； 判…刑， 宣告…有罪 (vt.)
 phonetic: /kən'dɛm/
-reviews: 2
+reviews: 3
 tags:
 - 英语
 - CET6

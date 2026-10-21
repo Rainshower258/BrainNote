@@ -1,14 +1,14 @@
 ---
 answer: 结束， 终了
-due: '2026-10-06'
-ease: 2.75
+due: '2027-05-18'
+ease: 3.05
 example: ''
-interval: 12
-last-review: '2026-09-24'
+interval: 218
+last-review: '2026-10-12'
 mastery: perfect
 meaning: 结束， 终了 (vi.) / 推断出，推论出；缔结，议定 (vt.)
 phonetic: /kən'klud/
-reviews: 2
+reviews: 4
 tags:
 - 英语
 - CET6

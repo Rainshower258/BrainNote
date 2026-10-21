@@ -1,14 +1,14 @@
 ---
 answer: 使认识， 使了解
-due: '2026-10-09'
-ease: 2.9
+due: '2029-02-04'
+ease: 3.15
 example: ''
-interval: 50
-last-review: '2026-08-20'
+interval: 846
+last-review: '2026-10-12'
 mastery: perfect
 meaning: 使认识， 使了解； 使熟悉 (vt.)
 phonetic: /ə'kwent/
-reviews: 3
+reviews: 5
 tags:
 - 英语
 - CET6

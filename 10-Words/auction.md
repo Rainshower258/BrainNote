@@ -1,14 +1,14 @@
 ---
 answer: 拍卖 (n&vt.)
-due: '2026-10-12'
-ease: 2.8
+due: '2027-04-17'
+ease: 2.95
 example: ''
-interval: 44
-last-review: '2026-08-29'
+interval: 185
+last-review: '2026-10-14'
 mastery: perfect
 meaning: 拍卖 (n&vt.)
 phonetic: /'ɔkʃən/
-reviews: 3
+reviews: 4
 tags:
 - 英语
 - CET6
