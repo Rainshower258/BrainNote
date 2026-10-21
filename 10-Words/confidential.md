@@ -1,14 +1,14 @@
 ---
 answer: 秘密的， 机密的
-due: '2026-10-13'
-ease: 2.8
+due: '2026-12-27'
+ease: 2.95
 example: ''
-interval: 16
-last-review: '2026-09-27'
+interval: 67
+last-review: '2026-10-21'
 mastery: perfect
 meaning: 秘密的， 机密的； 表示信任的； 担任机密工作的 (adj.)
 phonetic: /,kɑnfɪ'dɛnʃl/
-reviews: 2
+reviews: 3
 tags:
 - 英语
 - CET6

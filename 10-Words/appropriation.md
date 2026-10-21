@@ -1,14 +1,14 @@
 ---
 answer: 据为己有， 占有
-due: '2026-10-16'
-ease: 2.9
+due: '2027-04-27'
+ease: 3.0
 example: ''
-interval: 50
-last-review: '2026-08-27'
-mastery: perfect
+interval: 188
+last-review: '2026-10-21'
+mastery: easy
 meaning: 据为己有， 占有； 挪用； 拨款 (n.)
 phonetic: /ə,proprɪ'eʃən/
-reviews: 3
+reviews: 4
 tags:
 - 英语
 - CET6

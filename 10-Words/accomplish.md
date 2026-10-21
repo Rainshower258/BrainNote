@@ -1,14 +1,14 @@
 ---
 answer: 达到， 完成
-due: '2026-10-18'
-ease: 2.9
+due: '2027-05-28'
+ease: 3.0
 example: ''
-interval: 58
-last-review: '2026-08-21'
-mastery: perfect
+interval: 219
+last-review: '2026-10-21'
+mastery: easy
 meaning: 达到， 完成 (vt.)
 phonetic: /ə'kɑmplɪʃ/
-reviews: 3
+reviews: 4
 tags:
 - 英语
 - CET6

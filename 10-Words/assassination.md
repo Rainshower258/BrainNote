@@ -1,14 +1,14 @@
 ---
 answer: 刺杀， 暗杀
-due: '2026-10-17'
-ease: 2.9
+due: '2027-05-27'
+ease: 3.05
 example: ''
-interval: 50
-last-review: '2026-08-28'
+interval: 218
+last-review: '2026-10-21'
 mastery: perfect
 meaning: 刺杀， 暗杀 (n.)
 phonetic: /əˌsæsəˈneɪʃn/
-reviews: 3
+reviews: 4
 tags:
 - 英语
 - CET6

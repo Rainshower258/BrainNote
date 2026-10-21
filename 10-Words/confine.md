@@ -1,14 +1,14 @@
 ---
 answer: 限制，使局限
-due: '2026-10-13'
-ease: 2.8
+due: '2026-12-27'
+ease: 2.95
 example: ''
-interval: 16
-last-review: '2026-09-27'
+interval: 67
+last-review: '2026-10-21'
 mastery: perfect
 meaning: 限制，使局限；使不外出，禁闭 (vt.)
 phonetic: /kən'faɪn/
-reviews: 2
+reviews: 3
 tags:
 - 英语
 - CET6

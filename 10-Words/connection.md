@@ -1,14 +1,14 @@
 ---
 answer: 连接
-due: '2026-10-13'
-ease: 2.8
+due: '2026-12-27'
+ease: 2.95
 example: ''
-interval: 16
-last-review: '2026-09-27'
+interval: 67
+last-review: '2026-10-21'
 mastery: perfect
 meaning: 连接； 联系； 连接物， 连接点； 亲戚 (n.)
 phonetic: /kə'nɛkʃən/
-reviews: 2
+reviews: 3
 tags:
 - 英语
 - CET6

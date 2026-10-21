@@ -1,14 +1,14 @@
 ---
 answer: 青春期的
-due: '2026-10-20'
-ease: 2.9
+due: '2027-06-30'
+ease: 3.05
 example: ''
-interval: 58
-last-review: '2026-08-23'
+interval: 252
+last-review: '2026-10-21'
 mastery: perfect
 meaning: 青春期的； 青少年的 (adj.) / 青少年 (n.)
 phonetic: /,ædə'lɛsnt/
-reviews: 3
+reviews: 4
 tags:
 - 英语
 - CET6

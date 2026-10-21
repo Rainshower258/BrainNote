@@ -1,14 +1,14 @@
 ---
 answer: 丰富的， 富裕的
-due: '2026-10-20'
-ease: 2.9
+due: '2027-06-30'
+ease: 3.05
 example: ''
-interval: 58
-last-review: '2026-08-23'
-mastery: easy
+interval: 252
+last-review: '2026-10-21'
+mastery: perfect
 meaning: 丰富的， 富裕的； 大量的， 充足的 (adj.)
 phonetic: /ə'bʌndənt/
-reviews: 3
+reviews: 4
 tags:
 - 英语
 - CET6

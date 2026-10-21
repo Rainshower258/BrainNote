@@ -1,14 +1,14 @@
 ---
 answer: 听众， 观众
-due: '2026-10-18'
-ease: 2.9
+due: '2027-05-27'
+ease: 3.05
 example: ''
-interval: 50
-last-review: '2026-08-29'
+interval: 218
+last-review: '2026-10-21'
 mastery: perfect
 meaning: 听众， 观众； 读者 (n.)
 phonetic: /'ɔdɪəns/
-reviews: 3
+reviews: 4
 tags:
 - 英语
 - CET6

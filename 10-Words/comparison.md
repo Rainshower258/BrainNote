@@ -1,14 +1,14 @@
 ---
 answer: 比较， 对照
-due: '2026-10-15'
-ease: 2.65
+due: '2026-11-15'
+ease: 2.5
 example: ''
-interval: 21
-last-review: '2026-09-24'
-mastery: good
+interval: 25
+last-review: '2026-10-21'
+mastery: hard
 meaning: 比较， 对照； 比拟， 比喻 (n.)
 phonetic: /kəm'pærɪsn/
-reviews: 3
+reviews: 4
 tags:
 - 英语
 - CET6

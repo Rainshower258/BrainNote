@@ -1998,5 +1998,20 @@
     "sentence_en": "Her friends tried to console her after she failed the important exam.",
     "sentence_zh": "她重要考试失利后，朋友们都设法安慰她。",
     "source": "deepseek"
+  },
+  "consult": {
+    "sentence_en": "You should consult a dictionary when you are not sure about a word.",
+    "sentence_zh": "当你对某个单词不确定时，应该查阅词典。",
+    "source": "deepseek"
+  },
+  "consultancy": {
+    "sentence_en": "She found a job at a consultancy that helps small companies grow.",
+    "sentence_zh": "她在一家帮助小公司发展的咨询公司找到了一份工作。",
+    "source": "deepseek"
+  },
+  "consultant": {
+    "sentence_en": "The company hired a consultant to help improve its marketing strategy.",
+    "sentence_zh": "公司聘请了一位顾问来帮助改进其营销策略。",
+    "source": "deepseek"
   }
 }
