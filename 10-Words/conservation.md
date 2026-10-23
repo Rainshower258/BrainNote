@@ -1,14 +1,14 @@
 ---
 answer: 保存， 保护， 避免浪费
-due: '2026-06-27'
-ease: 2.5
+due: '2026-10-27'
+ease: 2.65
 example: ''
-interval: 1
-last-review: ''
-mastery: new
+interval: 4
+last-review: '2026-10-23'
+mastery: perfect
 meaning: 保存， 保护， 避免浪费； 守恒 (n.)
 phonetic: /,kɑnsɚ'veʃən/
-reviews: 0
+reviews: 1
 tags:
 - 英语
 - CET6

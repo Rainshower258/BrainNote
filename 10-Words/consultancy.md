@@ -1,14 +1,14 @@
 ---
 answer: 顾问
-due: '2026-06-28'
+due: '2026-10-25'
 ease: 2.5
 example: ''
-interval: 1
-last-review: ''
-mastery: new
+interval: 2
+last-review: '2026-10-23'
+mastery: good
 meaning: 顾问； 顾问服务公司 (n.)
 phonetic: /kən'sʌltənsi/
-reviews: 0
+reviews: 1
 tags:
 - 英语
 - CET6

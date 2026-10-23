@@ -2013,5 +2013,110 @@
     "sentence_en": "The company hired a consultant to help improve its marketing strategy.",
     "sentence_zh": "公司聘请了一位顾问来帮助改进其营销策略。",
     "source": "deepseek"
+  },
+  "contest": {
+    "sentence_en": "He plans to contest the decision because he believes it is unfair.",
+    "sentence_zh": "他打算对这项决定提出质疑，因为他认为它不公平。",
+    "source": "deepseek"
+  },
+  "contribution": {
+    "sentence_en": "Every small contribution to the project helps us move closer to our final goal.",
+    "sentence_zh": "对这个项目的每一份微小贡献都帮助我们离最终目标更近一步。",
+    "source": "deepseek"
+  },
+  "consumption": {
+    "sentence_en": "The doctor advised him to reduce his consumption of sugar and salt for better health.",
+    "sentence_zh": "医生建议他减少糖和盐的摄入量，以保持更健康的身体。",
+    "source": "deepseek"
+  },
+  "contribute": {
+    "sentence_en": "Everyone can contribute to the project by sharing their ideas and time.",
+    "sentence_zh": "每个人都可以通过分享自己的想法和时间来为这个项目做贡献。",
+    "source": "deepseek"
+  },
+  "contempt": {
+    "sentence_en": "She looked at the dishonest salesman with contempt and refused to buy anything from him.",
+    "sentence_zh": "她轻蔑地看着那个不诚实的推销员，拒绝从他那里买任何东西。",
+    "source": "deepseek"
+  },
+  "contrive": {
+    "sentence_en": "The engineers must contrive a new method to reduce the cost of production.",
+    "sentence_zh": "工程师们必须想出一个新方法来降低生产成本。",
+    "source": "deepseek"
+  },
+  "contend": {
+    "sentence_en": "Many young people contend for a place in the crowded job market every year.",
+    "sentence_zh": "每年都有许多年轻人在拥挤的就业市场中争夺一席之地。",
+    "source": "deepseek"
+  },
+  "contemplate": {
+    "sentence_en": "Before making a decision, you should contemplate the possible results carefully.",
+    "sentence_zh": "在做决定之前，你应该仔细考虑可能产生的结果。",
+    "source": "deepseek"
+  },
+  "contract": {
+    "sentence_en": "They plan to contract with a local firm for the building work.",
+    "sentence_zh": "他们计划与当地一家公司签订建筑工程合同。",
+    "source": "deepseek"
+  },
+  "contradiction": {
+    "sentence_en": "There is a clear contradiction between what he says and what he does.",
+    "sentence_zh": "他的言行之间存在明显的矛盾。",
+    "source": "deepseek"
+  },
+  "contention": {
+    "sentence_en": "The main contention of his speech is that education should be free for everyone.",
+    "sentence_zh": "他演讲的主要论点是教育应该对所有人免费。",
+    "source": "deepseek"
+  },
+  "contemporary": {
+    "sentence_en": "Many contemporary writers focus on social issues that affect ordinary people.",
+    "sentence_zh": "许多当代作家关注影响普通人的社会问题。",
+    "source": "deepseek"
+  },
+  "controversial": {
+    "sentence_en": "The plan to build a new factory near the river remains controversial among local residents.",
+    "sentence_zh": "在河边建新工厂的计划在当地居民中仍然有争议。",
+    "source": "deepseek"
+  },
+  "contaminate": {
+    "sentence_en": "We must not let factory waste contaminate the river that supplies our drinking water.",
+    "sentence_zh": "我们绝不能让工厂废料污染为我们供应饮用水的河流。",
+    "source": "deepseek"
+  },
+  "consumer": {
+    "sentence_en": "Every consumer has the right to know what is in the food they buy.",
+    "sentence_zh": "每位消费者都有权知道自己购买的食品中含有什么成分。",
+    "source": "deepseek"
+  },
+  "consume": {
+    "sentence_en": "People should consume less energy if they want to protect the environment for future generations.",
+    "sentence_zh": "如果人们想为子孙后代保护环境，就应该消耗更少的能源。",
+    "source": "deepseek"
+  },
+  "contradict": {
+    "sentence_en": "These new findings seem to contradict the conclusions of the previous study.",
+    "sentence_zh": "这些新发现似乎与先前研究的结论相矛盾。",
+    "source": "deepseek"
+  },
+  "contrast": {
+    "sentence_en": "If you contrast the two reports, you will notice several important differences.",
+    "sentence_zh": "如果你把这两份报告对比一下，就会发现几处重要的差异。",
+    "source": "deepseek"
+  },
+  "contact": {
+    "sentence_en": "You can contact the customer service if you have any questions.",
+    "sentence_zh": "如果你有任何问题，可以联系客服。",
+    "source": "deepseek"
+  },
+  "continual": {
+    "sentence_en": "His continual complaints about the weather made it hard for us to enjoy the trip.",
+    "sentence_zh": "他对天气的频频抱怨让我们很难享受这次旅行。",
+    "source": "deepseek"
+  },
+  "continuity": {
+    "sentence_en": "The continuity of the team's efforts was the key to their final success.",
+    "sentence_zh": "团队努力的连续性是他们最终成功的关键。",
+    "source": "deepseek"
   }
 }

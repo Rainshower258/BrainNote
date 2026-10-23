@@ -1,14 +1,14 @@
 ---
 answer: 贫瘠的， 荒芜的
-due: '2026-10-20'
-ease: 2.9
+due: '2027-05-29'
+ease: 3.05
 example: ''
-interval: 50
-last-review: '2026-08-31'
+interval: 218
+last-review: '2026-10-23'
 mastery: perfect
 meaning: 贫瘠的， 荒芜的； 不结果实的， 不育的； 无益的， 没有结果的 (adj.)
 phonetic: /'bærən/
-reviews: 3
+reviews: 4
 tags:
 - 英语
 - CET6

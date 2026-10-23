@@ -1,14 +1,14 @@
 ---
 answer: 建造
-due: '2026-06-27'
-ease: 2.5
+due: '2026-10-27'
+ease: 2.65
 example: ''
-interval: 1
-last-review: ''
-mastery: new
+interval: 4
+last-review: '2026-10-23'
+mastery: perfect
 meaning: 建造； 构思 (vt.) / 建筑物； 构想； 观念 (n.)
 phonetic: /kən'strʌkt/
-reviews: 0
+reviews: 1
 tags:
 - 英语
 - CET6

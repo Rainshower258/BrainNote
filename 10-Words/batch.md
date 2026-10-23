@@ -1,14 +1,14 @@
 ---
 answer: 一批， 一组， 一群
-due: '2026-10-22'
-ease: 2.9
+due: '2027-04-29'
+ease: 3.0
 example: ''
-interval: 50
-last-review: '2026-09-02'
-mastery: perfect
+interval: 188
+last-review: '2026-10-23'
+mastery: easy
 meaning: 一批， 一组， 一群； 一批生产量 (n.)
 phonetic: /bætʃ/
-reviews: 3
+reviews: 4
 tags:
 - 英语
 - CET6
