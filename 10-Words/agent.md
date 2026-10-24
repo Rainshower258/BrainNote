@@ -1,14 +1,14 @@
 ---
 answer: 代理人， 代理商
-due: '2026-10-23'
-ease: 2.9
+due: '2027-07-03'
+ease: 3.05
 example: ''
-interval: 58
-last-review: '2026-08-26'
-mastery: easy
+interval: 252
+last-review: '2026-10-24'
+mastery: perfect
 meaning: 代理人， 代理商； 政府代表； 动因， 原因； 剂 (n.)
 phonetic: /'edʒənt/
-reviews: 3
+reviews: 4
 tags:
 - 英语
 - CET6

@@ -1,14 +1,14 @@
 ---
 answer: 预先， 事先
-due: '2026-10-23'
-ease: 2.9
+due: '2027-05-30'
+ease: 3.05
 example: ''
-interval: 50
-last-review: '2026-09-03'
+interval: 218
+last-review: '2026-10-24'
 mastery: perfect
 meaning: 预先， 事先 (adv.)
 phonetic: /bɪ'fɔrhænd/
-reviews: 3
+reviews: 4
 tags:
 - 英语
 - CET6

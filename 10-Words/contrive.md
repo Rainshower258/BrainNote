@@ -1,14 +1,14 @@
 ---
 answer: 谋划， 策划
-due: '2026-06-29'
-ease: 2.5
+due: '2026-10-28'
+ease: 2.65
 example: ''
-interval: 1
-last-review: ''
-mastery: new
+interval: 4
+last-review: '2026-10-24'
+mastery: perfect
 meaning: 谋划， 策划； 设法做到； 设计， 想出 (vt.)
 phonetic: /kən'traɪv/
-reviews: 0
+reviews: 1
 tags:
 - 英语
 - CET6

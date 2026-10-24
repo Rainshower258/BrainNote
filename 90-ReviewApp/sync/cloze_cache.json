@@ -2118,5 +2118,130 @@
     "sentence_en": "The continuity of the team's efforts was the key to their final success.",
     "sentence_zh": "团队努力的连续性是他们最终成功的关键。",
     "source": "deepseek"
+  },
+  "converge": {
+    "sentence_en": "Thousands of fans will converge on the stadium before the final match begins.",
+    "sentence_zh": "成千上万的球迷将在决赛开始前聚集到体育场。",
+    "source": "deepseek"
+  },
+  "convenience": {
+    "sentence_en": "For your convenience, the hotel provides a free bus to the airport every hour.",
+    "sentence_zh": "为方便起见，酒店每小时提供一趟免费班车前往机场。",
+    "source": "deepseek"
+  },
+  "corrode": {
+    "sentence_en": "Salt water can corrode the metal parts of the bridge over time.",
+    "sentence_zh": "海水会随着时间的推移腐蚀桥梁的金属部件。",
+    "source": "deepseek"
+  },
+  "costume": {
+    "sentence_en": "She plans to wear a traditional costume at the cultural festival next week.",
+    "sentence_zh": "她打算在下周的文化节上穿一套传统服装。",
+    "source": "deepseek"
+  },
+  "convert": {
+    "sentence_en": "It is not easy to convert old factories into modern shopping centers within a single year.",
+    "sentence_zh": "在一年之内把旧工厂改造成现代化的购物中心并不容易。",
+    "source": "deepseek"
+  },
+  "convey": {
+    "sentence_en": "Good teachers can convey complex ideas in simple words that students easily understand.",
+    "sentence_zh": "好老师能用简单易懂的语言传达复杂的思想。",
+    "source": "deepseek"
+  },
+  "corpse": {
+    "sentence_en": "The police found a corpse near the river and began to investigate the case.",
+    "sentence_zh": "警方在河边发现了一具尸体，并开始调查此案。",
+    "source": "deepseek"
+  },
+  "cord": {
+    "sentence_en": "He tied the old box with a strong cord before carrying it upstairs.",
+    "sentence_zh": "他把旧箱子用一根结实的绳子捆好，然后搬上了楼。",
+    "source": "deepseek"
+  },
+  "corresponding": {
+    "sentence_en": "Each student should sit in the seat corresponding to the number on their card.",
+    "sentence_zh": "每个学生都应该坐在与自己卡片上号码相对应的座位上。",
+    "source": "deepseek"
+  },
+  "correspondence": {
+    "sentence_en": "There is a close correspondence between what he says and what he does.",
+    "sentence_zh": "他说的和做的之间有密切的一致性。",
+    "source": "deepseek"
+  },
+  "corrupt": {
+    "sentence_en": "Power can corrupt even the most honest people if they are not careful.",
+    "sentence_zh": "权力甚至能腐蚀最诚实的人，如果他们不警惕的话。",
+    "source": "deepseek"
+  },
+  "cork": {
+    "sentence_en": "You can use a cork to close the bottle tightly after opening it.",
+    "sentence_zh": "打开瓶子后，你可以用软木塞把瓶口紧紧塞住。",
+    "source": "deepseek"
+  },
+  "corps": {
+    "sentence_en": "The medical corps arrived quickly to help the injured soldiers after the battle.",
+    "sentence_zh": "战斗结束后，医疗队迅速赶到，帮助受伤的士兵。",
+    "source": "deepseek"
+  },
+  "correlate": {
+    "sentence_en": "Scientists must correlate the data carefully before they draw any conclusions.",
+    "sentence_zh": "科学家在得出结论之前必须仔细地将这些数据关联起来。",
+    "source": "deepseek"
+  },
+  "convict": {
+    "sentence_en": "The new evidence can convict the suspect of the crime in court.",
+    "sentence_zh": "新证据可以在法庭上证明嫌疑人有罪。",
+    "source": "deepseek"
+  },
+  "convene": {
+    "sentence_en": "The president decided to convene a meeting to discuss the new plan.",
+    "sentence_zh": "总统决定召集会议来讨论这项新计划。",
+    "source": "deepseek"
+  },
+  "cooperative": {
+    "sentence_en": "The success of this project depends on whether all the team members can remain cooperative.",
+    "sentence_zh": "这个项目的成功取决于所有团队成员能否保持合作的态度。",
+    "source": "deepseek"
+  },
+  "conversion": {
+    "sentence_en": "The conversion of the old factory into a museum took two years.",
+    "sentence_zh": "把这座旧工厂改造成博物馆花了两年时间。",
+    "source": "deepseek"
+  },
+  "corporate": {
+    "sentence_en": "The company has a clear corporate culture that every employee is expected to follow.",
+    "sentence_zh": "这家公司有着明确的企业文化，每位员工都应遵循。",
+    "source": "deepseek"
+  },
+  "convince": {
+    "sentence_en": "It is not easy to convince him to change his mind about the plan.",
+    "sentence_zh": "要说服他改变对这个计划的看法并不容易。",
+    "source": "deepseek"
+  },
+  "cordial": {
+    "sentence_en": "The manager gave us a cordial welcome and showed us around the new office.",
+    "sentence_zh": "经理热情地欢迎了我们，并带我们参观了新办公室。",
+    "source": "deepseek"
+  },
+  "convention": {
+    "sentence_en": "It is a common convention in many countries to shake hands when meeting someone new.",
+    "sentence_zh": "在许多国家，见面时握手是一种常见的习俗。",
+    "source": "deepseek"
+  },
+  "conventional": {
+    "sentence_en": "She prefers a conventional teaching style because it helps students follow the lessons easily.",
+    "sentence_zh": "她更喜欢常规的教学方式，因为这有助于学生轻松跟上课程。",
+    "source": "deepseek"
+  },
+  "cope": {
+    "sentence_en": "Many students find it hard to cope with the pressure of exams and daily life.",
+    "sentence_zh": "许多学生发现很难应付考试和日常生活的压力。",
+    "source": "deepseek"
+  },
+  "controversy": {
+    "sentence_en": "The new policy has caused a lot of controversy among teachers and parents.",
+    "sentence_zh": "这项新政策在教师和家长中引起了很大的争论。",
+    "source": "deepseek"
   }
 }

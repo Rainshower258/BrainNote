@@ -1,14 +1,14 @@
 ---
 answer: 痛苦， 苦恼
-due: '2026-10-24'
-ease: 2.9
+due: '2027-07-03'
+ease: 3.05
 example: ''
-interval: 58
-last-review: '2026-08-27'
-mastery: easy
+interval: 252
+last-review: '2026-10-24'
+mastery: perfect
 meaning: 痛苦， 苦恼 (n.)
 phonetic: /'æɡəni/
-reviews: 3
+reviews: 4
 tags:
 - 英语
 - CET6

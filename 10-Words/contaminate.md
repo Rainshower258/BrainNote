@@ -1,14 +1,14 @@
 ---
 answer: 弄脏， 污染
-due: '2026-06-28'
-ease: 2.5
+due: '2026-10-28'
+ease: 2.65
 example: ''
-interval: 1
-last-review: ''
-mastery: new
+interval: 4
+last-review: '2026-10-24'
+mastery: perfect
 meaning: 弄脏， 污染 (vt.)
 phonetic: /kən'tæmɪnet/
-reviews: 0
+reviews: 1
 tags:
 - 英语
 - CET6
