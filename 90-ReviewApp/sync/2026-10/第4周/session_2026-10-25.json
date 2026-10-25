@@ -1,0 +1,466 @@
+{
+  "date": "2026-10-25",
+  "totalWords": 27,
+  "elapsedSec": 943,
+  "results": [
+    {
+      "word": "convict",
+      "path": "10-Words/convict.md",
+      "wrongCount": 0,
+      "score": 5,
+      "mastery": "perfect",
+      "log": {
+        "flip": "seen",
+        "en2cn": true,
+        "cn2en": true,
+        "spelling": true
+      },
+      "cloze": {
+        "triggered": false,
+        "correct": null
+      }
+    },
+    {
+      "word": "corporate",
+      "path": "10-Words/corporate.md",
+      "wrongCount": 0,
+      "score": 5,
+      "mastery": "perfect",
+      "log": {
+        "flip": "seen",
+        "en2cn": true,
+        "cn2en": true,
+        "spelling": true
+      },
+      "cloze": {
+        "triggered": false,
+        "correct": null
+      }
+    },
+    {
+      "word": "corpse",
+      "path": "10-Words/corpse.md",
+      "wrongCount": 0,
+      "score": 5,
+      "mastery": "perfect",
+      "log": {
+        "flip": "seen",
+        "en2cn": true,
+        "cn2en": true,
+        "spelling": true
+      },
+      "cloze": {
+        "triggered": true,
+        "correct": true
+      }
+    },
+    {
+      "word": "corrupt",
+      "path": "10-Words/corrupt.md",
+      "wrongCount": 0,
+      "score": 5,
+      "mastery": "perfect",
+      "log": {
+        "flip": "seen",
+        "en2cn": true,
+        "cn2en": true,
+        "spelling": true
+      },
+      "cloze": {
+        "triggered": false,
+        "correct": null
+      }
+    },
+    {
+      "word": "corps",
+      "path": "10-Words/corps.md",
+      "wrongCount": 0,
+      "score": 5,
+      "mastery": "perfect",
+      "log": {
+        "flip": "seen",
+        "en2cn": true,
+        "cn2en": true,
+        "spelling": true
+      },
+      "cloze": {
+        "triggered": false,
+        "correct": null
+      }
+    },
+    {
+      "word": "convey",
+      "path": "10-Words/convey.md",
+      "wrongCount": 0,
+      "score": 5,
+      "mastery": "perfect",
+      "log": {
+        "flip": "seen",
+        "en2cn": true,
+        "cn2en": true,
+        "spelling": true
+      },
+      "cloze": {
+        "triggered": false,
+        "correct": null
+      }
+    },
+    {
+      "word": "cooperative",
+      "path": "10-Words/cooperative.md",
+      "wrongCount": 0,
+      "score": 5,
+      "mastery": "perfect",
+      "log": {
+        "flip": "seen",
+        "en2cn": true,
+        "cn2en": true,
+        "spelling": true
+      },
+      "cloze": {
+        "triggered": false,
+        "correct": null
+      }
+    },
+    {
+      "word": "convention",
+      "path": "10-Words/convention.md",
+      "wrongCount": 0,
+      "score": 5,
+      "mastery": "perfect",
+      "log": {
+        "flip": "seen",
+        "en2cn": true,
+        "cn2en": true,
+        "spelling": true
+      },
+      "cloze": {
+        "triggered": false,
+        "correct": null
+      }
+    },
+    {
+      "word": "conventional",
+      "path": "10-Words/conventional.md",
+      "wrongCount": 0,
+      "score": 5,
+      "mastery": "perfect",
+      "log": {
+        "flip": "seen",
+        "en2cn": true,
+        "cn2en": true,
+        "spelling": true
+      },
+      "cloze": {
+        "triggered": false,
+        "correct": null
+      }
+    },
+    {
+      "word": "converge",
+      "path": "10-Words/converge.md",
+      "wrongCount": 0,
+      "score": 5,
+      "mastery": "perfect",
+      "log": {
+        "flip": "seen",
+        "en2cn": true,
+        "cn2en": true,
+        "spelling": true
+      },
+      "cloze": {
+        "triggered": false,
+        "correct": null
+      }
+    },
+    {
+      "word": "consultancy",
+      "path": "10-Words/consultancy.md",
+      "wrongCount": 0,
+      "score": 5,
+      "mastery": "perfect",
+      "log": {
+        "flip": "seen",
+        "en2cn": true,
+        "cn2en": true,
+        "spelling": true
+      },
+      "cloze": {
+        "triggered": true,
+        "correct": true
+      }
+    },
+    {
+      "word": "convenience",
+      "path": "10-Words/convenience.md",
+      "wrongCount": 0,
+      "score": 5,
+      "mastery": "perfect",
+      "log": {
+        "flip": "seen",
+        "en2cn": true,
+        "cn2en": true,
+        "spelling": true
+      },
+      "cloze": {
+        "triggered": false,
+        "correct": null
+      }
+    },
+    {
+      "word": "controversy",
+      "path": "10-Words/controversy.md",
+      "wrongCount": 0,
+      "score": 5,
+      "mastery": "perfect",
+      "log": {
+        "flip": "seen",
+        "en2cn": true,
+        "cn2en": true,
+        "spelling": true
+      },
+      "cloze": {
+        "triggered": true,
+        "correct": true
+      }
+    },
+    {
+      "word": "corrode",
+      "path": "10-Words/corrode.md",
+      "wrongCount": 0,
+      "score": 5,
+      "mastery": "perfect",
+      "log": {
+        "flip": "seen",
+        "en2cn": true,
+        "cn2en": true,
+        "spelling": true
+      },
+      "cloze": {
+        "triggered": true,
+        "correct": true
+      }
+    },
+    {
+      "word": "convince",
+      "path": "10-Words/convince.md",
+      "wrongCount": 0,
+      "score": 5,
+      "mastery": "perfect",
+      "log": {
+        "flip": "seen",
+        "en2cn": true,
+        "cn2en": true,
+        "spelling": true
+      },
+      "cloze": {
+        "triggered": false,
+        "correct": null
+      }
+    },
+    {
+      "word": "convert",
+      "path": "10-Words/convert.md",
+      "wrongCount": 0,
+      "score": 5,
+      "mastery": "perfect",
+      "log": {
+        "flip": "seen",
+        "en2cn": true,
+        "cn2en": true,
+        "spelling": true
+      },
+      "cloze": {
+        "triggered": false,
+        "correct": null
+      }
+    },
+    {
+      "word": "cord",
+      "path": "10-Words/cord.md",
+      "wrongCount": 0,
+      "score": 5,
+      "mastery": "perfect",
+      "log": {
+        "flip": "seen",
+        "en2cn": true,
+        "cn2en": true,
+        "spelling": true
+      },
+      "cloze": {
+        "triggered": false,
+        "correct": null
+      }
+    },
+    {
+      "word": "costume",
+      "path": "10-Words/costume.md",
+      "wrongCount": 0,
+      "score": 5,
+      "mastery": "perfect",
+      "log": {
+        "flip": "seen",
+        "en2cn": true,
+        "cn2en": true,
+        "spelling": true
+      },
+      "cloze": {
+        "triggered": false,
+        "correct": null
+      }
+    },
+    {
+      "word": "cork",
+      "path": "10-Words/cork.md",
+      "wrongCount": 0,
+      "score": 5,
+      "mastery": "perfect",
+      "log": {
+        "flip": "seen",
+        "en2cn": true,
+        "cn2en": true,
+        "spelling": true
+      },
+      "cloze": {
+        "triggered": false,
+        "correct": null
+      }
+    },
+    {
+      "word": "corresponding",
+      "path": "10-Words/corresponding.md",
+      "wrongCount": 0,
+      "score": 5,
+      "mastery": "perfect",
+      "log": {
+        "flip": "seen",
+        "en2cn": true,
+        "cn2en": true,
+        "spelling": true
+      },
+      "cloze": {
+        "triggered": false,
+        "correct": null
+      }
+    },
+    {
+      "word": "cope",
+      "path": "10-Words/cope.md",
+      "wrongCount": 0,
+      "score": 5,
+      "mastery": "perfect",
+      "log": {
+        "flip": "seen",
+        "en2cn": true,
+        "cn2en": true,
+        "spelling": true
+      },
+      "cloze": {
+        "triggered": false,
+        "correct": null
+      }
+    },
+    {
+      "word": "convene",
+      "path": "10-Words/convene.md",
+      "wrongCount": 0,
+      "score": 5,
+      "mastery": "perfect",
+      "log": {
+        "flip": "seen",
+        "en2cn": true,
+        "cn2en": true,
+        "spelling": true
+      },
+      "cloze": {
+        "triggered": false,
+        "correct": null
+      }
+    },
+    {
+      "word": "conversion",
+      "path": "10-Words/conversion.md",
+      "wrongCount": 0,
+      "score": 5,
+      "mastery": "perfect",
+      "log": {
+        "flip": "seen",
+        "en2cn": true,
+        "cn2en": true,
+        "spelling": true
+      },
+      "cloze": {
+        "triggered": false,
+        "correct": null
+      }
+    },
+    {
+      "word": "correspondence",
+      "path": "10-Words/correspondence.md",
+      "wrongCount": 2,
+      "score": 3,
+      "mastery": "good",
+      "log": {
+        "flip": "seen",
+        "en2cn": true,
+        "cn2en": true,
+        "spelling": true
+      },
+      "cloze": {
+        "triggered": true,
+        "correct": false
+      }
+    },
+    {
+      "word": "cordial",
+      "path": "10-Words/cordial.md",
+      "wrongCount": 0,
+      "score": 5,
+      "mastery": "perfect",
+      "log": {
+        "flip": "seen",
+        "en2cn": true,
+        "cn2en": true,
+        "spelling": true
+      },
+      "cloze": {
+        "triggered": false,
+        "correct": null
+      }
+    },
+    {
+      "word": "correlate",
+      "path": "10-Words/correlate.md",
+      "wrongCount": 1,
+      "score": 4,
+      "mastery": "easy",
+      "log": {
+        "flip": "seen",
+        "en2cn": true,
+        "cn2en": true,
+        "spelling": true
+      },
+      "cloze": {
+        "triggered": true,
+        "correct": true
+      }
+    },
+    {
+      "word": "constitute",
+      "path": "10-Words/constitute.md",
+      "wrongCount": 5,
+      "score": 1,
+      "mastery": "again",
+      "log": {
+        "flip": "seen",
+        "en2cn": true,
+        "cn2en": true,
+        "spelling": true
+      },
+      "cloze": {
+        "triggered": true,
+        "correct": false
+      }
+    }
+  ]
+}

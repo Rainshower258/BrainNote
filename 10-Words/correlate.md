@@ -1,14 +1,14 @@
 ---
 answer: 相关， 关联
-due: '2026-06-30'
-ease: 2.5
+due: '2026-10-28'
+ease: 2.6
 example: ''
-interval: 1
-last-review: ''
-mastery: new
+interval: 3
+last-review: '2026-10-25'
+mastery: easy
 meaning: 相关， 关联 (vi.) / 使相互关联 (vt.)
 phonetic: /'kɔrəlet/
-reviews: 0
+reviews: 1
 tags:
 - 英语
 - CET6

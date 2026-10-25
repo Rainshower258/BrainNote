@@ -2243,5 +2243,120 @@
     "sentence_en": "The new policy has caused a lot of controversy among teachers and parents.",
     "sentence_zh": "这项新政策在教师和家长中引起了很大的争论。",
     "source": "deepseek"
+  },
+  "credit": {
+    "sentence_en": "You can credit the success of the project to the hard work of the whole team.",
+    "sentence_zh": "你可以把这个项目的成功归功于整个团队的努力。",
+    "source": "deepseek"
+  },
+  "crisp": {
+    "sentence_en": "The apple is so crisp and sweet that it makes a perfect healthy snack.",
+    "sentence_zh": "这个苹果又脆又甜，是完美的健康零食。",
+    "source": "deepseek"
+  },
+  "crew": {
+    "sentence_en": "The entire crew remained calm and worked together to handle the sudden emergency at sea.",
+    "sentence_zh": "全体船员保持冷静，齐心协力应对海上的突发紧急情况。",
+    "source": "deepseek"
+  },
+  "council": {
+    "sentence_en": "The city council decided to build a new library near the park.",
+    "sentence_zh": "市议会决定在公园附近建一座新图书馆。",
+    "source": "deepseek"
+  },
+  "counsel": {
+    "sentence_en": "You should counsel your friend before he makes a hasty decision.",
+    "sentence_zh": "你应该在朋友做出草率决定之前劝告他。",
+    "source": "deepseek"
+  },
+  "crash": {
+    "sentence_en": "Without proper safety measures, the old bridge could crash into the river during the flood.",
+    "sentence_zh": "如果没有适当的安全措施，这座旧桥可能会在洪水中坠入河中。",
+    "source": "deepseek"
+  },
+  "crawl": {
+    "sentence_en": "The explorer must crawl carefully through the dark narrow cave.",
+    "sentence_zh": "探险者必须小心地爬过黑暗狭窄的洞穴。",
+    "source": "deepseek"
+  },
+  "cradle": {
+    "sentence_en": "Ancient Greece is often considered the cradle of Western civilization.",
+    "sentence_zh": "古希腊常被视为西方文明的摇篮。",
+    "source": "deepseek"
+  },
+  "cripple": {
+    "sentence_en": "The sudden loss of funding could cripple the entire research project.",
+    "sentence_zh": "资金的突然丧失可能会严重削弱整个研究项目。",
+    "source": "deepseek"
+  },
+  "coverage": {
+    "sentence_en": "The local newspaper gave wide coverage to the debate about the new library.",
+    "sentence_zh": "当地报纸对有关新图书馆的辩论进行了广泛的报道。",
+    "source": "deepseek"
+  },
+  "coupon": {
+    "sentence_en": "You can use this coupon to get a discount on your next purchase.",
+    "sentence_zh": "你可以使用这张优惠券在下次购物时享受折扣。",
+    "source": "deepseek"
+  },
+  "coward": {
+    "sentence_en": "It is unfair to call a person a coward simply because he avoids a fight.",
+    "sentence_zh": "仅仅因为一个人避免冲突就称他为胆小鬼是不公平的。",
+    "source": "deepseek"
+  },
+  "creation": {
+    "sentence_en": "The creation of a new library will benefit the whole community.",
+    "sentence_zh": "一座新图书馆的创建将使整个社区受益。",
+    "source": "deepseek"
+  },
+  "crisis": {
+    "sentence_en": "The country is facing a serious economic crisis that may last for several years.",
+    "sentence_zh": "这个国家正面临一场可能持续数年的严重经济危机。",
+    "source": "deepseek"
+  },
+  "criminal": {
+    "sentence_en": "The police finally caught the criminal who had robbed three banks last month.",
+    "sentence_zh": "警方最终抓获了上个月抢劫三家银行的罪犯。",
+    "source": "deepseek"
+  },
+  "court": {
+    "sentence_en": "The young lawyer presented strong evidence in court to defend his client.",
+    "sentence_zh": "这位年轻律师在法庭上出示了有力的证据来为他的当事人辩护。",
+    "source": "deepseek"
+  },
+  "crime": {
+    "sentence_en": "The police are working hard to reduce crime in this city.",
+    "sentence_zh": "警方正在努力减少这座城市的犯罪。",
+    "source": "deepseek"
+  },
+  "cozy": {
+    "sentence_en": "The small café near the campus is cozy and welcoming to students.",
+    "sentence_zh": "校园附近的那家小咖啡馆舒适温馨，对学生十分友好。",
+    "source": "deepseek"
+  },
+  "courtesy": {
+    "sentence_en": "It is common courtesy to thank someone who helps you.",
+    "sentence_zh": "感谢帮助你的人是一种常见的礼貌。",
+    "source": "deepseek"
+  },
+  "counter": {
+    "sentence_en": "Please place your items on the counter and wait for the cashier.",
+    "sentence_zh": "请把您的物品放在柜台上，然后等待收银员。",
+    "source": "deepseek"
+  },
+  "counterpart": {
+    "sentence_en": "The American company is looking for a Chinese counterpart to expand its business in Asia.",
+    "sentence_zh": "这家美国公司正在寻找一家中国 counterpart（对等合作方），以拓展其在亚洲的业务。",
+    "source": "deepseek"
+  },
+  "criterion": {
+    "sentence_en": "The most important criterion for choosing a university is the quality of its teaching.",
+    "sentence_zh": "选择大学最重要的标准是教学质量。",
+    "source": "deepseek"
+  },
+  "credible": {
+    "sentence_en": "The witness provided a credible account of what happened on that rainy night.",
+    "sentence_zh": "那位目击者对那个雨夜发生的事情提供了可信的陈述。",
+    "source": "deepseek"
   }
 }

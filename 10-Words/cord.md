@@ -1,14 +1,14 @@
 ---
 answer: 细绳， 粗线， 索
-due: '2026-06-29'
-ease: 2.5
+due: '2026-10-29'
+ease: 2.65
 example: ''
-interval: 1
-last-review: ''
-mastery: new
+interval: 4
+last-review: '2026-10-25'
+mastery: perfect
 meaning: 细绳， 粗线， 索； 灯芯绒裤 (n.)
 phonetic: /kɔrd/
-reviews: 0
+reviews: 1
 tags:
 - 英语
 - CET6

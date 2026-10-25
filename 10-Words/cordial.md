@@ -1,14 +1,14 @@
 ---
 answer: 热情友好的， 热诚的
-due: '2026-06-29'
-ease: 2.5
+due: '2026-10-29'
+ease: 2.65
 example: ''
-interval: 1
-last-review: ''
-mastery: new
+interval: 4
+last-review: '2026-10-25'
+mastery: perfect
 meaning: 热情友好的， 热诚的 (adj.)
 phonetic: /'kɔrdʒəl/
-reviews: 0
+reviews: 1
 tags:
 - 英语
 - CET6

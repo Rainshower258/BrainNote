@@ -1,14 +1,14 @@
 ---
 answer: 有合作意向的，乐意合作的
-due: '2026-06-29'
-ease: 2.5
+due: '2026-10-29'
+ease: 2.65
 example: ''
-interval: 1
-last-review: ''
-mastery: new
+interval: 4
+last-review: '2026-10-25'
+mastery: perfect
 meaning: 有合作意向的，乐意合作的；合作的，协作的 (adj.) / 合作社， 合作商店 (n.)
 phonetic: /ko'ɑpərətɪv/
-reviews: 0
+reviews: 1
 tags:
 - 英语
 - CET6

@@ -1,14 +1,14 @@
 ---
 answer: 堕落的，腐败的，贪赃舞弊的
-due: '2026-06-30'
-ease: 2.5
+due: '2026-10-29'
+ease: 2.65
 example: ''
-interval: 1
-last-review: ''
-mastery: new
+interval: 4
+last-review: '2026-10-25'
+mastery: perfect
 meaning: 堕落的，腐败的，贪赃舞弊的 (adj.) / 腐蚀， 使堕落 (vt.)
 phonetic: /kə'rʌpt/
-reviews: 0
+reviews: 1
 tags:
 - 英语
 - CET6

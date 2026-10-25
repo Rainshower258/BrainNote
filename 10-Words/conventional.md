@@ -1,14 +1,14 @@
 ---
 answer: 普通的
-due: '2026-06-29'
-ease: 2.5
+due: '2026-10-29'
+ease: 2.65
 example: ''
-interval: 1
-last-review: ''
-mastery: new
+interval: 4
+last-review: '2026-10-25'
+mastery: perfect
 meaning: 普通的； 习惯的， 常规的； 因循守旧的 (adj.)
 phonetic: /kən'vɛnʃənl/
-reviews: 0
+reviews: 1
 tags:
 - 英语
 - CET6
