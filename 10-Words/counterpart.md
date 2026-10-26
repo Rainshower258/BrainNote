@@ -1,14 +1,14 @@
 ---
 answer: 与对方地位相当的人， 与另一方作用相当的物
-due: '2026-06-30'
-ease: 2.5
+due: '2026-10-30'
+ease: 2.65
 example: ''
-interval: 1
-last-review: ''
-mastery: new
+interval: 4
+last-review: '2026-10-26'
+mastery: perfect
 meaning: 与对方地位相当的人， 与另一方作用相当的物 (n.)
 phonetic: /'kaʊntɚpɑrt/
-reviews: 0
+reviews: 1
 tags:
 - 英语
 - CET6

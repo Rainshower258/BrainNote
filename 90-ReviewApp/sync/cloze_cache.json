@@ -2358,5 +2358,25 @@
     "sentence_en": "The witness provided a credible account of what happened on that rainy night.",
     "sentence_zh": "那位目击者对那个雨夜发生的事情提供了可信的陈述。",
     "source": "deepseek"
+  },
+  "criticism": {
+    "sentence_en": "The teacher's criticism helped me improve my writing skills.",
+    "sentence_zh": "老师的批评帮助我提高了写作技巧。",
+    "source": "deepseek"
+  },
+  "criticize": {
+    "sentence_en": "It is not fair to criticize him for a small mistake he made by accident.",
+    "sentence_zh": "因为他无意中犯的一个小错误就批评他，这是不公平的。",
+    "source": "deepseek"
+  },
+  "critical": {
+    "sentence_en": "His decision will be critical to the success of the whole project.",
+    "sentence_zh": "他的决定将对整个项目的成功起到关键作用。",
+    "source": "deepseek"
+  },
+  "critic": {
+    "sentence_en": "As a sharp critic, she often points out the weaknesses in his arguments.",
+    "sentence_zh": "作为一个尖锐的批评家，她经常指出他论点中的弱点。",
+    "source": "deepseek"
   }
 }

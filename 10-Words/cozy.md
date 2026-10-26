@@ -1,14 +1,14 @@
 ---
 answer: 舒适的
-due: '2026-06-30'
-ease: 2.5
+due: '2026-10-30'
+ease: 2.65
 example: ''
-interval: 1
-last-review: ''
-mastery: new
+interval: 4
+last-review: '2026-10-26'
+mastery: perfect
 meaning: 舒适的； 亲切友好的 (adj.)
 phonetic: /'kozi/
-reviews: 0
+reviews: 1
 tags:
 - 英语
 - CET6

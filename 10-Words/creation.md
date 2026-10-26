@@ -1,14 +1,14 @@
 ---
 answer: 创造， 创建
-due: '2026-07-01'
-ease: 2.5
+due: '2026-10-30'
+ease: 2.65
 example: ''
-interval: 1
-last-review: ''
-mastery: new
+interval: 4
+last-review: '2026-10-26'
+mastery: perfect
 meaning: 创造， 创建； 创造的作品， 产物； 宇宙， 天地万物 (n.)
 phonetic: /krɪ'eʃən/
-reviews: 0
+reviews: 1
 tags:
 - 英语
 - CET6

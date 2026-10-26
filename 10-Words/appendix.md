@@ -1,14 +1,14 @@
 ---
 answer: 阑尾
-due: '2026-10-26'
-ease: 2.9
+due: '2027-07-05'
+ease: 3.05
 example: ''
-interval: 58
-last-review: '2026-08-29'
+interval: 252
+last-review: '2026-10-26'
 mastery: perfect
 meaning: 阑尾； 附录 (n.)
 phonetic: /ə'pɛndɪks/
-reviews: 3
+reviews: 4
 tags:
 - 英语
 - CET6

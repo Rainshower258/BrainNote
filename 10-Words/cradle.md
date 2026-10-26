@@ -1,14 +1,14 @@
 ---
 answer: 摇篮
-due: '2026-06-30'
-ease: 2.5
+due: '2026-10-30'
+ease: 2.65
 example: ''
-interval: 1
-last-review: ''
-mastery: new
+interval: 4
+last-review: '2026-10-26'
+mastery: perfect
 meaning: 摇篮；策源地，发源地 (n.) / 轻轻地抱， 捧 (vt.)
 phonetic: /'kredl/
-reviews: 0
+reviews: 1
 tags:
 - 英语
 - CET6

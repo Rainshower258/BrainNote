@@ -1,14 +1,14 @@
 ---
 answer: 破坏，违反
-due: '2026-10-26'
-ease: 2.9
+due: '2027-06-01'
+ease: 3.05
 example: ''
-interval: 50
-last-review: '2026-09-06'
+interval: 218
+last-review: '2026-10-26'
 mastery: perfect
 meaning: 破坏，违反；破裂，不和；缺口，裂口 (n.) / 攻破， 在…造成缺口； 破坏， 违反 (vt.)
 phonetic: /britʃ/
-reviews: 3
+reviews: 4
 tags:
 - 英语
 - CET6
