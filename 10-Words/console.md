@@ -1,14 +1,14 @@
 ---
 answer: 安慰，慰问
-due: '2026-10-27'
-ease: 2.65
+due: '2026-11-10'
+ease: 2.75
 example: ''
-interval: 4
-last-review: '2026-10-23'
-mastery: perfect
+interval: 14
+last-review: '2026-10-27'
+mastery: easy
 meaning: 安慰，慰问 (vt.) / 控制台， 操纵台 (n.)
 phonetic: /'kɑnsol/
-reviews: 1
+reviews: 2
 tags:
 - 英语
 - CET6

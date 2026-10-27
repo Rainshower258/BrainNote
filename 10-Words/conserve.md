@@ -1,14 +1,14 @@
 ---
 answer: 保护， 保藏， 保存
-due: '2026-10-27'
-ease: 2.65
+due: '2026-11-12'
+ease: 2.8
 example: ''
-interval: 4
-last-review: '2026-10-23'
+interval: 16
+last-review: '2026-10-27'
 mastery: perfect
 meaning: 保护， 保藏， 保存 (vt.)
 phonetic: /kən'sɝv/
-reviews: 1
+reviews: 2
 tags:
 - 英语
 - CET6

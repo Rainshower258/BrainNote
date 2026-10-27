@@ -4,10 +4,10 @@
   "dailyMaxWords": 30,
   "dailyMaxWords_note": "每天卡片总量上限。复习词>=上限时，当天只取最过期的 daily_max 个复习词、不引入新词（纯复习日）；剩余复习词 due 不变，自动排到之后的天数，不会丢词。",
   "clozeProbabilityNewWord": 0.15,
-  "cursor_index": 553,
-  "cursor_note": "已引入的新词累计到第 553 个（下标 0-552 已用），下次从下标 553 开始取下 25 个",
-  "last_session_date": "2026-10-26",
-  "last_synced_date": "2026-10-26",
+  "cursor_index": 557,
+  "cursor_note": "已引入的新词累计到第 557 个（下标 0-556 已用），下次从下标 557 开始取下 25 个",
+  "last_session_date": "2026-10-27",
+  "last_synced_date": "2026-10-27",
   "history": [
     {
       "date": "2026-07-22",
@@ -1689,6 +1689,44 @@
       "cloze": {
         "attempted": 10,
         "correct": 10
+      }
+    },
+    {
+      "date": "2026-10-27",
+      "new_words_count": 4,
+      "review_words_count": 26,
+      "review_word_ids": [
+        "bibliography",
+        "catastrophe",
+        "cathedral",
+        "consequence",
+        "consequent",
+        "consequently",
+        "conservation",
+        "conservative",
+        "conserve",
+        "considerable",
+        "considerate",
+        "consist",
+        "consistent",
+        "console",
+        "consolidate",
+        "conspicuous",
+        "constant",
+        "constituent",
+        "constitution",
+        "constrain",
+        "construct",
+        "consult",
+        "consultant",
+        "contemporary",
+        "contest",
+        "correspondence"
+      ],
+      "synced": true,
+      "cloze": {
+        "attempted": 29,
+        "correct": 27
       }
     }
   ]

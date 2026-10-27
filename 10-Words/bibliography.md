@@ -1,14 +1,14 @@
 ---
 answer: 参考书目
-due: '2026-10-27'
-ease: 2.85
+due: '2027-05-29'
+ease: 3.0
 example: ''
-interval: 50
-last-review: '2026-09-07'
-mastery: easy
+interval: 214
+last-review: '2026-10-27'
+mastery: perfect
 meaning: 参考书目； 书目 (n.)
 phonetic: /,bɪblɪ'ɑɡrəfi/
-reviews: 3
+reviews: 4
 tags:
 - 英语
 - CET6

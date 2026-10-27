@@ -2378,5 +2378,40 @@
     "sentence_en": "As a sharp critic, she often points out the weaknesses in his arguments.",
     "sentence_zh": "作为一个尖锐的批评家，她经常指出他论点中的弱点。",
     "source": "deepseek"
+  },
+  "crowd": {
+    "sentence_en": "Many people crowd into the small hall to hear the famous professor's lecture.",
+    "sentence_zh": "许多人挤进小礼堂听那位著名教授的讲座。",
+    "source": "deepseek"
+  },
+  "culminate": {
+    "sentence_en": "The long project will culminate in a public exhibition next month.",
+    "sentence_zh": "这个长期项目将以下个月的一场公开展览告终。",
+    "source": "deepseek"
+  },
+  "crucial": {
+    "sentence_en": "Good communication is crucial to the success of any team project.",
+    "sentence_zh": "良好的沟通对任何团队项目的成功都至关重要。",
+    "source": "deepseek"
+  },
+  "cucumber": {
+    "sentence_en": "She added a slice of cucumber to her salad for extra freshness.",
+    "sentence_zh": "她往沙拉里加了一片黄瓜以增加清爽口感。",
+    "source": "deepseek"
+  },
+  "crumble": {
+    "sentence_en": "Without careful maintenance, the ancient castle can crumble over time.",
+    "sentence_zh": "如果没有精心维护，这座古堡会随着时间推移而崩塌。",
+    "source": "deepseek"
+  },
+  "crush": {
+    "sentence_en": "The new machine can crush large stones into small pieces in a few seconds.",
+    "sentence_zh": "这台新机器能在几秒钟内把大块石头压碎成小块。",
+    "source": "deepseek"
+  },
+  "crystallize": {
+    "sentence_en": "It takes time for new ideas to crystallize into a clear and practical plan.",
+    "sentence_zh": "新想法需要时间才能具体化为清晰而切实的计划。",
+    "source": "deepseek"
   }
 }

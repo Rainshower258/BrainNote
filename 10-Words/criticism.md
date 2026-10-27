@@ -1,14 +1,14 @@
 ---
 answer: 批评， 批判
-due: '2026-07-01'
-ease: 2.5
+due: '2026-10-31'
+ease: 2.65
 example: ''
-interval: 1
-last-review: ''
-mastery: new
+interval: 4
+last-review: '2026-10-27'
+mastery: perfect
 meaning: 批评， 批判； 评论， 评论文章 (n.)
 phonetic: /'krɪtə'sɪzəm/
-reviews: 0
+reviews: 1
 tags:
 - 英语
 - CET6
