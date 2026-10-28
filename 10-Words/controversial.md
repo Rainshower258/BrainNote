@@ -1,14 +1,14 @@
 ---
 answer: 引起争论的， 有争议的
-due: '2026-10-28'
-ease: 2.65
+due: '2026-11-11'
+ease: 2.75
 example: ''
-interval: 4
-last-review: '2026-10-24'
-mastery: perfect
+interval: 14
+last-review: '2026-10-28'
+mastery: easy
 meaning: 引起争论的， 有争议的 (adj.)
 phonetic: /,kɑntrə'vɝʃl/
-reviews: 1
+reviews: 2
 tags:
 - 英语
 - CET6

@@ -1,14 +1,14 @@
 ---
 answer: 反驳， 否认…的真实性
-due: '2026-10-28'
-ease: 2.65
+due: '2026-11-13'
+ease: 2.8
 example: ''
-interval: 4
-last-review: '2026-10-24'
+interval: 16
+last-review: '2026-10-28'
 mastery: perfect
 meaning: 反驳， 否认…的真实性； 与…发生矛盾， 与…抵触 (vt.)
 phonetic: /'kɑntrə'dɪkt/
-reviews: 1
+reviews: 2
 tags:
 - 英语
 - CET6

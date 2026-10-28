@@ -1,14 +1,14 @@
 ---
 answer: 告终
-due: '2026-07-02'
-ease: 2.5
+due: '2026-11-01'
+ease: 2.65
 example: ''
-interval: 1
-last-review: ''
-mastery: new
+interval: 4
+last-review: '2026-10-28'
+mastery: perfect
 meaning: 告终 (vi.)
 phonetic: /'kʌlmɪnet/
-reviews: 0
+reviews: 1
 tags:
 - 英语
 - CET6

@@ -1,14 +1,14 @@
 ---
 answer: 争夺，竞争
-due: '2026-10-28'
-ease: 2.65
+due: '2026-11-13'
+ease: 2.8
 example: ''
-interval: 4
-last-review: '2026-10-24'
+interval: 16
+last-review: '2026-10-28'
 mastery: perfect
 meaning: 争夺，竞争；搏斗，争斗 (vi.) / 声称， 主张 (vt.)
 phonetic: /kən'tɛnd/
-reviews: 1
+reviews: 2
 tags:
 - 英语
 - CET6

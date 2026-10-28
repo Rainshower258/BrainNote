@@ -1,14 +1,14 @@
 ---
 answer: 弄清， 查明
-due: '2026-10-28'
-ease: 2.9
+due: '2027-07-07'
+ease: 3.05
 example: ''
-interval: 58
-last-review: '2026-08-31'
+interval: 252
+last-review: '2026-10-28'
 mastery: perfect
 meaning: 弄清， 查明； 确定 (vt.)
 phonetic: /'æsɚ'ten/
-reviews: 3
+reviews: 4
 tags:
 - 英语
 - CET6

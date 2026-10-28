@@ -4,10 +4,10 @@
   "dailyMaxWords": 30,
   "dailyMaxWords_note": "每天卡片总量上限。复习词>=上限时，当天只取最过期的 daily_max 个复习词、不引入新词（纯复习日）；剩余复习词 due 不变，自动排到之后的天数，不会丢词。",
   "clozeProbabilityNewWord": 0.15,
-  "cursor_index": 557,
-  "cursor_note": "已引入的新词累计到第 557 个（下标 0-556 已用），下次从下标 557 开始取下 25 个",
-  "last_session_date": "2026-10-27",
-  "last_synced_date": "2026-10-27",
+  "cursor_index": 564,
+  "cursor_note": "已引入的新词累计到第 564 个（下标 0-563 已用），下次从下标 564 开始取下 25 个",
+  "last_session_date": "2026-10-28",
+  "last_synced_date": "2026-10-28",
   "history": [
     {
       "date": "2026-07-22",
@@ -1727,6 +1727,41 @@
       "cloze": {
         "attempted": 29,
         "correct": 27
+      }
+    },
+    {
+      "date": "2026-10-28",
+      "new_words_count": 7,
+      "review_words_count": 23,
+      "review_word_ids": [
+        "ascertain",
+        "brew",
+        "brief",
+        "consume",
+        "consumer",
+        "consumption",
+        "contact",
+        "contaminate",
+        "contemplate",
+        "contempt",
+        "contend",
+        "contention",
+        "continual",
+        "continuity",
+        "contract",
+        "contradict",
+        "contradiction",
+        "contrast",
+        "contribute",
+        "contribution",
+        "contrive",
+        "controversial",
+        "correlate"
+      ],
+      "synced": true,
+      "cloze": {
+        "attempted": 25,
+        "correct": 25
       }
     }
   ]
