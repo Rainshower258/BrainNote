@@ -1,14 +1,14 @@
 ---
 answer: 抵制， 拒绝参与 (n&vt.)
-due: '2026-11-06'
-ease: 2.9
+due: '2027-07-16'
+ease: 3.05
 example: ''
-interval: 58
-last-review: '2026-09-09'
+interval: 252
+last-review: '2026-11-06'
 mastery: perfect
 meaning: 抵制， 拒绝参与 (n&vt.)
 phonetic: /'bɔɪkɑt/
-reviews: 3
+reviews: 4
 tags:
 - 英语
 - CET6

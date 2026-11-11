@@ -1,14 +1,14 @@
 ---
 answer: 使恼怒
-due: '2026-11-03'
-ease: 2.95
+due: '2027-08-27'
+ease: 3.1
 example: ''
-interval: 67
-last-review: '2026-08-28'
+interval: 296
+last-review: '2026-11-04'
 mastery: perfect
 meaning: 使恼怒； 打搅 (vt.)
 phonetic: /ə'nɔɪ/
-reviews: 3
+reviews: 4
 tags:
 - 英语
 - CET6

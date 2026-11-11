@@ -1,14 +1,14 @@
 ---
 answer: 使隶属于
-due: '2026-11-01'
-ease: 2.95
+due: '2027-07-18'
+ease: 3.05
 example: ''
-interval: 67
-last-review: '2026-08-26'
-mastery: perfect
+interval: 257
+last-review: '2026-11-03'
+mastery: easy
 meaning: 使隶属于 (vt.) / 附属机构， 分公司 (n.)
 phonetic: /ə'fɪlɪet/
-reviews: 3
+reviews: 4
 tags:
 - 英语
 - CET6

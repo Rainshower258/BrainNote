@@ -1,14 +1,14 @@
 ---
 answer: 易于…的， 有…倾向的
-due: '2026-11-07'
-ease: 2.95
+due: '2027-09-01'
+ease: 3.1
 example: ''
-interval: 67
-last-review: '2026-09-01'
+interval: 296
+last-review: '2026-11-09'
 mastery: perfect
 meaning: 易于…的， 有…倾向的； 恰当的， 适宜的； 聪明的， 反应敏捷的 (adj.)
 phonetic: /æpt/
-reviews: 3
+reviews: 4
 tags:
 - 英语
 - CET6

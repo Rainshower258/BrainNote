@@ -1,14 +1,14 @@
 ---
 answer: 控制，约束
-due: '2026-07-02'
-ease: 2.5
+due: '2026-11-21'
+ease: 2.75
 example: ''
-interval: 1
-last-review: ''
-mastery: new
+interval: 12
+last-review: '2026-11-09'
+mastery: perfect
 meaning: 控制，约束 (vt.) / 控制， 约束； 路缘 (n.)
 phonetic: /kɝb/
-reviews: 0
+reviews: 2
 tags:
 - 英语
 - CET6

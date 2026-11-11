@@ -1,14 +1,14 @@
 ---
 answer: 定义， 释义， 定界
-due: '2026-07-04'
-ease: 2.5
+due: '2026-11-10'
+ease: 2.65
 example: ''
-interval: 1
-last-review: ''
-mastery: new
+interval: 4
+last-review: '2026-11-06'
+mastery: perfect
 meaning: 定义， 释义， 定界； 清晰， 鲜明 (n.)
 phonetic: /,dɛfɪ'nɪʃən/
-reviews: 0
+reviews: 1
 tags:
 - 英语
 - CET6

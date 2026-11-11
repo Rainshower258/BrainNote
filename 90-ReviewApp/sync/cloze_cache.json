@@ -2413,5 +2413,340 @@
     "sentence_en": "It takes time for new ideas to crystallize into a clear and practical plan.",
     "sentence_zh": "新想法需要时间才能具体化为清晰而切实的计划。",
     "source": "deepseek"
+  },
+  "curb": {
+    "sentence_en": "The government must take effective measures to curb the rising air pollution in big cities.",
+    "sentence_zh": "政府必须采取有效措施来遏制大城市中日益严重的空气污染。",
+    "source": "deepseek"
+  },
+  "cumulative": {
+    "sentence_en": "The cumulative effect of small daily savings can be surprisingly large over a few years.",
+    "sentence_zh": "每天少量储蓄的累积效应在几年之后可能会大得惊人。",
+    "source": "deepseek"
+  },
+  "cycle": {
+    "sentence_en": "Many students choose to cycle to school instead of taking the bus.",
+    "sentence_zh": "许多学生选择骑自行车上学，而不是乘坐公交车。",
+    "source": "deepseek"
+  },
+  "dart": {
+    "sentence_en": "The frightened deer began to dart across the road and disappeared into the forest.",
+    "sentence_zh": "受惊的鹿开始飞奔穿过马路，消失在森林中。",
+    "source": "deepseek"
+  },
+  "database": {
+    "sentence_en": "The company stores all customer information in a secure database.",
+    "sentence_zh": "公司将所有客户信息存储在一个安全的数据库中。",
+    "source": "deepseek"
+  },
+  "cute": {
+    "sentence_en": "The little girl looks very cute in her new dress, and everyone likes her.",
+    "sentence_zh": "这个小女孩穿着新裙子看起来非常可爱，大家都很喜欢她。",
+    "source": "deepseek"
+  },
+  "customary": {
+    "sentence_en": "It is customary to give a small gift when you visit a friend's home.",
+    "sentence_zh": "拜访朋友家时送一份小礼物是合乎习俗的。",
+    "source": "deepseek"
+  },
+  "dazzle": {
+    "sentence_en": "The bright lights of the city can dazzle visitors at night.",
+    "sentence_zh": "城市里明亮的灯光在夜晚会使游客感到目眩。",
+    "source": "deepseek"
+  },
+  "curse": {
+    "sentence_en": "Many people believe that the ancient curse will bring bad luck to anyone who opens the tomb.",
+    "sentence_zh": "许多人相信，这个古老的诅咒会给任何打开坟墓的人带来厄运。",
+    "source": "deepseek"
+  },
+  "culture": {
+    "sentence_en": "Learning about a foreign culture can help us understand different ways of thinking.",
+    "sentence_zh": "了解一种外国文化能帮助我们理解不同的思维方式。",
+    "source": "deepseek"
+  },
+  "deadline": {
+    "sentence_en": "We must finish the report before the deadline, or the teacher will not accept it.",
+    "sentence_zh": "我们必须在最后期限之前完成报告，否则老师不会接受。",
+    "source": "deepseek"
+  },
+  "cylinder": {
+    "sentence_en": "The water tank is shaped like a cylinder and can hold up to 200 liters.",
+    "sentence_zh": "这个水箱形状像圆柱体，最多可容纳200升水。",
+    "source": "deepseek"
+  },
+  "cynical": {
+    "sentence_en": "It is easy to become cynical when you see the same problems repeated every day.",
+    "sentence_zh": "当你看到同样的问题每天重复出现时，很容易变得愤世嫉俗。",
+    "source": "deepseek"
+  },
+  "current": {
+    "sentence_en": "The current situation in the job market makes many young people feel worried.",
+    "sentence_zh": "当前就业市场的形势让许多年轻人感到担忧。",
+    "source": "deepseek"
+  },
+  "decency": {
+    "sentence_en": "He had the decency to admit his mistake and apologize to the whole team.",
+    "sentence_zh": "他很有风度地承认了错误，并向整个团队道歉。",
+    "source": "deepseek"
+  },
+  "deficit": {
+    "sentence_en": "The government must reduce the budget deficit before the economy gets worse.",
+    "sentence_zh": "政府必须在经济恶化之前减少预算赤字。",
+    "source": "deepseek"
+  },
+  "decorate": {
+    "sentence_en": "We should decorate the classroom with flowers before the party starts.",
+    "sentence_zh": "我们应该在聚会开始前用鲜花装饰教室。",
+    "source": "deepseek"
+  },
+  "deceive": {
+    "sentence_en": "It is not right to deceive your friends just to get what you want.",
+    "sentence_zh": "为了得到你想要的东西而欺骗朋友是不对的。",
+    "source": "deepseek"
+  },
+  "decade": {
+    "sentence_en": "In the past decade, our city has changed a lot.",
+    "sentence_zh": "在过去的十年里，我们的城市发生了很大变化。",
+    "source": "deepseek"
+  },
+  "dean": {
+    "sentence_en": "The dean of our college gave a short speech at the opening ceremony yesterday morning.",
+    "sentence_zh": "我们学院的院长昨天上午在开学典礼上作了简短的讲话。",
+    "source": "deepseek"
+  },
+  "decay": {
+    "sentence_en": "Without proper care, old buildings can decay quickly over time.",
+    "sentence_zh": "如果没有适当的维护，旧建筑会随着时间迅速腐朽。",
+    "source": "deepseek"
+  },
+  "deferential": {
+    "sentence_en": "The young man was always deferential to his grandparents and listened carefully to their advice.",
+    "sentence_zh": "这个年轻人对祖父母总是恭敬有加，并认真听取他们的建议。",
+    "source": "deepseek"
+  },
+  "defendant": {
+    "sentence_en": "The defendant can remain silent during the initial police questioning.",
+    "sentence_zh": "被告在警方初步询问期间可以保持沉默。",
+    "source": "deepseek"
+  },
+  "decree": {
+    "sentence_en": "The government issued a new decree to protect the city's remaining green spaces.",
+    "sentence_zh": "政府颁布了一项新法令，以保护城市剩余的绿地。",
+    "source": "deepseek"
+  },
+  "decent": {
+    "sentence_en": "Everyone deserves a decent job and a safe place to live.",
+    "sentence_zh": "每个人都应该有一份像样的工作和一个安全的住所。",
+    "source": "deepseek"
+  },
+  "defeat": {
+    "sentence_en": "It is not easy to defeat a strong team without good teamwork.",
+    "sentence_zh": "没有良好的团队合作，要战胜一支强队并不容易。",
+    "source": "deepseek"
+  },
+  "deduct": {
+    "sentence_en": "You must deduct the tax from your monthly income before you plan the budget.",
+    "sentence_zh": "在规划预算之前，你必须从月收入中扣除税款。",
+    "source": "deepseek"
+  },
+  "defect": {
+    "sentence_en": "The engineer found a serious defect in the design of the new machine.",
+    "sentence_zh": "工程师在新机器的设计中发现了一个严重缺陷。",
+    "source": "deepseek"
+  },
+  "default": {
+    "sentence_en": "If you do not change the settings, the system will use the default option.",
+    "sentence_zh": "如果你不更改设置，系统将使用默认选项。",
+    "source": "deepseek"
+  },
+  "dedicate": {
+    "sentence_en": "She decided to dedicate more time to reading books after work.",
+    "sentence_zh": "她决定下班后把更多时间用于读书。",
+    "source": "deepseek"
+  },
+  "deduce": {
+    "sentence_en": "From these facts, we can deduce that the experiment was not successful.",
+    "sentence_zh": "从这些事实中，我们可以推断出这个实验并不成功。",
+    "source": "deepseek"
+  },
+  "deem": {
+    "sentence_en": "Many experts deem this new policy necessary for the country's long-term development.",
+    "sentence_zh": "许多专家认为这项新政策对国家的长期发展是必要的。",
+    "source": "deepseek"
+  },
+  "deadly": {
+    "sentence_en": "Driving after drinking can be deadly, so we must never take such a risk.",
+    "sentence_zh": "酒后驾车可能致命，所以我们绝不能冒这样的风险。",
+    "source": "deepseek"
+  },
+  "deficiency": {
+    "sentence_en": "The doctor said that a deficiency of vitamin D can lead to weak bones.",
+    "sentence_zh": "医生说缺乏维生素D会导致骨骼脆弱。",
+    "source": "deepseek"
+  },
+  "decrease": {
+    "sentence_en": "To decrease air pollution, the city has decided to limit the number of private cars.",
+    "sentence_zh": "为了减少空气污染，该市已决定限制私家车的数量。",
+    "source": "deepseek"
+  },
+  "debate": {
+    "sentence_en": "The students will debate the important issue in class tomorrow.",
+    "sentence_zh": "学生们明天将在课堂上辩论这个重要问题。",
+    "source": "deepseek"
+  },
+  "defiance": {
+    "sentence_en": "In defiance of the rules, he continued to speak his mind openly.",
+    "sentence_zh": "他无视规定，继续坦率地表达自己的想法。",
+    "source": "deepseek"
+  },
+  "decimal": {
+    "sentence_en": "Students should learn how to change a fraction into a decimal number.",
+    "sentence_zh": "学生们应该学会如何把分数转换成小数。",
+    "source": "deepseek"
+  },
+  "decisive": {
+    "sentence_en": "Her decisive action during the crisis saved the whole team from serious danger.",
+    "sentence_zh": "她在危机中果断的行动使整个团队免于严重危险。",
+    "source": "deepseek"
+  },
+  "define": {
+    "sentence_en": "It is difficult to define happiness in a few simple words.",
+    "sentence_zh": "很难用几个简单的词来定义幸福。",
+    "source": "deepseek"
+  },
+  "definitely": {
+    "sentence_en": "If you keep practicing every day, you will definitely make great progress in your spoken English.",
+    "sentence_zh": "如果你每天坚持练习，你的英语口语一定会取得很大进步。",
+    "source": "deepseek"
+  },
+  "deny": {
+    "sentence_en": "You cannot deny the fact that she worked very hard for the project.",
+    "sentence_zh": "你不能否认她为这个项目非常努力这一事实。",
+    "source": "deepseek"
+  },
+  "definitive": {
+    "sentence_en": "The report is widely regarded as the definitive study on climate change in this region.",
+    "sentence_zh": "这份报告被广泛认为是关于该地区气候变化的最权威研究。",
+    "source": "deepseek"
+  },
+  "dentist": {
+    "sentence_en": "The doctor advised him to see a dentist about his toothache.",
+    "sentence_zh": "医生建议他去牙科医生那里看看牙痛。",
+    "source": "deepseek"
+  },
+  "deport": {
+    "sentence_en": "The government may deport anyone who enters the country without a valid visa.",
+    "sentence_zh": "政府可能会将任何没有有效签证入境的人驱逐出境。",
+    "source": "deepseek"
+  },
+  "depression": {
+    "sentence_en": "Many people experience a deep sense of depression during the long winter months.",
+    "sentence_zh": "许多人在漫长的冬季会经历深深的抑郁感。",
+    "source": "deepseek"
+  },
+  "denote": {
+    "sentence_en": "In this chart, the red lines can denote the most important changes in temperature.",
+    "sentence_zh": "在这张图表中，红线可以表示温度最重要的变化。",
+    "source": "deepseek"
+  },
+  "delusion": {
+    "sentence_en": "He warned that blind trust in advertising could create a dangerous delusion among young consumers.",
+    "sentence_zh": "他警告说，盲目相信广告可能会在年轻消费者中造成危险的错觉。",
+    "source": "deepseek"
+  },
+  "derive": {
+    "sentence_en": "Many English words derive from Latin, so learning their roots can help you remember them.",
+    "sentence_zh": "许多英语单词源自拉丁语，因此学习它们的词根有助于记忆。",
+    "source": "deepseek"
+  },
+  "depress": {
+    "sentence_en": "The bad weather can depress people who are already feeling lonely and stressed.",
+    "sentence_zh": "恶劣的天气会让那些已经感到孤独和压力的人更加沮丧。",
+    "source": "deepseek"
+  },
+  "degrade": {
+    "sentence_en": "We must not degrade others by judging them only by their appearance.",
+    "sentence_zh": "我们绝不能仅凭外表来评判他人，从而有辱他们的人格。",
+    "source": "deepseek"
+  },
+  "demand": {
+    "sentence_en": "The workers plan to demand higher pay and better working conditions next month.",
+    "sentence_zh": "工人们计划下个月要求更高的工资和更好的工作条件。",
+    "source": "deepseek"
+  },
+  "deprive": {
+    "sentence_en": "You should never deprive children of the chance to play and learn.",
+    "sentence_zh": "你绝不应该剥夺孩子们玩耍和学习的机会。",
+    "source": "deepseek"
+  },
+  "demonstrate": {
+    "sentence_en": "The teacher asked us to demonstrate how the new machine works in class.",
+    "sentence_zh": "老师让我们在课堂上演示这台新机器是如何工作的。",
+    "source": "deepseek"
+  },
+  "definition": {
+    "sentence_en": "The teacher asked us to give a clear definition of this difficult term.",
+    "sentence_zh": "老师要求我们给这个难懂的术语下一个清晰的定义。",
+    "source": "deepseek"
+  },
+  "delicate": {
+    "sentence_en": "The delicate balance between work and family life is hard to keep.",
+    "sentence_zh": "工作与家庭生活之间微妙的平衡很难维持。",
+    "source": "deepseek"
+  },
+  "deliberate": {
+    "sentence_en": "The committee will deliberate on the proposal before making a final decision.",
+    "sentence_zh": "委员会将在做出最终决定前仔细考虑该提案。",
+    "source": "deepseek"
+  },
+  "descend": {
+    "sentence_en": "Passengers must descend the stairs carefully when the ship arrives at the port.",
+    "sentence_zh": "乘客在船靠港时必须小心地下楼梯。",
+    "source": "deepseek"
+  },
+  "defy": {
+    "sentence_en": "It is dangerous to defy the safety rules even when you are in a hurry.",
+    "sentence_zh": "即使你很匆忙，违抗安全规定也是危险的。",
+    "source": "deepseek"
+  },
+  "denounce": {
+    "sentence_en": "The workers decided to denounce the company's illegal actions to the authorities.",
+    "sentence_zh": "工人们决定向当局告发公司的非法行为。",
+    "source": "deepseek"
+  },
+  "denial": {
+    "sentence_en": "His denial of the facts made it hard for us to trust him.",
+    "sentence_zh": "他对事实的否认使我们很难信任他。",
+    "source": "deepseek"
+  },
+  "degenerate": {
+    "sentence_en": "Without proper care, the old library can degenerate into a place no one wants to visit.",
+    "sentence_zh": "如果没有适当的维护，这座老图书馆可能会衰退成无人愿意造访的地方。",
+    "source": "deepseek"
+  },
+  "depict": {
+    "sentence_en": "The artist used simple lines to depict the peaceful scene of the countryside.",
+    "sentence_zh": "这位艺术家用简单的线条描绘了乡村的宁静景象。",
+    "source": "deepseek"
+  },
+  "descent": {
+    "sentence_en": "The descent from the mountain took us nearly three hours in the rain.",
+    "sentence_zh": "在雨中从山上下来花了我们将近三个小时。",
+    "source": "deepseek"
+  },
+  "descendant": {
+    "sentence_en": "He is a direct descendant of the famous scientist who lived in the 19th century.",
+    "sentence_zh": "他是那位生活在十九世纪的著名科学家的直系后代。",
+    "source": "deepseek"
+  },
+  "describe": {
+    "sentence_en": "It is hard to describe how beautiful the sunset over the sea was.",
+    "sentence_zh": "很难描述海面上的日落有多么美丽。",
+    "source": "deepseek"
+  },
+  "deserve": {
+    "sentence_en": "Everyone who works hard can deserve respect from their colleagues and teachers.",
+    "sentence_zh": "每个努力工作的人都能值得同事和老师的尊重。",
+    "source": "deepseek"
   }
 }

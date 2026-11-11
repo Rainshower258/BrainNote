@@ -1,14 +1,14 @@
 ---
 answer: 否定， 拒绝相信
-due: '2026-07-04'
-ease: 2.5
+due: '2026-11-10'
+ease: 2.65
 example: ''
-interval: 1
-last-review: ''
-mastery: new
+interval: 4
+last-review: '2026-11-06'
+mastery: perfect
 meaning: 否定， 拒绝相信 (vt.)
 phonetic: /dɪ'nai/
-reviews: 0
+reviews: 1
 tags:
 - 英语
 - CET6

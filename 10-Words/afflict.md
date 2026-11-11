@@ -1,14 +1,14 @@
 ---
 answer: 使苦恼， 折磨
-due: '2026-11-01'
-ease: 2.95
+due: '2027-07-18'
+ease: 3.05
 example: ''
-interval: 67
-last-review: '2026-08-26'
-mastery: perfect
+interval: 257
+last-review: '2026-11-03'
+mastery: easy
 meaning: 使苦恼， 折磨 (vt.)
 phonetic: /ə'flɪkt/
-reviews: 3
+reviews: 4
 tags:
 - 英语
 - CET6

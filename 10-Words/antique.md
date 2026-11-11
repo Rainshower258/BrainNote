@@ -1,14 +1,14 @@
 ---
 answer: 古时的，古老的
-due: '2026-11-07'
-ease: 2.95
+due: '2027-09-01'
+ease: 3.1
 example: ''
-interval: 67
-last-review: '2026-09-01'
+interval: 296
+last-review: '2026-11-09'
 mastery: perfect
 meaning: 古时的，古老的 (adj.) / 古物， 古玩， 古董 (n.)
 phonetic: /æn'tik/
-reviews: 3
+reviews: 4
 tags:
 - 英语
 - CET6

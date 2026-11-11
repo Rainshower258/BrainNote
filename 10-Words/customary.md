@@ -1,14 +1,14 @@
 ---
 answer: 习惯上的， 惯常的， 合乎习俗的
-due: '2026-07-02'
-ease: 2.5
+due: '2026-11-08'
+ease: 2.65
 example: ''
-interval: 1
-last-review: ''
-mastery: new
+interval: 4
+last-review: '2026-11-04'
+mastery: perfect
 meaning: 习惯上的， 惯常的， 合乎习俗的 (adj.)
 phonetic: /'kʌstə'mɛri/
-reviews: 0
+reviews: 1
 tags:
 - 英语
 - CET6

@@ -1,14 +1,14 @@
 ---
 answer: 器械， 器具， 仪器
-due: '2026-11-07'
-ease: 2.95
+due: '2027-09-01'
+ease: 3.1
 example: ''
-interval: 67
-last-review: '2026-09-01'
+interval: 296
+last-review: '2026-11-09'
 mastery: perfect
 meaning: 器械， 器具， 仪器； 机构， 组织 (n.)
 phonetic: /ˌæpəˈrætəs/
-reviews: 3
+reviews: 4
 tags:
 - 英语
 - CET6

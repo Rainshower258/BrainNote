@@ -1,14 +1,14 @@
 ---
 answer: 有利的， 有益的
-due: '2026-11-04'
-ease: 2.9
+due: '2027-07-14'
+ease: 3.05
 example: ''
-interval: 58
-last-review: '2026-09-07'
-mastery: easy
+interval: 252
+last-review: '2026-11-04'
+mastery: perfect
 meaning: 有利的， 有益的 (adj.)
 phonetic: /,bɛnɪ'fɪʃl/
-reviews: 3
+reviews: 4
 tags:
 - 英语
 - CET6

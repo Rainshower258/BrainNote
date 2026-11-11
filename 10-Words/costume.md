@@ -1,14 +1,14 @@
 ---
 answer: 服装， 服饰
-due: '2026-10-29'
-ease: 2.65
+due: '2026-11-14'
+ease: 2.75
 example: ''
-interval: 4
-last-review: '2026-10-25'
-mastery: perfect
+interval: 14
+last-review: '2026-10-31'
+mastery: easy
 meaning: 服装， 服饰； 戏装， 成套服装 (n.)
 phonetic: /ˈkɑsˌtum/
-reviews: 1
+reviews: 2
 tags:
 - 英语
 - CET6

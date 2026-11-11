@@ -1,14 +1,14 @@
 ---
 answer: 一套公寓房间
-due: '2026-10-29'
-ease: 2.9
+due: '2029-12-26'
+ease: 3.2
 example: ''
-interval: 58
-last-review: '2026-09-01'
-mastery: easy
+interval: 1153
+last-review: '2026-10-30'
+mastery: perfect
 meaning: 一套公寓房间 (n.)
 phonetic: /ə'pɑrtmənt/
-reviews: 3
+reviews: 5
 tags:
 - 英语
 - CET6

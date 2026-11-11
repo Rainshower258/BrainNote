@@ -1,14 +1,14 @@
 ---
 answer: 动脉
-due: '2026-11-08'
+due: '2027-05-28'
 ease: 2.95
 example: ''
-interval: 67
-last-review: '2026-09-02'
-mastery: perfect
+interval: 198
+last-review: '2026-11-11'
+mastery: good
 meaning: 动脉； 干线， 要道 (n.)
 phonetic: /'ɑrtəri/
-reviews: 3
+reviews: 4
 tags:
 - 英语
 - CET6

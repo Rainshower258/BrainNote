@@ -1,14 +1,14 @@
 ---
 answer: 把…归因于
-due: '2026-10-29'
-ease: 2.9
+due: '2029-07-12'
+ease: 3.15
 example: ''
-interval: 58
-last-review: '2026-09-01'
+interval: 986
+last-review: '2026-10-30'
 mastery: perfect
 meaning: 把…归因于 (vt.) / 属性 (n.)
 phonetic: /ə'trɪbjut/
-reviews: 3
+reviews: 5
 tags:
 - 英语
 - CET6

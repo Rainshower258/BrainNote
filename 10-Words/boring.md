@@ -1,14 +1,14 @@
 ---
 answer: 令人厌烦的， 乏味的， 无聊的
-due: '2026-11-06'
-ease: 2.9
+due: '2027-07-16'
+ease: 3.05
 example: ''
-interval: 58
-last-review: '2026-09-09'
+interval: 252
+last-review: '2026-11-06'
 mastery: perfect
 meaning: 令人厌烦的， 乏味的， 无聊的 (adj.)
 phonetic: /'bɔrɪŋ/
-reviews: 3
+reviews: 4
 tags:
 - 英语
 - CET6

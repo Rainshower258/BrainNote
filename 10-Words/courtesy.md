@@ -1,14 +1,14 @@
 ---
 answer: 谦恭有礼
-due: '2026-10-30'
-ease: 2.65
+due: '2026-11-16'
+ease: 2.8
 example: ''
-interval: 4
-last-review: '2026-10-26'
+interval: 16
+last-review: '2026-10-31'
 mastery: perfect
 meaning: 谦恭有礼； 有礼貌的举止 (n.)
 phonetic: /'kɝtəsi/
-reviews: 1
+reviews: 2
 tags:
 - 英语
 - CET6

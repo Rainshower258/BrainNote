@@ -1,14 +1,14 @@
 ---
 answer: 罪， 罪行， 犯罪
-due: '2026-10-30'
-ease: 2.65
+due: '2026-11-18'
+ease: 2.8
 example: ''
-interval: 4
-last-review: '2026-10-26'
+interval: 16
+last-review: '2026-11-02'
 mastery: perfect
 meaning: 罪， 罪行， 犯罪 (n.)
 phonetic: /kraɪm/
-reviews: 1
+reviews: 2
 tags:
 - 英语
 - CET6

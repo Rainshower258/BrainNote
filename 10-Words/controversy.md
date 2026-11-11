@@ -1,14 +1,14 @@
 ---
 answer: 争论， 辩论
-due: '2026-10-29'
-ease: 2.65
+due: '2027-01-05'
+ease: 2.95
 example: ''
-interval: 4
-last-review: '2026-10-25'
+interval: 67
+last-review: '2026-10-30'
 mastery: perfect
 meaning: 争论， 辩论 (n.)
 phonetic: /ˈkɑntrəvɝ​sɪ/
-reviews: 1
+reviews: 3
 tags:
 - 英语
 - CET6

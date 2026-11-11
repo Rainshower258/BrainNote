@@ -1,14 +1,14 @@
 ---
 answer: 犯罪的， 刑事的
-due: '2026-10-30'
-ease: 2.65
+due: '2026-11-16'
+ease: 2.75
 example: ''
-interval: 4
-last-review: '2026-10-26'
-mastery: perfect
+interval: 14
+last-review: '2026-11-02'
+mastery: easy
 meaning: 犯罪的， 刑事的 (adj.) / 犯人，罪犯，刑事犯 (n.)
 phonetic: /'krɪmɪnl/
-reviews: 1
+reviews: 2
 tags:
 - 英语
 - CET6

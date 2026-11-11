@@ -1,14 +1,14 @@
 ---
 answer: 一致， 和谐， 符合
-due: '2026-10-29'
-ease: 2.95
+due: '2030-02-04'
+ease: 3.2
 example: ''
-interval: 67
-last-review: '2026-08-23'
-mastery: perfect
+interval: 1193
+last-review: '2026-10-30'
+mastery: easy
 meaning: 一致， 和谐， 符合 (n.)
 phonetic: /ə'kɔrdns/
-reviews: 3
+reviews: 5
 tags:
 - 英语
 - CET6

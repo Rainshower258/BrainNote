@@ -1,14 +1,14 @@
 ---
 answer: 组成， 形成
-due: '2026-10-29'
-ease: 2.45
+due: '2026-12-06'
+ease: 2.7
 example: ''
-interval: 3
-last-review: '2026-10-26'
-mastery: perfect
+interval: 37
+last-review: '2026-10-30'
+mastery: easy
 meaning: 组成， 形成； 设立； 任命 (vt.)
 phonetic: /'kɑnstətut/
-reviews: 3
+reviews: 5
 tags:
 - 英语
 - CET6

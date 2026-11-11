@@ -1,14 +1,14 @@
 ---
 answer: 接受， 承认
-due: '2026-11-04'
-ease: 2.65
+due: '2027-04-20'
+ease: 2.8
 example: ''
-interval: 42
-last-review: '2026-09-23'
-mastery: hard
+interval: 167
+last-review: '2026-11-04'
+mastery: perfect
 meaning: 接受， 承认； 容忍 (n.)
 phonetic: /ək'sɛptəns/
-reviews: 4
+reviews: 5
 tags:
 - 英语
 - CET6

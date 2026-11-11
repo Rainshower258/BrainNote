@@ -1,14 +1,14 @@
 ---
 answer: 猛冲，飞奔
-due: '2026-07-02'
-ease: 2.5
+due: '2026-11-08'
+ease: 2.65
 example: ''
-interval: 1
-last-review: ''
-mastery: new
+interval: 4
+last-review: '2026-11-04'
+mastery: perfect
 meaning: 猛冲，飞奔 (vi.) / 投射 (vt.) / 飞镖， 飞镖游戏； 急驰， 飞奔 (n.)
 phonetic: /dɑrt/
-reviews: 0
+reviews: 1
 tags:
 - 英语
 - CET6

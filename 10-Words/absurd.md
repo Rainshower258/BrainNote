@@ -1,14 +1,14 @@
 ---
 answer: 荒谬的， 荒唐的
-due: '2026-10-29'
-ease: 2.95
+due: '2029-08-14'
+ease: 3.15
 example: ''
-interval: 67
-last-review: '2026-08-23'
-mastery: perfect
+interval: 1019
+last-review: '2026-10-30'
+mastery: easy
 meaning: 荒谬的， 荒唐的 (adj.)
 phonetic: /əbˈsɝ​d/
-reviews: 3
+reviews: 5
 tags:
 - 英语
 - CET6

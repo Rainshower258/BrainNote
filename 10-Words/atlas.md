@@ -1,14 +1,14 @@
 ---
 answer: 地图集
-due: '2026-11-08'
-ease: 2.95
+due: '2027-09-03'
+ease: 3.1
 example: ''
-interval: 67
-last-review: '2026-09-02'
+interval: 296
+last-review: '2026-11-11'
 mastery: perfect
 meaning: 地图集 (n.)
 phonetic: /'ætləs/
-reviews: 3
+reviews: 4
 tags:
 - 英语
 - CET6

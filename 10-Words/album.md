@@ -1,14 +1,14 @@
 ---
 answer: 粘贴簿， 集邮簿， 相册
-due: '2026-11-02'
-ease: 2.95
+due: '2027-08-26'
+ease: 3.1
 example: ''
-interval: 67
-last-review: '2026-08-27'
+interval: 296
+last-review: '2026-11-03'
 mastery: perfect
 meaning: 粘贴簿， 集邮簿， 相册 (n.)
 phonetic: /'ælbəm/
-reviews: 3
+reviews: 4
 tags:
 - 英语
 - CET6

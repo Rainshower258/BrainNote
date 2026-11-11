@@ -1,14 +1,14 @@
 ---
 answer: 被吸收， 被消化
-due: '2026-11-08'
-ease: 2.95
+due: '2027-07-26'
+ease: 3.05
 example: ''
-interval: 67
-last-review: '2026-09-02'
-mastery: perfect
+interval: 257
+last-review: '2026-11-11'
+mastery: easy
 meaning: 被吸收， 被消化； 被同化 (vi.) / 吸收，消化；使同化 (vt.)
 phonetic: /ə'sɪməlet/
-reviews: 3
+reviews: 4
 tags:
 - 英语
 - CET6

@@ -1,14 +1,14 @@
 ---
 answer: 法令，政令
-due: '2026-07-03'
-ease: 2.5
+due: '2026-11-09'
+ease: 2.65
 example: ''
-interval: 1
-last-review: ''
-mastery: new
+interval: 4
+last-review: '2026-11-05'
+mastery: perfect
 meaning: 法令，政令；判决，裁决 (n.) / 判决， 命令 (vt.)
 phonetic: /dɪ'kri/
-reviews: 0
+reviews: 1
 tags:
 - 英语
 - CET6

@@ -1,14 +1,14 @@
 ---
 answer: 使眩目，耀
-due: '2026-07-02'
-ease: 2.5
+due: '2026-11-08'
+ease: 2.65
 example: ''
-interval: 1
-last-review: ''
-mastery: new
+interval: 4
+last-review: '2026-11-04'
+mastery: perfect
 meaning: 使眩目，耀；使赞叹不已；使倾倒 (vt.) / 耀眼的光； 令人赞叹的东西 (n.)
 phonetic: /'dæzl/
-reviews: 0
+reviews: 1
 tags:
 - 英语
 - CET6

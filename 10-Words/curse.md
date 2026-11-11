@@ -1,14 +1,14 @@
 ---
 answer: 诅咒，咒骂，天谴
-due: '2026-07-02'
-ease: 2.5
+due: '2026-11-27'
+ease: 2.8
 example: ''
-interval: 1
-last-review: ''
-mastery: new
+interval: 16
+last-review: '2026-11-11'
+mastery: perfect
 meaning: 诅咒，咒骂，天谴 (v.) / 祸害， 祸根； 咒骂， 诅咒， 咒语 (n.)
 phonetic: /kɝs/
-reviews: 0
+reviews: 2
 tags:
 - 英语
 - CET6

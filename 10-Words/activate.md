@@ -1,14 +1,14 @@
 ---
 answer: 使活动起来
-due: '2026-11-01'
-ease: 2.95
+due: '2027-08-25'
+ease: 3.1
 example: ''
-interval: 67
-last-review: '2026-08-26'
+interval: 296
+last-review: '2026-11-02'
 mastery: perfect
 meaning: 使活动起来； 使开始作用 (vt.)
 phonetic: /'æktə'vet/
-reviews: 3
+reviews: 4
 tags:
 - 英语
 - CET6

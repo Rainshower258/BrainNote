@@ -1,14 +1,14 @@
 ---
 answer: 无名的， 不具名的
-due: '2026-11-07'
-ease: 2.95
+due: '2027-09-01'
+ease: 3.1
 example: ''
-interval: 67
-last-review: '2026-09-01'
+interval: 296
+last-review: '2026-11-09'
 mastery: perfect
 meaning: 无名的， 不具名的； 匿名的； 无特色的， 无个性特征的 (adj.)
 phonetic: /ə'nɑnəməs/
-reviews: 3
+reviews: 4
 tags:
 - 英语
 - CET6

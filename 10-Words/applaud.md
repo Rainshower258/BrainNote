@@ -1,14 +1,14 @@
 ---
 answer: 鼓掌，喝彩
-due: '2026-10-29'
-ease: 2.9
+due: '2029-12-26'
+ease: 3.2
 example: ''
-interval: 58
-last-review: '2026-09-01'
-mastery: easy
+interval: 1153
+last-review: '2026-10-30'
+mastery: perfect
 meaning: 鼓掌，喝彩 (vi.) / 向…鼓掌， 向…喝彩； 称赞， 赞许 (vt.)
 phonetic: /ə'plɔd/
-reviews: 3
+reviews: 5
 tags:
 - 英语
 - CET6

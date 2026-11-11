@@ -1,14 +1,14 @@
 ---
 answer: 用具， 器具， 器械
-due: '2026-11-07'
-ease: 2.95
+due: '2027-07-24'
+ease: 3.05
 example: ''
-interval: 67
-last-review: '2026-09-01'
-mastery: perfect
+interval: 257
+last-review: '2026-11-09'
+mastery: easy
 meaning: 用具， 器具， 器械 (n.)
 phonetic: /ə'plaɪəns/
-reviews: 3
+reviews: 4
 tags:
 - 英语
 - CET6

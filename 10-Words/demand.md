@@ -1,14 +1,14 @@
 ---
 answer: 要求，需要
-due: '2026-07-04'
-ease: 2.5
+due: '2026-11-10'
+ease: 2.65
 example: ''
-interval: 1
-last-review: ''
-mastery: new
+interval: 4
+last-review: '2026-11-06'
+mastery: perfect
 meaning: 要求，需要；询问 (vt.) / 要求， 需要 (n.)
 phonetic: /dɪ'mænd/
-reviews: 0
+reviews: 1
 tags:
 - 英语
 - CET6

@@ -1,14 +1,14 @@
 ---
 answer: 恭敬的， 恭顺的
-due: '2026-07-03'
-ease: 2.5
+due: '2026-11-08'
+ease: 2.6
 example: ''
-interval: 1
-last-review: ''
-mastery: new
+interval: 3
+last-review: '2026-11-05'
+mastery: easy
 meaning: 恭敬的， 恭顺的 (adj.)
 phonetic: /ˌdefə'rɛnʃl/
-reviews: 0
+reviews: 1
 tags:
 - 英语
 - CET6

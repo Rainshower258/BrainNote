@@ -1,14 +1,14 @@
 ---
 answer: 随心所欲的
-due: '2026-10-31'
-ease: 2.8
+due: '2027-07-12'
+ease: 2.95
 example: ''
-interval: 60
-last-review: '2026-09-01'
+interval: 252
+last-review: '2026-11-02'
 mastery: perfect
 meaning: 随心所欲的； 专断的 (adj.)
 phonetic: /ˈɑːrbətreri/
-reviews: 4
+reviews: 5
 tags:
 - 英语
 - CET6

@@ -1,14 +1,14 @@
 ---
 answer: 礼券， 优惠券
-due: '2026-10-30'
-ease: 2.65
+due: '2026-11-14'
+ease: 2.75
 example: ''
-interval: 4
-last-review: '2026-10-26'
-mastery: perfect
+interval: 14
+last-review: '2026-10-31'
+mastery: easy
 meaning: 礼券， 优惠券； 配给券， 票证 (n.)
 phonetic: /'kupɑn/
-reviews: 1
+reviews: 2
 tags:
 - 英语
 - CET6

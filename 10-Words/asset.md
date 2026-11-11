@@ -1,14 +1,14 @@
 ---
 answer: 资产， 财产
-due: '2026-11-08'
-ease: 2.95
+due: '2027-07-26'
+ease: 3.05
 example: ''
-interval: 67
-last-review: '2026-09-02'
-mastery: perfect
+interval: 257
+last-review: '2026-11-11'
+mastery: easy
 meaning: 资产， 财产； 有价值的特性或技能， 优点 (n.)
 phonetic: /'æsɛt/
-reviews: 3
+reviews: 4
 tags:
 - 英语
 - CET6

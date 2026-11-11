@@ -1,14 +1,14 @@
 ---
 answer: 栅栏
-due: '2026-11-04'
-ease: 2.9
+due: '2027-06-11'
+ease: 3.0
 example: ''
-interval: 58
-last-review: '2026-09-07'
+interval: 219
+last-review: '2026-11-04'
 mastery: easy
 meaning: 栅栏； 检票口； 屏障； 障碍， 隔阂 (n.)
 phonetic: /'bærɪɚ/
-reviews: 3
+reviews: 4
 tags:
 - 英语
 - CET6

@@ -1,14 +1,14 @@
 ---
 answer: 傲慢的， 自大的
-due: '2026-10-30'
-ease: 2.9
+due: '2027-07-10'
+ease: 3.05
 example: ''
-interval: 58
-last-review: '2026-09-02'
-mastery: easy
+interval: 252
+last-review: '2026-10-31'
+mastery: perfect
 meaning: 傲慢的， 自大的 (adj.)
 phonetic: /'ærəɡənt/
-reviews: 3
+reviews: 4
 tags:
 - 英语
 - CET6

@@ -1,14 +1,14 @@
 ---
 answer: 赞成， 称许
-due: '2026-11-07'
-ease: 2.95
+due: '2027-09-01'
+ease: 3.1
 example: ''
-interval: 67
-last-review: '2026-09-01'
+interval: 296
+last-review: '2026-11-09'
 mastery: perfect
 meaning: 赞成， 称许 (vi.) / 赞成，称许；批准 (vt.)
 phonetic: /ə'prʊv/
-reviews: 3
+reviews: 4
 tags:
 - 英语
 - CET6

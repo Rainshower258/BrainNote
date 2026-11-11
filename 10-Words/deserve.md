@@ -1,14 +1,14 @@
 ---
 answer: 应受， 值得
-due: '2026-07-05'
-ease: 2.5
+due: '2026-11-13'
+ease: 2.65
 example: ''
-interval: 1
-last-review: ''
-mastery: new
+interval: 4
+last-review: '2026-11-09'
+mastery: perfect
 meaning: 应受， 值得 (vt.)
 phonetic: /dɪ'zɝv/
-reviews: 0
+reviews: 1
 tags:
 - 英语
 - CET6

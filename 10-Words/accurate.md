@@ -1,14 +1,14 @@
 ---
 answer: 准确的， 正确无误的
-due: '2026-10-29'
-ease: 2.95
+due: '2030-08-06'
+ease: 3.25
 example: ''
-interval: 67
-last-review: '2026-08-23'
+interval: 1376
+last-review: '2026-10-30'
 mastery: perfect
 meaning: 准确的， 正确无误的 (adj.)
 phonetic: /'ækjərət/
-reviews: 3
+reviews: 5
 tags:
 - 英语
 - CET6

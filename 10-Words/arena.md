@@ -1,14 +1,14 @@
 ---
 answer: 表演场地， 竞技场
-due: '2026-11-07'
-ease: 2.95
+due: '2027-09-01'
+ease: 3.1
 example: ''
-interval: 67
-last-review: '2026-09-01'
+interval: 296
+last-review: '2026-11-09'
 mastery: perfect
 meaning: 表演场地， 竞技场； 活动场所 (n.)
 phonetic: /ə'rinə/
-reviews: 3
+reviews: 4
 tags:
 - 英语
 - CET6

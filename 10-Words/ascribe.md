@@ -1,14 +1,14 @@
 ---
 answer: 把…归因于， 把…归属于
-due: '2026-11-08'
-ease: 2.95
+due: '2027-09-03'
+ease: 3.1
 example: ''
-interval: 67
-last-review: '2026-09-02'
+interval: 296
+last-review: '2026-11-11'
 mastery: perfect
 meaning: 把…归因于， 把…归属于 (vt.)
 phonetic: /ə'skraɪb/
-reviews: 3
+reviews: 4
 tags:
 - 英语
 - CET6

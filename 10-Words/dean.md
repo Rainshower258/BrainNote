@@ -1,14 +1,14 @@
 ---
 answer: 教长， 主任牧师
-due: '2026-07-02'
-ease: 2.5
+due: '2026-11-09'
+ease: 2.65
 example: ''
-interval: 1
-last-review: ''
-mastery: new
+interval: 4
+last-review: '2026-11-05'
+mastery: perfect
 meaning: 教长， 主任牧师； 学院院长， 系主任， 训导主任 (n.)
 phonetic: /din/
-reviews: 0
+reviews: 1
 tags:
 - 英语
 - CET6
