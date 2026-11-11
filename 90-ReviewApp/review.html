@@ -225,6 +225,10 @@
     padding: 1px 6px;
     font-size: 11px;
   }
+  .audio-tools { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin: 12px 0; }
+  .audio-tools button { border: 1px solid #d8ccb6; border-radius: 8px; background: #fffaf0; color: var(--ink); padding: 7px 12px; cursor: pointer; }
+  .audio-tools button:disabled { opacity: .5; cursor: default; }
+  .audio-status { font-size: 12px; color: var(--ink-soft); }
 </style>
 </head>
 <body>
@@ -239,6 +243,13 @@
 
   <div class="restore-note" id="restoreNote" hidden></div>
 
+  <div class="audio-tools" role="group" aria-label="单词读音">
+    <button type="button" id="audioToggle" aria-pressed="false">开启读音</button>
+    <button type="button" id="audioReplay" disabled>重播</button>
+    <span class="audio-status" id="audioStatus" role="status">本次打开默认静音</span>
+  </div>
+  <audio id="wordAudio" preload="none"></audio>
+
   <div id="cardArea"></div>
 
   <div class="footer-note" id="footerNote"></div>
@@ -246,13 +257,114 @@
 
 <script>
 // ============ 当日词表数据（构建时注入） ============
-const WORDS = [{"id": "cycle", "path": "10-Words/cycle.md", "word": "cycle", "phonetic": "/'saɪkl/", "meaning": "自行车、 摩托车； 循环 (n&v.)", "shortMeaning": "自行车、 摩托车", "example": "", "tip": "", "mastery": "perfect", "due": "2026-11-08", "interval": 4.0, "ease": 2.65, "reviews": 1, "isReview": true}, {"id": "authorize", "path": "10-Words/authorize.md", "word": "authorize", "phonetic": "/'ɔθəraɪz/", "meaning": "授权， 批准 (vt.)", "shortMeaning": "授权， 批准", "example": "", "tip": "", "mastery": "perfect", "due": "2026-11-09", "interval": 67.0, "ease": 2.95, "reviews": 3, "isReview": true}, {"id": "deficiency", "path": "10-Words/deficiency.md", "word": "deficiency", "phonetic": "/dɪ'fɪʃənsi/", "meaning": "缺乏， 不足； 缺点， 缺陷 (n.)", "shortMeaning": "缺乏， 不足", "example": "", "tip": "", "mastery": "easy", "due": "2026-11-08", "interval": 3.0, "ease": 2.6, "reviews": 1, "isReview": true}, {"id": "authority", "path": "10-Words/authority.md", "word": "authority", "phonetic": "/ə'θɔrəti/", "meaning": "官方； 权力； 当权者， 行政管理机构； 权威， 专家 (n.)", "shortMeaning": "官方", "example": "", "tip": "", "mastery": "perfect", "due": "2026-11-09", "interval": 67.0, "ease": 2.95, "reviews": 3, "isReview": true}, {"id": "bruise", "path": "10-Words/bruise.md", "word": "bruise", "phonetic": "/bruz/", "meaning": "青肿，挫伤；伤痕，擦痕 (n.) / 打青， 使受淤伤； 挫伤， 伤害 (vt.)", "shortMeaning": "青肿，挫伤", "example": "", "tip": "", "mastery": "perfect", "due": "2026-11-09", "interval": 58.0, "ease": 2.9, "reviews": 3, "isReview": true}, {"id": "author", "path": "10-Words/author.md", "word": "author", "phonetic": "/'ɔθɚ/", "meaning": "著作家， 作者 (n.)", "shortMeaning": "著作家， 作者", "example": "", "tip": "", "mastery": "perfect", "due": "2026-11-09", "interval": 67.0, "ease": 2.95, "reviews": 3, "isReview": true}, {"id": "cynical", "path": "10-Words/cynical.md", "word": "cynical", "phonetic": "/'sɪnɪkl/", "meaning": "愤世嫉俗的， 怀疑的 (adj.)", "shortMeaning": "愤世嫉俗的， 怀疑的", "example": "", "tip": "", "mastery": "perfect", "due": "2026-11-08", "interval": 4.0, "ease": 2.65, "reviews": 1, "isReview": true}, {"id": "cute", "path": "10-Words/cute.md", "word": "cute", "phonetic": "/kjʊt/", "meaning": "漂亮的， 娇小可爱的； 聪明伶俐的， 精明的 (adj.)", "shortMeaning": "漂亮的， 娇小可爱的", "example": "", "tip": "", "mastery": "perfect", "due": "2026-11-08", "interval": 4.0, "ease": 2.65, "reviews": 1, "isReview": true}, {"id": "cylinder", "path": "10-Words/cylinder.md", "word": "cylinder", "phonetic": "/'sɪlɪndɚ/", "meaning": "圆柱体， 圆筒； 气缸， 泵体 (n.)", "shortMeaning": "圆柱体， 圆筒", "example": "", "tip": "", "mastery": "perfect", "due": "2026-11-08", "interval": 4.0, "ease": 2.65, "reviews": 1, "isReview": true}, {"id": "deferential", "path": "10-Words/deferential.md", "word": "deferential", "phonetic": "/ˌdefə'rɛnʃl/", "meaning": "恭敬的， 恭顺的 (adj.)", "shortMeaning": "恭敬的， 恭顺的", "example": "", "tip": "", "mastery": "easy", "due": "2026-11-08", "interval": 3.0, "ease": 2.6, "reviews": 1, "isReview": true}, {"id": "attain", "path": "10-Words/attain.md", "word": "attain", "phonetic": "/ə'ten/", "meaning": "达到， 获得； 完成 (vt.)", "shortMeaning": "达到， 获得", "example": "", "tip": "", "mastery": "perfect", "due": "2026-11-09", "interval": 67.0, "ease": 2.95, "reviews": 3, "isReview": true}, {"id": "dazzle", "path": "10-Words/dazzle.md", "word": "dazzle", "phonetic": "/'dæzl/", "meaning": "使眩目，耀；使赞叹不已；使倾倒 (vt.) / 耀眼的光； 令人赞叹的东西 (n.)", "shortMeaning": "使眩目，耀", "example": "", "tip": "", "mastery": "perfect", "due": "2026-11-08", "interval": 4.0, "ease": 2.65, "reviews": 1, "isReview": true}, {"id": "deadline", "path": "10-Words/deadline.md", "word": "deadline", "phonetic": "/ˈdedlaɪn/", "meaning": "最后期限 (n.)", "shortMeaning": "最后期限", "example": "", "tip": "", "mastery": "perfect", "due": "2026-11-08", "interval": 4.0, "ease": 2.65, "reviews": 1, "isReview": true}, {"id": "automatic", "path": "10-Words/automatic.md", "word": "automatic", "phonetic": "/'ɔtə'mætɪk/", "meaning": "自动的； 必然发生的； 无意识的 (adj.) / 自动机械 (n.)", "shortMeaning": "自动的", "example": "", "tip": "", "mastery": "perfect", "due": "2026-11-09", "interval": 67.0, "ease": 2.95, "reviews": 3, "isReview": true}, {"id": "dart", "path": "10-Words/dart.md", "word": "dart", "phonetic": "/dɑrt/", "meaning": "猛冲，飞奔 (vi.) / 投射 (vt.) / 飞镖， 飞镖游戏； 急驰， 飞奔 (n.)", "shortMeaning": "猛冲，飞奔", "example": "", "tip": "", "mastery": "perfect", "due": "2026-11-08", "interval": 4.0, "ease": 2.65, "reviews": 1, "isReview": true}, {"id": "attendant", "path": "10-Words/attendant.md", "word": "attendant", "phonetic": "/ə'tɛndənt/", "meaning": "伴随的， 随之产生的 (adj.) / 服务人员，侍者，随从 (n.)", "shortMeaning": "伴随的， 随之产生的", "example": "", "tip": "", "mastery": "perfect", "due": "2026-11-09", "interval": 67.0, "ease": 2.95, "reviews": 3, "isReview": true}, {"id": "attract", "path": "10-Words/attract.md", "word": "attract", "phonetic": "/ə'trækt/", "meaning": "吸引， 引起…注意 (vt.)", "shortMeaning": "吸引， 引起…注意", "example": "", "tip": "", "mastery": "perfect", "due": "2026-11-09", "interval": 67.0, "ease": 2.95, "reviews": 3, "isReview": true}, {"id": "deem", "path": "10-Words/deem.md", "word": "deem", "phonetic": "/dim/", "meaning": "认为， 视为 (vt.)", "shortMeaning": "认为， 视为", "example": "", "tip": "", "mastery": "easy", "due": "2026-11-08", "interval": 3.0, "ease": 2.6, "reviews": 1, "isReview": true}, {"id": "deceive", "path": "10-Words/deceive.md", "word": "deceive", "phonetic": "/dɪ'siv/", "meaning": "行骗 (vi.) / 欺骗，蒙蔽 (vt.)", "shortMeaning": "行骗", "example": "", "tip": "", "mastery": "easy", "due": "2026-11-08", "interval": 3.0, "ease": 2.6, "reviews": 1, "isReview": true}, {"id": "customary", "path": "10-Words/customary.md", "word": "customary", "phonetic": "/'kʌstə'mɛri/", "meaning": "习惯上的， 惯常的， 合乎习俗的 (adj.)", "shortMeaning": "习惯上的， 惯常的， 合乎习俗的", "example": "", "tip": "", "mastery": "perfect", "due": "2026-11-08", "interval": 4.0, "ease": 2.65, "reviews": 1, "isReview": true}, {"id": "database", "path": "10-Words/database.md", "word": "database", "phonetic": "/'detəbes/", "meaning": "数据库 (n.)", "shortMeaning": "数据库", "example": "", "tip": "", "mastery": "perfect", "due": "2026-11-08", "interval": 4.0, "ease": 2.65, "reviews": 1, "isReview": true}, {"id": "attitude", "path": "10-Words/attitude.md", "word": "attitude", "phonetic": "/'ætɪtʊd/", "meaning": "态度， 看法； 姿势 (n.)", "shortMeaning": "态度， 看法", "example": "", "tip": "", "mastery": "perfect", "due": "2026-11-09", "interval": 67.0, "ease": 2.95, "reviews": 3, "isReview": true}, {"id": "brace", "path": "10-Words/brace.md", "word": "brace", "phonetic": "/bres/", "meaning": "做好准备；振作精神 (vi.) / 使防备，使受锻炼；支住，撑牢，使绷紧 (vt.) / 支架， 托架 (n.)", "shortMeaning": "做好准备", "example": "", "tip": "", "mastery": "easy", "due": "2026-11-09", "interval": 58.0, "ease": 2.9, "reviews": 3, "isReview": true}, {"id": "attractive", "path": "10-Words/attractive.md", "word": "attractive", "phonetic": "/ə'træktɪv/", "meaning": "有吸引力的， 引起注意的 (adj.)", "shortMeaning": "有吸引力的， 引起注意的", "example": "", "tip": "", "mastery": "perfect", "due": "2026-11-09", "interval": 67.0, "ease": 2.95, "reviews": 3, "isReview": true}, {"id": "authentic", "path": "10-Words/authentic.md", "word": "authentic", "phonetic": "/ɔ'θɛntɪk/", "meaning": "真的， 真正的； 可靠的， 可信的 (adj.)", "shortMeaning": "真的， 真正的", "example": "", "tip": "", "mastery": "perfect", "due": "2026-11-09", "interval": 67.0, "ease": 2.95, "reviews": 3, "isReview": true}, {"id": "decisive", "path": "10-Words/decisive.md", "word": "decisive", "phonetic": "/dɪ'saɪsɪv/", "meaning": "决定性的； 坚定的， 果断的， 决断的 (adj.)", "shortMeaning": "决定性的", "example": "", "tip": "", "mastery": "easy", "due": "2026-11-08", "interval": 3.0, "ease": 2.6, "reviews": 1, "isReview": true}, {"id": "autonomy", "path": "10-Words/autonomy.md", "word": "autonomy", "phonetic": "/ɔ'tɑnəmi/", "meaning": "自治， 自治权； 人身自由， 自主权 (n.)", "shortMeaning": "自治， 自治权", "example": "", "tip": "", "mastery": "perfect", "due": "2026-11-09", "interval": 67.0, "ease": 2.95, "reviews": 3, "isReview": true}, {"id": "definitely", "path": "10-Words/definitely.md", "word": "definitely", "phonetic": "/'dɛfɪnətli/", "meaning": "一定地， 明确地 (adv.)", "shortMeaning": "一定地， 明确地", "example": "", "tip": "", "mastery": "good", "due": "2026-11-08", "interval": 2.0, "ease": 2.5, "reviews": 1, "isReview": true}, {"id": "attack", "path": "10-Words/attack.md", "word": "attack", "phonetic": "/ə'tæk/", "meaning": "攻击， 进攻； 突然发作 (n&vt.)", "shortMeaning": "攻击， 进攻", "example": "", "tip": "", "mastery": "perfect", "due": "2026-11-09", "interval": 67.0, "ease": 2.95, "reviews": 3, "isReview": true}, {"id": "decency", "path": "10-Words/decency.md", "word": "decency", "phonetic": "/'disnsi/", "meaning": "得体；宽容，大方；正派，合乎礼仪，体面； (n.)", "shortMeaning": "得体", "example": "", "tip": "", "mastery": "easy", "due": "2026-11-08", "interval": 3.0, "ease": 2.6, "reviews": 1, "isReview": true}];
+const WORDS = [{"id": "deferential", "path": "10-Words/deferential.md", "word": "deferential", "phonetic": "/ˌdefə'rɛnʃl/", "meaning": "恭敬的， 恭顺的 (adj.)", "shortMeaning": "恭敬的， 恭顺的", "example": "", "tip": "", "mastery": "easy", "due": "2026-11-08", "interval": 3.0, "ease": 2.6, "reviews": 1, "isReview": true}, {"id": "author", "path": "10-Words/author.md", "word": "author", "phonetic": "/'ɔθɚ/", "meaning": "著作家， 作者 (n.)", "shortMeaning": "著作家， 作者", "example": "", "tip": "", "mastery": "perfect", "due": "2026-11-09", "interval": 67.0, "ease": 2.95, "reviews": 3, "isReview": true}, {"id": "cynical", "path": "10-Words/cynical.md", "word": "cynical", "phonetic": "/'sɪnɪkl/", "meaning": "愤世嫉俗的， 怀疑的 (adj.)", "shortMeaning": "愤世嫉俗的， 怀疑的", "example": "", "tip": "", "mastery": "perfect", "due": "2026-11-08", "interval": 4.0, "ease": 2.65, "reviews": 1, "isReview": true}, {"id": "decency", "path": "10-Words/decency.md", "word": "decency", "phonetic": "/'disnsi/", "meaning": "得体；宽容，大方；正派，合乎礼仪，体面； (n.)", "shortMeaning": "得体", "example": "", "tip": "", "mastery": "easy", "due": "2026-11-08", "interval": 3.0, "ease": 2.6, "reviews": 1, "isReview": true}, {"id": "automatic", "path": "10-Words/automatic.md", "word": "automatic", "phonetic": "/'ɔtə'mætɪk/", "meaning": "自动的； 必然发生的； 无意识的 (adj.) / 自动机械 (n.)", "shortMeaning": "自动的", "example": "", "tip": "", "mastery": "perfect", "due": "2026-11-09", "interval": 67.0, "ease": 2.95, "reviews": 3, "isReview": true}, {"id": "deem", "path": "10-Words/deem.md", "word": "deem", "phonetic": "/dim/", "meaning": "认为， 视为 (vt.)", "shortMeaning": "认为， 视为", "example": "", "tip": "", "mastery": "easy", "due": "2026-11-08", "interval": 3.0, "ease": 2.6, "reviews": 1, "isReview": true}, {"id": "cylinder", "path": "10-Words/cylinder.md", "word": "cylinder", "phonetic": "/'sɪlɪndɚ/", "meaning": "圆柱体， 圆筒； 气缸， 泵体 (n.)", "shortMeaning": "圆柱体， 圆筒", "example": "", "tip": "", "mastery": "perfect", "due": "2026-11-08", "interval": 4.0, "ease": 2.65, "reviews": 1, "isReview": true}, {"id": "authentic", "path": "10-Words/authentic.md", "word": "authentic", "phonetic": "/ɔ'θɛntɪk/", "meaning": "真的， 真正的； 可靠的， 可信的 (adj.)", "shortMeaning": "真的， 真正的", "example": "", "tip": "", "mastery": "perfect", "due": "2026-11-09", "interval": 67.0, "ease": 2.95, "reviews": 3, "isReview": true}, {"id": "authority", "path": "10-Words/authority.md", "word": "authority", "phonetic": "/ə'θɔrəti/", "meaning": "官方； 权力； 当权者， 行政管理机构； 权威， 专家 (n.)", "shortMeaning": "官方", "example": "", "tip": "", "mastery": "perfect", "due": "2026-11-09", "interval": 67.0, "ease": 2.95, "reviews": 3, "isReview": true}, {"id": "cycle", "path": "10-Words/cycle.md", "word": "cycle", "phonetic": "/'saɪkl/", "meaning": "自行车、 摩托车； 循环 (n&v.)", "shortMeaning": "自行车、 摩托车", "example": "", "tip": "", "mastery": "perfect", "due": "2026-11-08", "interval": 4.0, "ease": 2.65, "reviews": 1, "isReview": true}, {"id": "attain", "path": "10-Words/attain.md", "word": "attain", "phonetic": "/ə'ten/", "meaning": "达到， 获得； 完成 (vt.)", "shortMeaning": "达到， 获得", "example": "", "tip": "", "mastery": "perfect", "due": "2026-11-09", "interval": 67.0, "ease": 2.95, "reviews": 3, "isReview": true}, {"id": "cute", "path": "10-Words/cute.md", "word": "cute", "phonetic": "/kjʊt/", "meaning": "漂亮的， 娇小可爱的； 聪明伶俐的， 精明的 (adj.)", "shortMeaning": "漂亮的， 娇小可爱的", "example": "", "tip": "", "mastery": "perfect", "due": "2026-11-08", "interval": 4.0, "ease": 2.65, "reviews": 1, "isReview": true}, {"id": "decisive", "path": "10-Words/decisive.md", "word": "decisive", "phonetic": "/dɪ'saɪsɪv/", "meaning": "决定性的； 坚定的， 果断的， 决断的 (adj.)", "shortMeaning": "决定性的", "example": "", "tip": "", "mastery": "easy", "due": "2026-11-08", "interval": 3.0, "ease": 2.6, "reviews": 1, "isReview": true}, {"id": "deadline", "path": "10-Words/deadline.md", "word": "deadline", "phonetic": "/ˈdedlaɪn/", "meaning": "最后期限 (n.)", "shortMeaning": "最后期限", "example": "", "tip": "", "mastery": "perfect", "due": "2026-11-08", "interval": 4.0, "ease": 2.65, "reviews": 1, "isReview": true}, {"id": "dart", "path": "10-Words/dart.md", "word": "dart", "phonetic": "/dɑrt/", "meaning": "猛冲，飞奔 (vi.) / 投射 (vt.) / 飞镖， 飞镖游戏； 急驰， 飞奔 (n.)", "shortMeaning": "猛冲，飞奔", "example": "", "tip": "", "mastery": "perfect", "due": "2026-11-08", "interval": 4.0, "ease": 2.65, "reviews": 1, "isReview": true}, {"id": "brace", "path": "10-Words/brace.md", "word": "brace", "phonetic": "/bres/", "meaning": "做好准备；振作精神 (vi.) / 使防备，使受锻炼；支住，撑牢，使绷紧 (vt.) / 支架， 托架 (n.)", "shortMeaning": "做好准备", "example": "", "tip": "", "mastery": "easy", "due": "2026-11-09", "interval": 58.0, "ease": 2.9, "reviews": 3, "isReview": true}, {"id": "authorize", "path": "10-Words/authorize.md", "word": "authorize", "phonetic": "/'ɔθəraɪz/", "meaning": "授权， 批准 (vt.)", "shortMeaning": "授权， 批准", "example": "", "tip": "", "mastery": "perfect", "due": "2026-11-09", "interval": 67.0, "ease": 2.95, "reviews": 3, "isReview": true}, {"id": "bruise", "path": "10-Words/bruise.md", "word": "bruise", "phonetic": "/bruz/", "meaning": "青肿，挫伤；伤痕，擦痕 (n.) / 打青， 使受淤伤； 挫伤， 伤害 (vt.)", "shortMeaning": "青肿，挫伤", "example": "", "tip": "", "mastery": "perfect", "due": "2026-11-09", "interval": 58.0, "ease": 2.9, "reviews": 3, "isReview": true}, {"id": "customary", "path": "10-Words/customary.md", "word": "customary", "phonetic": "/'kʌstə'mɛri/", "meaning": "习惯上的， 惯常的， 合乎习俗的 (adj.)", "shortMeaning": "习惯上的， 惯常的， 合乎习俗的", "example": "", "tip": "", "mastery": "perfect", "due": "2026-11-08", "interval": 4.0, "ease": 2.65, "reviews": 1, "isReview": true}, {"id": "attendant", "path": "10-Words/attendant.md", "word": "attendant", "phonetic": "/ə'tɛndənt/", "meaning": "伴随的， 随之产生的 (adj.) / 服务人员，侍者，随从 (n.)", "shortMeaning": "伴随的， 随之产生的", "example": "", "tip": "", "mastery": "perfect", "due": "2026-11-09", "interval": 67.0, "ease": 2.95, "reviews": 3, "isReview": true}, {"id": "attract", "path": "10-Words/attract.md", "word": "attract", "phonetic": "/ə'trækt/", "meaning": "吸引， 引起…注意 (vt.)", "shortMeaning": "吸引， 引起…注意", "example": "", "tip": "", "mastery": "perfect", "due": "2026-11-09", "interval": 67.0, "ease": 2.95, "reviews": 3, "isReview": true}, {"id": "deceive", "path": "10-Words/deceive.md", "word": "deceive", "phonetic": "/dɪ'siv/", "meaning": "行骗 (vi.) / 欺骗，蒙蔽 (vt.)", "shortMeaning": "行骗", "example": "", "tip": "", "mastery": "easy", "due": "2026-11-08", "interval": 3.0, "ease": 2.6, "reviews": 1, "isReview": true}, {"id": "attractive", "path": "10-Words/attractive.md", "word": "attractive", "phonetic": "/ə'træktɪv/", "meaning": "有吸引力的， 引起注意的 (adj.)", "shortMeaning": "有吸引力的， 引起注意的", "example": "", "tip": "", "mastery": "perfect", "due": "2026-11-09", "interval": 67.0, "ease": 2.95, "reviews": 3, "isReview": true}, {"id": "definitely", "path": "10-Words/definitely.md", "word": "definitely", "phonetic": "/'dɛfɪnətli/", "meaning": "一定地， 明确地 (adv.)", "shortMeaning": "一定地， 明确地", "example": "", "tip": "", "mastery": "good", "due": "2026-11-08", "interval": 2.0, "ease": 2.5, "reviews": 1, "isReview": true}, {"id": "attack", "path": "10-Words/attack.md", "word": "attack", "phonetic": "/ə'tæk/", "meaning": "攻击， 进攻； 突然发作 (n&vt.)", "shortMeaning": "攻击， 进攻", "example": "", "tip": "", "mastery": "perfect", "due": "2026-11-09", "interval": 67.0, "ease": 2.95, "reviews": 3, "isReview": true}, {"id": "deficiency", "path": "10-Words/deficiency.md", "word": "deficiency", "phonetic": "/dɪ'fɪʃənsi/", "meaning": "缺乏， 不足； 缺点， 缺陷 (n.)", "shortMeaning": "缺乏， 不足", "example": "", "tip": "", "mastery": "easy", "due": "2026-11-08", "interval": 3.0, "ease": 2.6, "reviews": 1, "isReview": true}, {"id": "autonomy", "path": "10-Words/autonomy.md", "word": "autonomy", "phonetic": "/ɔ'tɑnəmi/", "meaning": "自治， 自治权； 人身自由， 自主权 (n.)", "shortMeaning": "自治， 自治权", "example": "", "tip": "", "mastery": "perfect", "due": "2026-11-09", "interval": 67.0, "ease": 2.95, "reviews": 3, "isReview": true}, {"id": "dazzle", "path": "10-Words/dazzle.md", "word": "dazzle", "phonetic": "/'dæzl/", "meaning": "使眩目，耀；使赞叹不已；使倾倒 (vt.) / 耀眼的光； 令人赞叹的东西 (n.)", "shortMeaning": "使眩目，耀", "example": "", "tip": "", "mastery": "perfect", "due": "2026-11-08", "interval": 4.0, "ease": 2.65, "reviews": 1, "isReview": true}, {"id": "database", "path": "10-Words/database.md", "word": "database", "phonetic": "/'detəbes/", "meaning": "数据库 (n.)", "shortMeaning": "数据库", "example": "", "tip": "", "mastery": "perfect", "due": "2026-11-08", "interval": 4.0, "ease": 2.65, "reviews": 1, "isReview": true}, {"id": "attitude", "path": "10-Words/attitude.md", "word": "attitude", "phonetic": "/'ætɪtʊd/", "meaning": "态度， 看法； 姿势 (n.)", "shortMeaning": "态度， 看法", "example": "", "tip": "", "mastery": "perfect", "due": "2026-11-09", "interval": 67.0, "ease": 2.95, "reviews": 3, "isReview": true}];
 
 // ============ 挖空造句数据（构建时注入；key = word） ============
 // 每个词: {sentence_en, sentence_zh}；缺失的词在浏览器端静默跳过挖空题
-const CLOZE = {"cycle": {"sentence_en": "Many students choose to cycle to school instead of taking the bus.", "sentence_zh": "许多学生选择骑自行车上学，而不是乘坐公交车。", "source": "deepseek"}, "authorize": {"sentence_en": "You must authorize this transaction before it can proceed.", "sentence_zh": "你必须先授权这笔交易，它才能继续进行。"}, "deficiency": {"sentence_en": "The doctor said that a deficiency of vitamin D can lead to weak bones.", "sentence_zh": "医生说缺乏维生素D会导致骨骼脆弱。", "source": "deepseek"}, "authority": {"sentence_en": "Every citizen must always respect the authority of the law.", "sentence_zh": "每个公民必须始终尊重法律的权威。"}, "bruise": {"sentence_en": "A fall from the bicycle can bruise your arm and leave a dark mark on the skin.", "sentence_zh": "从自行车上摔下来可能会使你的手臂青肿，并在皮肤上留下深色痕迹。"}, "author": {"sentence_en": "The author must sign the contract before the book is published.", "sentence_zh": "作者必须在书出版前签署合同。"}, "cynical": {"sentence_en": "It is easy to become cynical when you see the same problems repeated every day.", "sentence_zh": "当你看到同样的问题每天重复出现时，很容易变得愤世嫉俗。", "source": "deepseek"}, "cute": {"sentence_en": "The little girl looks very cute in her new dress, and everyone likes her.", "sentence_zh": "这个小女孩穿着新裙子看起来非常可爱，大家都很喜欢她。", "source": "deepseek"}, "cylinder": {"sentence_en": "The water tank is shaped like a cylinder and can hold up to 200 liters.", "sentence_zh": "这个水箱形状像圆柱体，最多可容纳200升水。", "source": "deepseek"}, "deferential": {"sentence_en": "The young man was always deferential to his grandparents and listened carefully to their advice.", "sentence_zh": "这个年轻人对祖父母总是恭敬有加，并认真听取他们的建议。", "source": "deepseek"}, "attain": {"sentence_en": "To attain success, you must be willing to work hard and persist.", "sentence_zh": "为了获得成功，你必须愿意努力工作并坚持不懈。"}, "dazzle": {"sentence_en": "The bright lights of the city can dazzle visitors at night.", "sentence_zh": "城市里明亮的灯光在夜晚会使游客感到目眩。", "source": "deepseek"}, "deadline": {"sentence_en": "We must finish the report before the deadline, or the teacher will not accept it.", "sentence_zh": "我们必须在最后期限之前完成报告，否则老师不会接受。", "source": "deepseek"}, "automatic": {"sentence_en": "An automatic process is often more reliable than a manual one, and it can save time.", "sentence_zh": "自动过程通常比手动过程更可靠，而且能节省时间。"}, "dart": {"sentence_en": "The frightened deer began to dart across the road and disappeared into the forest.", "sentence_zh": "受惊的鹿开始飞奔穿过马路，消失在森林中。", "source": "deepseek"}, "attendant": {"sentence_en": "We cannot ignore the attendant social problems caused by rapid urbanization.", "sentence_zh": "我们不能忽视快速城市化所带来的一系列社会问题。"}, "attract": {"sentence_en": "To attract more customers, the shop must offer better service.", "sentence_zh": "为了吸引更多顾客，这家商店必须提供更好的服务。"}, "deem": {"sentence_en": "Many experts deem this new policy necessary for the country's long-term development.", "sentence_zh": "许多专家认为这项新政策对国家的长期发展是必要的。", "source": "deepseek"}, "deceive": {"sentence_en": "It is not right to deceive your friends just to get what you want.", "sentence_zh": "为了得到你想要的东西而欺骗朋友是不对的。", "source": "deepseek"}, "customary": {"sentence_en": "It is customary to give a small gift when you visit a friend's home.", "sentence_zh": "拜访朋友家时送一份小礼物是合乎习俗的。", "source": "deepseek"}, "database": {"sentence_en": "The company stores all customer information in a secure database.", "sentence_zh": "公司将所有客户信息存储在一个安全的数据库中。", "source": "deepseek"}, "attitude": {"sentence_en": "A positive attitude can help you overcome many difficulties in life.", "sentence_zh": "积极的态度能帮助你克服生活中的许多困难。"}, "brace": {"sentence_en": "We must brace ourselves for the economic downturn that may come next year.", "sentence_zh": "我们必须为明年可能到来的经济衰退做好准备。"}, "attractive": {"sentence_en": "The attractive design of the new smartphone caught my attention immediately.", "sentence_zh": "新款智能手机的吸引人的设计立刻引起了我的注意。"}, "authentic": {"sentence_en": "We should always seek authentic information in the digital age.", "sentence_zh": "在数字时代，我们应该始终寻找真实的信息。"}, "decisive": {"sentence_en": "Her decisive action during the crisis saved the whole team from serious danger.", "sentence_zh": "她在危机中果断的行动使整个团队免于严重危险。", "source": "deepseek"}, "autonomy": {"sentence_en": "The new law grants the region greater autonomy in managing its own affairs.", "sentence_zh": "新法律赋予该地区更大的自治权来管理自己的事务。"}, "definitely": {"sentence_en": "If you keep practicing every day, you will definitely make great progress in your spoken English.", "sentence_zh": "如果你每天坚持练习，你的英语口语一定会取得很大进步。", "source": "deepseek"}, "attack": {"sentence_en": "The strategy to attack the enemy's weakest point requires careful planning.", "sentence_zh": "攻击敌人最弱点的策略需要仔细规划。"}, "decency": {"sentence_en": "He had the decency to admit his mistake and apologize to the whole team.", "sentence_zh": "他很有风度地承认了错误，并向整个团队道歉。", "source": "deepseek"}};
+const CLOZE = {"deferential": {"sentence_en": "The young man was always deferential to his grandparents and listened carefully to their advice.", "sentence_zh": "这个年轻人对祖父母总是恭敬有加，并认真听取他们的建议。", "source": "deepseek"}, "author": {"sentence_en": "The author must sign the contract before the book is published.", "sentence_zh": "作者必须在书出版前签署合同。"}, "cynical": {"sentence_en": "It is easy to become cynical when you see the same problems repeated every day.", "sentence_zh": "当你看到同样的问题每天重复出现时，很容易变得愤世嫉俗。", "source": "deepseek"}, "decency": {"sentence_en": "He had the decency to admit his mistake and apologize to the whole team.", "sentence_zh": "他很有风度地承认了错误，并向整个团队道歉。", "source": "deepseek"}, "automatic": {"sentence_en": "An automatic process is often more reliable than a manual one, and it can save time.", "sentence_zh": "自动过程通常比手动过程更可靠，而且能节省时间。"}, "deem": {"sentence_en": "Many experts deem this new policy necessary for the country's long-term development.", "sentence_zh": "许多专家认为这项新政策对国家的长期发展是必要的。", "source": "deepseek"}, "cylinder": {"sentence_en": "The water tank is shaped like a cylinder and can hold up to 200 liters.", "sentence_zh": "这个水箱形状像圆柱体，最多可容纳200升水。", "source": "deepseek"}, "authentic": {"sentence_en": "We should always seek authentic information in the digital age.", "sentence_zh": "在数字时代，我们应该始终寻找真实的信息。"}, "authority": {"sentence_en": "Every citizen must always respect the authority of the law.", "sentence_zh": "每个公民必须始终尊重法律的权威。"}, "cycle": {"sentence_en": "Many students choose to cycle to school instead of taking the bus.", "sentence_zh": "许多学生选择骑自行车上学，而不是乘坐公交车。", "source": "deepseek"}, "attain": {"sentence_en": "To attain success, you must be willing to work hard and persist.", "sentence_zh": "为了获得成功，你必须愿意努力工作并坚持不懈。"}, "cute": {"sentence_en": "The little girl looks very cute in her new dress, and everyone likes her.", "sentence_zh": "这个小女孩穿着新裙子看起来非常可爱，大家都很喜欢她。", "source": "deepseek"}, "decisive": {"sentence_en": "Her decisive action during the crisis saved the whole team from serious danger.", "sentence_zh": "她在危机中果断的行动使整个团队免于严重危险。", "source": "deepseek"}, "deadline": {"sentence_en": "We must finish the report before the deadline, or the teacher will not accept it.", "sentence_zh": "我们必须在最后期限之前完成报告，否则老师不会接受。", "source": "deepseek"}, "dart": {"sentence_en": "The frightened deer began to dart across the road and disappeared into the forest.", "sentence_zh": "受惊的鹿开始飞奔穿过马路，消失在森林中。", "source": "deepseek"}, "brace": {"sentence_en": "We must brace ourselves for the economic downturn that may come next year.", "sentence_zh": "我们必须为明年可能到来的经济衰退做好准备。"}, "authorize": {"sentence_en": "You must authorize this transaction before it can proceed.", "sentence_zh": "你必须先授权这笔交易，它才能继续进行。"}, "bruise": {"sentence_en": "A fall from the bicycle can bruise your arm and leave a dark mark on the skin.", "sentence_zh": "从自行车上摔下来可能会使你的手臂青肿，并在皮肤上留下深色痕迹。"}, "customary": {"sentence_en": "It is customary to give a small gift when you visit a friend's home.", "sentence_zh": "拜访朋友家时送一份小礼物是合乎习俗的。", "source": "deepseek"}, "attendant": {"sentence_en": "We cannot ignore the attendant social problems caused by rapid urbanization.", "sentence_zh": "我们不能忽视快速城市化所带来的一系列社会问题。"}, "attract": {"sentence_en": "To attract more customers, the shop must offer better service.", "sentence_zh": "为了吸引更多顾客，这家商店必须提供更好的服务。"}, "deceive": {"sentence_en": "It is not right to deceive your friends just to get what you want.", "sentence_zh": "为了得到你想要的东西而欺骗朋友是不对的。", "source": "deepseek"}, "attractive": {"sentence_en": "The attractive design of the new smartphone caught my attention immediately.", "sentence_zh": "新款智能手机的吸引人的设计立刻引起了我的注意。"}, "definitely": {"sentence_en": "If you keep practicing every day, you will definitely make great progress in your spoken English.", "sentence_zh": "如果你每天坚持练习，你的英语口语一定会取得很大进步。", "source": "deepseek"}, "attack": {"sentence_en": "The strategy to attack the enemy's weakest point requires careful planning.", "sentence_zh": "攻击敌人最弱点的策略需要仔细规划。"}, "deficiency": {"sentence_en": "The doctor said that a deficiency of vitamin D can lead to weak bones.", "sentence_zh": "医生说缺乏维生素D会导致骨骼脆弱。", "source": "deepseek"}, "autonomy": {"sentence_en": "The new law grants the region greater autonomy in managing its own affairs.", "sentence_zh": "新法律赋予该地区更大的自治权来管理自己的事务。"}, "dazzle": {"sentence_en": "The bright lights of the city can dazzle visitors at night.", "sentence_zh": "城市里明亮的灯光在夜晚会使游客感到目眩。", "source": "deepseek"}, "database": {"sentence_en": "The company stores all customer information in a secure database.", "sentence_zh": "公司将所有客户信息存储在一个安全的数据库中。", "source": "deepseek"}, "attitude": {"sentence_en": "A positive attitude can help you overcome many difficulties in life.", "sentence_zh": "积极的态度能帮助你克服生活中的许多困难。"}};
 // 从未错过的新词触发挖空题的概率（0~1）
 const CLOZE_PROB_NEW = 0.15;
+// 本机 MP3 路径；四张卡共用同一文件，不包含音频数据或 API 凭据。
+const WORD_AUDIO = {"deferential": {"src": ".audio_cache/9edc453aa4d036f053d61b4c.mp3", "source": "cambridge", "ipa": "ˌdef.əˈren.ʃə"}, "author": {"src": ".audio_cache/4223c850541af698ba8c5262.mp3", "source": "cambridge", "ipa": "ˈɔː.θər"}, "cynical": {"src": ".audio_cache/315d10b091a9f0f40e0d8729.mp3", "source": "cambridge", "ipa": "ˈsɪn.ɪ.kə"}, "decency": {"src": ".audio_cache/5b20ce4654422c6879df2629.mp3", "source": "cambridge", "ipa": "ˈdiː.sə"}, "automatic": {"src": ".audio_cache/2ca7f1bac5b02e3e36adc63e.mp3", "source": "cambridge", "ipa": "ˌɔː.təˈmæt.ɪk"}, "deem": {"src": ".audio_cache/73ee5cb0aa190cce429324c5.mp3", "source": "cambridge", "ipa": "diːm"}, "cylinder": {"src": ".audio_cache/86840e86a0abe4ddeeec994f.mp3", "source": "cambridge", "ipa": "ˈsɪl.ɪn.dər"}, "authentic": {"src": ".audio_cache/015b8550aa1e71e32a7c061a.mp3", "source": "cambridge", "ipa": "ɔːˈθen.tɪk"}, "authority": {"src": ".audio_cache/42cf23ae777be26bdfba40eb.mp3", "source": "cambridge", "ipa": "ɔːˈθɒr.ə.ti"}, "cycle": {"src": ".audio_cache/50f309fc0086dc241756034c.mp3", "source": "cambridge", "ipa": "ˈsaɪ.kə"}, "attain": {"src": ".audio_cache/aa9b280c36c01327da1355c7.mp3", "source": "cambridge", "ipa": "əˈteɪn"}, "cute": {"src": ".audio_cache/76a9ec9f27ffa32266bdc032.mp3", "source": "cambridge", "ipa": "kjuːt"}, "decisive": {"src": ".audio_cache/4c8ff2d4562ce83f147b3e84.mp3", "source": "cambridge", "ipa": "dɪˈsaɪ.sɪv"}, "deadline": {"src": ".audio_cache/394950fc5a92d5df4e8f524a.mp3", "source": "cambridge", "ipa": "ˈded.laɪn"}, "dart": {"src": ".audio_cache/ea69f35185f1a5190739173d.mp3", "source": "cambridge", "ipa": "dɑːt"}, "brace": {"src": ".audio_cache/64a3212848695ea8afd0c80a.mp3", "source": "cambridge", "ipa": "breɪs"}, "authorize": {"src": ".audio_cache/c417fec349dbf55b81663344.mp3", "source": "cambridge", "ipa": "ˈɔː.θə"}, "bruise": {"src": ".audio_cache/c6a594040366ff12e331785c.mp3", "source": "cambridge", "ipa": "bruːz"}, "customary": {"src": ".audio_cache/1e01d32bfb25f6f542bdbe44.mp3", "source": "cambridge", "ipa": "ˈkʌs.tə.mə"}, "attendant": {"src": ".audio_cache/0d2a3635478443ed2d39ea72.mp3", "source": "cambridge", "ipa": "əˈten.də"}, "attract": {"src": ".audio_cache/83dfaf3afe164f40b1864dc1.mp3", "source": "cambridge", "ipa": "əˈtrækt"}, "deceive": {"src": ".audio_cache/62fb40f32da6e0bb2d3614d2.mp3", "source": "cambridge", "ipa": "dɪˈsiːv"}, "attractive": {"src": ".audio_cache/0607c5aca9f471fe365b925a.mp3", "source": "cambridge", "ipa": "əˈtræk.tɪv"}, "definitely": {"src": ".audio_cache/9ce706311ecfaa1c9ce112c5.mp3", "source": "cambridge", "ipa": "ˈdef.ɪ.nət.li"}, "attack": {"src": ".audio_cache/42d4448e73f75f433b5f0967.mp3", "source": "cambridge", "ipa": "əˈtæk"}, "deficiency": {"src": ".audio_cache/5cf9b26e910b50c758d9941d.mp3", "source": "cambridge", "ipa": "dɪˈfɪʃ.ə"}, "autonomy": {"src": ".audio_cache/acb5cbd3990c7b6335215a89.mp3", "source": "cambridge", "ipa": "ɔːˈtɒn.ə.mi"}, "dazzle": {"src": ".audio_cache/a84951fdea04c53c2573ac62.mp3", "source": "cambridge", "ipa": "ˈdæz.ə"}, "database": {"src": ".audio_cache/79cd3725391798582afeeacd.mp3", "source": "cambridge", "ipa": "ˈdeɪ.tə.beɪs"}, "attitude": {"src": ".audio_cache/baacf9cefac09015875cbed5.mp3", "source": "cambridge", "ipa": "ˈæt.ɪ.tʃuːd"}};
+
+const audioPlayer = document.getElementById('wordAudio');
+const audioToggle = document.getElementById('audioToggle');
+const audioReplay = document.getElementById('audioReplay');
+const audioStatus = document.getElementById('audioStatus');
+let audioEnabled = false;
+let audioCard = null;
+let audioCanReveal = false;
+let audioPlayed = false;
+let audioVisit = 0;
+let finishPlayback = null;
+let answerPlaybackPending = false;
+
+function stopWordAudio() {
+  audioPlayer.pause();
+  audioPlayer.currentTime = 0;
+  if (finishPlayback) finishPlayback();
+}
+
+function updateAudioTools() {
+  const available = audioCard && WORD_AUDIO[audioCard.word.word];
+  audioToggle.textContent = audioEnabled ? '关闭读音' : '开启读音';
+  audioToggle.setAttribute('aria-pressed', String(audioEnabled));
+  audioReplay.disabled = !audioEnabled || !available || !audioCanReveal || answerPlaybackPending;
+  audioStatus.textContent = !audioEnabled ? '本次打开默认静音'
+    : !audioCard ? '当前卡片不播放读音'
+    : !available ? '此词暂无可用读音'
+    : !audioCanReveal ? '提交答案后播放' : '读音已就绪';
+}
+
+function playWordAudio() {
+  if (!audioEnabled || !audioCard || !audioCanReveal) return Promise.resolve();
+  const sound = WORD_AUDIO[audioCard.word.word];
+  if (!sound) return Promise.resolve();
+  stopWordAudio();
+  audioPlayer.src = sound.src;
+  return new Promise(resolve => {
+    const done = () => {
+      clearTimeout(timer);
+      if (finishPlayback === done) {
+        audioPlayer.onended = null;
+        audioPlayer.onerror = null;
+        finishPlayback = null;
+      }
+      resolve();
+    };
+    const timer = setTimeout(() => { audioPlayer.pause(); done(); }, 7000);
+    finishPlayback = done;
+    audioPlayer.onended = done;
+    audioPlayer.onerror = () => { audioStatus.textContent = '读音暂不可用，可继续答题'; done(); };
+    audioPlayer.play().catch(() => {
+      if (finishPlayback === done) audioStatus.textContent = '播放未成功，可点击重播';
+      done();
+    });
+  });
+}
+
+function playCardOnce() {
+  if (audioPlayed || !audioEnabled || !audioCanReveal || document.hidden) return Promise.resolve();
+  audioPlayed = true;
+  return playWordAudio();
+}
+
+function setAudioCard(item, stage) {
+  stopWordAudio();
+  audioVisit++;
+  audioCard = item;
+  answerPlaybackPending = false;
+  audioPlayed = false;
+  audioCanReveal = stage === 'flip' || stage === 'en2cn';
+  updateAudioTools();
+  playCardOnce();
+}
+
+function answerAudioThen(item, delayMs, next) {
+  const visit = audioVisit;
+  audioCanReveal = true;
+  answerPlaybackPending = true;
+  updateAudioTools();
+  const speech = playCardOnce();
+  Promise.all([speech, new Promise(resolve => setTimeout(resolve, delayMs))]).then(() => {
+    if (visit === audioVisit && audioCard === item) {
+      answerPlaybackPending = false;
+      next();
+    }
+  });
+}
+
+audioToggle.onclick = () => {
+  audioEnabled = !audioEnabled;
+  if (!audioEnabled) stopWordAudio();
+  updateAudioTools();
+  if (audioEnabled) playCardOnce();
+};
+audioReplay.onclick = () => { playWordAudio(); };
+document.addEventListener('visibilitychange', () => {
+  if (document.hidden) stopWordAudio();
+  else playCardOnce();
+});
 
 // ============ 会话状态 ============
 // 每个词的练习队列：flip -> en2cn -> cn2en -> spell
@@ -367,14 +479,15 @@ function buildDistractors(correct, pool, count) {
 function render() {
   saveState();
   updateProgress();
-  if (queue.length === 0) { renderSummary(); return; }
+  if (queue.length === 0) { setAudioCard(null, null); renderSummary(); return; }
   const item = queue[0];
-  if (item.type === 'cloze') { renderCloze(item); return; }
+  if (item.type === 'cloze') { setAudioCard(null, null); renderCloze(item); return; }
   const stage = STAGES[item.stageIndex];
   if (stage === 'flip') renderFlip(item);
   else if (stage === 'en2cn') renderEn2Cn(item);
   else if (stage === 'cn2en') renderCn2En(item);
   else if (stage === 'spell') renderSpell(item);
+  setAudioCard(item, stage);
 }
 
 function tagHtml(cls, label, item) {
@@ -492,14 +605,14 @@ function handleAnswer(isCorrect, btn, container, item, stageKey) {
     item.log[stageKey] = false;
     item.wrongCount++;
   }
-  setTimeout(() => {
+  answerAudioThen(item, isCorrect ? 500 : 1100, () => {
     if (isCorrect) {
       item.stageIndex++;
     } else {
       requeueWithError(item);
     }
     render();
-  }, isCorrect ? 500 : 1100);
+  });
 }
 
 // ---------- Stage 4: 拼写练习 ----------
@@ -520,6 +633,7 @@ function renderSpell(item) {
   const input = document.getElementById('spellInput');
   input.focus();
   function check() {
+    if (input.disabled) return;
     const val = input.value.trim().toLowerCase();
     const correct = val === w.word.toLowerCase();
     const fb = document.getElementById('fbMsg');
@@ -537,7 +651,7 @@ function renderSpell(item) {
       item.log.spelling = false;
       item.wrongCount++;
     }
-    setTimeout(() => {
+    answerAudioThen(item, correct ? 500 : 1300, () => {
       if (correct) {
         item.stageIndex++;
         // full pass through all 4 stages -> finalize
@@ -546,7 +660,7 @@ function renderSpell(item) {
         requeueWithError(item);
       }
       render();
-    }, correct ? 500 : 1300);
+    });
   }
   document.getElementById('spellCheck').onclick = check;
   input.addEventListener('keydown', e => { if (e.key === 'Enter') check(); });

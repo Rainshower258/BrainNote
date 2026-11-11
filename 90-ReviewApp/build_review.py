@@ -41,6 +41,7 @@ import urllib.error
 from datetime import date, timedelta
 
 import frontmatter
+from word_audio import build_audio_map, finish_audio_build
 
 APP_DIR = os.path.dirname(os.path.abspath(__file__))
 VAULT = os.path.dirname(APP_DIR)          # Brain/（vault 根）
@@ -451,12 +452,13 @@ def inject_json(value):
     return json.dumps(value, ensure_ascii=False).replace("</", "<\\/")
 
 
-def render_html(template, words, cloze_map, cloze_prob, today):
+def render_html(template, words, cloze_map, cloze_prob, today, audio_map=None):
     html = template
     html = html.replace("@@WORDS@@", inject_json(words))
     html = html.replace("@@CLOZE@@", inject_json(cloze_map))
     html = html.replace("@@CLOZE_PROB@@", json.dumps(cloze_prob))
     html = html.replace("@@TITLE_DATE@@", today.isoformat())
+    html = html.replace("@@AUDIO@@", inject_json(audio_map or {}))
     return html
 
 
@@ -475,6 +477,7 @@ def main():
     ap.add_argument("--seed", type=int, help="随机种子（测试用）")
     ap.add_argument("--no-shuffle", action="store_true", help="不随机打散复习+新词顺序")
     ap.add_argument("--dry-run", action="store_true", help="只打印，不写文件")
+    ap.add_argument("--no-audio", action="store_true", help="本次不准备或播放单词音频")
     args = ap.parse_args()
 
     today = date.fromisoformat(args.date) if args.date else date.today()
@@ -527,11 +530,17 @@ def main():
     # —— 渲染 HTML ——
     with open(TEMPLATE_PATH, encoding="utf-8") as f:
         template = f.read()
-    html = render_html(template, day_json, cloze_map, cloze_prob, today)
+    audio_map = build_audio_map(day_words, config, use_mock=args.mock or args.no_audio)
     out_path = args.output or HTML_PATH
+    for entry in audio_map.values():
+        entry['src'] = os.path.relpath(os.path.join(APP_DIR, entry['src']), os.path.dirname(os.path.abspath(out_path)))
+    html = render_html(template, day_json, cloze_map, cloze_prob, today, audio_map)
     with open(out_path, "w", encoding="utf-8") as f:
         f.write(html)
     print(f"[build] 已写 {out_path}")
+    if audio_map and not args.no_audio and not args.mock:
+        finish_audio_build(audio_map, config)
+    print(f"[build] 单词音频: {len(audio_map)}/{len(day_words)} 个词可用（仅本机）")
 
 
 if __name__ == "__main__":

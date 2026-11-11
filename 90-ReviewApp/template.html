@@ -225,6 +225,10 @@
     padding: 1px 6px;
     font-size: 11px;
   }
+  .audio-tools { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin: 12px 0; }
+  .audio-tools button { border: 1px solid #d8ccb6; border-radius: 8px; background: #fffaf0; color: var(--ink); padding: 7px 12px; cursor: pointer; }
+  .audio-tools button:disabled { opacity: .5; cursor: default; }
+  .audio-status { font-size: 12px; color: var(--ink-soft); }
 </style>
 </head>
 <body>
@@ -238,6 +242,13 @@
   <div class="progress-label" id="progressLabel">0 / 0</div>
 
   <div class="restore-note" id="restoreNote" hidden></div>
+
+  <div class="audio-tools" role="group" aria-label="单词读音">
+    <button type="button" id="audioToggle" aria-pressed="false">开启读音</button>
+    <button type="button" id="audioReplay" disabled>重播</button>
+    <span class="audio-status" id="audioStatus" role="status">本次打开默认静音</span>
+  </div>
+  <audio id="wordAudio" preload="none"></audio>
 
   <div id="cardArea"></div>
 
@@ -253,6 +264,107 @@ const WORDS = @@WORDS@@;
 const CLOZE = @@CLOZE@@;
 // 从未错过的新词触发挖空题的概率（0~1）
 const CLOZE_PROB_NEW = @@CLOZE_PROB@@;
+// 本机 MP3 路径；四张卡共用同一文件，不包含音频数据或 API 凭据。
+const WORD_AUDIO = @@AUDIO@@;
+
+const audioPlayer = document.getElementById('wordAudio');
+const audioToggle = document.getElementById('audioToggle');
+const audioReplay = document.getElementById('audioReplay');
+const audioStatus = document.getElementById('audioStatus');
+let audioEnabled = false;
+let audioCard = null;
+let audioCanReveal = false;
+let audioPlayed = false;
+let audioVisit = 0;
+let finishPlayback = null;
+let answerPlaybackPending = false;
+
+function stopWordAudio() {
+  audioPlayer.pause();
+  audioPlayer.currentTime = 0;
+  if (finishPlayback) finishPlayback();
+}
+
+function updateAudioTools() {
+  const available = audioCard && WORD_AUDIO[audioCard.word.word];
+  audioToggle.textContent = audioEnabled ? '关闭读音' : '开启读音';
+  audioToggle.setAttribute('aria-pressed', String(audioEnabled));
+  audioReplay.disabled = !audioEnabled || !available || !audioCanReveal || answerPlaybackPending;
+  audioStatus.textContent = !audioEnabled ? '本次打开默认静音'
+    : !audioCard ? '当前卡片不播放读音'
+    : !available ? '此词暂无可用读音'
+    : !audioCanReveal ? '提交答案后播放' : '读音已就绪';
+}
+
+function playWordAudio() {
+  if (!audioEnabled || !audioCard || !audioCanReveal) return Promise.resolve();
+  const sound = WORD_AUDIO[audioCard.word.word];
+  if (!sound) return Promise.resolve();
+  stopWordAudio();
+  audioPlayer.src = sound.src;
+  return new Promise(resolve => {
+    const done = () => {
+      clearTimeout(timer);
+      if (finishPlayback === done) {
+        audioPlayer.onended = null;
+        audioPlayer.onerror = null;
+        finishPlayback = null;
+      }
+      resolve();
+    };
+    const timer = setTimeout(() => { audioPlayer.pause(); done(); }, 7000);
+    finishPlayback = done;
+    audioPlayer.onended = done;
+    audioPlayer.onerror = () => { audioStatus.textContent = '读音暂不可用，可继续答题'; done(); };
+    audioPlayer.play().catch(() => {
+      if (finishPlayback === done) audioStatus.textContent = '播放未成功，可点击重播';
+      done();
+    });
+  });
+}
+
+function playCardOnce() {
+  if (audioPlayed || !audioEnabled || !audioCanReveal || document.hidden) return Promise.resolve();
+  audioPlayed = true;
+  return playWordAudio();
+}
+
+function setAudioCard(item, stage) {
+  stopWordAudio();
+  audioVisit++;
+  audioCard = item;
+  answerPlaybackPending = false;
+  audioPlayed = false;
+  audioCanReveal = stage === 'flip' || stage === 'en2cn';
+  updateAudioTools();
+  playCardOnce();
+}
+
+function answerAudioThen(item, delayMs, next) {
+  const visit = audioVisit;
+  audioCanReveal = true;
+  answerPlaybackPending = true;
+  updateAudioTools();
+  const speech = playCardOnce();
+  Promise.all([speech, new Promise(resolve => setTimeout(resolve, delayMs))]).then(() => {
+    if (visit === audioVisit && audioCard === item) {
+      answerPlaybackPending = false;
+      next();
+    }
+  });
+}
+
+audioToggle.onclick = () => {
+  audioEnabled = !audioEnabled;
+  if (!audioEnabled) stopWordAudio();
+  updateAudioTools();
+  if (audioEnabled) playCardOnce();
+};
+audioReplay.onclick = () => { playWordAudio(); };
+document.addEventListener('visibilitychange', () => {
+  if (document.hidden) stopWordAudio();
+  else playCardOnce();
+});
 
 // ============ 会话状态 ============
 // 每个词的练习队列：flip -> en2cn -> cn2en -> spell
@@ -367,14 +479,15 @@ function buildDistractors(correct, pool, count) {
 function render() {
   saveState();
   updateProgress();
-  if (queue.length === 0) { renderSummary(); return; }
+  if (queue.length === 0) { setAudioCard(null, null); renderSummary(); return; }
   const item = queue[0];
-  if (item.type === 'cloze') { renderCloze(item); return; }
+  if (item.type === 'cloze') { setAudioCard(null, null); renderCloze(item); return; }
   const stage = STAGES[item.stageIndex];
   if (stage === 'flip') renderFlip(item);
   else if (stage === 'en2cn') renderEn2Cn(item);
   else if (stage === 'cn2en') renderCn2En(item);
   else if (stage === 'spell') renderSpell(item);
+  setAudioCard(item, stage);
 }
 
 function tagHtml(cls, label, item) {
@@ -492,14 +605,14 @@ function handleAnswer(isCorrect, btn, container, item, stageKey) {
     item.log[stageKey] = false;
     item.wrongCount++;
   }
-  setTimeout(() => {
+  answerAudioThen(item, isCorrect ? 500 : 1100, () => {
     if (isCorrect) {
       item.stageIndex++;
     } else {
       requeueWithError(item);
     }
     render();
-  }, isCorrect ? 500 : 1100);
+  });
 }
 
 // ---------- Stage 4: 拼写练习 ----------
@@ -520,6 +633,7 @@ function renderSpell(item) {
   const input = document.getElementById('spellInput');
   input.focus();
   function check() {
+    if (input.disabled) return;
     const val = input.value.trim().toLowerCase();
     const correct = val === w.word.toLowerCase();
     const fb = document.getElementById('fbMsg');
@@ -537,7 +651,7 @@ function renderSpell(item) {
       item.log.spelling = false;
       item.wrongCount++;
     }
-    setTimeout(() => {
+    answerAudioThen(item, correct ? 500 : 1300, () => {
       if (correct) {
         item.stageIndex++;
         // full pass through all 4 stages -> finalize
@@ -546,7 +660,7 @@ function renderSpell(item) {
         requeueWithError(item);
       }
       render();
-    }, correct ? 500 : 1300);
+    });
   }
   document.getElementById('spellCheck').onclick = check;
   input.addEventListener('keydown', e => { if (e.key === 'Enter') check(); });
