@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="zh-CN">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>听音默写 · 六级背词</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#f5f0e5;color:#332c26;font:16px/1.65 system-ui,-apple-system,sans-serif}.wrap{max-width:760px;margin:42px auto;padding:0 22px}header{display:flex;justify-content:space-between;gap:16px;align-items:center}h1{font:700 30px/1.3 Georgia,serif;margin:5px 0}a{color:#8d482c;text-decoration:none}.eyebrow,.muted{color:#827564;font-size:13px}.progress{height:5px;background:#e2d8c7;margin:24px 0 8px;border-radius:6px;overflow:hidden}.progress div{height:100%;background:#95684d;transition:width .2s}.card{background:#fffdf7;border:1px solid #e4d8c6;border-radius:16px;padding:32px;margin:22px 0;box-shadow:0 8px 32px #6b50300a}.listening-symbol{font-size:38px;color:#986b4e;margin-bottom:10px}h2{font-size:23px;margin:8px 0}p{margin:10px 0}label{display:block;margin:18px 0 6px;font-size:14px;font-weight:600}input{display:block;width:100%;border:1px solid #d6c7b3;background:white;border-radius:8px;padding:12px;font:inherit;color:inherit}input:focus{outline:2px solid #b88c65;outline-offset:1px}button{border:0;border-radius:8px;padding:10px 18px;font:inherit;cursor:pointer;background:#865437;color:#fff}button.secondary{background:#eee5d6;color:#533f2e}button:disabled{opacity:.45;cursor:default}.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}.feedback{margin-top:20px;padding:16px;border-radius:10px;background:#f4eee1}.ok{color:#397049}.no{color:#a33e2b}.answer-word{font-size:24px;font-weight:700}.note{font-size:13px;color:#827564;margin-top:18px}.restore{padding:10px 14px;border-radius:8px;background:#eee5d6;font-size:13px;margin:15px 0}.hidden,[hidden]{display:none!important}.stats{display:flex;gap:20px;flex-wrap:wrap;margin:16px 0}.stat strong{font-size:28px;display:block}.stat span{font-size:13px;color:#827564}#mediaStatus{font-size:13px;color:#827564;min-height:22px}ul{padding-left:22px}#restart{font-size:13px} @media(max-width:540px){.wrap{margin-top:24px}.card{padding:24px}h1{font-size:25px}header{align-items:flex-start}}
+</style>
+<main class="wrap">
+<header><div><div class="eyebrow">独立练习 · 六级词汇</div><h1>听音默写</h1><div class="muted" id="dateLabel"></div></div><a href="../90-ReviewApp/review.html">日常背词 →</a></header>
+<div class="progress"><div id="progressFill"></div></div><div class="muted" id="progressLabel"></div>
+<div id="restore" class="restore" hidden>已恢复上次练习。点击“开始 / 继续”后播放读音。</div>
+<div class="card" id="intro"><div class="listening-symbol">♫</div><h2>听读音，写英文和中文</h2><p>每词填写正确英文，再写出任意一个中文意思即可。</p><p class="muted">中文接受常用同义、近义和简短说法。未匹配到时会显示释义，隔几题再练一次。</p><div class="actions"><button id="start">开始 / 继续</button><button class="secondary" id="restart">从头开始</button></div><p class="note">当前页面默认安静；点击开始后才播放。此处成绩独立保存。</p></div>
+<section class="card" id="exercise" hidden>
+ <div class="listening-symbol" aria-hidden="true">♫</div><h2 id="cardTitle">听音填写</h2>
+ <button class="secondary" type="button" id="replay">再听一次</button><div id="mediaStatus" role="status"></div>
+ <form id="answerForm" autocomplete="off">
+  <label for="english">英文单词</label><input id="english" lang="en" autocapitalize="off" spellcheck="false" placeholder="写出听到的英文" required maxlength="100">
+  <label for="chinese">中文意思</label><input id="chinese" lang="zh-CN" placeholder="写出一个你记得的中文意思即可" required maxlength="100">
+  <div class="actions"><button id="check" type="submit">检查答案</button><button id="dontKnow" type="button" class="secondary">没想起来，看答案</button></div>
+ </form>
+ <div id="feedback" class="feedback" role="status" hidden></div>
+ <div class="actions"><button id="next" hidden>下一词 →</button><button id="skipAudio" class="secondary" hidden>暂时跳过此词</button></div>
+ <p class="note">英文检查拼写；中文写对一个义项即可，不必照抄整条释义。</p>
+</section>
+<section class="card" id="summary" hidden></section>
+<div class="actions"><button id="export" class="secondary" hidden>导出本项目成绩</button><button id="pause" class="secondary" hidden>暂停</button></div>
+<audio id="audio" preload="none"></audio>
+</main>
+<script>
+const DATA = @@DATA@@;
+@@MATCHER@@
+const $ = id => document.getElementById(id);
+const escapeHtml = text => String(text).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const words = new Map(DATA.words.map(w=>[w.id,w]));
+const STORE_KEY = 'cet6-listening:v1:' + DATA.date + ':' + [...words.keys()].sort().join(',');
+function shuffled(ids){const a=[...ids];for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
+let state = {queue:shuffled([...words.keys()]),attempts:[],done:[],skipped:[],elapsedMs:0,exported:false};
+let running=false,startedAt=0,submitted=false,playVisit=0;
+$('dateLabel').textContent=DATA.date+' · '+DATA.words.length+' 个词';
+try {
+ const saved=JSON.parse(localStorage.getItem(STORE_KEY));
+ if(saved && Array.isArray(saved.queue) && Array.isArray(saved.done) && Array.isArray(saved.skipped) && Array.isArray(saved.attempts)
+    && [...saved.queue,...saved.done,...saved.skipped].every(id=>words.has(id))
+    && new Set([...saved.queue,...saved.done,...saved.skipped]).size===words.size) {
+  state=saved;$('restore').hidden=false;
+ }
+} catch(e){}
+function elapsed(){return state.elapsedMs+(running?Date.now()-startedAt:0);}
+function save(){
+ try{localStorage.setItem(STORE_KEY,JSON.stringify({...state,elapsedMs:elapsed()}));}catch(e){}
+}
+function stopAudio(){playVisit++;$('audio').pause();$('audio').currentTime=0;}
+function updateProgress(){
+ $('progressFill').style.width=(words.size?100*(state.done.length+state.skipped.length)/words.size:0)+'%';
+ $('progressLabel').textContent='已掌握 '+state.done.length+' / '+words.size+' · 待练 '+state.queue.length+(state.skipped.length?' · 暂跳 '+state.skipped.length:'');
+}
+async function playCurrent(){
+ stopAudio();const visit=playVisit;const w=words.get(state.queue[0]);
+ $('skipAudio').hidden=true;
+ if(!running || !w)return;
+ if(!w.audio){$('mediaStatus').textContent='此词暂无读音，可以暂时跳过。';$('skipAudio').hidden=submitted;return;}
+ const player=$('audio');player.src=w.audio;$('mediaStatus').textContent='正在播放…';
+ player.onended=()=>{if(visit===playVisit)$('mediaStatus').textContent='可以重播，慢慢回想。';};
+ player.onerror=()=>{if(visit===playVisit){$('mediaStatus').textContent='读音未加载成功，可重播或暂时跳过。';$('skipAudio').hidden=submitted;}};
+ try{await player.play();}catch(e){if(visit===playVisit){$('mediaStatus').textContent='播放未成功，请点击“再听一次”。';$('skipAudio').hidden=submitted;}}
+}
+function showCard(){
+ stopAudio();updateProgress();save();
+ if(!state.queue.length){showSummary();return;}
+ $('intro').hidden=true;$('summary').hidden=true;$('exercise').hidden=false;$('export').hidden=false;$('pause').hidden=false;
+ $('cardTitle').textContent='听音填写 · 第 '+(state.done.length+state.skipped.length+1)+' 词';
+ submitted=false;$('feedback').hidden=true;$('next').hidden=true;$('skipAudio').hidden=true;
+ for(const id of ['english','chinese','check','dontKnow'])$(id).disabled=false;
+ $('answerForm').reset();$('english').focus();playCurrent();
+}
+function submitAnswer(reveal=false){
+ if(submitted || !running)return;
+ const en=$('english').value,zh=$('chinese').value;
+ // HTML required does not reject whitespace; validate here as well.
+ if(!reveal && (!en.trim()||!zh.trim())){ $('mediaStatus').textContent='请先填写英文和中文，或点击“没想起来”。';return; }
+ const w=words.get(state.queue[0]);const result=reveal?{english:false,chinese:false}:checkListeningAnswer(en,zh,w);
+ state.attempts.push({word:w.word,englishInput:en,chineseInput:zh,englishCorrect:result.english,chineseCorrect:result.chinese,revealed:reveal,at:new Date().toISOString()});
+ state.exported=false;submitted=true;stopAudio();
+ for(const id of ['english','chinese','check','dontKnow'])$(id).disabled=true;
+ $('feedback').hidden=false;
+ $('feedback').innerHTML='<div class="'+(result.english&&result.chinese?'ok':'no')+'">'+(result.english?'✓ 英文正确':'✗ 英文再记一遍')+' · '+(result.chinese?'✓ 中文意思匹配':'✗ 中文未匹配，再记一遍')+'</div>'
+  +'<div class="answer-word">'+escapeHtml(w.word)+'</div><div>'+escapeHtml(w.meaning)+'</div>'
+  +'<div class="note">可接受的说法：'+escapeHtml(w.acceptedZh.slice(0,14).join('、'))+'</div>';
+ $('skipAudio').hidden=true;$('next').hidden=false;
+ $('next').textContent=result.english&&result.chinese?'正确，下一词 →':'记住了，稍后再练 →';
+ save();
+}
+function advance(){
+ if(!submitted)return;const id=state.queue.shift();const attempt=state.attempts[state.attempts.length-1];
+ if(attempt.englishCorrect&&attempt.chineseCorrect)state.done.push(id);
+ else state.queue.splice(Math.min(3,state.queue.length),0,id);
+ showCard();
+}
+function sessionPayload(){return {kind:'listening',version:1,date:DATA.date,exportedAt:new Date().toISOString(),totalWords:words.size,
+ completedWords:state.done.length,skippedWords:[...state.skipped],elapsedSec:Math.round(elapsed()/1000),attempts:state.attempts};}
+function showSummary(){
+ stopAudio();$('exercise').hidden=true;$('intro').hidden=true;$('summary').hidden=false;$('pause').hidden=true;$('export').hidden=false;
+ const errors=state.attempts.filter(a=>!a.englishCorrect||!a.chineseCorrect);
+ $('summary').innerHTML='<h2>'+(state.skipped.length?'本轮结束':'听音默写完成')+'</h2><div class="stats"><div class="stat"><strong>'+state.done.length+'</strong><span>掌握词数</span></div><div class="stat"><strong>'+errors.length+'</strong><span>重新练习次数</span></div><div class="stat"><strong>'+state.skipped.length+'</strong><span>暂时跳过</span></div></div>'
+  +'<p class="muted">成绩只属于听音默写项目。</p>'+(state.skipped.length?'<button id="retrySkipped" class="secondary">再练跳过的词</button>':'')
+  +'<div class="actions"><button id="restartSummary" class="secondary">再来一轮</button></div>';
+ if(state.skipped.length)$('retrySkipped').onclick=()=>{state.queue=[...state.skipped];state.skipped=[];state.exported=false;running=true;startedAt=Date.now();showCard();};
+ $('restartSummary').onclick=restart;
+ if(running){state.elapsedMs=elapsed();running=false;save();}
+ updateProgress();
+}
+function restart(){if(!confirm('清空本词表的听音练习进度，重新开始？'))return;localStorage.removeItem(STORE_KEY);state={queue:shuffled([...words.keys()]),attempts:[],done:[],skipped:[],elapsedMs:0,exported:false};running=true;startedAt=Date.now();$('restore').hidden=true;showCard();}
+$('start').onclick=()=>{if(!running){running=true;startedAt=Date.now();}showCard();};
+$('restart').onclick=restart;$('replay').onclick=playCurrent;
+$('answerForm').onsubmit=e=>{e.preventDefault();submitAnswer();};$('dontKnow').onclick=()=>submitAnswer(true);$('next').onclick=advance;
+$('skipAudio').onclick=()=>{if(submitted)return;const id=state.queue.shift();state.skipped.push(id);state.exported=false;showCard();};
+$('pause').onclick=()=>{stopAudio();state.elapsedMs=elapsed();running=false;save();$('exercise').hidden=true;$('intro').hidden=false;$('pause').hidden=true;};
+$('export').onclick=()=>{const blob=new Blob([JSON.stringify(sessionPayload(),null,2)],{type:'application/json'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download='listening_session_'+DATA.date+'.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),60000);state.exported=true;save();};
+window.addEventListener('beforeunload',e=>{save();if(state.attempts.length&&!state.exported){e.preventDefault();e.returnValue='';}});
+document.addEventListener('visibilitychange',()=>{if(document.hidden){stopAudio();save();}});
+updateProgress();
+if(!words.size){$('start').disabled=true;$('intro').querySelector('p').textContent='此日期没有词表，请先生成当天词表。';}
+</script>
+</html>

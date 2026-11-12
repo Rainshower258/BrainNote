@@ -1,0 +1,18 @@
+const assert=require('node:assert/strict');
+const {checkListeningAnswer,matchChinese}=require('../answer_matcher.js');
+const aliases=require('../aliases.json');
+const word=(word)=>({word,acceptedZh:aliases[word]});
+assert.deepEqual(checkListeningAnswer(' CUTE ','萌',word('cute')),{english:true,chinese:true});
+assert.deepEqual(checkListeningAnswer('cutes','可爱',word('cute')),{english:false,chinese:true});
+for(const text of ['截止时间','截止日期','最后期限','意思是：截止日期。'])assert.equal(matchChinese(text,aliases.deadline),true,text);
+for(const text of ['不可靠','不真实','可靠性不足','假的',''])assert.equal(matchChinese(text,aliases.authentic),false,text);
+assert.equal(matchChinese('不自动',aliases.automatic),false);
+assert.equal(matchChinese('有吸引力的',aliases.attractive),true);
+assert.equal(matchChinese('吸引力',aliases.attractive),false,'do not accept arbitrary substring');
+assert.equal(matchChinese('权威；专家',aliases.authority),true);
+assert.equal(matchChinese('认真',aliases.database),false);
+assert.equal(matchChinese('库',aliases.database),false,'single-character substring must not pass');
+assert.equal(matchChinese('土',['土地']),false,'do not strip lexical 地');
+assert.equal(matchChinese('导',['指导']),false,'do not strip lexical 指');
+assert.equal(matchChinese('执',['执着']),false,'do not strip lexical 着');
+console.log('中文同义、否定/子串反例、英文拼写检查通过');

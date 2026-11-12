@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="zh-CN">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>听音默写 · 六级背词</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#f5f0e5;color:#332c26;font:16px/1.65 system-ui,-apple-system,sans-serif}.wrap{max-width:760px;margin:42px auto;padding:0 22px}header{display:flex;justify-content:space-between;gap:16px;align-items:center}h1{font:700 30px/1.3 Georgia,serif;margin:5px 0}a{color:#8d482c;text-decoration:none}.eyebrow,.muted{color:#827564;font-size:13px}.progress{height:5px;background:#e2d8c7;margin:24px 0 8px;border-radius:6px;overflow:hidden}.progress div{height:100%;background:#95684d;transition:width .2s}.card{background:#fffdf7;border:1px solid #e4d8c6;border-radius:16px;padding:32px;margin:22px 0;box-shadow:0 8px 32px #6b50300a}.listening-symbol{font-size:38px;color:#986b4e;margin-bottom:10px}h2{font-size:23px;margin:8px 0}p{margin:10px 0}label{display:block;margin:18px 0 6px;font-size:14px;font-weight:600}input{display:block;width:100%;border:1px solid #d6c7b3;background:white;border-radius:8px;padding:12px;font:inherit;color:inherit}input:focus{outline:2px solid #b88c65;outline-offset:1px}button{border:0;border-radius:8px;padding:10px 18px;font:inherit;cursor:pointer;background:#865437;color:#fff}button.secondary{background:#eee5d6;color:#533f2e}button:disabled{opacity:.45;cursor:default}.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}.feedback{margin-top:20px;padding:16px;border-radius:10px;background:#f4eee1}.ok{color:#397049}.no{color:#a33e2b}.answer-word{font-size:24px;font-weight:700}.note{font-size:13px;color:#827564;margin-top:18px}.restore{padding:10px 14px;border-radius:8px;background:#eee5d6;font-size:13px;margin:15px 0}.hidden,[hidden]{display:none!important}.stats{display:flex;gap:20px;flex-wrap:wrap;margin:16px 0}.stat strong{font-size:28px;display:block}.stat span{font-size:13px;color:#827564}#mediaStatus{font-size:13px;color:#827564;min-height:22px}ul{padding-left:22px}#restart{font-size:13px} @media(max-width:540px){.wrap{margin-top:24px}.card{padding:24px}h1{font-size:25px}header{align-items:flex-start}}
+</style>
+<main class="wrap">
+<header><div><div class="eyebrow">独立练习 · 六级词汇</div><h1>听音默写</h1><div class="muted" id="dateLabel"></div></div><a href="../90-ReviewApp/review.html">日常背词 →</a></header>
+<div class="progress"><div id="progressFill"></div></div><div class="muted" id="progressLabel"></div>
+<div id="restore" class="restore" hidden>已恢复上次练习。点击“开始 / 继续”后播放读音。</div>
+<div class="card" id="intro"><div class="listening-symbol">♫</div><h2>听读音，写英文和中文</h2><p>每词填写正确英文，再写出任意一个中文意思即可。</p><p class="muted">中文接受常用同义、近义和简短说法。未匹配到时会显示释义，隔几题再练一次。</p><div class="actions"><button id="start">开始 / 继续</button><button class="secondary" id="restart">从头开始</button></div><p class="note">当前页面默认安静；点击开始后才播放。此处成绩独立保存。</p></div>
+<section class="card" id="exercise" hidden>
+ <div class="listening-symbol" aria-hidden="true">♫</div><h2 id="cardTitle">听音填写</h2>
+ <button class="secondary" type="button" id="replay">再听一次</button><div id="mediaStatus" role="status"></div>
+ <form id="answerForm" autocomplete="off">
+  <label for="english">英文单词</label><input id="english" lang="en" autocapitalize="off" spellcheck="false" placeholder="写出听到的英文" required maxlength="100">
+  <label for="chinese">中文意思</label><input id="chinese" lang="zh-CN" placeholder="写出一个你记得的中文意思即可" required maxlength="100">
+  <div class="actions"><button id="check" type="submit">检查答案</button><button id="dontKnow" type="button" class="secondary">没想起来，看答案</button></div>
+ </form>
+ <div id="feedback" class="feedback" role="status" hidden></div>
+ <div class="actions"><button id="next" hidden>下一词 →</button><button id="skipAudio" class="secondary" hidden>暂时跳过此词</button></div>
+ <p class="note">英文检查拼写；中文写对一个义项即可，不必照抄整条释义。</p>
+</section>
+<section class="card" id="summary" hidden></section>
+<div class="actions"><button id="export" class="secondary" hidden>导出本项目成绩</button><button id="pause" class="secondary" hidden>暂停</button></div>
+<audio id="audio" preload="none"></audio>
+</main>
+<script>
+const DATA = {"kind": "listening", "date": "2026-11-12", "words": [{"id": "cycle", "word": "cycle", "meaning": "自行车、 摩托车； 循环 (n&v.)", "acceptedZh": ["自行车", "摩托车", "循环", "单车", "脚踏车", "周期", "骑车", "骑自行车"], "audio": "../90-ReviewApp/.audio_cache/50f309fc0086dc241756034c.mp3"}, {"id": "authorize", "word": "authorize", "meaning": "授权， 批准 (vt.)", "acceptedZh": ["授权", "批准", "准许", "许可", "给予权限"], "audio": "../90-ReviewApp/.audio_cache/c417fec349dbf55b81663344.mp3"}, {"id": "deficiency", "word": "deficiency", "meaning": "缺乏， 不足； 缺点， 缺陷 (n.)", "acceptedZh": ["缺乏", "不足", "缺点", "缺陷", "欠缺", "匮乏", "缺少", "短缺"], "audio": "../90-ReviewApp/.audio_cache/5cf9b26e910b50c758d9941d.mp3"}, {"id": "authority", "word": "authority", "meaning": "官方； 权力； 当权者， 行政管理机构； 权威， 专家 (n.)", "acceptedZh": ["官方", "权力", "当权者", "行政管理机构", "权威", "专家", "职权", "权限", "当局", "政府", "管理机构", "行政机关"], "audio": "../90-ReviewApp/.audio_cache/42cf23ae777be26bdfba40eb.mp3"}, {"id": "bruise", "word": "bruise", "meaning": "青肿，挫伤；伤痕，擦痕 (n.) / 打青， 使受淤伤； 挫伤， 伤害 (vt.)", "acceptedZh": ["青肿", "挫伤", "伤痕", "擦痕", "打青", "使受淤伤", "伤害", "淤青", "瘀青", "淤伤", "瘀伤", "擦伤", "碰伤"], "audio": "../90-ReviewApp/.audio_cache/c6a594040366ff12e331785c.mp3"}, {"id": "author", "word": "author", "meaning": "著作家， 作者 (n.)", "acceptedZh": ["著作家", "作者", "作家", "著作者", "创作者", "撰稿人"], "audio": "../90-ReviewApp/.audio_cache/4223c850541af698ba8c5262.mp3"}, {"id": "cynical", "word": "cynical", "meaning": "愤世嫉俗的， 怀疑的 (adj.)", "acceptedZh": ["愤世嫉俗的", "怀疑的", "愤世嫉俗", "怀疑", "冷嘲热讽", "玩世不恭", "不信任"], "audio": "../90-ReviewApp/.audio_cache/315d10b091a9f0f40e0d8729.mp3"}, {"id": "cute", "word": "cute", "meaning": "漂亮的， 娇小可爱的； 聪明伶俐的， 精明的 (adj.)", "acceptedZh": ["漂亮的", "娇小可爱的", "聪明伶俐的", "精明的", "可爱", "可爱的", "萌", "漂亮", "娇小可爱", "伶俐", "聪明伶俐", "精明", "讨人喜欢"], "audio": "../90-ReviewApp/.audio_cache/76a9ec9f27ffa32266bdc032.mp3"}, {"id": "cylinder", "word": "cylinder", "meaning": "圆柱体， 圆筒； 气缸， 泵体 (n.)", "acceptedZh": ["圆柱体", "圆筒", "气缸", "泵体", "圆柱", "柱体", "筒", "汽缸"], "audio": "../90-ReviewApp/.audio_cache/86840e86a0abe4ddeeec994f.mp3"}, {"id": "deferential", "word": "deferential", "meaning": "恭敬的， 恭顺的 (adj.)", "acceptedZh": ["恭敬的", "恭顺的", "恭敬", "恭顺", "尊敬", "尊重", "谦恭", "毕恭毕敬"], "audio": "../90-ReviewApp/.audio_cache/9edc453aa4d036f053d61b4c.mp3"}, {"id": "attain", "word": "attain", "meaning": "达到， 获得； 完成 (vt.)", "acceptedZh": ["达到", "获得", "完成", "达成", "取得", "实现", "到达"], "audio": "../90-ReviewApp/.audio_cache/aa9b280c36c01327da1355c7.mp3"}, {"id": "dazzle", "word": "dazzle", "meaning": "使眩目，耀；使赞叹不已；使倾倒 (vt.) / 耀眼的光； 令人赞叹的东西 (n.)", "acceptedZh": ["使眩目", "耀", "使赞叹不已", "使倾倒", "耀眼的光", "令人赞叹的东西", "眩目", "晃眼", "耀眼", "使眼花", "使目眩", "使赞叹", "令人赞叹"], "audio": "../90-ReviewApp/.audio_cache/a84951fdea04c53c2573ac62.mp3"}, {"id": "deadline", "word": "deadline", "meaning": "最后期限 (n.)", "acceptedZh": ["最后期限", "截止日期", "截止时间", "截止期限", "期限", "限期", "截至日期", "最后时限"], "audio": "../90-ReviewApp/.audio_cache/394950fc5a92d5df4e8f524a.mp3"}, {"id": "automatic", "word": "automatic", "meaning": "自动的； 必然发生的； 无意识的 (adj.) / 自动机械 (n.)", "acceptedZh": ["自动的", "必然发生的", "无意识的", "自动机械", "自动", "自动化", "无意识", "不自觉", "必然发生"], "audio": "../90-ReviewApp/.audio_cache/2ca7f1bac5b02e3e36adc63e.mp3"}, {"id": "dart", "word": "dart", "meaning": "猛冲，飞奔 (vi.) / 投射 (vt.) / 飞镖， 飞镖游戏； 急驰， 飞奔 (n.)", "acceptedZh": ["猛冲", "飞奔", "投射", "飞镖", "飞镖游戏", "急驰", "疾驰", "投掷", "冲刺"], "audio": "../90-ReviewApp/.audio_cache/ea69f35185f1a5190739173d.mp3"}, {"id": "attendant", "word": "attendant", "meaning": "伴随的， 随之产生的 (adj.) / 服务人员，侍者，随从 (n.)", "acceptedZh": ["伴随的", "随之产生的", "服务人员", "侍者", "随从", "伴随", "随之产生", "随之而来", "附带", "服务员", "侍从", "陪同人员"], "audio": "../90-ReviewApp/.audio_cache/0d2a3635478443ed2d39ea72.mp3"}, {"id": "attract", "word": "attract", "meaning": "吸引， 引起…注意 (vt.)", "acceptedZh": ["吸引", "引起注意", "吸引注意", "引人注目", "招引", "招来", "引来"], "audio": "../90-ReviewApp/.audio_cache/83dfaf3afe164f40b1864dc1.mp3"}, {"id": "deem", "word": "deem", "meaning": "认为， 视为 (vt.)", "acceptedZh": ["认为", "视为", "看作", "当作", "认定", "觉得", "以为"], "audio": "../90-ReviewApp/.audio_cache/73ee5cb0aa190cce429324c5.mp3"}, {"id": "deceive", "word": "deceive", "meaning": "行骗 (vi.) / 欺骗，蒙蔽 (vt.)", "acceptedZh": ["行骗", "欺骗", "蒙蔽", "蒙骗", "骗", "骗人", "欺诈", "欺瞒", "诈骗"], "audio": "../90-ReviewApp/.audio_cache/62fb40f32da6e0bb2d3614d2.mp3"}, {"id": "customary", "word": "customary", "meaning": "习惯上的， 惯常的， 合乎习俗的 (adj.)", "acceptedZh": ["习惯上的", "惯常的", "合乎习俗的", "惯常", "通常", "惯例", "习惯性", "合乎习俗", "符合习俗", "习俗的", "习以为常", "惯用"], "audio": "../90-ReviewApp/.audio_cache/1e01d32bfb25f6f542bdbe44.mp3"}, {"id": "database", "word": "database", "meaning": "数据库 (n.)", "acceptedZh": ["数据库", "资料库", "数据资料库"], "audio": "../90-ReviewApp/.audio_cache/79cd3725391798582afeeacd.mp3"}, {"id": "attitude", "word": "attitude", "meaning": "态度， 看法； 姿势 (n.)", "acceptedZh": ["态度", "看法", "姿势", "姿态", "立场", "态势"], "audio": "../90-ReviewApp/.audio_cache/baacf9cefac09015875cbed5.mp3"}, {"id": "brace", "word": "brace", "meaning": "做好准备；振作精神 (vi.) / 使防备，使受锻炼；支住，撑牢，使绷紧 (vt.) / 支架， 托架 (n.)", "acceptedZh": ["做好准备", "振作精神", "使防备", "使受锻炼", "支住", "撑牢", "使绷紧", "支架", "托架", "撑架", "支撑", "撑住", "绷紧", "准备", "振作", "防备"], "audio": "../90-ReviewApp/.audio_cache/64a3212848695ea8afd0c80a.mp3"}, {"id": "attractive", "word": "attractive", "meaning": "有吸引力的， 引起注意的 (adj.)", "acceptedZh": ["有吸引力的", "引起注意的", "有吸引力", "吸引人", "迷人", "引人注目", "引起注意", "诱人", "动人"], "audio": "../90-ReviewApp/.audio_cache/0607c5aca9f471fe365b925a.mp3"}, {"id": "authentic", "word": "authentic", "meaning": "真的， 真正的； 可靠的， 可信的 (adj.)", "acceptedZh": ["真的", "真正的", "可靠的", "可信的", "真实", "真正", "真", "真实的", "正宗", "可靠", "可信", "货真价实", "真品"], "audio": "../90-ReviewApp/.audio_cache/015b8550aa1e71e32a7c061a.mp3"}, {"id": "decisive", "word": "decisive", "meaning": "决定性的； 坚定的， 果断的， 决断的 (adj.)", "acceptedZh": ["决定性的", "坚定的", "果断的", "决断的", "决定性", "果断", "决断", "坚定", "关键", "有决定作用"], "audio": "../90-ReviewApp/.audio_cache/4c8ff2d4562ce83f147b3e84.mp3"}, {"id": "autonomy", "word": "autonomy", "meaning": "自治， 自治权； 人身自由， 自主权 (n.)", "acceptedZh": ["自治", "自治权", "人身自由", "自主权", "自主", "独立自主"], "audio": "../90-ReviewApp/.audio_cache/acb5cbd3990c7b6335215a89.mp3"}, {"id": "definitely", "word": "definitely", "meaning": "一定地， 明确地 (adv.)", "acceptedZh": ["一定地", "明确地", "一定", "肯定", "确定", "确实", "明确", "毫无疑问", "无疑", "必定"], "audio": "../90-ReviewApp/.audio_cache/9ce706311ecfaa1c9ce112c5.mp3"}, {"id": "attack", "word": "attack", "meaning": "攻击， 进攻； 突然发作 (n&vt.)", "acceptedZh": ["攻击", "进攻", "突然发作", "袭击", "攻打", "抨击", "发作", "侵袭"], "audio": "../90-ReviewApp/.audio_cache/42d4448e73f75f433b5f0967.mp3"}, {"id": "decency", "word": "decency", "meaning": "得体；宽容，大方；正派，合乎礼仪，体面； (n.)", "acceptedZh": ["得体", "宽容", "大方", "正派", "合乎礼仪", "体面", "礼貌", "端庄", "得体举止", "正直"], "audio": "../90-ReviewApp/.audio_cache/5b20ce4654422c6879df2629.mp3"}]};
+// Exact English spelling; flexible Chinese senses, without substring or typo matching.
+function normalizeEnglish(value) {
+  return String(value).normalize('NFKC').trim().toLowerCase().replace(/[’‘]/g, "'").replace(/[‐‑–—]/g, '-').replace(/\s+/g, ' ');
+}
+function normalizeChinese(value) {
+  let text = String(value).normalize('NFKC').trim();
+  text = text.replace(/[（(][^）)]*[）)]/g, '').replace(/^(?:意思是|意思为|指的是|是指)[:：]?/, '');
+  text = text.replace(/[\s。.!！?？:：…·]/g, '');
+  // Remove grammatical particles, never negation: “不真实” must not pass as “真实”.
+  text = text.replace(/的$/, '');
+  return text;
+}
+function matchChinese(value, accepted) {
+  const targets = new Set(accepted.map(normalizeChinese).filter(Boolean));
+  const parts = String(value).split(/[,，;；/、\n]+/).map(normalizeChinese).filter(Boolean);
+  return parts.some(part => targets.has(part));
+}
+function checkListeningAnswer(english, chinese, word) {
+  return { english: !!normalizeEnglish(english) && normalizeEnglish(english) === normalizeEnglish(word.word),
+           chinese: matchChinese(chinese, word.acceptedZh || []) };
+}
+if (typeof module !== 'undefined') module.exports = { normalizeChinese, normalizeEnglish, matchChinese, checkListeningAnswer };
+
+const $ = id => document.getElementById(id);
+const escapeHtml = text => String(text).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const words = new Map(DATA.words.map(w=>[w.id,w]));
+const STORE_KEY = 'cet6-listening:v1:' + DATA.date + ':' + [...words.keys()].sort().join(',');
+function shuffled(ids){const a=[...ids];for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
+let state = {queue:shuffled([...words.keys()]),attempts:[],done:[],skipped:[],elapsedMs:0,exported:false};
+let running=false,startedAt=0,submitted=false,playVisit=0;
+$('dateLabel').textContent=DATA.date+' · '+DATA.words.length+' 个词';
+try {
+ const saved=JSON.parse(localStorage.getItem(STORE_KEY));
+ if(saved && Array.isArray(saved.queue) && Array.isArray(saved.done) && Array.isArray(saved.skipped) && Array.isArray(saved.attempts)
+    && [...saved.queue,...saved.done,...saved.skipped].every(id=>words.has(id))
+    && new Set([...saved.queue,...saved.done,...saved.skipped]).size===words.size) {
+  state=saved;$('restore').hidden=false;
+ }
+} catch(e){}
+function elapsed(){return state.elapsedMs+(running?Date.now()-startedAt:0);}
+function save(){
+ try{localStorage.setItem(STORE_KEY,JSON.stringify({...state,elapsedMs:elapsed()}));}catch(e){}
+}
+function stopAudio(){playVisit++;$('audio').pause();$('audio').currentTime=0;}
+function updateProgress(){
+ $('progressFill').style.width=(words.size?100*(state.done.length+state.skipped.length)/words.size:0)+'%';
+ $('progressLabel').textContent='已掌握 '+state.done.length+' / '+words.size+' · 待练 '+state.queue.length+(state.skipped.length?' · 暂跳 '+state.skipped.length:'');
+}
+async function playCurrent(){
+ stopAudio();const visit=playVisit;const w=words.get(state.queue[0]);
+ $('skipAudio').hidden=true;
+ if(!running || !w)return;
+ if(!w.audio){$('mediaStatus').textContent='此词暂无读音，可以暂时跳过。';$('skipAudio').hidden=submitted;return;}
+ const player=$('audio');player.src=w.audio;$('mediaStatus').textContent='正在播放…';
+ player.onended=()=>{if(visit===playVisit)$('mediaStatus').textContent='可以重播，慢慢回想。';};
+ player.onerror=()=>{if(visit===playVisit){$('mediaStatus').textContent='读音未加载成功，可重播或暂时跳过。';$('skipAudio').hidden=submitted;}};
+ try{await player.play();}catch(e){if(visit===playVisit){$('mediaStatus').textContent='播放未成功，请点击“再听一次”。';$('skipAudio').hidden=submitted;}}
+}
+function showCard(){
+ stopAudio();updateProgress();save();
+ if(!state.queue.length){showSummary();return;}
+ $('intro').hidden=true;$('summary').hidden=true;$('exercise').hidden=false;$('export').hidden=false;$('pause').hidden=false;
+ $('cardTitle').textContent='听音填写 · 第 '+(state.done.length+state.skipped.length+1)+' 词';
+ submitted=false;$('feedback').hidden=true;$('next').hidden=true;$('skipAudio').hidden=true;
+ for(const id of ['english','chinese','check','dontKnow'])$(id).disabled=false;
+ $('answerForm').reset();$('english').focus();playCurrent();
+}
+function submitAnswer(reveal=false){
+ if(submitted || !running)return;
+ const en=$('english').value,zh=$('chinese').value;
+ // HTML required does not reject whitespace; validate here as well.
+ if(!reveal && (!en.trim()||!zh.trim())){ $('mediaStatus').textContent='请先填写英文和中文，或点击“没想起来”。';return; }
+ const w=words.get(state.queue[0]);const result=reveal?{english:false,chinese:false}:checkListeningAnswer(en,zh,w);
+ state.attempts.push({word:w.word,englishInput:en,chineseInput:zh,englishCorrect:result.english,chineseCorrect:result.chinese,revealed:reveal,at:new Date().toISOString()});
+ state.exported=false;submitted=true;stopAudio();
+ for(const id of ['english','chinese','check','dontKnow'])$(id).disabled=true;
+ $('feedback').hidden=false;
+ $('feedback').innerHTML='<div class="'+(result.english&&result.chinese?'ok':'no')+'">'+(result.english?'✓ 英文正确':'✗ 英文再记一遍')+' · '+(result.chinese?'✓ 中文意思匹配':'✗ 中文未匹配，再记一遍')+'</div>'
+  +'<div class="answer-word">'+escapeHtml(w.word)+'</div><div>'+escapeHtml(w.meaning)+'</div>'
+  +'<div class="note">可接受的说法：'+escapeHtml(w.acceptedZh.slice(0,14).join('、'))+'</div>';
+ $('skipAudio').hidden=true;$('next').hidden=false;
+ $('next').textContent=result.english&&result.chinese?'正确，下一词 →':'记住了，稍后再练 →';
+ save();
+}
+function advance(){
+ if(!submitted)return;const id=state.queue.shift();const attempt=state.attempts[state.attempts.length-1];
+ if(attempt.englishCorrect&&attempt.chineseCorrect)state.done.push(id);
+ else state.queue.splice(Math.min(3,state.queue.length),0,id);
+ showCard();
+}
+function sessionPayload(){return {kind:'listening',version:1,date:DATA.date,exportedAt:new Date().toISOString(),totalWords:words.size,
+ completedWords:state.done.length,skippedWords:[...state.skipped],elapsedSec:Math.round(elapsed()/1000),attempts:state.attempts};}
+function showSummary(){
+ stopAudio();$('exercise').hidden=true;$('intro').hidden=true;$('summary').hidden=false;$('pause').hidden=true;$('export').hidden=false;
+ const errors=state.attempts.filter(a=>!a.englishCorrect||!a.chineseCorrect);
+ $('summary').innerHTML='<h2>'+(state.skipped.length?'本轮结束':'听音默写完成')+'</h2><div class="stats"><div class="stat"><strong>'+state.done.length+'</strong><span>掌握词数</span></div><div class="stat"><strong>'+errors.length+'</strong><span>重新练习次数</span></div><div class="stat"><strong>'+state.skipped.length+'</strong><span>暂时跳过</span></div></div>'
+  +'<p class="muted">成绩只属于听音默写项目。</p>'+(state.skipped.length?'<button id="retrySkipped" class="secondary">再练跳过的词</button>':'')
+  +'<div class="actions"><button id="restartSummary" class="secondary">再来一轮</button></div>';
+ if(state.skipped.length)$('retrySkipped').onclick=()=>{state.queue=[...state.skipped];state.skipped=[];state.exported=false;running=true;startedAt=Date.now();showCard();};
+ $('restartSummary').onclick=restart;
+ if(running){state.elapsedMs=elapsed();running=false;save();}
+ updateProgress();
+}
+function restart(){if(!confirm('清空本词表的听音练习进度，重新开始？'))return;localStorage.removeItem(STORE_KEY);state={queue:shuffled([...words.keys()]),attempts:[],done:[],skipped:[],elapsedMs:0,exported:false};running=true;startedAt=Date.now();$('restore').hidden=true;showCard();}
+$('start').onclick=()=>{if(!running){running=true;startedAt=Date.now();}showCard();};
+$('restart').onclick=restart;$('replay').onclick=playCurrent;
+$('answerForm').onsubmit=e=>{e.preventDefault();submitAnswer();};$('dontKnow').onclick=()=>submitAnswer(true);$('next').onclick=advance;
+$('skipAudio').onclick=()=>{if(submitted)return;const id=state.queue.shift();state.skipped.push(id);state.exported=false;showCard();};
+$('pause').onclick=()=>{stopAudio();state.elapsedMs=elapsed();running=false;save();$('exercise').hidden=true;$('intro').hidden=false;$('pause').hidden=true;};
+$('export').onclick=()=>{const blob=new Blob([JSON.stringify(sessionPayload(),null,2)],{type:'application/json'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download='listening_session_'+DATA.date+'.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),60000);state.exported=true;save();};
+window.addEventListener('beforeunload',e=>{save();if(state.attempts.length&&!state.exported){e.preventDefault();e.returnValue='';}});
+document.addEventListener('visibilitychange',()=>{if(document.hidden){stopAudio();save();}});
+updateProgress();
+if(!words.size){$('start').disabled=true;$('intro').querySelector('p').textContent='此日期没有词表，请先生成当天词表。';}
+</script>
+</html>

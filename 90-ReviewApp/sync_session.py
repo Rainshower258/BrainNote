@@ -64,6 +64,9 @@ def main():
         return
     with open(path, encoding="utf-8") as f:
         session = json.load(f)
+    if session.get('kind') == 'listening':
+        print('✗ 听音默写是独立项目，成绩不写入日常背词的 SM-2 或游标。')
+        return
     study_date = session.get("date", str(date.today()))
     try:
         ref_date = date.fromisoformat(study_date)

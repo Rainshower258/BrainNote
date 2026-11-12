@@ -42,6 +42,7 @@ from datetime import date, timedelta
 
 import frontmatter
 from word_audio import build_audio_map, finish_audio_build
+from listening_project import write_listening_project
 
 APP_DIR = os.path.dirname(os.path.abspath(__file__))
 VAULT = os.path.dirname(APP_DIR)          # Brain/（vault 根）
@@ -478,6 +479,7 @@ def main():
     ap.add_argument("--no-shuffle", action="store_true", help="不随机打散复习+新词顺序")
     ap.add_argument("--dry-run", action="store_true", help="只打印，不写文件")
     ap.add_argument("--no-audio", action="store_true", help="本次不准备或播放单词音频")
+    ap.add_argument("--no-listening", action="store_true", help="本次不生成独立听音默写项目")
     args = ap.parse_args()
 
     today = date.fromisoformat(args.date) if args.date else date.today()
@@ -531,6 +533,7 @@ def main():
     with open(TEMPLATE_PATH, encoding="utf-8") as f:
         template = f.read()
     audio_map = build_audio_map(day_words, config, use_mock=args.mock or args.no_audio)
+    listening_audio = {word: dict(entry) for word, entry in audio_map.items()}
     out_path = args.output or HTML_PATH
     for entry in audio_map.values():
         entry['src'] = os.path.relpath(os.path.join(APP_DIR, entry['src']), os.path.dirname(os.path.abspath(out_path)))
@@ -538,6 +541,8 @@ def main():
     with open(out_path, "w", encoding="utf-8") as f:
         f.write(html)
     print(f"[build] 已写 {out_path}")
+    if not args.no_listening and not args.mock:
+        write_listening_project(day_json, listening_audio, today, config)
     if audio_map and not args.no_audio and not args.mock:
         finish_audio_build(audio_map, config)
     print(f"[build] 单词音频: {len(audio_map)}/{len(day_words)} 个词可用（仅本机）")
