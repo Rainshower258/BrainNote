@@ -1,14 +1,14 @@
 ---
 answer: 攻击， 进攻
-due: '2026-11-09'
-ease: 2.95
+due: '2027-09-04'
+ease: 3.1
 example: ''
-interval: 67
-last-review: '2026-09-03'
+interval: 296
+last-review: '2026-11-12'
 mastery: perfect
 meaning: 攻击， 进攻； 突然发作 (n&vt.)
 phonetic: /ə'tæk/
-reviews: 3
+reviews: 4
 tags:
 - 英语
 - CET6

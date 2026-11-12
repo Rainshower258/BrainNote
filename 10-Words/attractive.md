@@ -1,14 +1,14 @@
 ---
 answer: 有吸引力的， 引起注意的
-due: '2026-11-09'
+due: '2027-05-29'
 ease: 2.95
 example: ''
-interval: 67
-last-review: '2026-09-03'
-mastery: perfect
+interval: 198
+last-review: '2026-11-12'
+mastery: good
 meaning: 有吸引力的， 引起注意的 (adj.)
 phonetic: /ə'træktɪv/
-reviews: 3
+reviews: 4
 tags:
 - 英语
 - CET6

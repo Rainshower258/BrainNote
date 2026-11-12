@@ -1,14 +1,14 @@
 ---
 answer: 最后期限
-due: '2026-11-08'
-ease: 2.65
+due: '2026-11-28'
+ease: 2.8
 example: ''
-interval: 4
-last-review: '2026-11-04'
+interval: 16
+last-review: '2026-11-12'
 mastery: perfect
 meaning: 最后期限 (n.)
 phonetic: /ˈdedlaɪn/
-reviews: 1
+reviews: 2
 tags:
 - 英语
 - CET6

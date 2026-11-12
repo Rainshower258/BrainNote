@@ -1,14 +1,14 @@
 ---
 answer: 漂亮的， 娇小可爱的
-due: '2026-11-08'
-ease: 2.65
+due: '2026-11-28'
+ease: 2.8
 example: ''
-interval: 4
-last-review: '2026-11-04'
+interval: 16
+last-review: '2026-11-12'
 mastery: perfect
 meaning: 漂亮的， 娇小可爱的； 聪明伶俐的， 精明的 (adj.)
 phonetic: /kjʊt/
-reviews: 1
+reviews: 2
 tags:
 - 英语
 - CET6

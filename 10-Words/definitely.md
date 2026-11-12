@@ -1,14 +1,14 @@
 ---
 answer: 一定地， 明确地
-due: '2026-11-08'
-ease: 2.5
+due: '2026-11-18'
+ease: 2.6
 example: ''
-interval: 2
-last-review: '2026-11-06'
-mastery: good
+interval: 6
+last-review: '2026-11-12'
+mastery: easy
 meaning: 一定地， 明确地 (adv.)
 phonetic: /'dɛfɪnətli/
-reviews: 1
+reviews: 2
 tags:
 - 英语
 - CET6

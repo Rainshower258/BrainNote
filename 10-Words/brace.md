@@ -1,14 +1,14 @@
 ---
 answer: 做好准备
-due: '2026-11-09'
-ease: 2.9
+due: '2027-07-22'
+ease: 3.05
 example: ''
-interval: 58
-last-review: '2026-09-12'
-mastery: easy
+interval: 252
+last-review: '2026-11-12'
+mastery: perfect
 meaning: 做好准备；振作精神 (vi.) / 使防备，使受锻炼；支住，撑牢，使绷紧 (vt.) / 支架， 托架 (n.)
 phonetic: /bres/
-reviews: 3
+reviews: 4
 tags:
 - 英语
 - CET6

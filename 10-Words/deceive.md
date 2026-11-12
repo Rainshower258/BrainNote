@@ -1,14 +1,14 @@
 ---
 answer: 行骗
-due: '2026-11-08'
-ease: 2.6
+due: '2026-11-24'
+ease: 2.75
 example: ''
-interval: 3
-last-review: '2026-11-05'
-mastery: easy
+interval: 12
+last-review: '2026-11-12'
+mastery: perfect
 meaning: 行骗 (vi.) / 欺骗，蒙蔽 (vt.)
 phonetic: /dɪ'siv/
-reviews: 1
+reviews: 2
 tags:
 - 英语
 - CET6
