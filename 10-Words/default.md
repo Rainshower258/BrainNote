@@ -1,14 +1,14 @@
 ---
 answer: 不履行义务， 拖欠
-due: '2026-11-09'
-ease: 2.65
+due: '2026-11-29'
+ease: 2.8
 example: ''
-interval: 4
-last-review: '2026-11-05'
+interval: 16
+last-review: '2026-11-13'
 mastery: perfect
 meaning: 不履行义务， 拖欠 (v.) / 违约，拖欠；弃权；预设，缺省 (n.)
 phonetic: /dɪ'fɔlt/
-reviews: 1
+reviews: 2
 tags:
 - 英语
 - CET6

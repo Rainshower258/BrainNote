@@ -1,14 +1,14 @@
 ---
 answer: 推论， 推断， 演绎
-due: '2026-11-09'
-ease: 2.65
+due: '2026-11-29'
+ease: 2.8
 example: ''
-interval: 4
-last-review: '2026-11-05'
+interval: 16
+last-review: '2026-11-13'
 mastery: perfect
 meaning: 推论， 推断， 演绎 (vt.)
 phonetic: /dɪ'dʊs/
-reviews: 1
+reviews: 2
 tags:
 - 英语
 - CET6

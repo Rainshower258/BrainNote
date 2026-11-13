@@ -1,14 +1,14 @@
 ---
 answer: 古典的， 经典的
-due: '2026-11-09'
-ease: 2.85
+due: '2027-05-16'
+ease: 3.0
 example: ''
-interval: 43
-last-review: '2026-09-27'
-mastery: easy
+interval: 184
+last-review: '2026-11-13'
+mastery: perfect
 meaning: 古典的， 经典的 (adj.)
 phonetic: /'klæsɪkl/
-reviews: 3
+reviews: 4
 tags:
 - 英语
 - CET6

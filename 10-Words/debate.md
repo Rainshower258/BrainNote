@@ -1,14 +1,14 @@
 ---
 answer: 争论， 辩论 (n&v.)
-due: '2026-11-09'
-ease: 2.65
+due: '2026-11-27'
+ease: 2.75
 example: ''
-interval: 4
-last-review: '2026-11-05'
-mastery: perfect
+interval: 14
+last-review: '2026-11-13'
+mastery: easy
 meaning: 争论， 辩论 (n&v.)
 phonetic: /dɪ'bet/
-reviews: 1
+reviews: 2
 tags:
 - 英语
 - CET6

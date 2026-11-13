@@ -1,14 +1,14 @@
 ---
 answer: 非常， 极度地
-due: '2026-11-09'
-ease: 2.65
+due: '2026-11-29'
+ease: 2.8
 example: ''
-interval: 4
-last-review: '2026-11-05'
+interval: 16
+last-review: '2026-11-13'
 mastery: perfect
 meaning: 非常， 极度地 (adv.) / 致死的，致命的；不共戴天的；极度的，十足的 (adj.)
 phonetic: /'dɛdli/
-reviews: 1
+reviews: 2
 tags:
 - 英语
 - CET6

@@ -1,14 +1,14 @@
 ---
 answer: 碰，撞
-due: '2026-11-09'
-ease: 2.9
+due: '2027-07-23'
+ease: 3.05
 example: ''
-interval: 58
-last-review: '2026-09-12'
+interval: 252
+last-review: '2026-11-13'
 mastery: perfect
 meaning: 碰，撞； (vi.)
 phonetic: /bʌmp/
-reviews: 3
+reviews: 4
 tags:
 - 英语
 - CET6

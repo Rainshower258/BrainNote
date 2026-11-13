@@ -1,14 +1,14 @@
 ---
 answer: 知道的， 意识到的
-due: '2026-11-10'
-ease: 2.95
+due: '2027-07-28'
+ease: 3.05
 example: ''
-interval: 67
-last-review: '2026-09-04'
-mastery: perfect
+interval: 257
+last-review: '2026-11-13'
+mastery: easy
 meaning: 知道的， 意识到的 (adj.)
 phonetic: /ə'wɛr/
-reviews: 3
+reviews: 4
 tags:
 - 英语
 - CET6

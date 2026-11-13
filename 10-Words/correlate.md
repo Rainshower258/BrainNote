@@ -1,14 +1,14 @@
 ---
 answer: 相关， 关联
-due: '2026-11-09'
-ease: 2.75
+due: '2027-01-02'
+ease: 2.9
 example: ''
-interval: 12
-last-review: '2026-10-28'
+interval: 50
+last-review: '2026-11-13'
 mastery: perfect
 meaning: 相关， 关联 (vi.) / 使相互关联 (vt.)
 phonetic: /'kɔrəlet/
-reviews: 2
+reviews: 3
 tags:
 - 英语
 - CET6

@@ -1,0 +1,517 @@
+{
+  "date": "2026-11-13",
+  "totalWords": 30,
+  "elapsedSec": 375,
+  "results": [
+    {
+      "word": "defiance",
+      "path": "10-Words/defiance.md",
+      "wrongCount": 0,
+      "score": 5,
+      "mastery": "perfect",
+      "log": {
+        "flip": "seen",
+        "en2cn": true,
+        "cn2en": true,
+        "spelling": true
+      },
+      "cloze": {
+        "triggered": true,
+        "correct": true
+      }
+    },
+    {
+      "word": "decimal",
+      "path": "10-Words/decimal.md",
+      "wrongCount": 0,
+      "score": 5,
+      "mastery": "perfect",
+      "log": {
+        "flip": "seen",
+        "en2cn": true,
+        "cn2en": true,
+        "spelling": true
+      },
+      "cloze": {
+        "triggered": true,
+        "correct": true
+      }
+    },
+    {
+      "word": "decade",
+      "path": "10-Words/decade.md",
+      "wrongCount": 0,
+      "score": 5,
+      "mastery": "perfect",
+      "log": {
+        "flip": "seen",
+        "en2cn": true,
+        "cn2en": true,
+        "spelling": true
+      },
+      "cloze": {
+        "triggered": true,
+        "correct": true
+      }
+    },
+    {
+      "word": "avert",
+      "path": "10-Words/avert.md",
+      "wrongCount": 0,
+      "score": 5,
+      "mastery": "perfect",
+      "log": {
+        "flip": "seen",
+        "en2cn": true,
+        "cn2en": true,
+        "spelling": true
+      },
+      "cloze": {
+        "triggered": true,
+        "correct": true
+      }
+    },
+    {
+      "word": "collaboration",
+      "path": "10-Words/collaboration.md",
+      "wrongCount": 0,
+      "score": 5,
+      "mastery": "perfect",
+      "log": {
+        "flip": "seen",
+        "en2cn": true,
+        "cn2en": true,
+        "spelling": true
+      },
+      "cloze": {
+        "triggered": true,
+        "correct": true
+      }
+    },
+    {
+      "word": "awkward",
+      "path": "10-Words/awkward.md",
+      "wrongCount": 0,
+      "score": 5,
+      "mastery": "perfect",
+      "log": {
+        "flip": "seen",
+        "en2cn": true,
+        "cn2en": true,
+        "spelling": true
+      },
+      "cloze": {
+        "triggered": true,
+        "correct": false
+      }
+    },
+    {
+      "word": "aviation",
+      "path": "10-Words/aviation.md",
+      "wrongCount": 0,
+      "score": 5,
+      "mastery": "perfect",
+      "log": {
+        "flip": "seen",
+        "en2cn": true,
+        "cn2en": true,
+        "spelling": true
+      },
+      "cloze": {
+        "triggered": true,
+        "correct": true
+      }
+    },
+    {
+      "word": "decree",
+      "path": "10-Words/decree.md",
+      "wrongCount": 0,
+      "score": 5,
+      "mastery": "perfect",
+      "log": {
+        "flip": "seen",
+        "en2cn": true,
+        "cn2en": true,
+        "spelling": true
+      },
+      "cloze": {
+        "triggered": true,
+        "correct": true
+      }
+    },
+    {
+      "word": "debate",
+      "path": "10-Words/debate.md",
+      "wrongCount": 1,
+      "score": 4,
+      "mastery": "easy",
+      "log": {
+        "flip": "seen",
+        "en2cn": true,
+        "cn2en": true,
+        "spelling": true
+      },
+      "cloze": {
+        "triggered": true,
+        "correct": true
+      }
+    },
+    {
+      "word": "dedicate",
+      "path": "10-Words/dedicate.md",
+      "wrongCount": 0,
+      "score": 5,
+      "mastery": "perfect",
+      "log": {
+        "flip": "seen",
+        "en2cn": true,
+        "cn2en": true,
+        "spelling": true
+      },
+      "cloze": {
+        "triggered": true,
+        "correct": true
+      }
+    },
+    {
+      "word": "decrease",
+      "path": "10-Words/decrease.md",
+      "wrongCount": 0,
+      "score": 5,
+      "mastery": "perfect",
+      "log": {
+        "flip": "seen",
+        "en2cn": true,
+        "cn2en": true,
+        "spelling": true
+      },
+      "cloze": {
+        "triggered": true,
+        "correct": true
+      }
+    },
+    {
+      "word": "decay",
+      "path": "10-Words/decay.md",
+      "wrongCount": 0,
+      "score": 5,
+      "mastery": "perfect",
+      "log": {
+        "flip": "seen",
+        "en2cn": true,
+        "cn2en": true,
+        "spelling": true
+      },
+      "cloze": {
+        "triggered": true,
+        "correct": true
+      }
+    },
+    {
+      "word": "denote",
+      "path": "10-Words/denote.md",
+      "wrongCount": 0,
+      "score": 5,
+      "mastery": "perfect",
+      "log": {
+        "flip": "seen",
+        "en2cn": true,
+        "cn2en": true,
+        "spelling": true
+      },
+      "cloze": {
+        "triggered": true,
+        "correct": true
+      }
+    },
+    {
+      "word": "award",
+      "path": "10-Words/award.md",
+      "wrongCount": 0,
+      "score": 5,
+      "mastery": "perfect",
+      "log": {
+        "flip": "seen",
+        "en2cn": true,
+        "cn2en": true,
+        "spelling": true
+      },
+      "cloze": {
+        "triggered": true,
+        "correct": true
+      }
+    },
+    {
+      "word": "avail",
+      "path": "10-Words/avail.md",
+      "wrongCount": 0,
+      "score": 5,
+      "mastery": "perfect",
+      "log": {
+        "flip": "seen",
+        "en2cn": true,
+        "cn2en": true,
+        "spelling": true
+      },
+      "cloze": {
+        "triggered": true,
+        "correct": true
+      }
+    },
+    {
+      "word": "aware",
+      "path": "10-Words/aware.md",
+      "wrongCount": 1,
+      "score": 4,
+      "mastery": "easy",
+      "log": {
+        "flip": "seen",
+        "en2cn": true,
+        "cn2en": true,
+        "spelling": true
+      },
+      "cloze": {
+        "triggered": true,
+        "correct": true
+      }
+    },
+    {
+      "word": "defendant",
+      "path": "10-Words/defendant.md",
+      "wrongCount": 0,
+      "score": 5,
+      "mastery": "perfect",
+      "log": {
+        "flip": "seen",
+        "en2cn": true,
+        "cn2en": true,
+        "spelling": true
+      },
+      "cloze": {
+        "triggered": true,
+        "correct": true
+      }
+    },
+    {
+      "word": "avoid",
+      "path": "10-Words/avoid.md",
+      "wrongCount": 0,
+      "score": 5,
+      "mastery": "perfect",
+      "log": {
+        "flip": "seen",
+        "en2cn": true,
+        "cn2en": true,
+        "spelling": true
+      },
+      "cloze": {
+        "triggered": true,
+        "correct": true
+      }
+    },
+    {
+      "word": "classical",
+      "path": "10-Words/classical.md",
+      "wrongCount": 0,
+      "score": 5,
+      "mastery": "perfect",
+      "log": {
+        "flip": "seen",
+        "en2cn": true,
+        "cn2en": true,
+        "spelling": true
+      },
+      "cloze": {
+        "triggered": true,
+        "correct": true
+      }
+    },
+    {
+      "word": "dean",
+      "path": "10-Words/dean.md",
+      "wrongCount": 0,
+      "score": 5,
+      "mastery": "perfect",
+      "log": {
+        "flip": "seen",
+        "en2cn": true,
+        "cn2en": true,
+        "spelling": true
+      },
+      "cloze": {
+        "triggered": true,
+        "correct": true
+      }
+    },
+    {
+      "word": "default",
+      "path": "10-Words/default.md",
+      "wrongCount": 0,
+      "score": 5,
+      "mastery": "perfect",
+      "log": {
+        "flip": "seen",
+        "en2cn": true,
+        "cn2en": true,
+        "spelling": true
+      },
+      "cloze": {
+        "triggered": true,
+        "correct": true
+      }
+    },
+    {
+      "word": "decent",
+      "path": "10-Words/decent.md",
+      "wrongCount": 0,
+      "score": 5,
+      "mastery": "perfect",
+      "log": {
+        "flip": "seen",
+        "en2cn": true,
+        "cn2en": true,
+        "spelling": true
+      },
+      "cloze": {
+        "triggered": true,
+        "correct": true
+      }
+    },
+    {
+      "word": "bump",
+      "path": "10-Words/bump.md",
+      "wrongCount": 0,
+      "score": 5,
+      "mastery": "perfect",
+      "log": {
+        "flip": "seen",
+        "en2cn": true,
+        "cn2en": true,
+        "spelling": true
+      },
+      "cloze": {
+        "triggered": true,
+        "correct": true
+      }
+    },
+    {
+      "word": "coalition",
+      "path": "10-Words/coalition.md",
+      "wrongCount": 0,
+      "score": 5,
+      "mastery": "perfect",
+      "log": {
+        "flip": "seen",
+        "en2cn": true,
+        "cn2en": true,
+        "spelling": true
+      },
+      "cloze": {
+        "triggered": true,
+        "correct": true
+      }
+    },
+    {
+      "word": "deadly",
+      "path": "10-Words/deadly.md",
+      "wrongCount": 0,
+      "score": 5,
+      "mastery": "perfect",
+      "log": {
+        "flip": "seen",
+        "en2cn": true,
+        "cn2en": true,
+        "spelling": true
+      },
+      "cloze": {
+        "triggered": true,
+        "correct": true
+      }
+    },
+    {
+      "word": "deduce",
+      "path": "10-Words/deduce.md",
+      "wrongCount": 0,
+      "score": 5,
+      "mastery": "perfect",
+      "log": {
+        "flip": "seen",
+        "en2cn": true,
+        "cn2en": true,
+        "spelling": true
+      },
+      "cloze": {
+        "triggered": true,
+        "correct": true
+      }
+    },
+    {
+      "word": "correlate",
+      "path": "10-Words/correlate.md",
+      "wrongCount": 0,
+      "score": 5,
+      "mastery": "perfect",
+      "log": {
+        "flip": "seen",
+        "en2cn": true,
+        "cn2en": true,
+        "spelling": true
+      },
+      "cloze": {
+        "triggered": true,
+        "correct": true
+      }
+    },
+    {
+      "word": "defeat",
+      "path": "10-Words/defeat.md",
+      "wrongCount": 0,
+      "score": 5,
+      "mastery": "perfect",
+      "log": {
+        "flip": "seen",
+        "en2cn": true,
+        "cn2en": true,
+        "spelling": true
+      },
+      "cloze": {
+        "triggered": true,
+        "correct": true
+      }
+    },
+    {
+      "word": "decorate",
+      "path": "10-Words/decorate.md",
+      "wrongCount": 0,
+      "score": 5,
+      "mastery": "perfect",
+      "log": {
+        "flip": "seen",
+        "en2cn": true,
+        "cn2en": true,
+        "spelling": true
+      },
+      "cloze": {
+        "triggered": true,
+        "correct": true
+      }
+    },
+    {
+      "word": "deduct",
+      "path": "10-Words/deduct.md",
+      "wrongCount": 0,
+      "score": 5,
+      "mastery": "perfect",
+      "log": {
+        "flip": "seen",
+        "en2cn": true,
+        "cn2en": true,
+        "spelling": true
+      },
+      "cloze": {
+        "triggered": true,
+        "correct": true
+      }
+    }
+  ]
+}

@@ -1,14 +1,14 @@
 ---
 answer: 腐烂，衰败
-due: '2026-11-09'
-ease: 2.65
+due: '2026-11-29'
+ease: 2.8
 example: ''
-interval: 4
-last-review: '2026-11-05'
+interval: 16
+last-review: '2026-11-13'
 mastery: perfect
 meaning: 腐烂，衰败 (vi.) / 腐烂， 衰败状态 (n.)
 phonetic: /dɪ'ke/
-reviews: 1
+reviews: 2
 tags:
 - 英语
 - CET6
