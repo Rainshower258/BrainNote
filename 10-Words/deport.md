@@ -1,14 +1,14 @@
 ---
 answer: 把…驱逐出境
-due: '2026-11-10'
-ease: 2.65
+due: '2026-11-30'
+ease: 2.8
 example: ''
-interval: 4
-last-review: '2026-11-06'
+interval: 16
+last-review: '2026-11-14'
 mastery: perfect
 meaning: 把…驱逐出境 (vt.)
 phonetic: /dɪ'pɔrt/
-reviews: 1
+reviews: 2
 tags:
 - 英语
 - CET6

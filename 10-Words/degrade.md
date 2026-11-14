@@ -1,14 +1,14 @@
 ---
 answer: 降低…的身份， 有辱…的人格
-due: '2026-11-10'
-ease: 2.65
+due: '2026-11-28'
+ease: 2.75
 example: ''
-interval: 4
-last-review: '2026-11-06'
-mastery: perfect
+interval: 14
+last-review: '2026-11-14'
+mastery: easy
 meaning: 降低…的身份， 有辱…的人格； 使降解， 使退化 (vt.)
 phonetic: /dɪ'ɡred/
-reviews: 1
+reviews: 2
 tags:
 - 英语
 - CET6

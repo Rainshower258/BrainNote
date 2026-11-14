@@ -1,14 +1,14 @@
 ---
 answer: 衰退，堕落，蜕化
-due: '2026-11-10'
-ease: 2.65
+due: '2026-11-30'
+ease: 2.8
 example: ''
-interval: 4
-last-review: '2026-11-06'
+interval: 16
+last-review: '2026-11-14'
 mastery: perfect
 meaning: 衰退，堕落，蜕化 (vi.) / 衰退的，堕落的 (adj.) / 堕落者 (n.)
 phonetic: /dɪ'dʒɛnəret/
-reviews: 1
+reviews: 2
 tags:
 - 英语
 - CET6

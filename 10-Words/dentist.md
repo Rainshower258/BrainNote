@@ -1,14 +1,14 @@
 ---
 answer: 牙科医生
-due: '2026-11-10'
-ease: 2.65
+due: '2026-11-30'
+ease: 2.8
 example: ''
-interval: 4
-last-review: '2026-11-06'
+interval: 16
+last-review: '2026-11-14'
 mastery: perfect
 meaning: 牙科医生 (n.)
 phonetic: /'dɛntɪst/
-reviews: 1
+reviews: 2
 tags:
 - 英语
 - CET6

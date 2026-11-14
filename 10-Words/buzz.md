@@ -1,14 +1,14 @@
 ---
 answer: 发出嗡嗡声
-due: '2026-11-10'
-ease: 2.9
+due: '2027-07-24'
+ease: 3.05
 example: ''
-interval: 58
-last-review: '2026-09-13'
+interval: 252
+last-review: '2026-11-14'
 mastery: perfect
 meaning: 发出嗡嗡声；忙乱，急行；发出嘈杂的谈话声 (vi.) / 嗡嗡声； 嘈杂的谈话声 (n.)
 phonetic: /bʌz/
-reviews: 3
+reviews: 4
 tags:
 - 英语
 - CET6

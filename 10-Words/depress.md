@@ -1,14 +1,14 @@
 ---
 answer: 使沮丧， 使不景气
-due: '2026-11-10'
-ease: 2.65
+due: '2026-11-30'
+ease: 2.8
 example: ''
-interval: 4
-last-review: '2026-11-06'
+interval: 16
+last-review: '2026-11-14'
 mastery: perfect
 meaning: 使沮丧， 使不景气； 按下 (vt.)
 phonetic: /dɪ'prɛs/
-reviews: 1
+reviews: 2
 tags:
 - 英语
 - CET6
