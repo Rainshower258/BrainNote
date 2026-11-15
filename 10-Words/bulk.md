@@ -1,14 +1,14 @@
 ---
 answer: 变得越来越大
-due: '2026-11-11'
-ease: 2.9
+due: '2027-07-25'
+ease: 3.05
 example: ''
-interval: 58
-last-review: '2026-09-14'
-mastery: easy
+interval: 252
+last-review: '2026-11-15'
+mastery: perfect
 meaning: 变得越来越大； 使更大 (v.) / 物体，体积；大批 (n.)
 phonetic: /bʌlk/
-reviews: 3
+reviews: 4
 tags:
 - 英语
 - CET6

@@ -1,14 +1,14 @@
 ---
 answer: 批评家， 爱挑剔的人
-due: '2026-11-12'
-ease: 2.7
+due: '2026-12-25'
+ease: 2.85
 example: ''
-interval: 10
-last-review: '2026-11-02'
-mastery: easy
+interval: 40
+last-review: '2026-11-15'
+mastery: perfect
 meaning: 批评家， 爱挑剔的人 (n.)
 phonetic: /'krɪtɪk/
-reviews: 2
+reviews: 3
 tags:
 - 英语
 - CET6

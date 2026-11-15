@@ -1,14 +1,14 @@
 ---
 answer: 思想， 观念， 概念
-due: '2026-11-11'
-ease: 2.8
+due: '2027-03-29'
+ease: 2.95
 example: ''
-interval: 32
-last-review: '2026-10-10'
+interval: 134
+last-review: '2026-11-15'
 mastery: perfect
 meaning: 思想， 观念， 概念； 构想， 设想； 怀孕 (n.)
 phonetic: /kən'sɛpʃən/
-reviews: 3
+reviews: 4
 tags:
 - 英语
 - CET6

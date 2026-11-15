@@ -1,14 +1,14 @@
 ---
 answer: 顾问
-due: '2026-11-12'
-ease: 2.8
+due: '2027-01-21'
+ease: 2.95
 example: ''
-interval: 16
-last-review: '2026-10-27'
+interval: 67
+last-review: '2026-11-15'
 mastery: perfect
 meaning: 顾问； 会诊医师， 专科医生 (n.)
 phonetic: /kən'sʌltənt/
-reviews: 2
+reviews: 3
 tags:
 - 英语
 - CET6

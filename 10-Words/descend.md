@@ -1,14 +1,14 @@
 ---
 answer: 下来，下降
-due: '2026-11-10'
-ease: 2.65
+due: '2026-12-01'
+ease: 2.8
 example: ''
-interval: 4
-last-review: '2026-11-06'
+interval: 16
+last-review: '2026-11-15'
 mastery: perfect
 meaning: 下来，下降 (vi.) / 走下， 爬下 (vt.)
 phonetic: /dɪ'sɛnd/
-reviews: 1
+reviews: 2
 tags:
 - 英语
 - CET6

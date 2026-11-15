@@ -1,14 +1,14 @@
 ---
 answer: 理事会， 委员会
-due: '2026-11-12'
-ease: 2.75
+due: '2027-01-04'
+ease: 2.9
 example: ''
-interval: 12
-last-review: '2026-10-31'
+interval: 50
+last-review: '2026-11-15'
 mastery: perfect
 meaning: 理事会， 委员会 (n.)
 phonetic: /'kaʊnsl/
-reviews: 2
+reviews: 3
 tags:
 - 英语
 - CET6

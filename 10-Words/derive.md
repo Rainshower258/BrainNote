@@ -1,14 +1,14 @@
 ---
 answer: 起源， 衍生
-due: '2026-11-10'
-ease: 2.65
+due: '2026-12-01'
+ease: 2.8
 example: ''
-interval: 4
-last-review: '2026-11-06'
+interval: 16
+last-review: '2026-11-15'
 mastery: perfect
 meaning: 起源， 衍生 (vi.) / 取得，得到；追溯…的起源或来由 (vt.)
 phonetic: /dɪ'raɪv/
-reviews: 1
+reviews: 2
 tags:
 - 英语
 - CET6

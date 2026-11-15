@@ -1,14 +1,14 @@
 ---
 answer: 结果， 后果
-due: '2026-11-12'
-ease: 2.8
+due: '2027-01-21'
+ease: 2.95
 example: ''
-interval: 16
-last-review: '2026-10-27'
+interval: 67
+last-review: '2026-11-15'
 mastery: perfect
 meaning: 结果， 后果； 重要， 重大 (n.)
 phonetic: /'kɑnsəkwɛns/
-reviews: 2
+reviews: 3
 tags:
 - 英语
 - CET6

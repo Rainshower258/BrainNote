@@ -1,14 +1,14 @@
 ---
 answer: 限制， 约束
-due: '2026-11-12'
-ease: 2.8
+due: '2027-01-21'
+ease: 2.95
 example: ''
-interval: 16
-last-review: '2026-10-27'
+interval: 67
+last-review: '2026-11-15'
 mastery: perfect
 meaning: 限制， 约束； 克制， 抑制 (vt.)
 phonetic: /kən'stren/
-reviews: 2
+reviews: 3
 tags:
 - 英语
 - CET6
