@@ -1,14 +1,14 @@
 ---
 answer: 连续， 持续
-due: '2026-11-13'
-ease: 2.8
+due: '2026-12-05'
+ease: 2.65
 example: ''
-interval: 16
-last-review: '2026-10-28'
-mastery: perfect
+interval: 19
+last-review: '2026-11-16'
+mastery: hard
 meaning: 连续， 持续 (n.)
 phonetic: /'kɑntə'nʊəti/
-reviews: 2
+reviews: 3
 tags:
 - 英语
 - CET6

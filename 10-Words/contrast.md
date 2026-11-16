@@ -1,14 +1,14 @@
 ---
 answer: 形成对比， 对比之下显出区别
-due: '2026-11-13'
-ease: 2.8
+due: '2027-01-22'
+ease: 2.95
 example: ''
-interval: 16
-last-review: '2026-10-28'
+interval: 67
+last-review: '2026-11-16'
 mastery: perfect
 meaning: 形成对比， 对比之下显出区别 (vi.) / 对比，对照；反差[kən'trɑːst] (n.) / 对比，对照 (vt.)
 phonetic: /'kɑntræst/
-reviews: 2
+reviews: 3
 tags:
 - 英语
 - CET6

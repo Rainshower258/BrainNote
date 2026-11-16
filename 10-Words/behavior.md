@@ -1,14 +1,14 @@
 ---
 answer: 行为， 举止， 表现
-due: '2026-11-13'
-ease: 2.95
+due: '2027-09-08'
+ease: 3.1
 example: ''
-interval: 67
-last-review: '2026-09-07'
+interval: 296
+last-review: '2026-11-16'
 mastery: perfect
 meaning: 行为， 举止， 表现 (n.)
 phonetic: /bɪ'hevjɚ/
-reviews: 3
+reviews: 4
 tags:
 - 英语
 - CET6

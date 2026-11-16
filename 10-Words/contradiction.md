@@ -1,14 +1,14 @@
 ---
 answer: 矛盾， 不一致
-due: '2026-11-13'
-ease: 2.8
+due: '2027-01-22'
+ease: 2.95
 example: ''
-interval: 16
-last-review: '2026-10-28'
+interval: 67
+last-review: '2026-11-16'
 mastery: perfect
 meaning: 矛盾， 不一致； 否认， 反驳 (n.)
 phonetic: /,kɑntrə'dɪkʃən/
-reviews: 2
+reviews: 3
 tags:
 - 英语
 - CET6

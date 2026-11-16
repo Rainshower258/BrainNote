@@ -1,14 +1,14 @@
 ---
 answer: 缩小
-due: '2026-11-13'
+due: '2026-12-31'
 ease: 2.8
 example: ''
-interval: 16
-last-review: '2026-10-28'
-mastery: perfect
+interval: 45
+last-review: '2026-11-16'
+mastery: good
 meaning: 缩小； 订合同； 感染， 染上 (v.) / 契约， 合同 (n.)
 phonetic: /'kɑntrækt/
-reviews: 2
+reviews: 3
 tags:
 - 英语
 - CET6

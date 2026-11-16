@@ -1,14 +1,14 @@
 ---
 answer: 贡献
-due: '2026-11-13'
-ease: 2.8
+due: '2027-01-22'
+ease: 2.95
 example: ''
-interval: 16
-last-review: '2026-10-28'
+interval: 67
+last-review: '2026-11-16'
 mastery: perfect
 meaning: 贡献； 促成作用； 捐款， 捐献物； 稿件 (n.)
 phonetic: /,kɑntrɪ'bjuʃən/
-reviews: 2
+reviews: 3
 tags:
 - 英语
 - CET6

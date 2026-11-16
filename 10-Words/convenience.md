@@ -1,14 +1,14 @@
 ---
 answer: 方便
-due: '2026-11-14'
-ease: 2.75
+due: '2027-01-13'
+ease: 2.9
 example: ''
-interval: 14
-last-review: '2026-10-31'
-mastery: easy
+interval: 58
+last-review: '2026-11-16'
+mastery: perfect
 meaning: 方便； 便利设施 (n.)
 phonetic: /kən'vinɪəns/
-reviews: 2
+reviews: 3
 tags:
 - 英语
 - CET6

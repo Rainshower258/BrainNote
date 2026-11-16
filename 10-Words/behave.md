@@ -1,14 +1,14 @@
 ---
 answer: 表现，举止
-due: '2026-11-13'
-ease: 2.95
+due: '2027-09-08'
+ease: 3.1
 example: ''
-interval: 67
-last-review: '2026-09-07'
+interval: 296
+last-review: '2026-11-16'
 mastery: perfect
 meaning: 表现，举止；运转，做出反应 (vi.) / 检点自己的行为 (vt.)
 phonetic: /bɪ'hev/
-reviews: 3
+reviews: 4
 tags:
 - 英语
 - CET6

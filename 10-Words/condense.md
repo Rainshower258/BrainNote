@@ -1,14 +1,14 @@
 ---
 answer: 使冷凝， 使凝结
-due: '2026-11-14'
-ease: 2.8
+due: '2027-04-12'
+ease: 2.95
 example: ''
-interval: 35
-last-review: '2026-10-10'
-mastery: easy
+interval: 147
+last-review: '2026-11-16'
+mastery: perfect
 meaning: 使冷凝， 使凝结； 浓缩， 压缩， 简缩 (vt.)
 phonetic: /kən'dɛns/
-reviews: 3
+reviews: 4
 tags:
 - 英语
 - CET6
