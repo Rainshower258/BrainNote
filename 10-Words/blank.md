@@ -1,14 +1,14 @@
 ---
 answer: 空白的
-due: '2026-11-15'
-ease: 2.95
+due: '2027-09-10'
+ease: 3.1
 example: ''
-interval: 67
-last-review: '2026-09-09'
+interval: 296
+last-review: '2026-11-18'
 mastery: perfect
 meaning: 空白的；茫然的，无表情的 (adj.) / 空白； 空白表格 (n.)
 phonetic: /blæŋk/
-reviews: 3
+reviews: 4
 tags:
 - 英语
 - CET6

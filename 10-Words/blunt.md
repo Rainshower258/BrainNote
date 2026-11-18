@@ -1,14 +1,14 @@
 ---
 answer: 钝的
-due: '2026-11-15'
-ease: 2.95
+due: '2027-09-10'
+ease: 3.1
 example: ''
-interval: 67
-last-review: '2026-09-09'
+interval: 296
+last-review: '2026-11-18'
 mastery: perfect
 meaning: 钝的；率直的，直言不讳的 (adj.) / 使迟钝； 使减弱； 使钝 (vt.)
 phonetic: /blʌnt/
-reviews: 3
+reviews: 4
 tags:
 - 英语
 - CET6

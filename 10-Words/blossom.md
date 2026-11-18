@@ -1,14 +1,14 @@
 ---
 answer: 开花
-due: '2026-11-15'
-ease: 2.95
+due: '2027-08-02'
+ease: 3.05
 example: ''
-interval: 67
-last-review: '2026-09-09'
-mastery: perfect
+interval: 257
+last-review: '2026-11-18'
+mastery: easy
 meaning: 开花； 发展， 长成 (vi.) / 花 (n.)
 phonetic: /'blɑsəm/
-reviews: 3
+reviews: 4
 tags:
 - 英语
 - CET6

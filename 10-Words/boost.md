@@ -1,14 +1,14 @@
 ---
 answer: 推动， 促进， 激励
-due: '2026-11-15'
-ease: 2.95
+due: '2027-09-10'
+ease: 3.1
 example: ''
-interval: 67
-last-review: '2026-09-09'
+interval: 296
+last-review: '2026-11-18'
 mastery: perfect
 meaning: 推动， 促进， 激励； 替…做广告， 宣扬； 提高， 使增长 (v.) / 提高，增长；推动，激励 (n.)
 phonetic: /bʊst/
-reviews: 3
+reviews: 4
 tags:
 - 英语
 - CET6

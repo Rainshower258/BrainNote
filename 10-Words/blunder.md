@@ -1,14 +1,14 @@
 ---
 answer: 跌跌撞撞地走， 慌乱地走
-due: '2026-11-15'
-ease: 2.95
+due: '2027-08-02'
+ease: 3.05
 example: ''
-interval: 67
-last-review: '2026-09-09'
-mastery: perfect
+interval: 257
+last-review: '2026-11-18'
+mastery: easy
 meaning: 跌跌撞撞地走， 慌乱地走； 犯错误 (vi.) / 错误 (n.)
 phonetic: /'blʌndɚ/
-reviews: 3
+reviews: 4
 tags:
 - 英语
 - CET6

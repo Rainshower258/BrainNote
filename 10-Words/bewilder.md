@@ -1,14 +1,14 @@
 ---
 answer: 使迷惑
-due: '2026-11-15'
-ease: 2.95
+due: '2027-09-10'
+ease: 3.1
 example: ''
-interval: 67
-last-review: '2026-09-09'
+interval: 296
+last-review: '2026-11-18'
 mastery: perfect
 meaning: 使迷惑； 使难住 (vt.)
 phonetic: /bɪ'wɪldɚ/
-reviews: 3
+reviews: 4
 tags:
 - 英语
 - CET6

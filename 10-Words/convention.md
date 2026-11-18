@@ -1,14 +1,14 @@
 ---
 answer: 习俗， 惯例
-due: '2026-11-16'
-ease: 2.8
+due: '2027-01-15'
+ease: 2.9
 example: ''
-interval: 16
-last-review: '2026-10-31'
-mastery: perfect
+interval: 58
+last-review: '2026-11-18'
+mastery: easy
 meaning: 习俗， 惯例； 公约； 会议 (n.)
 phonetic: /kən'vɛnʃən/
-reviews: 2
+reviews: 3
 tags:
 - 英语
 - CET6

@@ -6,8 +6,8 @@
   "clozeProbabilityNewWord": 0.15,
   "cursor_index": 631,
   "cursor_note": "已引入的新词累计到第 631 个（下标 0-630 已用），下次从下标 631 开始取下 25 个",
-  "last_session_date": "2026-11-16",
-  "last_synced_date": "2026-11-16",
+  "last_session_date": "2026-11-18",
+  "last_synced_date": "2026-11-18",
   "history": [
     {
       "date": "2026-07-22",
@@ -2316,6 +2316,48 @@
         "descent",
         "describe",
         "deserve"
+      ],
+      "synced": true,
+      "cloze": {
+        "attempted": 30,
+        "correct": 29
+      }
+    },
+    {
+      "date": "2026-11-18",
+      "new_words_count": 0,
+      "review_words_count": 30,
+      "review_word_ids": [
+        "betray",
+        "beverage",
+        "bewilder",
+        "biography",
+        "blank",
+        "blaze",
+        "bleed",
+        "blink",
+        "blossom",
+        "blunder",
+        "blunt",
+        "blur",
+        "blush",
+        "booklet",
+        "boost",
+        "booth",
+        "combine",
+        "commit",
+        "comparison",
+        "convention",
+        "conventional",
+        "converge",
+        "convey",
+        "convince",
+        "cordial",
+        "corporate",
+        "corps",
+        "costume",
+        "coupon",
+        "critical"
       ],
       "synced": true,
       "cloze": {
