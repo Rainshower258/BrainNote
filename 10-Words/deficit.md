@@ -1,14 +1,14 @@
 ---
 answer: 赤字， 亏空， 亏损
-due: '2026-11-17'
-ease: 2.65
+due: '2026-12-22'
+ease: 2.8
 example: ''
-interval: 8
-last-review: '2026-11-09'
+interval: 32
+last-review: '2026-11-20'
 mastery: perfect
 meaning: 赤字， 亏空， 亏损 (n.)
 phonetic: /'dɛfəsɪt/
-reviews: 2
+reviews: 3
 tags:
 - 英语
 - CET6

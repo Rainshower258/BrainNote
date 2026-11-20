@@ -1,14 +1,14 @@
 ---
 answer: 变节， 叛变
-due: '2026-11-17'
-ease: 2.65
+due: '2026-12-22'
+ease: 2.8
 example: ''
-interval: 8
-last-review: '2026-11-09'
+interval: 32
+last-review: '2026-11-20'
 mastery: perfect
 meaning: 变节， 叛变 (vi.) / 缺点，缺陷，欠缺[dI'fekt] (n.)
 phonetic: /‘dɪfɛkt/
-reviews: 2
+reviews: 3
 tags:
 - 英语
 - CET6

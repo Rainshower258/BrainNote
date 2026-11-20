@@ -1,14 +1,14 @@
 ---
 answer: 新闻报道
-due: '2026-11-18'
-ease: 2.8
+due: '2027-01-26'
+ease: 2.95
 example: ''
-interval: 16
-last-review: '2026-11-02'
+interval: 67
+last-review: '2026-11-20'
 mastery: perfect
 meaning: 新闻报道； 覆盖范围 (n.)
 phonetic: /'kʌvərɪdʒ/
-reviews: 2
+reviews: 3
 tags:
 - 英语
 - CET6

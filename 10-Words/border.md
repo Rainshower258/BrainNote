@@ -1,14 +1,14 @@
 ---
 answer: 近似， 与…接壤
-due: '2026-11-18'
-ease: 2.95
+due: '2027-09-12'
+ease: 3.1
 example: ''
-interval: 67
-last-review: '2026-09-12'
+interval: 296
+last-review: '2026-11-20'
 mastery: perfect
 meaning: 近似， 与…接壤 (vi.) / 边，边缘，边界 (n.) / 给…加上边，围；邻接 (vt.)
 phonetic: /'bɔrdɚ/
-reviews: 3
+reviews: 4
 tags:
 - 英语
 - CET6

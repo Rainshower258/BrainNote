@@ -1,14 +1,14 @@
 ---
 answer: 柜台
-due: '2026-11-16'
-ease: 2.8
+due: '2027-01-26'
+ease: 2.95
 example: ''
-interval: 16
-last-review: '2026-10-31'
+interval: 67
+last-review: '2026-11-20'
 mastery: perfect
 meaning: 柜台； 计数器； 筹码 (n.)
 phonetic: /'kaʊntɚ/
-reviews: 2
+reviews: 3
 tags:
 - 英语
 - CET6
