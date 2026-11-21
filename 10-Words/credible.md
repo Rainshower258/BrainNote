@@ -1,14 +1,14 @@
 ---
 answer: 可信的， 可靠的
-due: '2026-11-18'
-ease: 2.8
+due: '2027-01-27'
+ease: 2.95
 example: ''
-interval: 16
-last-review: '2026-11-02'
+interval: 67
+last-review: '2026-11-21'
 mastery: perfect
 meaning: 可信的， 可靠的 (adj.)
 phonetic: /'krɛdəbl/
-reviews: 2
+reviews: 3
 tags:
 - 英语
 - CET6

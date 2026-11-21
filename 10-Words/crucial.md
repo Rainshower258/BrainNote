@@ -1,14 +1,14 @@
 ---
 answer: 至关重要的， 决定性的
-due: '2026-11-19'
-ease: 2.8
+due: '2027-01-27'
+ease: 2.95
 example: ''
-interval: 16
-last-review: '2026-11-03'
+interval: 67
+last-review: '2026-11-21'
 mastery: perfect
 meaning: 至关重要的， 决定性的 (adj.)
 phonetic: /'krʊʃəl/
-reviews: 2
+reviews: 3
 tags:
 - 英语
 - CET6

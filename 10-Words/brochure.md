@@ -1,14 +1,14 @@
 ---
 answer: 小册子
-due: '2026-11-20'
-ease: 2.95
+due: '2027-08-05'
+ease: 3.05
 example: ''
-interval: 67
-last-review: '2026-09-14'
-mastery: perfect
+interval: 257
+last-review: '2026-11-21'
+mastery: easy
 meaning: 小册子 (n.)
 phonetic: /bro'ʃʊr/
-reviews: 3
+reviews: 4
 tags:
 - 英语
 - CET6

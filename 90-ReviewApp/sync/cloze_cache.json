@@ -2748,5 +2748,55 @@
     "sentence_en": "Everyone who works hard can deserve respect from their colleagues and teachers.",
     "sentence_zh": "每个努力工作的人都能值得同事和老师的尊重。",
     "source": "deepseek"
+  },
+  "despise": {
+    "sentence_en": "We should not despise people who come from different backgrounds or have less experience.",
+    "sentence_zh": "我们不应该鄙视那些来自不同背景或经验较少的人。",
+    "source": "deepseek"
+  },
+  "designate": {
+    "sentence_en": "Please designate a responsible person to check the equipment before each use.",
+    "sentence_zh": "请指定一名负责人在每次使用前检查设备。",
+    "source": "deepseek"
+  },
+  "destined": {
+    "sentence_en": "The young couple felt they were destined to be together forever.",
+    "sentence_zh": "这对年轻夫妇觉得他们注定要永远在一起。",
+    "source": "deepseek"
+  },
+  "despite": {
+    "sentence_en": "Despite the heavy rain, the students continued their outdoor activities without any complaint.",
+    "sentence_zh": "尽管下着大雨，学生们仍然毫无怨言地继续进行户外活动。",
+    "source": "deepseek"
+  },
+  "destination": {
+    "sentence_en": "After a long journey, we finally reached our destination and began to explore the old town.",
+    "sentence_zh": "经过漫长的旅程，我们终于到达了目的地，并开始探索这座古镇。",
+    "source": "deepseek"
+  },
+  "design": {
+    "sentence_en": "The architect will design a new library for our university next year.",
+    "sentence_zh": "这位建筑师明年将为我们的大学设计一座新图书馆。",
+    "source": "deepseek"
+  },
+  "desire": {
+    "sentence_en": "It is natural to desire a better life for your family.",
+    "sentence_zh": "渴望为家人创造更好的生活是人之常情。",
+    "source": "deepseek"
+  },
+  "desirable": {
+    "sentence_en": "A quiet neighborhood with good schools is highly desirable for young families.",
+    "sentence_zh": "拥有好学校的安静社区对年轻家庭来说非常有吸引力。",
+    "source": "deepseek"
+  },
+  "destiny": {
+    "sentence_en": "She believes that hard work can change her destiny and bring her a better future.",
+    "sentence_zh": "她相信努力工作能够改变她的命运，为她带来更美好的未来。",
+    "source": "deepseek"
+  },
+  "destruction": {
+    "sentence_en": "The fire caused the complete destruction of the old library and many valuable books.",
+    "sentence_zh": "这场大火彻底摧毁了那座古老的图书馆和许多珍贵的书籍。",
+    "source": "deepseek"
   }
 }

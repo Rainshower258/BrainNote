@@ -1,0 +1,517 @@
+{
+  "date": "2026-11-21",
+  "totalWords": 30,
+  "elapsedSec": 971,
+  "results": [
+    {
+      "word": "brisk",
+      "path": "10-Words/brisk.md",
+      "wrongCount": 0,
+      "score": 5,
+      "mastery": "perfect",
+      "log": {
+        "flip": "seen",
+        "en2cn": true,
+        "cn2en": true,
+        "spelling": true
+      },
+      "cloze": {
+        "triggered": true,
+        "correct": true
+      }
+    },
+    {
+      "word": "brilliant",
+      "path": "10-Words/brilliant.md",
+      "wrongCount": 0,
+      "score": 5,
+      "mastery": "perfect",
+      "log": {
+        "flip": "seen",
+        "en2cn": true,
+        "cn2en": true,
+        "spelling": true
+      },
+      "cloze": {
+        "triggered": true,
+        "correct": true
+      }
+    },
+    {
+      "word": "cripple",
+      "path": "10-Words/cripple.md",
+      "wrongCount": 0,
+      "score": 5,
+      "mastery": "perfect",
+      "log": {
+        "flip": "seen",
+        "en2cn": true,
+        "cn2en": true,
+        "spelling": true
+      },
+      "cloze": {
+        "triggered": true,
+        "correct": true
+      }
+    },
+    {
+      "word": "criticize",
+      "path": "10-Words/criticize.md",
+      "wrongCount": 0,
+      "score": 5,
+      "mastery": "perfect",
+      "log": {
+        "flip": "seen",
+        "en2cn": true,
+        "cn2en": true,
+        "spelling": true
+      },
+      "cloze": {
+        "triggered": true,
+        "correct": true
+      }
+    },
+    {
+      "word": "cucumber",
+      "path": "10-Words/cucumber.md",
+      "wrongCount": 1,
+      "score": 4,
+      "mastery": "easy",
+      "log": {
+        "flip": "seen",
+        "en2cn": true,
+        "cn2en": true,
+        "spelling": true
+      },
+      "cloze": {
+        "triggered": true,
+        "correct": true
+      }
+    },
+    {
+      "word": "crime",
+      "path": "10-Words/crime.md",
+      "wrongCount": 0,
+      "score": 5,
+      "mastery": "perfect",
+      "log": {
+        "flip": "seen",
+        "en2cn": true,
+        "cn2en": true,
+        "spelling": true
+      },
+      "cloze": {
+        "triggered": true,
+        "correct": true
+      }
+    },
+    {
+      "word": "breakdown",
+      "path": "10-Words/breakdown.md",
+      "wrongCount": 0,
+      "score": 5,
+      "mastery": "perfect",
+      "log": {
+        "flip": "seen",
+        "en2cn": true,
+        "cn2en": true,
+        "spelling": true
+      },
+      "cloze": {
+        "triggered": true,
+        "correct": true
+      }
+    },
+    {
+      "word": "bracket",
+      "path": "10-Words/bracket.md",
+      "wrongCount": 1,
+      "score": 4,
+      "mastery": "easy",
+      "log": {
+        "flip": "seen",
+        "en2cn": true,
+        "cn2en": true,
+        "spelling": true
+      },
+      "cloze": {
+        "triggered": true,
+        "correct": true
+      }
+    },
+    {
+      "word": "crumble",
+      "path": "10-Words/crumble.md",
+      "wrongCount": 0,
+      "score": 5,
+      "mastery": "perfect",
+      "log": {
+        "flip": "seen",
+        "en2cn": true,
+        "cn2en": true,
+        "spelling": true
+      },
+      "cloze": {
+        "triggered": true,
+        "correct": false
+      }
+    },
+    {
+      "word": "crowd",
+      "path": "10-Words/crowd.md",
+      "wrongCount": 0,
+      "score": 5,
+      "mastery": "perfect",
+      "log": {
+        "flip": "seen",
+        "en2cn": true,
+        "cn2en": true,
+        "spelling": true
+      },
+      "cloze": {
+        "triggered": true,
+        "correct": true
+      }
+    },
+    {
+      "word": "credible",
+      "path": "10-Words/credible.md",
+      "wrongCount": 0,
+      "score": 5,
+      "mastery": "perfect",
+      "log": {
+        "flip": "seen",
+        "en2cn": true,
+        "cn2en": true,
+        "spelling": true
+      },
+      "cloze": {
+        "triggered": true,
+        "correct": true
+      }
+    },
+    {
+      "word": "briefcase",
+      "path": "10-Words/briefcase.md",
+      "wrongCount": 0,
+      "score": 5,
+      "mastery": "perfect",
+      "log": {
+        "flip": "seen",
+        "en2cn": true,
+        "cn2en": true,
+        "spelling": true
+      },
+      "cloze": {
+        "triggered": true,
+        "correct": true
+      }
+    },
+    {
+      "word": "bribe",
+      "path": "10-Words/bribe.md",
+      "wrongCount": 0,
+      "score": 5,
+      "mastery": "perfect",
+      "log": {
+        "flip": "seen",
+        "en2cn": true,
+        "cn2en": true,
+        "spelling": true
+      },
+      "cloze": {
+        "triggered": true,
+        "correct": true
+      }
+    },
+    {
+      "word": "crush",
+      "path": "10-Words/crush.md",
+      "wrongCount": 0,
+      "score": 5,
+      "mastery": "perfect",
+      "log": {
+        "flip": "seen",
+        "en2cn": true,
+        "cn2en": true,
+        "spelling": true
+      },
+      "cloze": {
+        "triggered": true,
+        "correct": true
+      }
+    },
+    {
+      "word": "crisp",
+      "path": "10-Words/crisp.md",
+      "wrongCount": 0,
+      "score": 5,
+      "mastery": "perfect",
+      "log": {
+        "flip": "seen",
+        "en2cn": true,
+        "cn2en": true,
+        "spelling": true
+      },
+      "cloze": {
+        "triggered": true,
+        "correct": true
+      }
+    },
+    {
+      "word": "breakthrough",
+      "path": "10-Words/breakthrough.md",
+      "wrongCount": 0,
+      "score": 5,
+      "mastery": "perfect",
+      "log": {
+        "flip": "seen",
+        "en2cn": true,
+        "cn2en": true,
+        "spelling": true
+      },
+      "cloze": {
+        "triggered": true,
+        "correct": true
+      }
+    },
+    {
+      "word": "crew",
+      "path": "10-Words/crew.md",
+      "wrongCount": 0,
+      "score": 5,
+      "mastery": "perfect",
+      "log": {
+        "flip": "seen",
+        "en2cn": true,
+        "cn2en": true,
+        "spelling": true
+      },
+      "cloze": {
+        "triggered": true,
+        "correct": true
+      }
+    },
+    {
+      "word": "criticism",
+      "path": "10-Words/criticism.md",
+      "wrongCount": 0,
+      "score": 5,
+      "mastery": "perfect",
+      "log": {
+        "flip": "seen",
+        "en2cn": true,
+        "cn2en": true,
+        "spelling": true
+      },
+      "cloze": {
+        "triggered": true,
+        "correct": true
+      }
+    },
+    {
+      "word": "culminate",
+      "path": "10-Words/culminate.md",
+      "wrongCount": 0,
+      "score": 5,
+      "mastery": "perfect",
+      "log": {
+        "flip": "seen",
+        "en2cn": true,
+        "cn2en": true,
+        "spelling": true
+      },
+      "cloze": {
+        "triggered": true,
+        "correct": true
+      }
+    },
+    {
+      "word": "criterion",
+      "path": "10-Words/criterion.md",
+      "wrongCount": 0,
+      "score": 5,
+      "mastery": "perfect",
+      "log": {
+        "flip": "seen",
+        "en2cn": true,
+        "cn2en": true,
+        "spelling": true
+      },
+      "cloze": {
+        "triggered": true,
+        "correct": true
+      }
+    },
+    {
+      "word": "credit",
+      "path": "10-Words/credit.md",
+      "wrongCount": 0,
+      "score": 5,
+      "mastery": "perfect",
+      "log": {
+        "flip": "seen",
+        "en2cn": true,
+        "cn2en": true,
+        "spelling": true
+      },
+      "cloze": {
+        "triggered": true,
+        "correct": true
+      }
+    },
+    {
+      "word": "breed",
+      "path": "10-Words/breed.md",
+      "wrongCount": 1,
+      "score": 4,
+      "mastery": "easy",
+      "log": {
+        "flip": "seen",
+        "en2cn": true,
+        "cn2en": true,
+        "spelling": true
+      },
+      "cloze": {
+        "triggered": true,
+        "correct": true
+      }
+    },
+    {
+      "word": "crucial",
+      "path": "10-Words/crucial.md",
+      "wrongCount": 0,
+      "score": 5,
+      "mastery": "perfect",
+      "log": {
+        "flip": "seen",
+        "en2cn": true,
+        "cn2en": true,
+        "spelling": true
+      },
+      "cloze": {
+        "triggered": true,
+        "correct": true
+      }
+    },
+    {
+      "word": "brutal",
+      "path": "10-Words/brutal.md",
+      "wrongCount": 0,
+      "score": 5,
+      "mastery": "perfect",
+      "log": {
+        "flip": "seen",
+        "en2cn": true,
+        "cn2en": true,
+        "spelling": true
+      },
+      "cloze": {
+        "triggered": true,
+        "correct": true
+      }
+    },
+    {
+      "word": "brink",
+      "path": "10-Words/brink.md",
+      "wrongCount": 0,
+      "score": 5,
+      "mastery": "perfect",
+      "log": {
+        "flip": "seen",
+        "en2cn": true,
+        "cn2en": true,
+        "spelling": true
+      },
+      "cloze": {
+        "triggered": true,
+        "correct": true
+      }
+    },
+    {
+      "word": "crystallize",
+      "path": "10-Words/crystallize.md",
+      "wrongCount": 1,
+      "score": 4,
+      "mastery": "easy",
+      "log": {
+        "flip": "seen",
+        "en2cn": true,
+        "cn2en": true,
+        "spelling": true
+      },
+      "cloze": {
+        "triggered": true,
+        "correct": true
+      }
+    },
+    {
+      "word": "crisis",
+      "path": "10-Words/crisis.md",
+      "wrongCount": 0,
+      "score": 5,
+      "mastery": "perfect",
+      "log": {
+        "flip": "seen",
+        "en2cn": true,
+        "cn2en": true,
+        "spelling": true
+      },
+      "cloze": {
+        "triggered": true,
+        "correct": true
+      }
+    },
+    {
+      "word": "brood",
+      "path": "10-Words/brood.md",
+      "wrongCount": 0,
+      "score": 5,
+      "mastery": "perfect",
+      "log": {
+        "flip": "seen",
+        "en2cn": true,
+        "cn2en": true,
+        "spelling": true
+      },
+      "cloze": {
+        "triggered": true,
+        "correct": true
+      }
+    },
+    {
+      "word": "definitely",
+      "path": "10-Words/definitely.md",
+      "wrongCount": 1,
+      "score": 4,
+      "mastery": "easy",
+      "log": {
+        "flip": "seen",
+        "en2cn": true,
+        "cn2en": true,
+        "spelling": true
+      },
+      "cloze": {
+        "triggered": true,
+        "correct": true
+      }
+    },
+    {
+      "word": "brochure",
+      "path": "10-Words/brochure.md",
+      "wrongCount": 1,
+      "score": 4,
+      "mastery": "easy",
+      "log": {
+        "flip": "seen",
+        "en2cn": true,
+        "cn2en": true,
+        "spelling": true
+      },
+      "cloze": {
+        "triggered": true,
+        "correct": true
+      }
+    }
+  ]
+}

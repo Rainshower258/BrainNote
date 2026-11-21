@@ -1,14 +1,14 @@
 ---
 answer: 结晶
-due: '2026-11-19'
-ease: 2.8
+due: '2027-01-18'
+ease: 2.9
 example: ''
-interval: 16
-last-review: '2026-11-03'
-mastery: perfect
+interval: 58
+last-review: '2026-11-21'
+mastery: easy
 meaning: 结晶； 变得清晰而明确； 使具体化 (v.)
 phonetic: /'krɪstə'laɪz/
-reviews: 2
+reviews: 3
 tags:
 - 英语
 - CET6

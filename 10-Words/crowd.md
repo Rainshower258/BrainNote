@@ -1,14 +1,14 @@
 ---
 answer: 聚集， 挤， 涌
-due: '2026-11-19'
-ease: 2.8
+due: '2027-01-27'
+ease: 2.95
 example: ''
-interval: 16
-last-review: '2026-11-03'
+interval: 67
+last-review: '2026-11-21'
 mastery: perfect
 meaning: 聚集， 挤， 涌 (vi.) / 群，一批 (n.) / 挤；挤满 (vt.)
 phonetic: /kraʊd/
-reviews: 2
+reviews: 3
 tags:
 - 英语
 - CET6

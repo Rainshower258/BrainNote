@@ -1,14 +1,14 @@
 ---
 answer: 黄瓜
-due: '2026-11-19'
-ease: 2.8
+due: '2027-01-18'
+ease: 2.9
 example: ''
-interval: 16
-last-review: '2026-11-03'
-mastery: perfect
+interval: 58
+last-review: '2026-11-21'
+mastery: easy
 meaning: 黄瓜 (n.)
 phonetic: /'kjʊ,kʌmbɚ/
-reviews: 2
+reviews: 3
 tags:
 - 英语
 - CET6

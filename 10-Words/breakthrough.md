@@ -1,14 +1,14 @@
 ---
 answer: 突破， 突破性进展， 重要的新发现
-due: '2026-11-19'
-ease: 2.95
+due: '2027-09-13'
+ease: 3.1
 example: ''
-interval: 67
-last-review: '2026-09-13'
+interval: 296
+last-review: '2026-11-21'
 mastery: perfect
 meaning: 突破， 突破性进展， 重要的新发现 (n.)
 phonetic: /'brek'θrʊ/
-reviews: 3
+reviews: 4
 tags:
 - 英语
 - CET6
