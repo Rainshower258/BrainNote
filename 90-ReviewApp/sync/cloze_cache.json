@@ -2798,5 +2798,105 @@
     "sentence_en": "The fire caused the complete destruction of the old library and many valuable books.",
     "sentence_zh": "这场大火彻底摧毁了那座古老的图书馆和许多珍贵的书籍。",
     "source": "deepseek"
+  },
+  "deviate": {
+    "sentence_en": "We must not deviate from the original plan without a good reason.",
+    "sentence_zh": "没有充分的理由，我们绝不能偏离最初的计划。",
+    "source": "deepseek"
+  },
+  "detection": {
+    "sentence_en": "Early detection of the disease can greatly increase the patient's chance of survival.",
+    "sentence_zh": "早期发现这种疾病能大大提高患者的生存机会。",
+    "source": "deepseek"
+  },
+  "differentiation": {
+    "sentence_en": "Teachers should make a clear differentiation between the two similar concepts in class.",
+    "sentence_zh": "老师应该在课堂上对这两个相似的概念做出明确的区别。",
+    "source": "deepseek"
+  },
+  "deteriorate": {
+    "sentence_en": "If we ignore these small problems, the situation will only deteriorate in the coming months.",
+    "sentence_zh": "如果我们忽视这些小问题，情况只会在接下来的几个月里进一步恶化。",
+    "source": "deepseek"
+  },
+  "devise": {
+    "sentence_en": "The engineers must devise a new plan to solve the traffic problem in the city center.",
+    "sentence_zh": "工程师们必须设计一个新方案来解决市中心的交通问题。",
+    "source": "deepseek"
+  },
+  "diagnose": {
+    "sentence_en": "Doctors can diagnose the disease early if patients describe their symptoms clearly.",
+    "sentence_zh": "如果病人清楚地描述症状，医生就能及早诊断出这种疾病。",
+    "source": "deepseek"
+  },
+  "destructive": {
+    "sentence_en": "The destructive power of the earthquake left thousands of families without homes.",
+    "sentence_zh": "这场地震的破坏力使数千个家庭无家可归。",
+    "source": "deepseek"
+  },
+  "detail": {
+    "sentence_en": "Please explain the main point in detail so that everyone can understand it.",
+    "sentence_zh": "请详细解释这个要点，以便每个人都能理解。",
+    "source": "deepseek"
+  },
+  "dictate": {
+    "sentence_en": "The rules dictate that all students must hand in their reports before Friday.",
+    "sentence_zh": "规定要求所有学生必须在周五之前提交报告。",
+    "source": "deepseek"
+  },
+  "detach": {
+    "sentence_en": "You must detach the cable from the computer before you move it.",
+    "sentence_zh": "搬动电脑之前，你必须先把电缆从电脑上拆下来。",
+    "source": "deepseek"
+  },
+  "diffuse": {
+    "sentence_en": "Experts believe that good ideas can diffuse quickly through social media.",
+    "sentence_zh": "专家认为，好的想法能通过社交媒体迅速传播。",
+    "source": "deepseek"
+  },
+  "dignity": {
+    "sentence_en": "Every person should be treated with dignity, regardless of their background or social status.",
+    "sentence_zh": "每个人都应受到有尊严的对待，无论其背景或社会地位如何。",
+    "source": "deepseek"
+  },
+  "devote": {
+    "sentence_en": "Students should devote enough time to reading so that they can improve their language skills.",
+    "sentence_zh": "学生应该把足够的时间用于阅读，以便提高语言能力。",
+    "source": "deepseek"
+  },
+  "dilemma": {
+    "sentence_en": "Many young people face a dilemma when choosing between a high salary and a job they truly enjoy.",
+    "sentence_zh": "许多年轻人在高薪和自己真正喜欢的工作之间做选择时会面临困境。",
+    "source": "deepseek"
+  },
+  "digest": {
+    "sentence_en": "Doctors say we must digest our food slowly and pay attention to what we eat.",
+    "sentence_zh": "医生说我们必须慢慢消化食物，并注意自己吃的东西。",
+    "source": "deepseek"
+  },
+  "detective": {
+    "sentence_en": "The detective carefully examined the room for any clues before he left.",
+    "sentence_zh": "侦探离开前仔细检查了房间，寻找任何线索。",
+    "source": "deepseek"
+  },
+  "differentiate": {
+    "sentence_en": "Students should learn to differentiate between facts and opinions before forming their own judgments.",
+    "sentence_zh": "学生应该学会在形成自己的判断之前区分事实和观点。",
+    "source": "deepseek"
+  },
+  "detain": {
+    "sentence_en": "The police cannot detain anyone without a valid reason in a law-based society.",
+    "sentence_zh": "在法治社会中，警察不能在没有正当理由的情况下拘留任何人。",
+    "source": "deepseek"
+  },
+  "device": {
+    "sentence_en": "The new device can help students learn English more efficiently in class.",
+    "sentence_zh": "这种新装置能帮助学生在课堂上更高效地学习英语。",
+    "source": "deepseek"
+  },
+  "detect": {
+    "sentence_en": "Doctors can detect many serious diseases early with the help of modern technology.",
+    "sentence_zh": "借助现代技术，医生能够及早察觉许多严重疾病。",
+    "source": "deepseek"
   }
 }

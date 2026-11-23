@@ -1,14 +1,14 @@
 ---
 answer: 冠军， 得胜者
-due: '2026-11-20'
-ease: 2.9
+due: '2027-08-02'
+ease: 3.05
 example: ''
-interval: 58
-last-review: '2026-09-23'
+interval: 252
+last-review: '2026-11-23'
 mastery: perfect
 meaning: 冠军， 得胜者； 捍卫者， 拥护者 (n.)
 phonetic: /'tʃæmpɪən/
-reviews: 3
+reviews: 4
 tags:
 - 英语
 - CET6

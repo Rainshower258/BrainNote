@@ -1,14 +1,14 @@
 ---
 answer: 鄙视， 看不起
-due: '2026-07-05'
-ease: 2.5
+due: '2026-11-27'
+ease: 2.65
 example: ''
-interval: 1
-last-review: ''
-mastery: new
+interval: 4
+last-review: '2026-11-23'
+mastery: perfect
 meaning: 鄙视， 看不起 (vt.)
 phonetic: /dɪ'spaɪz/
-reviews: 0
+reviews: 1
 tags:
 - 英语
 - CET6

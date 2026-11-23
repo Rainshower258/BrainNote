@@ -1,14 +1,14 @@
 ---
 answer: 公牛
-due: '2026-11-20'
-ease: 2.95
+due: '2027-09-15'
+ease: 3.1
 example: ''
-interval: 67
-last-review: '2026-09-14'
+interval: 296
+last-review: '2026-11-23'
 mastery: perfect
 meaning: 公牛； 雄兽； 买进证券投机图利者， 看涨的人 (n.)
 phonetic: /bul/
-reviews: 3
+reviews: 4
 tags:
 - 英语
 - CET6

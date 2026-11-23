@@ -1,14 +1,14 @@
 ---
 answer: 冒泡， 起泡， 沸腾
-due: '2026-11-20'
-ease: 2.95
+due: '2027-09-15'
+ease: 3.1
 example: ''
-interval: 67
-last-review: '2026-09-14'
+interval: 296
+last-review: '2026-11-23'
 mastery: perfect
 meaning: 冒泡， 起泡， 沸腾 (vi.) / 泡，泡沫，水泡，气泡；幻想的计划 (n.)
 phonetic: /'bʌbl/
-reviews: 3
+reviews: 4
 tags:
 - 英语
 - CET6

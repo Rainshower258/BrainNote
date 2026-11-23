@@ -1,14 +1,14 @@
 ---
 answer: 猛然弓背跃起
-due: '2026-11-20'
-ease: 2.95
+due: '2027-09-15'
+ease: 3.1
 example: ''
-interval: 67
-last-review: '2026-09-14'
+interval: 296
+last-review: '2026-11-23'
 mastery: perfect
 meaning: 猛然弓背跃起 (vi.) / 美元，澳元；雄鹿，雄兔 (n.)
 phonetic: /bʌk/
-reviews: 3
+reviews: 4
 tags:
 - 英语
 - CET6

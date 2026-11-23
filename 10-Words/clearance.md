@@ -1,14 +1,14 @@
 ---
 answer: 净空， 余隙
-due: '2026-11-22'
-ease: 2.8
+due: '2027-05-31'
+ease: 2.95
 example: ''
-interval: 45
-last-review: '2026-10-08'
-mastery: good
+interval: 189
+last-review: '2026-11-23'
+mastery: perfect
 meaning: 净空， 余隙； 许可， 批准； 票据交换， 清算； 清除， 清理， 出空 (n.)
 phonetic: /'klɪrəns/
-reviews: 3
+reviews: 4
 tags:
 - 英语
 - CET6

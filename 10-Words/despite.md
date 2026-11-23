@@ -1,14 +1,14 @@
 ---
 answer: 不管， 不顾
-due: '2026-07-05'
-ease: 2.5
+due: '2026-11-27'
+ease: 2.65
 example: ''
-interval: 1
-last-review: ''
-mastery: new
+interval: 4
+last-review: '2026-11-23'
+mastery: perfect
 meaning: 不管， 不顾 (prep.)
 phonetic: /dɪ'spaɪt/
-reviews: 0
+reviews: 1
 tags:
 - 英语
 - CET6
