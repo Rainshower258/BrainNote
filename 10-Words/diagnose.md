@@ -1,14 +1,14 @@
 ---
 answer: 诊断
-due: '2026-07-06'
-ease: 2.5
+due: '2026-11-29'
+ease: 2.65
 example: ''
-interval: 1
-last-review: ''
-mastery: new
+interval: 4
+last-review: '2026-11-25'
+mastery: perfect
 meaning: 诊断； 判断 (vt.)
 phonetic: /,daɪəɡ'nos/
-reviews: 0
+reviews: 1
 tags:
 - 英语
 - CET6

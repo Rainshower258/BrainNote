@@ -1,14 +1,14 @@
 ---
 answer: 细节，枝节
-due: '2026-07-06'
-ease: 2.5
+due: '2026-11-29'
+ease: 2.65
 example: ''
-interval: 1
-last-review: ''
-mastery: new
+interval: 4
+last-review: '2026-11-25'
+mastery: perfect
 meaning: 细节，枝节；零件 (n.) / 详细说明 (vt.)
 phonetic: /dɪˈtel/
-reviews: 0
+reviews: 1
 tags:
 - 英语
 - CET6

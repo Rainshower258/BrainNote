@@ -1,14 +1,14 @@
 ---
 answer: 得体
-due: '2026-11-24'
-ease: 2.75
+due: '2027-01-14'
+ease: 2.9
 example: ''
-interval: 12
-last-review: '2026-11-12'
+interval: 50
+last-review: '2026-11-25'
 mastery: perfect
 meaning: 得体；宽容，大方；正派，合乎礼仪，体面； (n.)
 phonetic: /'disnsi/
-reviews: 2
+reviews: 3
 tags:
 - 英语
 - CET6

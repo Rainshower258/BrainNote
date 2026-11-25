@@ -2898,5 +2898,90 @@
     "sentence_en": "Doctors can detect many serious diseases early with the help of modern technology.",
     "sentence_zh": "借助现代技术，医生能够及早察觉许多严重疾病。",
     "source": "deepseek"
+  },
+  "dim": {
+    "sentence_en": "You can dim the screen to reduce eye strain at night.",
+    "sentence_zh": "你可以在晚上调暗屏幕以减少眼睛疲劳。",
+    "source": "deepseek"
+  },
+  "disapproval": {
+    "sentence_en": "His parents expressed strong disapproval of his decision to drop out of college.",
+    "sentence_zh": "他的父母对他辍学的决定表示强烈不赞成。",
+    "source": "deepseek"
+  },
+  "discern": {
+    "sentence_en": "It is hard to discern the truth from all these conflicting reports.",
+    "sentence_zh": "从这些互相矛盾的报道中很难辨别出真相。",
+    "source": "deepseek"
+  },
+  "diploma": {
+    "sentence_en": "She hopes to earn her diploma in computer science before she starts working.",
+    "sentence_zh": "她希望在开始工作之前拿到计算机科学专业的毕业文凭。",
+    "source": "deepseek"
+  },
+  "dilute": {
+    "sentence_en": "You must dilute the strong medicine with water before giving it to children.",
+    "sentence_zh": "在给孩子服用之前，你必须用水稀释这种药效强的药。",
+    "source": "deepseek"
+  },
+  "diplomat": {
+    "sentence_en": "A good diplomat must be patient and know how to listen to others.",
+    "sentence_zh": "一名优秀的外交官必须有耐心，并且懂得如何倾听他人。",
+    "source": "deepseek"
+  },
+  "directory": {
+    "sentence_en": "You can find the company's phone number in the business directory on the desk.",
+    "sentence_zh": "你可以在桌上的工商行名录里找到这家公司的电话号码。",
+    "source": "deepseek"
+  },
+  "diminish": {
+    "sentence_en": "We must take action now, or the water supply will diminish quickly.",
+    "sentence_zh": "我们必须现在采取行动，否则水供应会迅速减少。",
+    "source": "deepseek"
+  },
+  "discard": {
+    "sentence_en": "It is time to discard outdated ideas and embrace new ones.",
+    "sentence_zh": "是时候抛弃过时的观念，拥抱新的思想了。",
+    "source": "deepseek"
+  },
+  "discharge": {
+    "sentence_en": "The factory must not discharge waste water into the river without treatment.",
+    "sentence_zh": "工厂不得未经处理就向河里排放废水。",
+    "source": "deepseek"
+  },
+  "diligent": {
+    "sentence_en": "A diligent student always reviews his notes carefully before the final examination each term.",
+    "sentence_zh": "一个勤奋的学生每学期期末考试前总会认真复习笔记。",
+    "source": "deepseek"
+  },
+  "disable": {
+    "sentence_en": "A serious injury can disable a young athlete and end his sports career.",
+    "sentence_zh": "严重的伤病会使年轻运动员丧失能力，并终结他的运动生涯。",
+    "source": "deepseek"
+  },
+  "disastrous": {
+    "sentence_en": "The government's decision to cut the budget for public health proved disastrous for the whole country.",
+    "sentence_zh": "政府削减公共卫生预算的决定对整个国家来说被证明是灾难性的。",
+    "source": "deepseek"
+  },
+  "discipline": {
+    "sentence_en": "Learning a new language requires strong discipline and patience every day.",
+    "sentence_zh": "学习一门新语言每天都需要很强的自律和耐心。",
+    "source": "deepseek"
+  },
+  "dine": {
+    "sentence_en": "They often dine together at a small restaurant after work.",
+    "sentence_zh": "他们下班后经常在一家小餐馆一起用餐。",
+    "source": "deepseek"
+  },
+  "dimension": {
+    "sentence_en": "We must consider the social dimension of this problem before we make any decision.",
+    "sentence_zh": "在做出任何决定之前，我们必须考虑这个问题的社会层面。",
+    "source": "deepseek"
+  },
+  "disaster": {
+    "sentence_en": "The heavy rain caused a serious disaster in the small village last week.",
+    "sentence_zh": "上周的大雨在这个小村庄引发了一场严重的灾难。",
+    "source": "deepseek"
   }
 }

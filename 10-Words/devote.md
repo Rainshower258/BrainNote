@@ -1,14 +1,14 @@
 ---
 answer: 将…奉献给， 把…专用
-due: '2026-07-06'
-ease: 2.5
+due: '2026-11-29'
+ease: 2.65
 example: ''
-interval: 1
-last-review: ''
-mastery: new
+interval: 4
+last-review: '2026-11-25'
+mastery: perfect
 meaning: 将…奉献给， 把…专用 (vt.)
 phonetic: /dɪ'vot/
-reviews: 0
+reviews: 1
 tags:
 - 英语
 - CET6
