@@ -1,14 +1,14 @@
 ---
 answer: 意思是
-due: '2026-11-25'
-ease: 2.75
+due: '2027-01-16'
+ease: 2.9
 example: ''
-interval: 12
-last-review: '2026-11-13'
+interval: 50
+last-review: '2026-11-27'
 mastery: perfect
 meaning: 意思是； 表示， 是…的标志 (vt.)
 phonetic: /dɪ'not/
-reviews: 2
+reviews: 3
 tags:
 - 英语
 - CET6

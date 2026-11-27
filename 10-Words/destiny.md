@@ -1,14 +1,14 @@
 ---
 answer: 命运
-due: '2026-11-26'
-ease: 2.6
+due: '2026-12-09'
+ease: 2.75
 example: ''
-interval: 3
-last-review: '2026-11-23'
-mastery: easy
+interval: 12
+last-review: '2026-11-27'
+mastery: perfect
 meaning: 命运； 定数， 天命 (n.)
 phonetic: /'dɛstəni/
-reviews: 1
+reviews: 2
 tags:
 - 英语
 - CET6

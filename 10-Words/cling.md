@@ -1,14 +1,14 @@
 ---
 answer: 紧紧抓住
-due: '2026-11-26'
-ease: 2.9
+due: '2027-08-06'
+ease: 3.05
 example: ''
-interval: 58
-last-review: '2026-09-29'
+interval: 252
+last-review: '2026-11-27'
 mastery: perfect
 meaning: 紧紧抓住； 黏着， 挨近； 依附， 依恋； 坚持， 墨守， 忠实于 (vi.)
 phonetic: /klɪŋ/
-reviews: 3
+reviews: 4
 tags:
 - 英语
 - CET6
